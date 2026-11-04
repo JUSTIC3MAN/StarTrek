@@ -143,7 +143,7 @@ def filmcraft_add(jname, vp, trans=None):
     if not m:
         return
     song = m.group(1)
-    fdir = C.CFG.get("filmcraft_dir") or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "FilmCraft")
+    fdir = C.CFG.get("filmcraft_dir", r"A:\artcraft\FilmCraft")
     cut = os.path.join(fdir, "projects", song, song + ".txt")
     if not os.path.exists(cut):
         return

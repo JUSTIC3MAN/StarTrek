@@ -33,8 +33,7 @@ def main():
     bsel = sys.argv[sys.argv.index("--batch") + 1] if "--batch" in sys.argv else None
     import fc, song_cut
     pdir = os.path.join(HERE, "projects", song)
-    _st = os.path.dirname(HERE)                  # the Star Trek folder (A:\Ai projects\Star Trek on Justice's PC)
-    cfg = {"videos": os.path.join(_st, "Comfort", "out", "videos"), "comfort": os.path.join(_st, "Comfort"),
+    cfg = {"videos": r"A:\Ai projects\Star Trek\Comfort\out\videos", "comfort": r"A:\Ai projects\Star Trek\Comfort",
            "kind": "nature", "subject2": "nature only: no people appear anywhere.", "neg": "no people, no text, no watermark",
            "sound": "Wind, water and nature sounds that fit each shot.", "fadein": "24", "fadeout": "60", "queue": "a", "prefix": "z", "inpoint": "0.4"}
     styles, rows, warn = {}, [], []

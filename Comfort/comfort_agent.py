@@ -169,10 +169,6 @@ def t_star_trek(action, song="", mode="", text="", shot="", value="", **_):
     import subprocess, sys
     ov = os.path.normpath(C.P("..", "Overseer", "overseer.py"))
     args = [str(action)] + ([str(song)] if song else [])
-    if action == "new":                          # new song from an audio file: value = its path, text = "Artist - Title"
-        args = ["new", str(value or text or song)] + ([str(text)] if value and text else [])
-    if action == "pick":                         # the art style for a new song: shot/value = a picture label from its style round
-        args.append(str(shot or value or text))
     if action == "mode":
         args.append(str(mode or "auto"))
     if action in ("redo", "trim", "transition") or (action == "shots" and shot):
@@ -352,7 +348,7 @@ TOOLS = [
          {"query": S("e.g. 'pond wide 3', 'moaning tree stump', 'forest arena'"), "limit": I("How many results.")}, ["query"]),
     tool("look_at", "Look at a gallery image or attached image yourself (it is shown to you).", {"image": S("Gallery reference or file name.")}, ["image"]),
     tool("star_trek", "Justice's music-video production (Star Trek: SongMap -> shot list -> Comfort -> Overseer checks -> FilmCraft edit in Preview). Use whenever he talks about his song videos, also when Claude is out of tokens.",
-         {"action": S("new (a NEW song from an MP3: value = the file path, text = 'Artist - Title'; the Overseer then makes the style round, writes the shot list and produces the whole video by itself) | pick (choose a new song's art style: song + shot = a picture label from its style round) | planstatus (where every new song is) | restyle | replan | review (start here: short summary) | redo (re-render a shot) | trim (cut the end of a shot, slowed to fit; value = percent) | transition (set the transition INTO a shot; value = e.g. 'film_dissolve 16' or 'cross_zoom 12 strength=40') | rebuild | pause | resume | mode | shots (with shot = a label or section word, to see only those lines) | setshots | songmap | rules | readme"), "shot": S("Shot label (a01 or a01_harbour_wide) or, for shots, a section word."), "value": S("For trim: percent (10-20). For transition: name and params."), "song": S("Song project name, e.g. conqueress."),
+         {"action": S("review (start here: short summary) | redo (re-render a shot) | trim (cut the end of a shot, slowed to fit; value = percent) | transition (set the transition INTO a shot; value = e.g. 'film_dissolve 16' or 'cross_zoom 12 strength=40') | rebuild | pause | resume | mode | shots (with shot = a label or section word, to see only those lines) | setshots | songmap | rules | readme"), "shot": S("Shot label (a01 or a01_harbour_wide) or, for shots, a section word."), "value": S("For trim: percent (10-20). For transition: name and params."), "song": S("Song project name, e.g. conqueress."),
           "mode": S("For mode: auto (keep producing), check (only check), off."), "text": S("For setshots: the complete new shot list.")}, ["action"]),
     tool("prompt_guide", "Full prompting rules: topic 'krea2' (images) or 'h3' (MiniMax H3 video+audio).", {"topic": S("krea2 or h3")}, ["topic"]),
     tool("list_workflows", "List every ComfyUI workflow Comfort can run, with what each is for.", {}),

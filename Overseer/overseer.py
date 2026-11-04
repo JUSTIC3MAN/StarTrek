@@ -661,15 +661,8 @@ def tick():
         return
     open(lock, "w").close()
     try:
-        try:                                     # new songs: MP3 -> SongMap -> style round -> pick -> shot list -> queue (planner.py)
-            import planner
-            planner.tick()
-        except Exception:
-            log("planner", "planner error: " + traceback.format_exc()[-700:].replace("\n", " | "))
         for name, mode in songs():
             if mode == "off" or level_of(name) == "off":
-                continue
-            if not os.path.isdir(os.path.join(FILM, "projects", name)):     # its project isn't on this PC (yet)
                 continue
             try:
                 STATE["level"] = level_of(name)
@@ -743,9 +736,6 @@ if __name__ == "__main__":
         for name, mode in songs():
             p = os.path.join(HERE, f"report_{name}.txt")
             print(open(p, encoding="utf-8").read() if os.path.exists(p) else f"{name}: no report yet")
-    elif cmd in ("new", "pick", "planstatus", "restyle", "replan"):
-        import planner
-        planner.cli(sys.argv[1:])
     elif cmd == "mode":
         rows, hit = [], False
         for ln in open(os.path.join(HERE, "songs.txt"), encoding="utf-8"):

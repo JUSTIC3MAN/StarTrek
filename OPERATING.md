@@ -4,10 +4,10 @@ New PC? Install first: [README.md](README.md). The production rules — what a f
 Justice's hard rules — are in **[README.txt](README.txt)**. That page wins wherever anything else disagrees; this page
 explains the machine around it.
 
-## The design: the local AI does the work, Claude is optional
+## The design: Claude spends few tokens, the local AI does the work
 
-Star Trek runs with no Claude at all. Drop in an MP3 and the local AI plans, generates, checks and edits the whole video
-(next section). When Claude is there, it spends few tokens: it can plan or rework a song by hand and fix tools.
+Star Trek was built so that almost nothing depends on Claude being online. On this PC Claude works through **Claude Code**,
+the terminal; `CLAUDE.md` translates the manuals' commands for it.
 
 - **The PC does the production.** Every generation, check, edit and render runs on the local GPU (built on an RTX 4090).
 - **The local AI is in charge of production.** That is `qwen3.6:27b` in Ollama, used by both the Overseer and Comfort's agent.
@@ -15,38 +15,12 @@ Star Trek runs with no Claude at all. Drop in an MP3 and the local AI plans, gen
   and shots at the level Justice picked, re-makes failures, places every shot in the song's FilmCraft project and builds
   the edit. **FilmCraft is driven entirely by text cut lists through `fc.py`**, so the Overseer and Claude can both run it
   without touching the FilmCraft window. Justice talks to the local AI in the **Star Trek interface**, not in a Claude chat.
-- **Claude (optional) plans and fixes.** The local planner writes a new song's style round and shot list by itself;
-  Claude can write or rework one by hand, change tools when something is wrong, and answer Justice. It never babysits renders, never reads videos or big files, never transcribes or analyses
+- **Claude only plans and fixes.** It writes the creative plan (a song's style round and shot list), changes tools when
+  something is wrong, and answers Justice. It never babysits renders, never reads videos or big files, never transcribes or analyses
   audio itself, and never runs wait loops. Each tool answers Claude with **one line** (`fc.py build` → `ok renders/x.mp4 …`,
   `sm.sh` → `OK Song 128s | 76 BPM …`, Overseer → `report_<song>.txt`).
 - **Every program talks through files**: an inbox folder in, a one-line result or report out. That is how the Overseer,
   Claude and Justice's interface all control the same programs without stepping on each other.
-
-## A new song with no Claude: drop the MP3 in
-
-1. Put the song in **`Overseer\new_songs\`**, named **`Artist - Title.mp3`** (or say *"new song A:\Music\X\Song.mp3"* in the
-   Star Trek interface chat). Comfort must be running (`Open Star Trek.bat`).
-2. The Overseer takes it from there with the local AI (`Overseer\planner.py`, one step per tick). Progress shows in the
-   interface under the song's name and in `Overseer\logs\<song>.log`. It goes through:
-   - **SongMap**: the project folder `FilmCraft\projects\<song>\` with the MP3, and the timing sheet. SongMap is started automatically.
-   - **Style round**: the local AI writes N pictures (6 by default), each in a **different** installed Krea 2 style and from a
-     **different** part of the lyrics, following README.txt and Comfort\CLAUDE.md section 16. Comfort renders them into
-     `Preview\<Artist - Title>\` as "styles v1 …png", and the brief is written to `Comfort\songs\<Artist - Title>\brief.md`.
-   - **Pick**: Justice picks the look: *"pick <song> <label>"* in the chat (the labels are in the file names), or the label in
-     `Overseer\plans\<song>.pick.txt`. No pick after **30 minutes**: the vision AI scores every picture and takes the
-     best, so the GPU never waits.
-   - **Shot list**: the local AI writes `FilmCraft\projects\<song>\<song>.shots.txt` for the whole song from the SongMap
-     sheet. That means one scene per section, shot lengths from the music, a real transition on every cut and every shot a
-     new picture. `song_jobs.py` checks it, and any error goes back to the AI (up to 4 tries).
-   - **Production**: the jobs are queued and the song is set to `auto` in `songs.txt`. From here it's the normal Overseer:
-     pictures → checks → H3 videos → 1080p60 → placed in FilmCraft at their SongMap times → edit built →
-     `Preview\<Artist - Title>\<Artist - Title> (full song).mp4`.
-3. Change course any time in the chat: *"restyle <song>"* (a new style round), *"replan <song>"* (a new shot list),
-   *"planstatus"*. Or redo, trim or change the transition of one shot the usual way.
-
-Settings in `Overseer\planner.json`: `styles_count`, `pick_wait_minutes`, `max_tries`, `model` (empty = Comfort's model;
-on a 32 GB card try `qwen3.6:35b`), `people` (who may appear; empty = the local AI decides per song).
-If a song says **STUCK** (no valid shot list after 4 tries): *"replan <song>"*, or have Claude fix the shot list.
 
 ## The programs and how they connect
 
@@ -94,27 +68,26 @@ If a song says **STUCK** (no valid shot list after 4 tries): *"replan <song>"*, 
 
 ## One song, start to finish (who does what)
 
-1. **SongMap** makes the sheet (automatic for a dropped MP3).
-2. **Look:** a style round of Krea 2 pictures, each one a different art style. The local planner writes it, or Claude
-   does by hand (`Comfort\CLAUDE.md` section 16). Justice picks; with no pick, the vision AI picks after 30 minutes.
-3. **Shot list** `FilmCraft\projects\<song>\<song>.shots.txt`: written by the local planner from the sheet and the
-   README.txt process, checked by `song_jobs.py`. Claude can write or rework it instead, which costs Claude tokens only here.
+1. **SongMap** makes the sheet (Claude queues it with one `sm.sh` call, or Justice drops the MP3 on `SongMap.bat`).
+2. **Look:** Claude has Comfort make a varied set of Krea 2 pictures, each a different art style (`Comfort\CLAUDE.md` section 16).
+   Justice picks the style.
+3. **Claude** writes `FilmCraft\projects\<song>\<song>.shots.txt` from the sheet and the README.txt process. This is the only
+   creative step that costs Claude tokens. Then Claude runs `song_jobs.py <song> --queue` once and sets the song to `auto`
+   (`overseer.py mode <song> auto`).
 4. **Comfort + Overseer** take it from there with no Claude: pictures → checks → videos → 1080p60 finish → placed at their
    SongMap times with a transition on every cut → built → copied to Preview.
-5. **Justice** watches the edit in the interface or in Preview and asks for changes in the interface chat (redo, trim,
-   transition, replan, restyle).
+5. **Justice** watches the edit in the interface or in Preview and asks for changes there. He brings Claude back only for
+   new plans or broken tools.
 
 ## How Claude reaches the programs
 
-- **Claude Code running on this Windows PC:** run the Python tools directly, e.g. `python FilmCraft\fc.py build <cut list>`,
-  `python Overseer\overseer.py status`, and write job files into `Comfort\inbox\`.
-- **Claude desktop app with the Star Trek folder connected** (the device shell is a Linux VM): it can't reach the ports or
-  start Windows programs, so it talks to everything through files. The folder shows up as `$HOME/mnt/Star Trek`. Older
-  paths in the manuals (`$HOME/mnt/Ai projects/Comfort`, `A:\artcraft\FilmCraft`, `A:\Ai projects\Comfort`) are the same
-  folders; the setup recreates those links. SongMap: `bash "$HOME/mnt/Star Trek/SongMap/sm.sh" 'A:\Music\X\Song.mp3'`.
-  Lyrics: `bash "$HOME/mnt/Star Trek/ClaudeSubtitles/SubtitleStudio/Lyrics/lyrics.sh" -w 170 <folder>`.
-  Builds longer than 3 minutes go through a Comfort `filmcraft_build` job, not the device shell.
-- **Never** take control of Justice's screen to open or fix something; ask him to double-click the program.
+- **Claude Code (the terminal) on this PC**, started with `Claude Star Trek.bat`: it runs the Windows tools directly with
+  ClaudeComfy's Python. The commands are in `CLAUDE.md`, section "Claude Code (the terminal) on this PC": the Comfort heartbeat,
+  `overseer.py`, `song_jobs.py`, `fc.py build`, `sm.sh`, `lyrics.sh`, Comfort inbox jobs. It has no time limit, so builds run directly.
+- **Claude desktop app with the Star Trek folder connected** (Justice's main PC): its shell is a Linux VM that can't start
+  Windows programs or reach the ports. It talks to everything through files under `$HOME/mnt/...`, exactly as the manuals
+  say, and builds longer than 3 minutes go through a Comfort `filmcraft_build` job.
+- **Either way**, never take control of Justice's screen to open or fix something; ask him to double-click the program.
 
 ## Token rules for Claude (from README.txt rule 9 and the manuals)
 

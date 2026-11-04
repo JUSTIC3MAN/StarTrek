@@ -7,6 +7,8 @@
 #   sm.sh -w SECS                           keep waiting for what is already queued
 # Exit: 0 done, 2 failed, 3 SongMap isn't running on the PC, 4 still working (run: sm.sh -w 170)
 SM="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Python for the job file: the desktop app's Linux shell has python3; Claude Code on Windows (Git Bash) uses SongMap's own venv
+case "$(uname -s)" in MINGW*|MSYS*|CYGWIN*) PYB="$SM/venv/Scripts/python.exe"; [ -x "$PYB" ] || PYB=python;; *) PYB=python3;; esac
 WAIT=170; COPY=(); LYR=""; SONGS=(); LOCAL=()
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -23,7 +25,7 @@ PEND="$SM/.pending_jobs"
 queued=0
 if [ ${#SONGS[@]} -gt 0 ]; then
   name="sm_$(date +%m%d-%H%M%S)"
-  python3 - "$SM/inbox/$name.json.tmp" "$LYR" "${#COPY[@]}" "${COPY[@]}" "${SONGS[@]}" <<'EOF'
+  "$PYB" - "$SM/inbox/$name.json.tmp" "$LYR" "${#COPY[@]}" "${COPY[@]}" "${SONGS[@]}" <<'EOF'
 import json, sys
 out, lyr, nc = sys.argv[1], sys.argv[2], int(sys.argv[3])
 copy, songs = sys.argv[4:4 + nc], sys.argv[4 + nc:]

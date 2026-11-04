@@ -1,7 +1,7 @@
 # Star Trek - one-time setup on a new Windows PC (NVIDIA RTX GPU). Safe to run again: finished steps are skipped,
 # downloads resume. Started by "SETUP NEW PC.bat" in the Star Trek folder. Log: setup\setup_log.txt
 #
-#   -AnyLocation   set it up right where it is, even when the PC has an A: drive
+#   -AnyLocation   set it up right where it is, without A: (not recommended: the tools and manuals expect A:\Ai projects\Star Trek)
 #   -SkipModels    everything except the ~150 GB of model downloads (run again later without it)
 param([switch]$AnyLocation, [switch]$SkipModels)
 
@@ -112,6 +112,24 @@ Say ('   folder: ' + $ST)
 # Unzipped anywhere: with an A: drive, Star Trek is copied to A:\Ai projects\Star Trek (where every config, doc and song
 # project expects it) and the setup carries on from there. Without an A: drive it runs right where it is.
 Step 'Location'
+if (-not (Test-Path 'A:\') -and -not $AnyLocation) {
+    # Justice's tools, Claude's manuals and the song projects all use A:\Ai projects\Star Trek - give a drive the letter A:
+    Say 'This PC has no A: drive. Star Trek lives on A:\Ai projects\Star Trek (its tools, manuals and song projects use that path).' 'Yellow'
+    Get-Volume | Where-Object { $_.DriveLetter -and $_.DriveType -eq 'Fixed' } | Sort-Object DriveLetter | ForEach-Object {
+        Say ('   ' + $_.DriveLetter + ':  ' + $_.FileSystemLabel + '  ' + [int]($_.SizeRemaining / 1GB) + ' GB free of ' + [int]($_.Size / 1GB) + ' GB')
+    }
+    Say 'Pick a drive with about 250 GB free to become A:. Programs installed on that drive keep working, but their shortcuts' 'Yellow'
+    Say 'and anything that remembers the old letter must be redone. The system drive (C:) cannot be used.' 'Yellow'
+    $d = (Read-Host 'Letter of the drive that should become A: (Enter = stop)').Trim().TrimEnd(':').ToUpper()
+    if (-not $d) { Stop-Setup 'no A: drive - run the setup again when you have picked one' }
+    if ($d -eq $env:SystemDrive.Substring(0, 1).ToUpper() -or -not (Test-Path ($d + ':\'))) { Stop-Setup ($d + ': cannot become A:') }
+    Stop-Transcript | Out-Null
+    Start-Process powershell -Verb RunAs -Wait -ArgumentList ('-NoProfile -Command "Get-Partition -DriveLetter ' + $d + ' | Set-Partition -NewDriveLetter A"')
+    if (-not (Test-Path 'A:\')) { Say 'The drive letter did not change (the admin prompt was declined?).' 'Red'; exit 1 }
+    if ($ST.Substring(0, 1).ToUpper() -eq $d) { $ST = 'A' + $ST.Substring(1); $Setup = Join-Path $ST 'setup'; $CCdir = Join-Path $ST 'ClaudeComfy' }
+    $Log = Join-Path $ST 'setup\setup_log.txt'; Start-Transcript -Path $Log -Append | Out-Null
+    Say ('   ' + $d + ': is now A:') 'Green'
+}
 if ($ST -ne $Want -and (Test-Path 'A:\') -and -not $AnyLocation) {
     $fresh = -not (Test-Path (Join-Path $Want 'SETUP NEW PC.bat'))
     Say ('   ' + ($(if ($fresh) { 'copying' } else { 'updating' })) + ' Star Trek in ' + $Want + ' ...')
@@ -129,7 +147,7 @@ if ($ST -ne $Want -and (Test-Path 'A:\') -and -not $AnyLocation) {
     exit $LASTEXITCODE
 }
 $onA = ($ST -eq $Want)
-if (-not $onA) { Say ('   no A: drive - Star Trek runs right here: ' + $ST + ' (the A: links are skipped)') 'Yellow' }
+if (-not $onA) { Say ('   -AnyLocation: Star Trek is set up right here: ' + $ST + ' (the A: links are skipped; the tools and manuals still expect A:)') 'Yellow' }
 $CC  = if ($onA) { 'A:\ClaudeComfy' } else { $CCdir }
 
 # Files from a GitHub "Download ZIP" carry Windows' downloaded-from-the-internet mark, which makes SmartScreen block

@@ -7,22 +7,27 @@ Justice's music-video production line, running locally on an NVIDIA RTX GPU:
 - **Subtitle Studio** puts the lyrics on timestamps.
 - The **Overseer** is the local AI in charge.
 
-**It runs without Claude.** Drop an MP3 into `Overseer\new_songs\` and the Overseer does everything with the local AI: the timing sheet, the art-style round, the shot list, every picture and video prompt, the checks, the FilmCraft edit. See [OPERATING.md](OPERATING.md). Claude is optional: it can still plan or fix things with few tokens.
+**Claude runs it through Claude Code**, the terminal version of Claude, which also works on Windows 10 LTSC where the desktop app can't. The local AI (the Overseer) does the production and the checking. Claude plans and fixes with few tokens. See [OPERATING.md](OPERATING.md).
 The production rules are in [README.txt](README.txt), the single source for rules.
 
-## Setup in four steps (no Git, no Claude needed)
+## Setup (no Git needed)
 
 1. Open https://github.com/JUSTIC3MAN/StarTrek → green **Code** button → **Download ZIP**.
 2. Right-click the ZIP → **Extract All…** (anywhere, e.g. Downloads).
 3. In the extracted folder, double-click **`SETUP NEW PC.bat`**. Windows may warn that the file came from the internet; choose **Run** / **Run anyway**.
    - **The PC has an A: drive:** setup copies everything to `A:\Ai projects\Star Trek`, the same place as on Justice's PC, and continues there. You can delete the extracted folder afterwards.
-   - **No A: drive:** setup runs right where you extracted it.
+   - **No A: drive:** setup lists your drives and offers to give one of them the letter A: (one admin prompt). Pick a drive with ~250 GB free, and avoid the one your games or apps live on, since their shortcuts would need redoing. Then it copies everything to `A:\Ai projects\Star Trek`.
 4. When it asks for a **Civitai API key**, paste it (civitai.com → avatar → Account settings → API Keys → Add API key), or press Enter to skip. Without the key, Star Trek runs on official stand-in models (stock Krea 2 Turbo, Comfy-Org MiniMax H3 REF2VA). Run the setup again later with the key and it switches to DaSiWa H3 and RedCraft by itself.
 
 The first run takes several hours, almost all of it downloads (~150 GB). Running it again is safe: finished steps are skipped and downloads resume.
 When it says **SETUP FINISHED**, double-click **`Open Star Trek.bat`**. That starts Comfort with ComfyUI and the local AI, and opens the Star Trek interface.
 
-> **For Claude** (if Claude is on this PC): run `SETUP NEW PC.bat` yourself and ask Justice only for the Civitai key. Don't take control of his screen.
+## Claude Code (the terminal)
+
+1. Install it once, in PowerShell: `irm https://claude.ai/install.ps1 | iex`. Then open a new window, run `claude` and sign in. It needs Windows 10 1809 or newer; LTSC 2019/2021 are fine.
+2. Double-click **`Claude Star Trek.bat`** in `A:\Ai projects\Star Trek`. Claude Code opens in the Star Trek folder and reads `CLAUDE.md`, which tells it how to run every program from the terminal.
+
+> **For Claude:** `SETUP NEW PC.bat` asks Justice for his Civitai key and maybe a drive letter, so he runs it himself in its own window. If it stops, read the last lines of `setup\setup_log.txt`, fix that one thing, and he runs it again. Never take control of his screen.
 
 ## What the PC needs
 
@@ -45,12 +50,12 @@ When it says **SETUP FINISHED**, double-click **`Open Star Trek.bat`**. That sta
 8. Pulls the local AI: `ollama pull qwen3.6:27b` (~18 GB). On a 32 GB card (5090) the stronger `qwen3.6:35b` fits: run `ollama pull qwen3.6:35b` and set `"model"` under `"llm"` in `Comfort\config.json`.
 9. Writes Comfort's settings for this PC and checks everything.
 
-Options: `SETUP NEW PC.bat -SkipModels` (everything but the models), `-AnyLocation` (set up where it is even with an A: drive).
+Options: `SETUP NEW PC.bat -SkipModels` (everything but the models), `-AnyLocation` (set up where it is, without A:; not recommended).
 Models only, any time: `ClaudeComfy\venv\Scripts\python.exe setup\download_models.py` (`--list` shows what is missing).
 
 ## Before the first start
 
-`Overseer\songs.txt` lists Justice's songs. A song whose project folder isn't on this PC is skipped; copy its project over first (see below). `Overseer\level.txt` sets how much the local AI checks: strict / light / off (README.txt, OVERSEER LEVELS).
+`Overseer\songs.txt` lists Justice's songs, and songs set to `auto` start producing as soon as Comfort runs. Copy each song's project over first (see below), or set it to `off` until you do; a song whose project folder is missing only fills its log with errors. `Overseer\level.txt` sets how much the local AI checks: strict / light / off (README.txt, OVERSEER LEVELS).
 
 ## What is in git and what is not
 
@@ -91,5 +96,5 @@ October 2026; if it asks for Buzz (payment) now, Star Trek simply stays on stock
 ## Updating
 
 Download the ZIP again, extract it and double-click `SETUP NEW PC.bat`. On A: it updates `A:\Ai projects\Star Trek`
-and keeps this PC's own settings: `Overseer\songs.txt`, `level.txt`, `planner.json`, `Comfort\config.json`.
-Without an A: drive, extract the new ZIP over the old Star Trek folder first. A PC with Git can `git pull` instead. Media (`Comfort\out`, `Preview`) is never in git: copy it by drive when needed.
+and keeps this PC's own settings: `Overseer\songs.txt`, `level.txt`, `Comfort\config.json`.
+A PC with Git can `git pull` in `A:\Ai projects\Star Trek` instead. Media (`Comfort\out`, `Preview`) is never in git: copy it by drive when needed.
