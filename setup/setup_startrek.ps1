@@ -44,15 +44,7 @@ function Winget([string]$id, [string]$what) {
             Start-Process -Wait "$t.exe" '/quiet InstallAllUsers=0 InstallLauncherAllUsers=0 Include_launcher=1 PrependPath=1 Include_test=0'
             $env:Path = (Join-Path $env:LOCALAPPDATA 'Programs\Python\Launcher') + ';' + $env:Path
         }
-        'Gyan.FFmpeg' {
-            Download 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip' "$t.zip"
-            Expand-Archive -Force "$t.zip" "$t"
-            $bin = (Get-ChildItem -Directory $t | Select-Object -First 1).FullName + '\bin'
-            New-Item -ItemType Directory -Path 'C:\ffmpeg' -Force | Out-Null
-            Copy-Item -Recurse -Force $bin 'C:\ffmpeg\'
-            $up = [Environment]::GetEnvironmentVariable('Path', 'User')
-            if ($up -notlike '*C:\ffmpeg\bin*') { [Environment]::SetEnvironmentVariable('Path', ($up.TrimEnd(';') + ';C:\ffmpeg\bin'), 'User') }
-        }
+        'Gyan.FFmpeg' { Install-FFmpegZip }
         'Ollama.Ollama' {
             Download 'https://ollama.com/download/OllamaSetup.exe' "$t.exe"; Start-Process -Wait "$t.exe" '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES'
         }
@@ -65,6 +57,36 @@ function Winget([string]$id, [string]$what) {
         }
     }
     Refresh-Path
+}
+function Add-UserPath([string]$dir) {
+    # put a folder on this user's PATH for good, and on this window's PATH now (works when the user PATH is empty)
+    $up = [Environment]::GetEnvironmentVariable('Path', 'User'); if (-not $up) { $up = '' }
+    if (($up -split ';') -notcontains $dir) { [Environment]::SetEnvironmentVariable('Path', (($up.TrimEnd(';') + ';' + $dir).TrimStart(';')), 'User') }
+    if (($env:Path -split ';') -notcontains $dir) { $env:Path = $dir + ';' + $env:Path }
+}
+function Find-FFmpeg {
+    # wherever ffmpeg ended up: the direct download, a winget install (Links or its package folder), a hand install
+    $dirs = @('C:\ffmpeg\bin', (Join-Path $env:LOCALAPPDATA 'Microsoft\WinGet\Links'), 'C:\Program Files\ffmpeg\bin')
+    foreach ($root in (Join-Path $env:LOCALAPPDATA 'Microsoft\WinGet\Packages'), 'C:\Program Files\WinGet\Packages') {
+        if (Test-Path $root) {
+            Get-ChildItem -Directory $root -Filter 'Gyan.FFmpeg*' -ErrorAction SilentlyContinue | ForEach-Object {
+                $hit = Get-ChildItem -Recurse -File -Filter ffmpeg.exe $_.FullName -ErrorAction SilentlyContinue | Select-Object -First 1
+                if ($hit) { $dirs += $hit.DirectoryName }
+            }
+        }
+    }
+    foreach ($d in $dirs) { if ($d -and (Test-Path (Join-Path $d 'ffmpeg.exe'))) { return $d } }
+    return $null
+}
+function Install-FFmpegZip {
+    $z = Join-Path $env:TEMP 'st_ffmpeg.zip'; $x = Join-Path $env:TEMP 'st_ffmpeg'
+    Download 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip' $z
+    if (Test-Path $x) { Remove-Item -Recurse -Force $x }
+    Expand-Archive -Force $z $x
+    $exe = Get-ChildItem -Recurse -File -Filter ffmpeg.exe $x | Select-Object -First 1
+    if (-not $exe) { Stop-Setup 'the ffmpeg download had no ffmpeg.exe in it' }
+    New-Item -ItemType Directory -Path 'C:\ffmpeg\bin' -Force | Out-Null
+    Copy-Item -Force (Join-Path $exe.DirectoryName '*') 'C:\ffmpeg\bin\'
 }
 function Download([string]$url, [string]$out) {
     & curl.exe -L --fail --retry 5 -C - -o $out $url
@@ -121,7 +143,12 @@ if (-not (Have 'git'))    { Winget 'Git.Git' 'Git' }
 & git config --global core.longpaths true
 $py312 = $false; if (Have 'py') { & py -3.12 -c "import sys" 2>$null; $py312 = ($LASTEXITCODE -eq 0) }
 if (-not $py312)          { Winget 'Python.Python.3.12' 'Python 3.12' }
-if (-not (Have 'ffmpeg')) { Winget 'Gyan.FFmpeg' 'ffmpeg' }
+if (-not (Have 'ffmpeg')) {
+    $ff = Find-FFmpeg
+    if (-not $ff) { Winget 'Gyan.FFmpeg' 'ffmpeg'; $ff = Find-FFmpeg }
+    if (-not $ff -and -not (Have 'ffmpeg')) { Say 'ffmpeg still missing - downloading it directly ...'; Install-FFmpegZip; $ff = Find-FFmpeg }
+    if ($ff) { Add-UserPath $ff; Say ('   ffmpeg: ' + $ff) }
+}
 $ollama = Join-Path $env:LOCALAPPDATA 'Programs\Ollama\ollama.exe'
 if (-not (Have 'ollama') -and -not (Test-Path $ollama)) { Winget 'Ollama.Ollama' 'Ollama' }
 if (-not (Test-Path (Join-Path $env:WINDIR 'System32\vcruntime140_1.dll'))) { Winget 'Microsoft.VCRedist.2015+.x64' 'Visual C++ runtime' }
