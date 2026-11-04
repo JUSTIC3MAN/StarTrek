@@ -100,7 +100,11 @@ function Junction([string]$old, [string]$new) {
     }
     $parent = Split-Path -Parent $old
     if (-not (Test-Path -LiteralPath $parent)) { New-Item -ItemType Directory -Path $parent -Force | Out-Null }
-    cmd /c mklink /J "$old" "$new" | Out-Null
+    $target = $new
+    $dd = (Get-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\DOS Devices' -ErrorAction SilentlyContinue).'A:'
+    if (-not $dd) { $sl = (& subst.exe) | Where-Object { $_ -like 'A:\*' } | Select-Object -First 1; if ($sl) { $dd = ($sl -split '=> ')[1] } }
+    if ($dd -and $target -like 'A:*') { $target = ($dd -replace '^\\\?\?\\', '').TrimEnd('\') + $target.Substring(2) }
+    cmd /c mklink /J "$old" "$target" | Out-Null
     Say ("   made " + $old + " -> " + $new)
 }
 
@@ -113,22 +117,27 @@ Say ('   folder: ' + $ST)
 # project expects it) and the setup carries on from there. Without an A: drive it runs right where it is.
 Step 'Location'
 if (-not (Test-Path 'A:\') -and -not $AnyLocation) {
-    # Justice's tools, Claude's manuals and the song projects all use A:\Ai projects\Star Trek - give a drive the letter A:
-    Say 'This PC has no A: drive. Star Trek lives on A:\Ai projects\Star Trek (its tools, manuals and song projects use that path).' 'Yellow'
-    Get-Volume | Where-Object { $_.DriveLetter -and $_.DriveType -eq 'Fixed' } | Sort-Object DriveLetter | ForEach-Object {
-        Say ('   ' + $_.DriveLetter + ':  ' + $_.FileSystemLabel + '  ' + [int]($_.SizeRemaining / 1GB) + ' GB free of ' + [int]($_.Size / 1GB) + ' GB')
+    # No A: drive: make one. A:\ is the folder C:\A (nothing is renamed or moved; the C: drive stays as it is).
+    # Now for this session with subst; for every restart through Windows' DOS Devices registry key (one admin prompt).
+    $root = 'C:\A'
+    $free = [int]((Get-PSDrive C).Free / 1GB)
+    Say ('This PC has no A: drive - making A: from ' + $root + ' (C: has ' + $free + ' GB free; Star Trek needs about 250 GB)') 'Yellow'
+    if ($free -lt 250) { Say '   NOTE: less than 250 GB free on C: - the model downloads may run out of space' 'Yellow' }
+    New-Item -ItemType Directory -Path $root -Force | Out-Null
+    & subst.exe A: $root | Out-Null
+    if (-not (Test-Path 'A:\')) { Stop-Setup 'could not make the A: drive (subst A: C:\A failed)' }
+    $reg = "New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\DOS Devices' -Name 'A:' -Value '\??\C:\A' -PropertyType String -Force | Out-Null"
+    Say '   Windows will ask for admin permission once, so A: stays after restarts - choose Yes.'
+    try {
+        Start-Process powershell -Verb RunAs -Wait -WindowStyle Hidden -ArgumentList ('-NoProfile -EncodedCommand ' + [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($reg)))
+    } catch { }
+    $kept = (Get-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\DOS Devices' -ErrorAction SilentlyContinue).'A:'
+    if ($kept) { Say '   A: drive made (C:\A) and kept after restarts' 'Green' }
+    else {
+        # no admin: map A: at every login instead (works for Star Trek, which runs as you)
+        Set-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Run' -Name 'Star Trek A drive' -Value 'subst.exe A: C:\A'
+        Say '   A: drive made (C:\A); no admin permission, so it is mapped again at every login' 'Yellow'
     }
-    Say 'Pick a drive with about 250 GB free to become A:. Programs installed on that drive keep working, but their shortcuts' 'Yellow'
-    Say 'and anything that remembers the old letter must be redone. The system drive (C:) cannot be used.' 'Yellow'
-    $d = (Read-Host 'Letter of the drive that should become A: (Enter = stop)').Trim().TrimEnd(':').ToUpper()
-    if (-not $d) { Stop-Setup 'no A: drive - run the setup again when you have picked one' }
-    if ($d -eq $env:SystemDrive.Substring(0, 1).ToUpper() -or -not (Test-Path ($d + ':\'))) { Stop-Setup ($d + ': cannot become A:') }
-    Stop-Transcript | Out-Null
-    Start-Process powershell -Verb RunAs -Wait -ArgumentList ('-NoProfile -Command "Get-Partition -DriveLetter ' + $d + ' | Set-Partition -NewDriveLetter A"')
-    if (-not (Test-Path 'A:\')) { Say 'The drive letter did not change (the admin prompt was declined?).' 'Red'; exit 1 }
-    if ($ST.Substring(0, 1).ToUpper() -eq $d) { $ST = 'A' + $ST.Substring(1); $Setup = Join-Path $ST 'setup'; $CCdir = Join-Path $ST 'ClaudeComfy' }
-    $Log = Join-Path $ST 'setup\setup_log.txt'; Start-Transcript -Path $Log -Append | Out-Null
-    Say ('   ' + $d + ': is now A:') 'Green'
 }
 if ($ST -ne $Want -and (Test-Path 'A:\') -and -not $AnyLocation) {
     $fresh = -not (Test-Path (Join-Path $Want 'SETUP NEW PC.bat'))

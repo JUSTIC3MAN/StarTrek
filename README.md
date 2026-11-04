@@ -16,7 +16,7 @@ The production rules are in [README.txt](README.txt), the single source for rule
 2. Right-click the ZIP → **Extract All…** (anywhere, e.g. Downloads).
 3. In the extracted folder, double-click **`SETUP NEW PC.bat`**. Windows may warn that the file came from the internet; choose **Run** / **Run anyway**.
    - **The PC has an A: drive:** setup copies everything to `A:\Ai projects\Star Trek`, the same place as on Justice's PC, and continues there. You can delete the extracted folder afterwards.
-   - **No A: drive:** setup lists your drives and offers to give one of them the letter A: (one admin prompt). Pick a drive with ~250 GB free, and avoid the one your games or apps live on, since their shortcuts would need redoing. Then it copies everything to `A:\Ai projects\Star Trek`.
+   - **No A: drive:** setup makes one: **A: is the folder `C:\A`**. Nothing is renamed or moved. Windows asks for admin permission once (choose **Yes**) so A: stays after restarts. Everything installs to `A:\Ai projects\Star Trek`, which is really `C:\A\Ai projects\Star Trek`. You need about 250 GB free on C:.
 4. When it asks for a **Civitai API key**, paste it (civitai.com → avatar → Account settings → API Keys → Add API key), or press Enter to skip. Without the key, Star Trek runs on official stand-in models (stock Krea 2 Turbo, Comfy-Org MiniMax H3 REF2VA). Run the setup again later with the key and it switches to DaSiWa H3 and RedCraft by itself.
 
 The first run takes several hours, almost all of it downloads (~150 GB). Running it again is safe: finished steps are skipped and downloads resume.
