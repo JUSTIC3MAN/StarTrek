@@ -14,9 +14,10 @@ The production rules are in [README.txt](README.txt), the single source for rule
 
 1. Open https://github.com/JUSTIC3MAN/StarTrek → green **Code** button → **Download ZIP**.
 2. Right-click the ZIP → **Extract All…** (anywhere, e.g. Downloads).
-3. In the extracted folder, double-click **`SETUP NEW PC.bat`**. Windows may warn that the file came from the internet; choose **Run** / **Run anyway**.
-   - **The PC has an A: drive:** setup copies everything to `A:\Ai projects\Star Trek`, the same place as on Justice's PC, and continues there. You can delete the extracted folder afterwards.
-   - **No A: drive:** setup makes one: **A: is the folder `C:\A`**. Nothing is renamed or moved. Windows asks for admin permission once (choose **Yes**) so A: stays after restarts. Everything installs to `A:\Ai projects\Star Trek`, which is really `C:\A\Ai projects\Star Trek`. You need about 250 GB free on C:.
+3. Put the extracted folder where you want Star Trek to live (e.g. `C:\Users\<you>\Documents\Star Trek\StarTrek-main\StarTrek-main`) and double-click **`SETUP NEW PC.bat`** in it. Windows may warn that the file came from the internet; choose **Run**.
+   - **The files stay in that folder.** Setup makes **`A:\Ai projects\Star Trek`** a link to it, because Justice's tools, Claude's manuals and the song projects all use that path. Everything installs into your folder; the A: path just points there.
+   - **No A: drive:** setup makes one from the small folder `C:\A`, which holds only the links. Nothing is renamed or moved. Windows asks for admin permission once (choose **Yes**) so A: stays after restarts.
+   - Models and environments need about **250 GB** free on the drive your folder is on.
 4. When it asks for a **Civitai API key**, paste it (civitai.com → avatar → Account settings → API Keys → Add API key), or press Enter to skip. Without the key, Star Trek runs on official stand-in models (stock Krea 2 Turbo, Comfy-Org MiniMax H3 REF2VA). Run the setup again later with the key and it switches to DaSiWa H3 and RedCraft by itself.
 
 The first run takes several hours, almost all of it downloads (~150 GB). Running it again is safe: finished steps are skipped and downloads resume.
@@ -25,7 +26,7 @@ When it says **SETUP FINISHED**, double-click **`Open Star Trek.bat`**. That sta
 ## Claude Code (the terminal)
 
 1. Install it once, in PowerShell: `irm https://claude.ai/install.ps1 | iex`. Then open a new window, run `claude` and sign in. It needs Windows 10 1809 or newer; LTSC 2019/2021 are fine.
-2. Double-click **`Claude Star Trek.bat`** in `A:\Ai projects\Star Trek`. Claude Code opens in the Star Trek folder and reads `CLAUDE.md`, which tells it how to run every program from the terminal.
+2. Double-click **`Claude Star Trek.bat`** in your Star Trek folder. Claude Code opens in the Star Trek folder and reads `CLAUDE.md`, which tells it how to run every program from the terminal.
 
 > **For Claude:** `SETUP NEW PC.bat` asks Justice for his Civitai key and maybe a drive letter, so he runs it himself in its own window. If it stops, read the last lines of `setup\setup_log.txt`, fix that one thing, and he runs it again. Never take control of his screen.
 

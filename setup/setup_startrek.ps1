@@ -101,9 +101,11 @@ function Junction([string]$old, [string]$new) {
     $parent = Split-Path -Parent $old
     if (-not (Test-Path -LiteralPath $parent)) { New-Item -ItemType Directory -Path $parent -Force | Out-Null }
     $target = $new
+    $home_ = Get-Item -LiteralPath $Want -Force -ErrorAction SilentlyContinue
+    if ($home_ -and $home_.LinkType -eq 'Junction' -and $target -like ($Want + '*')) { $target = (@($home_.Target)[0]).TrimEnd('\') + $target.Substring($Want.Length) }
     $dd = (Get-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\DOS Devices' -ErrorAction SilentlyContinue).'A:'
     if (-not $dd) { $sl = (& subst.exe) | Where-Object { $_ -like 'A:\*' } | Select-Object -First 1; if ($sl) { $dd = ($sl -split '=> ')[1] } }
-    if ($dd -and $target -like 'A:*') { $target = ($dd -replace '^\\\?\?\\', '').TrimEnd('\') + $target.Substring(2) }
+    if ($dd -and $target -like 'A:*' -and $target -notlike ($Want + '*')) { $target = ($dd -replace '^\\\?\?\\', '').TrimEnd('\') + $target.Substring(2) }
     cmd /c mklink /J "$old" "$target" | Out-Null
     Say ("   made " + $old + " -> " + $new)
 }
@@ -140,16 +142,22 @@ if (-not (Test-Path 'A:\') -and -not $AnyLocation) {
     }
 }
 if ($ST -ne $Want -and (Test-Path 'A:\') -and -not $AnyLocation) {
-    $fresh = -not (Test-Path (Join-Path $Want 'SETUP NEW PC.bat'))
-    Say ('   ' + ($(if ($fresh) { 'copying' } else { 'updating' })) + ' Star Trek in ' + $Want + ' ...')
-    New-Item -ItemType Directory -Path $Want -Force | Out-Null
-    # an update never overwrites this PC's own state (which songs run, the check level, Comfort's settings)
-    & robocopy $ST $Want /E /R:1 /W:1 /NFL /NDL /NJH /NJS /NP /XF songs.txt level.txt config.json launcher.json planner.json /XD .git | Out-Null
-    if ($LASTEXITCODE -ge 8) { Stop-Setup ('could not copy to ' + $Want) }
-    foreach ($f in 'Overseer\songs.txt', 'Overseer\level.txt', 'Comfort\config.json', 'Comfort\launcher.json', 'Overseer\planner.json') {
-        if (-not (Test-Path (Join-Path $Want $f)) -and (Test-Path (Join-Path $ST $f))) { Copy-Item (Join-Path $ST $f) (Join-Path $Want $f) }
+    $it = Get-Item -LiteralPath $Want -Force -ErrorAction SilentlyContinue
+    if ($it -and $it.LinkType -ne 'Junction') {
+        # an older Star Trek already lives in A:\Ai projects\Star Trek: update it (this PC's own settings are kept)
+        Say ('   updating the Star Trek in ' + $Want + ' ...')
+        & robocopy $ST $Want /E /R:1 /W:1 /NFL /NDL /NJH /NJS /NP /XF songs.txt level.txt config.json launcher.json /XD .git | Out-Null
+        if ($LASTEXITCODE -ge 8) { Stop-Setup ('could not copy to ' + $Want) }
+    } else {
+        # the files stay where they are: A:\Ai projects\Star Trek becomes a link to this folder, so every tool and manual
+        # finds them at the A: path
+        if ($it) { cmd /c rmdir "$Want" | Out-Null }
+        New-Item -ItemType Directory -Path (Split-Path -Parent $Want) -Force | Out-Null
+        cmd /c mklink /J "$Want" "$ST" | Out-Null
+        if (-not (Test-Path (Join-Path $Want 'SETUP NEW PC.bat'))) { Stop-Setup ('could not link ' + $Want + ' to ' + $ST) }
+        Say ('   ' + $Want + ' -> ' + $ST + '  (the files stay in this folder)') 'Green'
     }
-    Say ('   done - continuing the setup in ' + $Want + ' (the unzipped folder ' + $ST + ' can be deleted afterwards)')
+    Say ('   continuing the setup through ' + $Want)
     Stop-Transcript | Out-Null
     $more = @(); if ($SkipModels) { $more += '-SkipModels' }
     & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $Want 'setup\setup_startrek.ps1') @more
