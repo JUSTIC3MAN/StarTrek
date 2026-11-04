@@ -1,0 +1,41 @@
+# Python packages for the custom nodes in ComfyUI\custom_nodes (collected from each pack's requirements.txt).
+# Left out on purpose: llama-cpp-python (DaSiWa Prompt Forge local GGUF backend - needs a C++ compiler; Ollama/OpenAI-compatible servers work without it)
+#                      amd-adlx (AMD GPU monitoring only)
+
+# ComfyUI-KJNodes
+pillow>=10.3.0
+color-matcher
+matplotlib
+mss
+opencv-python-headless
+
+# ComfyUI-VideoHelperSuite
+opencv-python
+imageio-ffmpeg
+
+# ComfyUI-Easy-Use
+diffusers
+accelerate
+clip_interrogator>=0.6.0
+lark
+onnxruntime
+sentencepiece
+spandrel
+peft
+
+# ComfyUI-GGUF
+gguf>=0.13.0
+protobuf
+
+# ComfyUI-DaSiWa-Nodes (PyAV 18.1 is the version DaSiWa tested its H3 continuity code against)
+transformers>=4.45.0
+psutil>=5.9
+av==18.1.0
+safetensors
+nvidia-ml-py
+
+# ComfyUI-VFI (RIFE)
+requests
+
+# Model downloads
+huggingface_hub[hf_xet]

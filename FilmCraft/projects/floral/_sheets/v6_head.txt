@@ -1,0 +1,17 @@
+# Marie Vie - FLORAL v6 (2026-11-03): the whole song by THE PROCESS (Star Trek README). Replaces the fixed 1-bar cutting from 0:17 on.
+# Locked: Justice's approved opening 0-17.37 (in1, in2). One scene per section, shots 1.5-2.5 bars (1 bar only on a chorus hit),
+# a transition on every cut, no shot used twice. Rendered v4/ext footage is reused only where it fits its section's scene,
+# from measured in-points (clip file@sec) so no shot runs into the next picture of its run. Old list: floral.shots.txt.bak-before-v6.
+#title Marie Vie - FLORAL
+#songmap FLORAL.songmap.json
+#music FLORAL.mp3
+#copy A:\Ai projects\Star Trek\Preview\Marie Vie - FLORAL\FLORAL full edit.mp4
+#pics floral_v6
+#queue a
+#end 248.69
+#inpoint 0.8
+#tail 4.5
+#people none (nature only)
+#neg no people, no hands, no text, no watermark, no border, no frame, no blank paper
+#subject2 nature only: no people appear anywhere.
+#sound Wind, rain, water and nature sounds that fit each shot.

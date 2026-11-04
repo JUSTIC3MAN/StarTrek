@@ -1,0 +1,6 @@
+#size 1376x768
+#n 1
+#seed random
+#style none
+#name talawa_e01_a04_locks_flag_f1
+[label=a04_locks_flag lora=graphic-novel-earthy-ink-comfy.safetensors:1.1] one man with short locks in a khaki jacket and khaki trousers, fully clothed, seen from behind at shoulder height, standing beside a stack of hand-painted wooden sound system speakers on a green hilltop, his locks and a Rasta flag with three horizontal stripes, red on top, gold in the middle, green at the bottom above him lifting in the wind, an enormous grey stone tower crumbling into dust across the valley in front of him, a rust-red sky, graphic novel earthy ink illustration, bold brush-ink contours, cross-hatched shadows and flat earthy color, over-the-shoulder view from behind him, his head and shoulders in the lower left, the falling tower in the right half, he is the only person, ochre, rust red, olive and ink black with the red, gold and green flag, no text, no letters, no watermark, no border, no frame, no blank paper, no photoreal, graphic novel earthy ink style

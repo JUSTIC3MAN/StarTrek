@@ -1,0 +1,4 @@
+#name pond_wide
+#size 1536x864
+#i2p pond.jpg
+Recompose this scene as a wide 16:9 landscape view, keeping the same style, colors and mood

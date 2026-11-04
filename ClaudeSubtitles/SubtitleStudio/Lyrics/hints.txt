@@ -1,0 +1,7 @@
+# Names and slang for the recogniser to listen for, one per line.
+# Used for every song in this folder. Lines starting with # are ignored.
+# For one song only, make "<song name>.hints.txt" next to it - rough lyrics work there too.
+Justice Man
+Iration
+mae
+pura vida

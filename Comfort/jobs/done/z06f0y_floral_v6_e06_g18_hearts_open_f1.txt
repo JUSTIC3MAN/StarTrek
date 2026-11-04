@@ -1,0 +1,6 @@
+#size 1376x768
+#n 1
+#seed random
+#style none
+#name floral_v6_e06_g18_hearts_open_f1
+[label=g18_hearts_open wf=edit image=floral_v6_p06/02-1_g14_coast_flowers.png lora=pastel-rainbow-watercolor-comfy.safetensors:1.1] the same place, the same light and the same art style as this picture, now top-down shot over the flowers: thousands of purple flowers opening at once along the coast, their golden hearts shining, wet-on-wet watercolor painting, deep saturated violet and magenta pigment blooming and bleeding into each other, dark pooled edges, soft teal-blue accents and visible paper grain, the washes filling the whole frame, sunlit gold, violet, magenta and teal-blue, no people, no hands, no text, no watermark, no border, no frame, no blank paper, pastel rainbow watercolor style

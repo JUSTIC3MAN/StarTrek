@@ -1,0 +1,83 @@
+# built by song_cut.py from talawa.plan.json - edit talawa.shots.txt and rerun song_jobs.py, not this file
+out projects/talawa/talawa.mp4
+size 1920x1080@60
+fadein 18
+clipaudio off
+musicfull off
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r01_stage60.mp4 0.400-3.560   # i01_needle_drop @0.00
+> cross_zoom 13 strength=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_r01_stage60.mp4 5.400-8.940   # a02_speaker_cones @3.16
+> push 13 direction=north
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r01_stage60.mp4 5.400-8.960   # i03_flag_close @6.70
+> luma_fade 13
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_r02_stage60.mp4 0.400-3.940   # a04_locks_flag @10.26
+> light_leak 26 color=#e0a040 amount=55
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_r02_stage60.mp4 5.400-8.960   # b01_chopper_field @13.80
+> push 13 direction=east
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_r02_stage60.mp4 10.400-13.960   # b02_side_door @17.36
+> cross_zoom 13 strength=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_r03_stage60.mp4 1.460-4.970   # b03_cockpit_herb @20.92
+speed 1.460-4.970 99.2
+> blur_dissolve 13 blur=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r01_stage60.mp4 10.400-14.400   # h04_hand_leaf @24.46
+> luma_fade 26
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r02_stage60.mp4 0.400-3.960   # s01_street_dusk @28.46
+> cross_zoom 13 strength=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r02_stage60.mp4 5.400-8.960   # s02_amp_valves @32.02
+> push 13 direction=west
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r02_stage60.mp4 12.000-14.970   # s04_record_crate @35.58
+speed 12.000-14.970 83.4
+> light_leak 20 color=#ffb050 amount=50
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r03_stage60.mp4 1.270-4.600   # s03_bulbs_on @39.14
+speed 1.270-4.600 94.1
+> flare 14 color=#ffb050
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r04_stage60.mp4 0.400-3.960   # c03_sound_stack @42.68
+> cross_zoom 13 strength=25
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r04_t1_stage60.mp4 5.400-8.960   # v3_08_phones @46.24
+> push 13 direction=south
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r04_stage60.mp4 10.400-13.960   # c02_hands_phones @49.80
+> blur_dissolve 13 blur=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r05_t1_stage60.mp4 0.400-3.520   # c04_aerial_lights @53.36
+> light_leak 26 color=#ff9a40 amount=55
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r05_stage60.mp4 5.400-8.960   # d01_drum_circle @56.48
+> cross_zoom 13 strength=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r05_t1_stage60.mp4 10.400-13.960   # v3_11_drum @60.04
+> blur_dissolve 13 blur=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r06_t1_stage60.mp4 0.400-3.940   # v2_10_boots @63.60
+> push 13 direction=west
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r06_t1_stage60.mp4 5.400-7.870   # d05_fire_dancers @67.14
+speed 5.400-7.870 69.0
+> blur_dissolve 16 blur=40
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r07_stage60.mp4 0.400-3.940   # e1_rags_rain @70.72
+> push 12 direction=east
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r07_stage60.mp4 5.400-7.160   # e5_grandma_umbrella @74.26
+> blur_dissolve 12 blur=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r07_stage60.mp4 10.670-12.470   # e2_couple_rain @76.02
+> cross_zoom 12 strength=25
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r08_stage60.mp4 0.400-2.180   # c05_rain_crowd @77.82
+> push 12 direction=south
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r08_t1_stage60.mp4 5.400-7.180   # r04_puddle_feet @79.60
+> wave 12
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r08_stage60.mp4 10.400-12.180   # e3_crowd_jump @81.38
+> blur_dissolve 13 blur=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r09_stage60.mp4 0.400-2.600   # r05_khaki_rebels @83.16
+> flash 8
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r09_stage60.mp4 5.400-8.940   # v3_12_lion @85.36
+> cross_zoom 13 strength=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r09_stage60.mp4 10.400-12.200   # l02_lion_eyes @88.90
+> push 12 direction=south
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r10_stage60.mp4 0.400-3.230   # l03_paw_rock @90.70  (holding for the next shot)
+speed 0.400-3.230 53.2
+> blur_dissolve 13 blur=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r10_stage60.mp4 10.400-13.960   # l05_lion_roar @96.02
+> light_leak 26 color=#ffb050 amount=50
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r11_stage60.mp4 0.400-3.960   # b6_brass_street @99.58
+> cross_zoom 13 strength=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r11_stage60.mp4 5.970-8.370   # b6_brass_bells @103.14
+speed 5.970-8.370 67.4
+> push 13 direction=east
+clip A:\Ai projects\Star Trek\Comfort\out\videos\talawa_v2_r11_t2_stage60.mp4 10.400-14.970   # b6_brethren_hug @106.70  (holding for the next shot)
+speed 10.400-14.970 64.4
+fadeout 120
+music Talawa.mp3
+copy A:\Ai projects\Star Trek\Preview\Talawa\Talawa (full song).mp4

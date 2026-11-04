@@ -1,0 +1,6 @@
+#size 1376x768
+#n 1
+#seed random
+#style none
+#name floral_v6_e04_gl06_drop_rings_f2
+[label=gl06_drop_rings wf=edit image=floral_v6_p04/02-1_gl01_glass_waves.png lora=early-cgi-surreal-render-comfy.safetensors:1.1] the same place, the same light and the same art style as this picture, now low macro at the surface: a glass droplet falling into the glass sea and sending out rings of light, surreal translucent render, forms like glowing glass with iridescent violet and blue light inside, intricate fractal layers and soft volumetric glow, the image filling the frame edge to edge, deep violet, magenta, indigo and electric blue-teal, no people, no hands, no text, no watermark, no border, no frame, no blank paper, early cgi surreal render style

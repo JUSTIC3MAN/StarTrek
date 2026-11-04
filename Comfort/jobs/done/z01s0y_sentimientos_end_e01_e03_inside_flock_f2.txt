@@ -1,0 +1,6 @@
+#size 1376x768
+#n 1
+#seed random
+#style none
+#name sentimientos_end_e01_e03_inside_flock_f2
+[label=e03_inside_flock wf=edit image=sentimientos_end_p01/01-1_e01_house_birds.png lora=airy-gouache-minimalist-comfy.safetensors:1.1] the same place, the same light and the same carved print as this picture, now close, in the middle of the flock: small birds of coral, teal and gold flying close past the camera through the open dusk sky, their wings crisp flat gouache shapes against soft peach clouds, no people, airy minimalist gouache illustration, flat matte color shapes, soft paper grain, lots of open space and a calm limited palette, coral, teal, lilac, cream, ochre and deep blue, no text, no watermark, no border, no frame, no blank paper, no photoreal, airy gouache minimalist style

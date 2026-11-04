@@ -1,0 +1,6 @@
+#name lily_space_keys
+#size 1376x768
+#n 1
+#seed random
+#style none
+[label=k6] A vast dreamy cosmos of deep blue space with a glowing nebula of emerald green, radiant gold and soft violet, countless stars, round green lily pads floating among the stars like small drifting planets, a single white water lily glowing at the center like a bright star, faint rings of light spreading through space as if it were still water, dreamy painterly digital illustration with soft brushstroke textures and rich saturated hues blending emerald greens, radiant golds and cool blues, a peaceful, almost magical atmosphere. Wide view, the glowing lily centered, the nebula sweeping across the frame. Soft cosmic glow, colors of deep blue, emerald green, radiant gold, violet and white, no people, no text, no watermark.

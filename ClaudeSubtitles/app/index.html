@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subtitle Animator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/app/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <button id="btnPanel" class="ghost icon" title="Hide the controls for a bigger preview  (Tab)">&#9776;</button>
+    <span class="dot"></span>
+    <h1>Subtitle Animator</h1>
+  </div>
+  <div class="topactions">
+    <label class="inline">
+      <span>Preset</span>
+      <select id="presetSelect"><option value="">— custom —</option></select>
+    </label>
+    <button id="btnSaveSettings" class="ghost" title="Save all current settings to a .json file">Save look</button>
+    <button id="btnLoadSettings" class="ghost" title="Load a previously saved look">Load look</button>
+    <input type="file" id="fileSettings" accept=".json" hidden>
+    <button id="btnReset" class="ghost">Reset</button>
+    <span class="divider"></span>
+    <button id="btnExport" class="primary">Export</button>
+  </div>
+</header>
+
+<main class="layout" id="layout">
+
+  <!-- ================================================= controls ========= -->
+  <aside class="panel" id="panel">
+    <div id="controls"></div>
+  </aside>
+
+  <!-- ================================================== preview ========= -->
+  <section class="stage">
+
+    <!-- row 1: transport -->
+    <div class="bar">
+      <button id="btnPlay" class="play" title="Play / pause  (Space)">&#9654;</button>
+      <button id="btnStart" class="ghost icon" title="Back to start  (Home)">&#9198;</button>
+      <input type="range" id="scrub" min="0" max="1" step="0.001" value="0">
+      <span class="time"><b id="tNow">0.00</b> / <span id="tEnd">4.00</span>s</span>
+      <label class="inline small"><input type="checkbox" id="loopChk" checked><span>Loop</span></label>
+    </div>
+
+    <!-- row 2: view + output -->
+    <div class="bar bar2">
+      <div class="segmented" id="bgPicker">
+        <button data-bg="checker" class="on" title="Checkerboard shows the transparency">Checker</button>
+        <button data-bg="black">Black</button>
+        <button data-bg="white">White</button>
+        <button data-bg="image" title="Load a frame grab from your video to preview against">Still…</button>
+      </div>
+      <input type="file" id="fileBg" accept="image/*" hidden>
+
+      <label class="inline small">
+        <span>Zoom</span>
+        <select id="zoomSelect">
+          <option value="fit">Fit</option>
+          <option value="1">100%</option>
+          <option value="0.75">75%</option>
+          <option value="0.5">50%</option>
+          <option value="0.33">33%</option>
+          <option value="0.25">25%</option>
+        </select>
+      </label>
+
+      <label class="inline small" title="Drop to Fast only if playback stutters. Export is always full quality.">
+        <span>Preview</span>
+        <select id="qualitySelect">
+          <option value="full">Full</option>
+          <option value="fast">Fast</option>
+        </select>
+      </label>
+
+      <span class="fps" id="fpsReadout">—</span>
+
+      <span class="divider"></span>
+
+      <span class="barlabel">Output</span>
+      <label class="inline small">
+        <span>Name</span>
+        <input type="text" id="fileName" value="subtitle" spellcheck="false">
+      </label>
+      <label class="inline small">
+        <span>Format</span>
+        <select id="codecSelect"></select>
+      </label>
+      <label class="inline small" title="Splits your text on blank lines and renders one file per block — good for a whole song in one go.">
+        <input type="checkbox" id="batchChk"><span>File per block</span>
+      </label>
+    </div>
+
+    <!-- the preview fills everything that's left -->
+    <div class="canvaswrap" id="canvasWrap">
+      <div class="canvasholder" id="canvasHolder">
+        <canvas id="preview"></canvas>
+      </div>
+    </div>
+
+    <div class="progress" id="progressWrap" hidden>
+      <div class="pbar"><div class="pfill" id="pfill"></div></div>
+      <div class="prow">
+        <span id="pText">Rendering…</span>
+        <button id="btnCancel" class="ghost small">Cancel</button>
+      </div>
+    </div>
+
+    <div class="notice" id="notice" hidden></div>
+
+  </section>
+</main>
+
+<script src="/app/presets.js"></script>
+<script src="/app/engine.js"></script>
+<script src="/app/ui.js"></script>
+</body>
+</html>

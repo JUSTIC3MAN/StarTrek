@@ -1,0 +1,22 @@
+# built by song_cut.py from conqueress.plan.json - edit conqueress.shots.txt and rerun song_jobs.py, not this file
+out projects/conqueress/conqueress.mp4
+size 1920x1080@60
+fadein 24
+clipaudio off
+musicfull on
+clip A:\Ai projects\Star Trek\Comfort\out\videos\conq_v2_r01_stage60.mp4 1.200-4.490   # a01_harbour_wide @0.00
+speed 1.200-4.490 62.8
+> cross_zoom 12 strength=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\conq_v2_r01_stage60.mp4 5.400-9.980   # a02_sail_light @5.24
+speed 5.400-9.980 92.7
+> luma_fade 14
+clip A:\Ai projects\Star Trek\Comfort\out\videos\conq_v2_r01_stage60.mp4 10.400-14.980   # a03_prow_waves @10.18
+speed 10.400-14.980 93.1
+> blur_dissolve 12 blur=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\conq_v2_r02_stage60.mp4 0.420-3.720   # a04_harbour_high @15.10
+> flare 14 color=#ff7a2a
+clip A:\Ai projects\Star Trek\Comfort\out\videos\conq_v2_r03_stage60.mp4 2.090-4.980   # b01_sun_mars @18.40
+speed 2.090-4.980 88.1
+fadeout 60
+music Conqueress.mp3
+copy A:\Ai projects\Star Trek\Preview\Marie Vie - Conqueress\Conqueress v2.mp4

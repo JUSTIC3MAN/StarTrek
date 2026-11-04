@@ -1,0 +1,8 @@
+#name floral_v6_p06
+#size 1376x768
+#n 1
+#seed random
+#style none
+[label=n17_glasshouse_night lora=neon-cyberpunk-anime-comfy.safetensors:1.1] a ruined glasshouse on a cliff above the sea at night lighting up from inside, neon flowers bursting through every broken pane, neon cyberpunk anime illustration, glowing neon outlines, electric blue and magenta light, a painted illustrated background with no photographic detail, wide shot from the cliff, electric violet, magenta, cyan and deep indigo, no people, no hands, no text, no watermark, no border, no frame, no blank paper, neon cyberpunk anime style
+[label=g14_coast_flowers lora=pastel-rainbow-watercolor-comfy.safetensors:1.1] the whole coastline and the old sea wall covered in purple flowers at golden sunrise, wet-on-wet watercolor painting, deep saturated violet and magenta pigment blooming and bleeding into each other, dark pooled edges, soft teal-blue accents and visible paper grain, the washes filling the whole frame, high aerial shot along the coast, sunlit gold, violet, magenta and teal-blue, no people, no hands, no text, no watermark, no border, no frame, no blank paper, pastel rainbow watercolor style
+[label=o01_sunset_petals lora=pastel-rainbow-watercolor-comfy.safetensors:1.1] the sun setting over the sea, purple petals drifting down onto the old stone sea wall, wet-on-wet watercolor painting, deep saturated violet and magenta pigment blooming and bleeding into each other, dark pooled edges, soft teal-blue accents and visible paper grain, the washes filling the whole frame, wide shot from the wall, sunlit gold, violet, magenta and teal-blue, no people, no hands, no text, no watermark, no border, no frame, no blank paper, pastel rainbow watercolor style

@@ -1,0 +1,162 @@
+# Marie Vie - FAUNA: the whole song, shot by shot on the SongMap grid (song_jobs.py fauna -> plan + Comfort jobs)
+#title Marie Vie - FAUNA
+#songmap FAUNA.songmap.json
+#music FAUNA.mp3
+#copy A:\Ai projects\Star Trek\Preview\Marie Vie - FAUNA\FAUNA full edit.mp4
+#pics fauna_full
+#queue b
+#end 241.0
+#subject2 island nature and animals only: no people appear anywhere.
+#sound Night island sounds, waves, wind and animal calls that fit each shot.
+style I | lora=iridescent-anime-nightscape-comfy.safetensors:1.1 | iridescent anime nightscape, glowing bioluminescent color, shimmering night sky gradients and luminous hand-painted reflections | violet, teal, cyan and glowing gold | iridescent anime nightscape style | iridescent anime nightscape (glowing bioluminescent color, shimmering night-sky gradients, luminous hand-painted reflections)
+style Is | lora=iridescent-anime-nightscape-comfy.safetensors:1.1 | iridescent anime nightscape at sunset, glowing bioluminescent color, shimmering sky gradients and luminous hand-painted reflections | glowing gold, coral pink, violet and teal | iridescent anime nightscape style | iridescent anime nightscape at sunset (glowing color, shimmering sky gradients, luminous hand-painted reflections)
+
+# ---- already rendered: the y runs (0-59.86)
+@ 0 intro
+s2.84 | run fauna_ext_r01:0 | | i01
+s2.82 | run fauna_ext_r01:1 | | i02
+s2.82 | run fauna_ext_r01:2 | | i03
+s2.82 | run fauna_ext_r02:0 | | i04
+* | run fauna_ext_r02:1 | | i05
+@ 13.96 chorus 1
+s2.64 | run fauna_ext_r02:2 | luma_fade 53 invert=True | c01
+1 | run fauna_ext_r03:0 | | c02
+1 | run fauna_ext_r03:1 | | c03
+1 | run fauna_ext_r03:2 | | c04
+1 | run fauna_ext_r04:0 | | c05
+1 | run fauna_ext_r04:1 | | c06
+1 | run fauna_ext_r04:2 | | c07
+1 | run fauna_ext_r05:0 | | c08
+1 | run fauna_ext_r05:1 | | c09
+1 | run fauna_ext_r05:2 | | c10
+1 | run fauna_ext_r06:0 | | c11
+1 | run fauna_ext_r06:1 | | c12
+* | run fauna_ext_r06:2 | | c13
+@ 41.78 verse 1
+2 | run fauna_ext_r07:0 | wave 40 | v01
+s2.80 | run fauna_ext_r07:1 | | v02
+s2.80 | run fauna_ext_r07:2 | | v03
+s2.80 | run fauna_ext_r08:0 | | v04
+* | run fauna_ext_r08:1 | | v05
+@ 55.70 verse 2 'que desaparecieran todas las nubes'
+s2.10 | run fauna_ext_r08:2 | additive_dissolve 40 | w01
+s2.06 | run fauna_ext_r09:0 | | w02
+- | run fauna_ext_r09:1 | | x01
+- | run fauna_ext_r09:2 | | x02
+
+# ---- new: rest of verse 2 to the end of verse 4
+batch 3
+1 | I | | w03_moon_revealed | the full moon revealed as the clouds part, its light spilling over a calm island lagoon ; wide shot from the beach, the moon high in the frame | The last clouds slide away and the moonlight spreads across the lagoon while the camera rises
+1 | I | | w04_herons_lift | a flock of night herons lifting off the mangroves into the clearing sky ; low angle from the mangrove roots | The herons take off one after another and climb past the moon while the camera tilts up with them
+1.5 | I | | w05_star_mirror | a starry sky reflected perfectly in the still lagoon after the clouds have gone ; wide shot at the waterline, the horizon in the middle | The stars shimmer in the water as a slow ripple crosses it while the camera glides forward
+1 | =x01 | | x01_r1
+* | I | | w06_island_clear | the whole island glowing under a clear starry sky ; high aerial shot over the sea toward the island | The camera flies toward the island while its lights shimmer under the stars
+@ 69.6 verse 3 'en tus ojos y en tu brisa, la sintonía'
+2 | I | wave 30 | f01_jelly_pair | two glowing jellyfish drifting side by side, pulsing in sync ; underwater side view, both jellyfish in the frame | The two jellyfish pulse together and drift upward while the camera floats alongside
+1 | I | | f02_turtle_pair | two sea turtles swimming side by side through moonlit water ; underwater shot from below, the surface glowing above | The turtles glide forward together while the camera follows from below
+1 | I | | f03_firefly_sync | fireflies flashing in sync across the palm trees at night ; wide shot across the palm grove | Waves of fireflies flash on and off together while the camera slides sideways through the palms
+1 | I | | f04_manta_loop | a pair of manta rays looping around each other in glowing water ; underwater wide shot | The mantas loop around each other in a slow spiral while the camera circles them
+1 | I | | f05_turtle_eye | the eye of a sea turtle reflecting the moon ; extreme close-up | The turtle blinks slowly and the moon's reflection shimmers while the camera pushes in
+1 | I | | f06_grass_breeze | the night breeze rippling through tall beach grass under the stars ; low shot inside the grass | The grass sways in long waves while the camera glides through it
+* | I | | f07_dolphins_moon | two dolphins leaping together across the moon's reflection on the sea ; side view at the waterline | The dolphins leap and splash down in the moonlight while the camera tracks with them
+@ 83.5 pre-chorus 1 'por ti yo vuelo y hacia el cielo'
+2 | I | luma_fade 40 | b01_bird_low | a white seabird gliding low over the dark glowing sea at night ; side tracking shot just above the water | The bird glides fast over the water, its wingtip almost touching the waves, while the camera tracks beside it
+2 | I | | b02_moon_column | a white seabird climbing a column of moonlight toward the sky ; low angle looking up the column of light | The bird spirals up the column of light while the camera tilts up after it
+1 | I | | b03_cloud_wings | a white seabird's wings cutting through glowing clouds ; close behind the bird | The wings slice through the clouds, which swirl behind it, while the camera chases
+1 | I | | b04_island_below | a white seabird turning high above the island far below ; high aerial shot looking down past the bird | The bird banks into a turn and the island swings below while the camera follows
+1 | I | | b05_feathers_fall | white feathers drifting down onto the glowing lagoon ; low shot at the water surface | The feathers float down and land in rings of light while the camera eases back
+* | I | | b06_bird_lands | a white seabird landing on a palm at the top of a cliff above the sea ; wide shot from the cliff | The bird swoops in and lands while the palm fronds sway and the camera pushes in
+@ 97.44 chorus 2 'una tierra que te hará la luz'
+1 | =c01+2.7 | ray 20 | c01_r1
+1 | I | | k01_mountain_light | the island's mountain lighting up from within, rivers of light running down its slopes to the sea ; wide shot from the sea | Rivers of light pour down the slopes while the camera pushes toward the mountain
+1 | =c02+1.8 | | c02_r1
+1 | I | | k02_air_heals | wind sweeping across the island's grass meadows, sparks of light rising from them ; low shot across the meadow | The wind sweeps through and lights rise into the air while the camera glides forward
+1 | =c03+1.8 | | c03_r1
+1 | I | | k03_new_dawn | a sunrise of iridescent colors breaking on the horizon behind the island ; wide shot from the sea | The colors spread across the sky while the camera rises over the water
+0.5 | =c10+1.8 | | c10_r1
+* | I | | k04_turtle_returns | a sea turtle returning to the shore of the glowing lagoon ; low shot at the waterline | The turtle pushes up onto the sand as the water glows around it while the camera follows
+@ 110.48 chorus 3 'el centro universal, el secreto y la verdad'
+1 | =c08+1.8 | additive_dissolve 16 | c08_r1
+1 | I | | k05_plankton_spiral | glowing plankton forming a perfect spiral in the middle of the lagoon ; top-down aerial shot | The spiral turns and brightens while the camera spins slowly overhead
+1 | I | | k06_coral_grows | new coral flowers growing and opening on the reef ; underwater macro | The coral flowers grow and open in time-lapse while the camera drifts through the reef
+1 | =c12+1.8 | | c12_r1
+1 | I | | k07_one_ripple | a calm lagoon at dawn, a single ripple spreading across it ; low wide shot | The ripple spreads across the glassy water while the camera glides forward
+1 | =c09+1.8 | | c09_r1
+1 | I | | k08_nature_calls | every tree and flower on the island lighting up at once ; wide shot from the sea | The light ripples across the whole island while the camera pushes in
+0.5 | =c11+1.8 | | c11_r1
+* | I | | k09_island_above | the glowing island seen from high above, surrounded by luminous reefs ; top-down aerial shot | The camera rises slowly as the reefs pulse with light
+@ 125.26 verse 4 'suspirando entre naufragios'
+2 | I | liquid_distortion 40 | s01_wreck | an old shipwreck on the moonlit seabed with glowing coral growing over it ; wide underwater shot | The camera glides slowly toward the wreck as fish drift past
+2 | I | | s02_octopus | an octopus gliding out of the shipwreck's broken hull ; close underwater shot at the hull | The octopus flows out of the hull and spreads its arms while the camera backs away
+1 | I | | s03_bell | a coral-covered ship's bell swaying in the current ; close-up | The bell sways and sends up tiny bubbles while the camera circles it
+1 | I | | s04_fish_ribs | shoals of glowing fish streaming through the ribs of the wreck ; low underwater shot through the ribs | The fish stream through the ribs while the camera pushes along with them
+1 | I | | s05_light_falls | moonlight falling in shafts from the surface into the deep ; looking up from the seabed | The shafts of light sway while the camera tilts up toward the surface
+* | I | | s06_shell_path | a path of glowing shells across the seabed leading up toward the shore ; low shot along the path | The shells glow one after another along the path while the camera glides forward
+
+# ---- new: verse 5 to the end
+batch 4
+@ 139.18 verse 5 'me envolviste en lunas'
+2 | I | luma_fade 40 | l01_many_moons | many moons rising together over the sea ; wide shot from the beach, the moons across the sky | The moons rise slowly and their light spreads on the water while the camera pushes forward
+1 | I | | l02_moonbow | a moonbow arching over a waterfall on the island at night ; wide shot from the pool below | Spray drifts through the moonbow while the camera rises toward the falls
+1 | I | | l03_moon_flood | moonlight flooding across the beach as a wave washes in ; low shot at the sand | The wave rushes in and the moonlight floods over the sand while the camera slides back
+1 | I | | l04_bat_moon | a fruit bat flying across a giant moon ; low angle at the moon | The bat flaps across the moon while the camera tracks with it
+1 | I | | l05_tide_pool | starfish and anemones glowing in a moonlit tide pool ; top-down shot over the pool | The anemones sway and the water ripples while the camera turns overhead
+1 | I | | l06_moons_wave | moons reflected in a curling wave ; at the waterline inside the curl | The wave curls with the moons inside it while the camera rushes forward
+* | I | | l07_moons_mountain | many moons lining up above the island's mountain ; wide shot from the sea | The moons drift into a line above the peak while the camera rises
+@ 153.08 verse 6 'remember the sunsets in this island'
+2 | Is | light_leak 30 | u01_sunset | a blazing iridescent sunset over the island with tall palms swaying ; wide shot from the sea | The palms sway and the sunset colors shift while the camera glides toward the shore
+1 | Is | | u02_fronds_backlit | palm fronds waving in the warm wind, backlit by the sun ; low angle up into the fronds | The fronds wave and the sun flares between them while the camera turns slowly
+1 | Is | | u03_gold_waves | waves rolling in gold at sunset ; low shot at the waterline | The golden waves roll toward the camera, which glides over them
+1 | Is | | u04_frigatebirds_sun | frigatebirds gliding as silhouettes across the setting sun ; wide shot at the sun | The birds glide across the sun while the camera pans with them
+1 | =x02 | | x02_r1
+1 | Is | | u06_sun_touches | the sun touching the sea horizon ; wide shot from the beach | The sun sinks into the sea while its path of light shimmers toward the camera
+* | Is | | u07_palm_waving | a single palm on a cliff waving against the last light ; wide shot from below the cliff | The palm waves in the wind while the camera rises up the cliff
+@ 167.0 pre-chorus 2 'esta es la historia de una vida'
+2 | I | luma_fade 40 | t01_hatch | turtle hatchlings breaking out of the sand at night ; low macro at the sand | The sand shifts and the hatchlings push out while the camera eases back
+1 | I | | t02_race_beach | tiny turtle hatchlings racing down the moonlit beach toward the sea ; low shot from behind the hatchlings | The hatchlings scramble toward the water while the camera follows low behind them
+1 | I | | t03_first_wave | a turtle hatchling reaching the glowing foam of its first wave ; low macro at the waterline | The foam washes over the hatchling and lifts it while the camera pushes in
+2 | I | | t04_swim_out | turtle hatchlings swimming out under the glowing sea surface ; underwater shot looking up | The hatchlings paddle toward the open sea while the camera follows beneath them
+1 | I | | t05_tracks | turtle tracks in the sand, the waves washing them away ; top-down shot over the sand | The waves wash over the tracks while the camera drifts along them
+* | I | | t06_ocean_alive | the night ocean full of glowing life ; wide shot at the waterline | Glowing life swirls through the waves while the camera glides forward
+@ 180.92 chorus 4 'la vida que te dejaría regresar'
+1 | =k01+1.8 | light_sweep 30 | k01_r1
+1 | =c04+1.8 | | c04_r1
+1 | I | | q01_turtles_return | grown sea turtles returning to the island beach at dawn ; low wide shot at the waterline | The turtles crawl out of the surf in the dawn light while the camera slides along the shore
+1 | =k02+1.8 | | k02_r1
+1 | =c05+1.8 | | c05_r1
+1 | I | | q02_mirror_lake | a mountain lake on the island mirroring the sunrise ; wide shot at the lake edge | Mist drifts over the mirror-still lake while the camera glides across it
+1 | =c06+1.8 | | c06_r1
+* | I | | q03_land_lights | the island at sunrise, the light spreading over the whole land ; high aerial shot | The sunlight sweeps across the island while the camera flies over it
+@ 194.82 chorus 5 'escala una montaña escondida con el mar'
+1 | =k05+1.8 | additive_dissolve 16 | k05_r1
+1 | I | | q04_mountain_rises | a giant mountain rising out of the sea, waterfalls pouring off its sides ; wide low shot from the sea | The mountain rises and the waterfalls pour down while the camera pulls back
+1 | =c09+3 | | c09_r2
+1 | I | | q05_peak_stars | the mountain's peak breaking through the clouds into the stars ; low angle up the peak | The clouds part around the peak while the camera rises up it
+1 | =k08+1.8 | | k08_r1
+1 | I | | q06_cloud_forest | a cloud forest on the mountain with glowing birds of paradise ; low shot through the ferns | The birds flutter through the mist while the camera pushes between the trees
+1 | =c07+1.8 | | c07_r1
+* | I | | q07_mountain_awake | the hidden mountain fully awake, lit by the moon ; wide shot from the lagoon | The mountain glows and its reflection shimmers while the camera rises
+@ 208.74 chorus 6 'donde todo daría para volverte a encontrar'
+1 | I | zoom_blur 16 | h01_bird_storm | a storm of thousands of glowing seabirds swirling over the sea cliffs ; wide low shot from the cliff base | The birds swirl in a vast whirl while the camera pushes up into them
+0.5 | I | | h02_cliff_smash | a huge wave smashing into the sea cliff in a spray of light ; low shot at the cliff | The wave explodes against the rock and the spray flies toward the camera
+0.5 | I | | h03_lightning_birds | lightning over the sea, seabirds scattering in its flash ; wide shot | The lightning flashes and the birds scatter while the camera surges forward
+1 | I | | h04_storm_whale | a whale breaching in the storm ; side shot at the waterline | The whale bursts out of the water and crashes down while the camera rushes in
+0.5 | =c10+3 | | c10_r2
+1 | I | | h05_bird_spiral | seabirds forming one giant spiral over the island ; looking straight up into the spiral | The spiral turns faster while the camera spins beneath it
+0.5 | I | | h06_barrel | the glowing barrel of a breaking wave ; from inside the barrel | The barrel races around the camera as it rushes through
+0.5 | I | | h07_light_rain | a rain of light falling into the lagoon ; low shot at the surface | Drops of light splash into the lagoon while the camera glides
+0.5 | =c02+3 | | c02_r2
+0.5 | I | | h08_falls_storm | waterfalls blasting off the mountain in the storm ; low angle up the falls | The water blasts down while the camera tilts up fast
+0.5 | I | | h09_palms_bend | palms bending hard in the storm wind ; low shot | The palms whip in the wind while the camera slides through them
+* | I | | h10_storm_breaks | the storm breaking open to clear stars over the sea ; wide shot | The clouds tear open to the stars while the camera rises
+@ 222.64 chorus 7 'show my love'
+2 | Is | luma_fade 40 | e01_island_sunset | the island at golden sunset seen from the sea, everything glowing ; wide shot from the sea | The camera glides toward the island while the sunset colors shimmer
+1 | =u02+1.8 | | u02_r1
+1 | Is | | e02_fireflies_dusk | fireflies rising from the jungle at dusk ; low shot at the jungle edge | The fireflies rise in swirls while the camera tilts up
+1 | =i03+2 | | i03_r1
+1 | Is | | e03_whale_calf | a mother whale and her calf swimming into the sunset ; side shot at the water surface | The whales surface and blow spray in the golden light while the camera tracks with them
+1 | =k03+1.8 | | k03_r1
+1 | Is | | e04_sky_in_lagoon | the iridescent sunset sky reflected in the still lagoon ; wide low shot | The colors shimmer in the water while the camera glides forward
+* | I | | e05_first_stars | the island under the first stars, the sea glowing ; wide shot from the sea | The camera pulls slowly away from the island as the stars come out
+@ 237.86 silence
+* | I | luma_fade 53 | e06_stars_sea | stars over the dark glowing sea ; wide shot at the horizon | The stars shimmer and the sea glows softly while the camera drifts

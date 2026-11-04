@@ -1,0 +1,13 @@
+z01s0p_sentimientos_end_p01.txt 3762055c58
+z01s0x_sentimientos_end_e01.txt fdd5138fcd
+z01s1_sentimientos_end_r01.json 9077470809
+z01s1_sentimientos_end_r02.json 327269176e
+z01s1_sentimientos_end_r03.json 7fb4daf3f0
+z01s1_sentimientos_end_r04.json dba497ae31
+z01s1_sentimientos_end_r05.json f04a52ed69
+z02s0p_sentimientos_end_p02.txt 64ae45cb7e
+z02s0x_sentimientos_end_e02.txt 5f73b42c2f
+z02s1_sentimientos_end_r06.json e4224d318e
+z02s1_sentimientos_end_r07.json 9599036ef6
+z02s1_sentimientos_end_r08.json a491a6cf5b
+z02s1_sentimientos_end_r09.json 63c6a9915e

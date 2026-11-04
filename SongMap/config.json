@@ -1,0 +1,12 @@
+{
+  "subtitle_studio": "..\\ClaudeSubtitles\\SubtitleStudio",
+  "filmcraft_projects": "..\\FilmCraft\\projects",
+  "comfort": "..\\Comfort",
+  "comfyui_url": "http://127.0.0.1:8188",
+  "free_comfyui_vram": true,
+  "wait_for_comfort_minutes": 15,
+  "fps": 60,
+  "beat_checkpoint": "final0",
+  "songformer_repo": "ASLP-lab/SongFormer",
+  "idle_exit_seconds": 180
+}

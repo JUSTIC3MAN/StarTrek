@@ -1,0 +1,6 @@
+#size 1376x768
+#n 1
+#seed random
+#style none
+#name talawa_e01_a02_speaker_cones_f1
+[label=a02_speaker_cones wf=edit image=talawa_flag_v1/01-1_flag.png lora=graphic-novel-earthy-ink-comfy.safetensors:1.1] the same place, the same light and the same art style as this picture, now close on the speaker stack from the side: the hand-painted wooden speaker cones of the same sound system close up, the cones pumping and throwing out glowing rings of sound, the red, gold and green flag flapping on top, the grey tower far behind, no people, graphic novel earthy ink illustration, bold brush-ink contours, cross-hatched shadows and flat earthy color, ochre, rust red, olive and ink black, with the red, gold and green of the flag, no text, no letters, no watermark, no border, no frame, no blank paper, no photoreal, graphic novel earthy ink style

@@ -1,0 +1,114 @@
+{
+ "load": {
+  "class_type": "VHS_LoadVideoPath",
+  "_meta": {
+   "title": "load"
+  },
+  "inputs": {
+   "video": "",
+   "force_rate": 0,
+   "custom_width": 0,
+   "custom_height": 0,
+   "frame_load_cap": 0,
+   "skip_first_frames": 0,
+   "select_every_nth": 1
+  }
+ },
+ "rife": {
+  "class_type": "FrameInterpolationModelLoader",
+  "_meta": {
+   "title": "rife"
+  },
+  "inputs": {
+   "model_name": "rife_v4.26.safetensors"
+  }
+ },
+ "interp": {
+  "class_type": "FrameInterpolate",
+  "_meta": {
+   "title": "interp"
+  },
+  "inputs": {
+   "interp_model": [
+    "rife",
+    0
+   ],
+   "images": [
+    "load",
+    0
+   ],
+   "multiplier": 5
+  }
+ },
+ "sel": {
+  "class_type": "VHS_SelectEveryNthImage",
+  "_meta": {
+   "title": "sel"
+  },
+  "inputs": {
+   "images": [
+    "interp",
+    0
+   ],
+   "select_every_nth": 2,
+   "skip_first_images": 0
+  }
+ },
+ "rtx": {
+  "class_type": "DaSiWa_RTX_UpscalerRefiner",
+  "_meta": {
+   "title": "rtx"
+  },
+  "inputs": {
+   "images": [
+    "sel",
+    0
+   ],
+   "denoise": false,
+   "denoise_quality": "Ultra",
+   "deblur": false,
+   "deblur_quality": "Ultra",
+   "upscale": "VSR",
+   "upscale_quality": "Ultra",
+   "resize_type": "Manual",
+   "scale": 2.0,
+   "megapixels": 2.0,
+   "width": 1920,
+   "height": 1080,
+   "divisible_by": "8",
+   "ratio_preset": "16:9",
+   "resize_method": "Center Crop (Fill)",
+   "device_id": 0,
+   "chunking": true,
+   "chunk_frames": 16,
+   "lossless_fp16": true,
+   "auto_unload_models": true
+  }
+ },
+ "save": {
+  "class_type": "VHS_VideoCombine",
+  "_meta": {
+   "title": "save"
+  },
+  "inputs": {
+   "frame_rate": 60,
+   "loop_count": 0,
+   "filename_prefix": "comfort/stage60fast",
+   "format": "video/h264-mp4",
+   "pix_fmt": "yuv420p",
+   "crf": 16,
+   "save_metadata": false,
+   "trim_to_audio": false,
+   "pingpong": false,
+   "save_output": true,
+   "images": [
+    "rtx",
+    0
+   ],
+   "audio": [
+    "load",
+    2
+   ]
+  }
+ }
+}

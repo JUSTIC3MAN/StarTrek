@@ -1,0 +1,6 @@
+# Lets ClaudeComfy use the upscale models from your main ComfyUI install (read in place, nothing copied).
+# Add more folders here (loras, upscale_models, frame_interpolation ...) if you want them shared too.
+main_install:
+    base_path: "A:/Ai projects/comfy/ComfyUI/models/"
+    upscale_models: upscale_models
+    seedvr2: SEEDVR2

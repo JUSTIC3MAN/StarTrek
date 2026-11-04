@@ -1,0 +1,14 @@
+{
+ "workflow": "H3 Keyframe Chain (Comfort)",
+ "name": "real_herbalist_vid5",
+ "set": {
+  "ref.prompt": "subject_definitions:\n<Subject 1> is the rendering style of <Picture 1> and <Picture 2>: a luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere.\n<Subject 2> is the plant and its light: tall cannabis plants with serrated leaves, glowing fireflies, dew and smoke-soft light.\n<Picture 1> is the first frame of [Shot 1], showing an extreme close-up of a single drop of morning dew hanging from the tip of a serrated cannabis leaf, the rising sun glowing inside the drop, soft green hills blurred behind.\n<Picture 2> is the last frame of [Shot 1], showing a close low view at ground level of a ring of small fresh green sprouts rising from dry cracked earth around the wet glowing spot where the dew drop landed, a leaf tip hanging at the top edge.\n\nsummary:\n[keyframe completion + reference generation] A 10.1-second 16:9 single continuous shot in <Subject 1> that begins on <Picture 1> and ends on <Picture 2>: the dew drop swells, falls from the leaf tip onto dry cracked earth, and a ring of fresh green sprouts rises around the spot where it lands.\n\nretention_analysis:\n<Subject 1> (applies to [Shot 1]): fully_preserved - the hand-made style, palette and texture; nothing becomes smooth or photographic.\n<Subject 2> (appears in [Shot 1]): fully_preserved - its look and shapes.\n<Picture 1> ([Shot 1] first frame): fully_preserved - its composition.\n<Picture 2> ([Shot 1] last frame): fully_preserved - its composition.\n\ndetailed_description:\nThe target video is a living luminous anime film painting in <Subject 1>: painted light glows softly and every surface keeps its painted texture.\n[Shot 1] The shot begins from <Picture 1>. The dew drop swells slowly at the leaf tip, the sunrise glowing inside it, then lets go and falls. The camera tilts down after it at a slow, steady speed in one continuous move, following the drop down to the dry cracked earth, where it lands and darkens the ground in a glowing wet spot. Around it, a ring of small fresh green sprouts pushes up and unfolds in the warm sunrise light. The camera is still settling as the shot ends on <Picture 2>. No cut or transition occurs.\n\noverall_soundscape:\nMorning birds, one clear soft drip, then a gentle rustle of tiny leaves unfolding and a warm low hum.\n\nnon_diegetic_music:\nN/A",
+  "ref.length": 243
+ },
+ "images": {
+  "pic1.image": "A:\\Ai projects\\Comfort\\out\\herbalist_keys3\\02-1_he1.png",
+  "pic2.image": "A:\\Ai projects\\Comfort\\out\\herbalist_keys3\\03-1_he2.png"
+ },
+ "seed": "random",
+ "fc_in": "leak 24"
+}

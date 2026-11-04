@@ -1,0 +1,8 @@
+#name herbalist_chain_keys
+#size 1376x768
+#n 1
+#seed random
+#style none
+#lora luminous-anime-film-comfy.safetensors:1.1
+[label=k2] Just outside the open window of a hillside house at sunset, perfect smoke rings float slowly away over a deep green valley of terraced hills toward a huge setting sun, warm haze filling the valley, the edge of the wooden window frame along the left edge of the frame, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Wide view looking out over the valley, the rings at different distances leading toward the sun in the center. Low golden sunset light, colors of deep red, gold, emerald green and violet sky, no people, no text, no watermark, luminous anime film style.
+[label=k3] Tall cannabis plants with serrated leaves stand in a hillside field at dusk, the first fireflies glowing among the leaves, the last faint smoke ring dissolving in the violet sky above, the warm lights of a valley village below, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Medium-wide view from among the plants, the nearest leaves large in the foreground, the field sloping down toward the valley. Soft dusk light with green-gold firefly glow, colors of violet, firefly gold, deep teal and leaf green, no people, no text, no watermark, luminous anime film style.

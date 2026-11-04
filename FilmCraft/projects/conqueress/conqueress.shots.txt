@@ -1,0 +1,135 @@
+#title Marie Vie - Conqueress
+#songmap Conqueress.songmap.json
+#music Conqueress.mp3
+#queue c
+#kind music-video
+#neg no text, no watermark, no border, no frame, no blank paper
+#subject2 the only person ever shown: one small dark silhouette of a woman in a long dress, always far away and never close; most shots show no people.
+#sound Sea, wind, fire and nature sounds that fit each shot.
+style K | lora=bold-woodcut-linocut-comfy.safetensors:1.1 | bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper | black and warm cream with red-orange accents | bold woodcut linocut style | bold woodcut linocut print (thick carved black lines, gouged textures, black and warm cream with one red-orange ink layer, the carving filling the whole frame)
+# Conqueress v2 (2026-10-27): one scene per section, other angles made from the scene's master picture with Krea 2 edit (K>label). Whole song in batches; the Overseer feeds the queue, checks every shot and builds.
+#pics conq_v2
+#build overseer
+#within film_dissolve 14 | cross_zoom 12 strength=30 | luma_fade 14 | blur_dissolve 12 blur=30
+#copy A:\Ai projects\Star Trek\Preview\Marie Vie - Conqueress\Conqueress v2.mp4
+#prefix a
+#inpoint 1.2
+#end 245.5
+batch 1
+@ 0 intro - the harbour at first light, the boat leaving (master k3)
+s5.24 | K@conqueress_keys_v1b/03-1_k3.png | | a01_harbour_wide | the small wooden sailboat with its sail full of wind leaving the stone harbour toward a huge carved rising sun, a tiny far-off silhouette of a woman at the bow ; wide shot | The boat glides out over the carved waves toward the sun while the camera drifts slowly after it and the sun's rays turn
+3 | K>a01 | | a02_sail_light | the full sail and rigging of the same boat catching the first red-orange light, the sun glowing through the cloth, no people ; closer, from behind the mast looking up at the sail | The sail swells and ripples in the wind while the camera slides slowly up along the mast
+3 | K>a01 | | a03_prow_waves | the prow of the same boat cutting the carved waves, spray flying, the sun's reflection breaking on the water ahead, no people ; detail low at the waterline | The prow slices through the waves and the spray arcs while the camera rides low beside it
+* | K>a01 | | a04_harbour_high | the whole stone harbour and pier seen from high above the harbour wall, the small boat far out on the sea heading into the huge carved sun ; high wide shot | The camera rises slowly over the harbour wall as the boat shrinks toward the sun and the waves roll in
+- | K>a01 | | a05_pier_ropes | the end of the same stone pier, loose ropes and a bollard in the red-orange light, the boat already far out at sea, no people ; low close shot on the pier stones | The ropes sway and waves wash over the stones while the camera pushes slowly along the pier
+@ 18.4 chorus 1 - sun and fire from Mars over the sea (master k4)
+2 | K@conqueress_keys_v1b/04-1_k4.png | flare 14 color=#ff7a2a | b01_sun_mars | a huge carved sun rising over the sea with a small red planet burning high in the upper left like a spark of fire ; wide shot | The sun climbs and its carved rays wheel outward while the red planet flickers and the camera pushes toward the horizon
+1 | K>b01 | | b02_mars_close | the same red planet close, burning, carved flames streaming from it across the upper sky, the sun's rays at the lower edge ; closer, low angle up at the planet | The flames stream and curl off the planet while the camera tilts up toward it
+1 | K>b01 | | b03_sun_rim | the burning rim of the same carved sun close, thick gouged rays and sparks flying off its edge ; detail, the rim filling the frame | The rays flicker outward and sparks fly past the camera as it drifts along the rim
+1 | K>b01 | | b04_far_rock | a tiny far-off silhouette of a woman in a long dress standing on a black rock in the sea under the same huge sun and red planet ; wide shot from the waves, the figure tiny | The waves break around the rock and the sun's rays sweep the sea while the camera glides slowly forward
+- | K>b01 | | b05_fire_falls | a thread of carved fire falling from the red planet into the sea under the same sun, steam rising where it lands ; closer on the falling fire and the sea | The fire streaks down and the steam bursts up in swirls while the camera tilts down with it
+- | K>b01 | | b06_waves_glow | the carved waves glowing red-orange under the same sun and planet, no people ; low at the waterline | The waves roll toward the camera and flash with light while the camera skims forward over them
+batch 10
+2 | K>b01 | | b08_meteor_sky | a blazing meteor streaking diagonally down across the sky above the same sea, a long carved tail of red-orange fire and sparks behind it, the huge carved sun on the horizon ; wide shot | The meteor streaks from the upper left toward the horizon, its tail stretching and shedding sparks, while the camera pans with it
+* | K>b01 | | b09_meteor_impact | the same meteor striking the sea near the horizon, a burst of carved spray and steam, rings of red-orange light spreading across the waves ; wide low shot | The impact bursts upward and rings of light race across the waves toward the camera while the camera rises
+- | K>b01 | | b10_meteor_head | the fiery head of the same meteor, carved flames peeling back from it, sparks flying ; closer, tracking alongside it | The flames tear back and sparks stream past while the camera tracks alongside at speed
+- | K>b01 | | b07_sun_reflection | the reflection of the same carved sun breaking into ripples on the sea, the red planet a spark above ; looking down at the water | The ripples shimmer and break the reflection apart while the camera drifts across them
+
+batch 2
+@ 31.54 chorus 2 - smoke at dawn over a still bay
+3 | K | blur_dissolve 24 | c01_dawn_smoke | a small village of stone houses on a hillside above a still bay at dawn, thin smoke rising from one chimney and drifting in long carved ribbons over the water, a low red-orange sun ; wide shot from across the bay | The smoke ribbons drift and curl slowly across the bay while the camera glides sideways along the water
+3 | K>c01 | | c02_smoke_roofs | the same smoke curling over the tiled roofs and the chimney, the low sun glowing behind it, no people ; closer, at roof height | The smoke twists and unrolls in the breeze while the camera drifts slowly through it
+* | K>c01 | | c03_bay_reeds | reeds at the edge of the same still bay trembling in the dawn breeze, the smoke reflected on the water, no people ; detail low at the waterline | The reeds sway and ripples spread across the reflection while the camera pushes slowly forward through the reeds
+@ 44.72 verse 1 - the highest mountain
+3 | K | cross_zoom 20 strength=45 | d01_peak | the highest mountain, a towering carved peak rising above a sea of clouds, snow ridges cut in thick black lines, the sun blazing red-orange on its flank, a tiny far-off silhouette of a woman on the ridge far below the summit ; wide shot | The clouds roll past the peak and the light slides up the ridges while the camera rises slowly toward the summit
+3 | K>d01 | | d02_ridge_wind | the same snow ridge, wind tearing snow off its edge in carved plumes against the sun, no people ; closer, along the ridge | The snow plumes stream off the ridge while the camera tracks along the edge
+* | K>d01 | | d03_cloud_sea | the sea of clouds below the same peak with the summit's shadow cutting across it, no people ; looking down from high on the mountain | The clouds churn and flow under the shadow while the camera tilts slowly down over them
+
+batch 3
+@ 57.8 verse 2 - a high pass in cloud, eagles
+3 | K | luma_fade 24 | e01_pass | a high mountain pass in drifting cloud, a stone cairn beside the path, two eagles circling, the sun a red-orange disc through the mist ; wide shot | The mist pours through the pass and the eagles circle while the camera moves slowly up the path
+3 | K>e01 | | e02_eagles | the same two eagles circling close, their carved wings spread against the misty sun ; closer, looking up | The eagles bank and glide across the sun while the camera turns with them
+* | K>e01 | | e03_cairn | the stacked stones of the same cairn with mist streaming past and a strip of red cloth fluttering on top, no people ; detail, low | The cloth snaps in the wind and the mist streams past while the camera circles slowly round the cairn
+@ 71.0 verse 3 - the meadow above the sea, raising sails
+3 | K | film_dissolve 24 | f01_meadow | a wind-swept meadow of tall grass on a cliff above the sea, a tall sailing ship below raising its sails, a tiny far-off silhouette of a woman walking in the grass ; wide shot | The grass waves in long rolling lines and the sails climb on the ship while the camera drifts slowly forward through the meadow
+3 | K>f01 | | f02_grass | the tall grass of the same meadow bending in the wind with seeds blowing off it, the sea behind, no people ; closer, low in the grass | The grass sways and the seeds fly past while the camera glides through it
+* | K>f01 | | f03_sails_rise | the sails of the same ship climbing the masts and filling with wind, ropes taut, no people ; closer, from the cliff edge looking down at the ship | The sails unroll and swell while the ship turns toward the open sea and the camera follows
+
+batch 4
+@ 84.16 pre-chorus - chrysalis to butterfly
+2 | K | light_leak 16 | g01_chrysalis | a chrysalis hanging from a thorny branch in a sunlit thicket, its shell splitting and a butterfly's carved wings unfolding out of it ; closer shot, the chrysalis in the centre | The shell splits and the wings unfold and spread while the camera pushes slowly in
+2 | K>g01 | | g02_wings_open | the butterfly's wings fully open on the same branch, black carved veins and red-orange panels trembling in the light ; detail, the wings filling the frame | The wings pulse open and closed while the camera drifts across their patterns
+2 | K>g01 | | g03_thicket | the same sunlit thicket, dozens of butterflies lifting off the branches into the light, no people ; wide shot | The butterflies rise and scatter upward while the camera rises with them
+* | K>g01 | | g04_flight | the butterfly flying up out of the same thicket toward the sun ; low angle looking up | The butterfly climbs in loops toward the light while the camera tilts up after it
+@ 97.3 chorus 3 - morning lake, everything vibrating
+2 | K | luma_fade 16 invert=True | h01_lake | a still mountain lake at morning ringed with reeds, rings of ripples spreading across it, mist lifting, the sun low and red-orange ; wide shot | The rings spread and overlap across the lake while the camera glides low over the water
+1 | K>h01 | | h02_rings | the rings of ripples on the same lake, the sun's reflection trembling in them ; looking down at the water | The ripples spread outward and the reflection shivers while the camera sinks toward it
+1 | K>h01 | | h03_dragonflies | dragonflies skimming the surface of the same lake, their wings flickering in the light, no people ; detail | The dragonflies dart and hover and their wings flicker while the camera slides along the water
+2 | K>h01 | | h04_birds | a flock of birds lifting off the same lake into the morning sun, no people ; wide low shot from the water | The birds rise in a sweeping curve and the water ripples under them while the camera tilts up after them
+* | K>h01 | | h05_sunrise | the sun rising over the same lake, its rays cut in thick lines, the mist burning off, no people ; wide shot | The rays spread and the mist peels away while the camera rises slowly over the reeds
+
+batch 5
+@ 110.46 chorus 4 - flor de caña on fire
+1 | K | grunge 16 | i01_cane_fire | a field of flowering sugarcane at dawn, its pale feathery plumes catching fire one after another, sparks swirling into the sky, a small house far away on the hill ; wide shot | The fire runs along the plumes and sparks whirl upward while the camera pushes forward over the field
+1 | K>i01 | | i02_plume | one burning sugarcane plume, carved flames licking up the feathery flower ; detail | The flames climb and the plume sways and sheds sparks while the camera circles it
+1 | K>i01 | | i03_sparks | sparks and burning seeds spiralling up into the dawn sky above the same field ; low angle up | The sparks spiral and scatter across the sky while the camera tilts up with them
+1 | K>i01 | | i04_stalks | the tall cane stalks of the same field in red-orange firelight, smoke drifting between them ; closer, between the stalks | The stalks sway and smoke rolls between them while the camera tracks along the row
+2 | K>i01 | | i05_house_birds | the small house on the hill above the same burning field, a flock of birds pouring from its roof into the sky, no people ; wide low shot from the field | The birds burst out and wheel over the house while the camera rises from the field toward them
+1 | K>i01 | | i06_embers | embers drifting over the same field after the fire has passed, the sun rising through the smoke, no people ; wide shot | The embers float and glow and the smoke thins while the camera drifts slowly forward
+* | =i01+1.2 | | i07_fire_again
+@ 123.6 verse 4 - the river breaks free
+3 | K | flare 14 color=#ff7a2a | j01_river | a wild river bursting out of a narrow carved canyon into an open plain at sunrise, white water foaming, birds flying low over it ; wide shot | The river pours and foams out of the canyon while the camera flies low along it toward the plain
+3 | K>j01 | | j02_rapids | the white rapids of the same river crashing over black rocks ; closer, at water level | The water crashes and sprays over the rocks while the camera rushes along the surface
+* | K>j01 | | j03_plain | the same river spreading into wide shining channels across the open plain, the sun on the horizon, no people ; high wide shot | The channels shimmer and branch while the camera rises slowly over the plain
+
+batch 6
+@ 136.76 verse 5 - jaguar eyes in the dark
+3 | K | luma_fade 20 | k01_jaguar | the dark jungle at night, a jaguar's eyes glowing red-orange between carved black leaves, moonlight in thin lines ; wide shot | The leaves stir and the eyes blink and shift while the camera pushes slowly in through the leaves
+3 | K>k01 | | k02_eyes | the same jaguar's glowing eyes and the spotted fur around them ; extreme close-up | The eyes narrow and the whiskers twitch while the camera creeps closer
+* | K>k01 | | k03_prowl | the same jaguar moving through the dark jungle, its spotted back sliding past the leaves ; closer, side on | The jaguar prowls past and the leaves swing back behind it while the camera tracks with it
+@ 149.9 verse 6 - rain all night
+3 | K | blur_dissolve 20 | l01_rain | rain falling all night over a small house in the jungle with one lit window, carved rain lines slanting across the black sky ; wide shot | The rain sheets sweep across in waves and the lit window flickers while the camera moves slowly toward the house
+3 | K>l01 | | l02_roof_rain | rain pouring off the edge of the same tin roof in streams, splashing into puddles, no people ; closer | The streams pour and the puddles burst with rings while the camera tilts down along them
+* | K>l01 | | l03_leaves_rain | big jungle leaves bending under the same heavy rain, water running off their tips, no people ; detail | The leaves bounce under the drops and water runs off while the camera drifts through them
+
+batch 7
+@ 163.06 verse 7 - agave daggers
+3 | K | film_dissolve 20 | m01_agave | a field of tall agave under the moon before dawn, their leaves like carved daggers pointing at the sky, dust drifting between the rows ; wide shot | The dust drifts between the rows and the moonlight slides over the blades while the camera glides slowly along the field
+3 | K>m01 | | m02_blades | the sharp agave blades of the same field, their dagger tips catching the first red-orange light ; detail | The light runs along the blade edges and dust blows past while the camera moves slowly across the tips
+* | K>m01 | | m03_dawn_field | the same agave field as dawn breaks red-orange on the horizon, long shadows of the blades on the ground, no people ; low wide shot | The shadows stretch and the sky brightens while the camera rises over the blades
+@ 176.14 verse 8 - always next to you
+3 | K | light_leak 16 | n01_herons | two herons flying side by side low over a misty river at first light, their wings in thick carved strokes ; wide shot | The herons beat their wings in step over the water while the camera flies alongside them
+3 | K>n01 | | n02_wingtips | the wingtips of the same two herons almost touching above the water ; closer | The wings rise and fall together and their reflections ripple below while the camera keeps pace
+* | K>n01 | | n03_river_mist | the same misty river at first light, the herons small far ahead over the water, no people ; wide low shot | The mist drifts over the water and the herons fade into the light while the camera glides forward
+
+batch 8
+@ 189.34 chorus 5 - the cane fire again, new angles
+2 | K>i01 | grunge 14 | o01_fire_lines | the same burning sugarcane field seen from high above, lines of fire crossing it, smoke streaming, no people ; high wide shot | The lines of fire crawl across the field and the smoke streams sideways while the camera glides over it
+1 | =i02+0.6 | | o05_plume_again
+1 | K>i01 | | o02_fire_row | flames racing along a row of the same sugarcane at ground level, plumes flaring ; low close shot | The flames race toward the camera and the plumes flare while the camera pulls back fast
+1 | K>i01 | | o04_window_embers | embers flying past the small house's dark window on the same hill, no people ; closer | The embers stream past the window and the glow flickers on the wall while the camera drifts along the house
+2 | K>i01 | | o03_birds_sun | the flock of birds from the same house flying into the rising sun over the burning field, no people ; wide shot | The birds sweep across the sun in a long curve while the camera follows them
+* | =i05+0.8 | | o06_house_again
+@ 202.5 chorus 6 - the lion's heartbeat in the sun
+2 | K | flare 16 color=#ff7a2a | p01_lion | a lion lying on a high flat rock on the savanna under a huge carved sun, its mane blown by the wind, its chest rising and falling ; wide shot | The mane ripples in the wind and the chest rises and falls slowly while the camera pushes in toward the lion
+1 | K>p01 | | p02_mane | the same lion's mane and face, eyes half closed in the sun ; closer | The mane streams and the eyes open slowly while the camera drifts round the face
+1 | K>p01 | | p03_grass | the tall golden savanna grass around the same rock bending in pulses of wind, no people ; detail low | The grass bends in pulses like a heartbeat while the camera skims through it
+2 | K>p01 | | p04_sun_rock | the same rock and lion as a small black shape against the huge sun, no people ; wide low shot | The sun's rays pulse outward and the grass waves while the camera rises slowly
+1 | K>p01 | | p05_paw | the same lion's paw resting on the warm rock, dust lifting in the wind ; detail | The dust lifts and swirls past the paw while the camera slides along the rock
+* | =p01+1.2 | | p06_lion_again
+
+batch 9
+@ 215.66 chorus 7 - back to the sun over the sea
+2 | K>b01 | luma_fade 16 | q01_boat_sun | the small sailboat far out on the same sea sailing into the huge carved sun, the red planet above ; wide shot | The boat rises and falls on the swell toward the sun while the camera follows low over the waves
+1 | =b03+0.6 | | q05_rim_again
+1 | K>b01 | | q02_fire_road | the sun's reflection a road of fire across the same waves toward the horizon, no people ; low at the waterline | The road of light shimmers and breaks on the waves while the camera skims forward along it
+1 | K>b01 | | q04_planet_fades | the red planet fading in the bright sky above the same sea, no people ; low angle up | The planet's flames thin and the sky brightens while the camera tilts up toward it
+2 | K>a01 | | q03_sail_sun | the full sail of the same boat glowing red-orange against the sun ; closer, from below the sail | The sail swells and ripples with light while the camera slides up along the mast
+* | =b01+1.4 | | q06_sun_again
+@ 228.82 outro - the old tree (I love you, Father)
+3 | K | luma_fade 30 | t01_old_tree | a huge old ceiba tree alone on a hill above the sea at sunset, its wide crown and buttress roots cut in thick carved lines, leaves moving in the wind, a tiny far-off silhouette of a woman at its foot ; wide shot | The leaves stir and the light sinks slowly behind the crown while the camera drifts slowly toward the tree
+3 | K>t01 | | t02_crown | the crown of the same old tree from below, sunset light breaking through the branches ; low angle up into the branches | The branches sway and the light flickers through the leaves while the camera turns slowly beneath them
+* | K>t01 | | t03_hill_dusk | the same hill and old tree small against the setting sun and the sea, birds flying home, no people ; wide shot | The sun sinks and the birds cross the sky while the camera pulls slowly back from the hill
+@ 241.58 drop
+* | K>t01 | | t04_leaf | a single leaf falling from the same old tree toward the sea in the last light ; detail | The leaf turns slowly as it falls through the light while the camera drifts down with it
+- | K>t01 | | t05_roots | the buttress roots of the same old tree gripping the hill, grass moving around them ; detail low | The grass ripples around the roots and the light fades while the camera slides along them

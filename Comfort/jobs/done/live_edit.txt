@@ -1,0 +1,5 @@
+#name live_edit
+#preset edit
+#image live_test/01-1_cracked-ancient-stone.png
+#seed 42
+Same stone pillar, now snapped in half: the upper half has fallen and lies broken on the ground beside the plinth, the plinth and base stay exactly the same, same style, same plain white background

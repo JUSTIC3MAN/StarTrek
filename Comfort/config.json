@@ -1,0 +1,75 @@
+{
+ "comfy_url": "http://127.0.0.1:8189",
+ "comfy_dir": "A:\\ClaudeComfy\\ComfyUI",
+ "comfy_python": "A:\\ClaudeComfy\\venv\\Scripts\\python.exe",
+ "comfy_extra_args": [
+  "--enable-manager",
+  "--enable-manager-legacy-ui"
+ ],
+ "auto_start_comfy": true,
+ "comfy_start_timeout": 300,
+ "image_timeout": 900,
+ "default_upscale_model": "4x-UltraSharpV2.safetensors",
+ "krea": {
+  "_from": "Krea 2 RedCraft (ClaudeComfy).json - same models, enhancer and 2-pass sampler settings",
+  "unet": "Krea2\\redcraftHybridH3Krea2t_30Krea2_fp8.safetensors",
+  "clip": "Qwen3VL4B\\qwen3-vl-4b-heretic_fp8_e4m3fn.safetensors",
+  "vae": "qwen_image_vae.safetensors",
+  "enhancer_strength": 1.5,
+  "loras": [],
+  "pass1": {
+   "eta": 0,
+   "sampler_name": "linear/euler",
+   "scheduler": "simple",
+   "steps": 8,
+   "cfg": 1
+  },
+  "pass2": {
+   "enabled": true,
+   "eta": 0.9,
+   "sampler_name": "exponential/res_2s",
+   "scheduler": "bong_tangent",
+   "steps": 8,
+   "denoise": 0.2,
+   "cfg": 1
+  }
+ },
+ "edit": {
+  "_from": "Krea 2 Identity Edit (ClaudeComfy).json - single-image mode",
+  "unet": "Krea2\\krea2_turbo_fp8_scaled.safetensors",
+  "lora": "Krea2\\krea2_identity_edit_v1_2.safetensors",
+  "lora_strength": 1,
+  "clip": "Qwen3VL4B\\qwen3vl_4b_fp8_scaled.safetensors",
+  "vae": "qwen_image_vae.safetensors",
+  "ref_boost": 4,
+  "grounding_px": 768,
+  "steps": 10,
+  "cfg": 1,
+  "sampler_name": "euler",
+  "scheduler": "simple",
+  "mp": 1.0
+ },
+ "i2p": {
+  "_from": "Krea 2 RedCraft 'Image to prompt' group: TextGenerate + qwen3-vl-4b-heretic, its own system prompt (JoinStrings ' ' + base prompt)",
+  "clip": "Qwen3VL4B\\qwen3-vl-4b-heretic_fp8_e4m3fn.safetensors",
+  "max_length": 512,
+  "temperature": 0.7,
+  "seed": 0,
+  "max_mp": 1.5,
+  "system": "You are an image prompt engineer for the Krea 2 image model. Look at the image and write one prompt that would recreate it as closely as possible. If a creative direction is given, apply it while keeping the image's style. Output only the prompt as a single dense paragraph of natural descriptive prose, with no preamble, no lists and no quotes. Cover the main subject, composition and camera angle, environment, lighting, art style and medium, colors and mood.",
+  "join": "\n\nCreative direction: ",
+  "thinking": true
+ },
+ "llm": {
+  "url": "http://127.0.0.1:11434",
+  "model": "qwen3.6:27b",
+  "keep_alive": "1m",
+  "vram_handoff": true,
+  "num_ctx": 16384,
+  "show_results": true,
+  "max_steps": 14,
+  "think": true
+ },
+ "app_port": 8790,
+ "free_after_job": false
+}

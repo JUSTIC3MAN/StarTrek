@@ -1,0 +1,431 @@
+{
+ "t": "2026-10-27 16:44:59",
+ "flags": [
+  {
+   "key": "conq_v2_r01:0",
+   "label": "a01_harbour_wide",
+   "t": 0.0,
+   "motion": 0.4
+  },
+  {
+   "key": "conq_v2_r03:0",
+   "label": "b02_mars_close",
+   "t": 21.68,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r03:1",
+   "label": "b03_sun_rim",
+   "t": 23.32,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r03:2",
+   "label": "b04_far_rock",
+   "t": 24.98,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r25:0",
+   "label": "b08_meteor_sky",
+   "t": 26.62,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r25:1",
+   "label": "b09_meteor_impact",
+   "t": 29.9,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r05:0",
+   "label": "c01_dawn_smoke",
+   "t": 31.54,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r05:1",
+   "label": "c02_smoke_roofs",
+   "t": 36.48,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r05:2",
+   "label": "c03_bay_reeds",
+   "t": 41.42,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r06:0",
+   "label": "d01_peak",
+   "t": 44.72,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r06:1",
+   "label": "d02_ridge_wind",
+   "t": 49.64,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r06:2",
+   "label": "d03_cloud_sea",
+   "t": 54.56,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r07:0",
+   "label": "e01_pass",
+   "t": 57.8,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r07:1",
+   "label": "e02_eagles",
+   "t": 62.78,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r07:2",
+   "label": "e03_cairn",
+   "t": 67.72,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r08:0",
+   "label": "f01_meadow",
+   "t": 71.0,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r08:1",
+   "label": "f02_grass",
+   "t": 75.92,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r08:2",
+   "label": "f03_sails_rise",
+   "t": 80.86,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r09:0",
+   "label": "g01_chrysalis",
+   "t": 84.16,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r09:1",
+   "label": "g02_wings_open",
+   "t": 87.46,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r09:2",
+   "label": "g03_thicket",
+   "t": 90.74,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r10:0",
+   "label": "g04_flight",
+   "t": 94.02,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r10:1",
+   "label": "h01_lake",
+   "t": 97.3,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r10:2",
+   "label": "h02_rings",
+   "t": 100.58,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r11:0",
+   "label": "h03_dragonflies",
+   "t": 102.22,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r11:1",
+   "label": "h04_birds",
+   "t": 103.88,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r11:2",
+   "label": "h05_sunrise",
+   "t": 107.16,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r12:0",
+   "label": "i01_cane_fire",
+   "t": 110.46,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r12:1",
+   "label": "i02_plume",
+   "t": 112.1,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r12:2",
+   "label": "i03_sparks",
+   "t": 113.74,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r13:0",
+   "label": "i04_stalks",
+   "t": 115.38,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r13:1",
+   "label": "i05_house_birds",
+   "t": 116.98,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r13:2",
+   "label": "i06_embers",
+   "t": 120.32,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r12:0",
+   "label": "i07_fire_again",
+   "t": 121.96,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r14:0",
+   "label": "j01_river",
+   "t": 123.6,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r14:1",
+   "label": "j02_rapids",
+   "t": 128.54,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r14:2",
+   "label": "j03_plain",
+   "t": 133.46,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r15:0",
+   "label": "k01_jaguar",
+   "t": 136.76,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r15:1",
+   "label": "k02_eyes",
+   "t": 141.68,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r15:2",
+   "label": "k03_prowl",
+   "t": 146.6,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r16:0",
+   "label": "l01_rain",
+   "t": 149.9,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r16:1",
+   "label": "l02_roof_rain",
+   "t": 154.84,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r16:2",
+   "label": "l03_leaves_rain",
+   "t": 159.76,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r17:0",
+   "label": "m01_agave",
+   "t": 163.06,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r17:1",
+   "label": "m02_blades",
+   "t": 168.0,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r17:2",
+   "label": "m03_dawn_field",
+   "t": 172.92,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r18:0",
+   "label": "n01_herons",
+   "t": 176.14,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r18:1",
+   "label": "n02_wingtips",
+   "t": 181.12,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r18:2",
+   "label": "n03_river_mist",
+   "t": 186.06,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r19:0",
+   "label": "o01_fire_lines",
+   "t": 189.34,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r12:1",
+   "label": "o05_plume_again",
+   "t": 192.66,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r19:1",
+   "label": "o02_fire_row",
+   "t": 194.3,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r19:2",
+   "label": "o04_window_embers",
+   "t": 195.92,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r20:0",
+   "label": "o03_birds_sun",
+   "t": 197.58,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r13:1",
+   "label": "o06_house_again",
+   "t": 200.86,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r20:1",
+   "label": "p01_lion",
+   "t": 202.5,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r20:2",
+   "label": "p02_mane",
+   "t": 205.78,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r21:0",
+   "label": "p03_grass",
+   "t": 207.38,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r21:1",
+   "label": "p04_sun_rock",
+   "t": 209.08,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r21:2",
+   "label": "p05_paw",
+   "t": 212.36,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r20:1",
+   "label": "p06_lion_again",
+   "t": 214.02,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r22:0",
+   "label": "q01_boat_sun",
+   "t": 215.66,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r03:1",
+   "label": "q05_rim_again",
+   "t": 218.94,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r22:1",
+   "label": "q02_fire_road",
+   "t": 220.58,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r22:2",
+   "label": "q04_planet_fades",
+   "t": 222.24,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r23:0",
+   "label": "q03_sail_sun",
+   "t": 223.88,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r02:2",
+   "label": "q06_sun_again",
+   "t": 227.16,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r23:1",
+   "label": "t01_old_tree",
+   "t": 228.82,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r23:2",
+   "label": "t02_crown",
+   "t": 233.74,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r24:0",
+   "label": "t03_hill_dusk",
+   "t": 238.72,
+   "motion": 0.0
+  },
+  {
+   "key": "conq_v2_r24:1",
+   "label": "t04_leaf",
+   "t": 241.58,
+   "motion": 0.0
+  }
+ ]
+}

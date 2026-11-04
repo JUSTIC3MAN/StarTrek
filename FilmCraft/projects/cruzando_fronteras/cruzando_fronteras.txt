@@ -1,0 +1,18 @@
+# Cruzando Fronteras - Ras Manuel - concert-screen project (1920x1080 @ 60 fps). Add clips in order, then rebuild:
+#   python3 fc.py build projects/cruzando_fronteras/cruzando_fronteras.txt
+# Chain: each clip starts on the previous clip's last frame, so a 0.5 s dissolve (30 frames at 60 fps) hides the join.
+out projects/cruzando_fronteras/cruzando_fronteras.mp4
+size 1920x1080@60
+music Cruzando Fronteras.mp3          # the song on A2 from 0:00, trimmed to the end of the edit
+musicfull on                          # the whole song on A2 (Star Trek README), not trimmed to the edit
+clip A:\Ai projects\Star Trek\Comfort\out\videos\cruzando_fronteras_vid1_stage60.mp4
+> dissolve 30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\cruzando_fronteras_vid2_stage60.mp4
+> dissolve 30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\cruzando_fronteras_vid3_stage60.mp4
+> glitch 18
+clip A:\Ai projects\Star Trek\Comfort\out\videos\cruzando_fronteras_vid4_stage60.mp4
+> flash 12
+clip A:\Ai projects\Star Trek\Comfort\out\videos\cruzando_fronteras_vid5_stage60.mp4
+> whip 15
+clip A:\Ai projects\Star Trek\Comfort\out\videos\cruzando_fronteras_vid6_stage60.mp4

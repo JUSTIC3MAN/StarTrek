@@ -1,0 +1,157 @@
+{
+ "_note": "aspect + mp -> generation size (multiples of 16, Krea 2 = 1-2 MP). No preset upscales: 'target' is the size to upscale to ONLY after Justice approves an image (re-run with the same #seed and #final WxH). Krea Edit only when he asks.",
+ "square": {
+  "aspect": "1:1",
+  "mp": 2.0
+ },
+ "square1k": {
+  "size": "1024x1024"
+ },
+ "portrait": {
+  "aspect": "2:3",
+  "mp": 2.0
+ },
+ "landscape": {
+  "aspect": "3:2",
+  "mp": 2.0
+ },
+ "wide": {
+  "aspect": "16:9",
+  "mp": 2.0
+ },
+ "vertical": {
+  "aspect": "9:16",
+  "mp": 2.0,
+  "note": "phone / IG / vertical video"
+ },
+ "cinema": {
+  "aspect": "21:9",
+  "mp": 2.0,
+  "note": "widescreen projector"
+ },
+ "uhd": {
+  "aspect": "16:9",
+  "mp": 2.0,
+  "target": [
+   3840,
+   2160
+  ]
+ },
+ "concept": {
+  "aspect": "16:9",
+  "mp": 2.0,
+  "style": "be_scene",
+  "note": "BeatEmUp style anchor / arena concept"
+ },
+ "bg_sky": {
+  "aspect": "2.4:1",
+  "mp": 2.0,
+  "style": "be_sky",
+  "note": "L0 sky, opaque",
+  "target": [
+   3840,
+   1600
+  ]
+ },
+ "bg_far": {
+  "aspect": "2.4:1",
+  "mp": 2.0,
+  "style": "be_strip",
+  "note": "L1 far skyline, cut out later",
+  "target": [
+   3840,
+   1600
+  ]
+ },
+ "bg_mid": {
+  "aspect": "2.5:1",
+  "mp": 2.0,
+  "style": "be_strip",
+  "note": "L2 mid backdrop",
+  "target": [
+   3000,
+   1200
+  ]
+ },
+ "landmark": {
+  "aspect": "16:9",
+  "mp": 2.0,
+  "style": "be_iso",
+  "note": "L2 focal piece (fallen mech etc.)"
+ },
+ "floor_slab": {
+  "size": "1024x1024",
+  "style": "be_topdown",
+  "note": "top-down slab -> 256x128 diamond in post"
+ },
+ "floor_decals": {
+  "aspect": "3:2",
+  "mp": 2.0,
+  "style": "be_topdown_cut",
+  "note": "sheet of floor decals"
+ },
+ "prop": {
+  "aspect": "1:1",
+  "mp": 2.0,
+  "style": "be_iso",
+  "note": "L4 billboard, squat"
+ },
+ "prop_tall": {
+  "aspect": "2:3",
+  "mp": 2.0,
+  "style": "be_iso",
+  "note": "pillars, trees"
+ },
+ "prop_wide": {
+  "aspect": "2:1",
+  "mp": 2.0,
+  "style": "be_iso",
+  "note": "wall runs"
+ },
+ "prop_sheet": {
+  "aspect": "3:2",
+  "mp": 2.0,
+  "style": "be_iso",
+  "note": "several small props on one sheet"
+ },
+ "foreground": {
+  "aspect": "16:9",
+  "mp": 2.0,
+  "style": "be_fg",
+  "note": "L5 edge framing"
+ },
+ "portrait_card": {
+  "aspect": "512:461",
+  "mp": 1.0,
+  "note": "menu card, feather in post",
+  "target": [
+   512,
+   461
+  ]
+ },
+ "portrait_bg": {
+  "aspect": "16:9",
+  "mp": 1.5,
+  "note": "menu background",
+  "target": [
+   1280,
+   720
+  ]
+ },
+ "brawler_bg": {
+  "aspect": "2.4:1",
+  "mp": 2.0,
+  "style": "rez_bg",
+  "note": "Rez brawler stage background",
+  "target": [
+   3840,
+   1600
+  ]
+ },
+ "brawler_prop": {
+  "aspect": "1:1",
+  "mp": 2.0,
+  "style": "rez_prop",
+  "note": "Rez brawler destructible"
+ }
+}

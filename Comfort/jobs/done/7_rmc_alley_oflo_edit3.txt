@@ -1,0 +1,8 @@
+#name rmc_alley_oflo_edit3
+#wf edit
+#image out\rmc_intro_v1\02-1_alley_lookout.png
+#boost 2
+#steps 8
+#n 4
+#seed random
+[label=oflo_edit] Replace the white spray-painted graffiti word FLOWC on the brick wall at the right with the word O-Flo, written as a capital letter O, then a hyphen, then a capital letter F, a lowercase letter l and a lowercase letter o, in the same white dripping spray paint, slightly smaller so the whole word fits on the wall inside the frame, with plain bricks after the last letter and no quotation marks or other marks. Everything else in the image stays exactly the same.

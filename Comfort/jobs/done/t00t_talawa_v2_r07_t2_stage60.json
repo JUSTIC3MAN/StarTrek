@@ -1,0 +1,8 @@
+{
+ "workflow": "Stage 1080p60 (Comfort)",
+ "name": "talawa_v2_r07_t2_stage60",
+ "set": {
+  "load.video": "A:\\Ai projects\\Star Trek\\Comfort\\out\\videos\\talawa_v2_r07_t2.mp4"
+ },
+ "free_after": true
+}

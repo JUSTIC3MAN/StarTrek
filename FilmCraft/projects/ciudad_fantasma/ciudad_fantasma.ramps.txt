@@ -1,0 +1,9 @@
+motion as rendered -> after the speed ramp (. still  - = + * # moving), speeds used, new length
+ciudad_fantasma_vid1_stage60.mp4: ramp off
+ciudad_fantasma_vid2_stage60.mp4: ramp off
+ciudad_fantasma_vid3_stage60.mp4: ramp off
+ciudad_fantasma_vid4_stage60.mp4: ramp off
+ciudad_fantasma_vid5_stage60.mp4: ramp off
+ciudad_fantasma_vid6_stage60.mp4: ramp off
+ciudad_fantasma_vid7_stage60.mp4: ramp off
+ciudad_fantasma_vid8_stage60.mp4: ramp off

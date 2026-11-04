@@ -1,0 +1,5 @@
+conqueress off
+conqueress_v3 auto
+sentimientos off
+talawa auto
+floral auto

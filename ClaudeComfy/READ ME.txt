@@ -1,0 +1,37 @@
+ClaudeComfy - separate ComfyUI v0.39.2 for MiniMax H3
+=====================================================
+Your main install (A:\Ai projects\comfy\ComfyUI) is not touched by anything in here.
+
+FIRST TIME
+  1. Double-click "1 - Setup ClaudeComfy.bat"
+     - builds the Python env (venv), installs PyTorch 2.10 CUDA 13.0 + all node packages
+     - downloads ~27 GB of H3 support files from Hugging Face (resumes if interrupted - just run it again)
+     - test-starts ComfyUI once; everything is logged to setup_log.txt and download_log.txt
+  2. Double-click "2 - Start ClaudeComfy.bat"  ->  http://127.0.0.1:8189
+     (port 8189, so it can run next to your main ComfyUI on 8188)
+  3. Workflows sidebar:
+       "DaSiWa MiniMax H3 (ClaudeComfy)"       - wired to your DaSiWa Hybrid v3 int8
+       "MiniMax H3 Seed Hunter (ClaudeComfy)"  - wired to your DaSiWa Hybrid v3 int8 + Kijai DMAD turbo LoRA
+     The untouched originals are in workflows_original\
+
+WHERE THINGS ARE (ComfyUI\models\...)
+  diffusion_models\MiniMaxH3\  DasiwaMinimaxH3_dasiwaHybridV3_int8   (REF2VA + FL2VA hybrid, NON-turbo build)
+                               minimaxH3INT8INT6INT4_fl2vaINT8Pruned  (stock FL2VA pruned int8)
+                               minimaxH3_comfy_3086249                (full bf16, 66 GB - too big for 64 GB RAM, see below)
+  text_encoders\               qwen3vl_32b_minimax_h3_nvfp4_awq
+  vae\MiniMaxH3\               video fp16, video int8 (faster), audio fp32
+  vae_approx\                  taeh3 (live previews)
+  latent_upscale_models\       H3 latent upscaler fp16 + bf16
+  loras\MINIMAX\               DMAD 4-step, silveroxides FL2VA + REF2VA dareties, your turbo_v4_step600
+  upscale_models\              2x-AnimeSharpV4_RCAN (+ your main install's upscalers via extra_model_paths.yaml)
+  frame_interpolation\         rife_v4.26        rife\flownet.pkl (Seed Hunter RIFE node)
+
+NOTES
+  - DaSiWa workflow sampling was switched to the non-turbo values your model needs:
+    res_multistep / simple / 25 steps / shift 11 video, 4 audio.
+    Faster route: turn on the DMAD LoRA already loaded (off) in the LoRA loader, then euler / 8 steps / shift 7 video, 4 audio.
+  - minimax_h3_turbo_v4_step600_pruned_comfyui (your LoRA) carries a warning in its own file header:
+    its AdaLN layers were stripped during conversion and "four-step distillation behaviour may be degraded or broken".
+    Prefer the DMAD or silveroxides LoRAs.
+  - Optional extra model: venv\Scripts\python.exe scripts\download_h3_models.py --singularity
+    (Minimax-h3_Singularity REF2VA pruned int8, 21 GB - the model the Seed Hunter author uses)

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "A:\Ai projects\Comfort\comfort.py", line 460, in run_file
+    _, ok = run_job(job, base)
+            ^^^^^^^^^^^^^^^^^^
+  File "A:\Ai projects\Comfort\comfort.py", line 386, in run_job
+    specs = [resolve(it) for it in job["items"]]
+             ^^^^^^^^^^^
+  File "A:\Ai projects\Comfort\comfort.py", line 298, in resolve
+    raise ValueError("unknown preset '%s' (see presets.json)" % pr)
+ValueError: unknown preset 'brawler_bg' (see presets.json)

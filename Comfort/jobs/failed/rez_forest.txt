@@ -1,0 +1,6 @@
+#name rez_forest
+#preset brawler_bg
+#n 3
+A scary cartoon forest at night, gnarled black twisted trees with spiral curling branches and hollow knotholes shaped like moaning faces, thorny bramble vines with long curved thorns, toxic neon green fog drifting between the trunks, glowing lime-green mushrooms and floating green wisps, a pale crooked moon behind bare branches, dirt path with twisted roots
+#preset brawler_prop
+A squat old wooden potion barrel with warped dark planks and rusted iron bands, wrapped in black thorny vines with spiral curls, a cork-stoppered glowing toxic green potion bottle wedged in the top, a stitched green heart symbol painted on the front, green light leaking through the gaps between the planks

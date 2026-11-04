@@ -1,0 +1,121 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 4,
+  "text": "Rise",
+  "font": {
+    "family": "Staatliches",
+    "size": 500,
+    "weight": 400,
+    "italic": false,
+    "letterSpacing": 19,
+    "lineHeight": 0.7
+  },
+  "align": "center",
+  "vAlign": "middle",
+  "offsetX": 0,
+  "offsetY": 0,
+  "maxWidthPct": 80,
+  "opacity": 1,
+  "fill": {
+    "mode": "gradient",
+    "color": "#ffffff",
+    "stops": [
+      "#e2033b",
+      "#e2033b",
+      "#c6c25d",
+      "#33d605"
+    ],
+    "angle": 100,
+    "sweepSpeed": 0,
+    "baseHue": 0,
+    "hueSpread": 18,
+    "cycleSpeed": 0.25,
+    "saturation": 95,
+    "lightness": 60,
+    "palette": [
+      "#ff2e63",
+      "#ffd166",
+      "#06d6a0",
+      "#4cc9f0"
+    ],
+    "paletteCycle": false,
+    "unit": "letter"
+  },
+  "stroke": {
+    "enabled": true,
+    "color": "#000000",
+    "width": 7
+  },
+  "shadow": {
+    "enabled": true,
+    "color": "#000000",
+    "opacity": 0.55,
+    "blur": 20,
+    "dx": 0,
+    "dy": 8
+  },
+  "glow": {
+    "enabled": false,
+    "color": "#00e5ff",
+    "blur": 34,
+    "opacity": 0.9,
+    "intensity": 2
+  },
+  "backdrop": {
+    "enabled": false,
+    "color": "#000000",
+    "opacity": 0.55,
+    "padX": 30,
+    "padY": 14,
+    "radius": 14
+  },
+  "entrance": {
+    "mode": "slideUp",
+    "unit": "none",
+    "delay": 0.1,
+    "stagger": 0.07,
+    "duration": 1.97,
+    "easing": "outCubic",
+    "distance": 416,
+    "blurAmount": 16,
+    "softness": 6,
+    "lps": 18,
+    "overlap": 1.4
+  },
+  "exit": {
+    "enabled": false,
+    "mode": "fade",
+    "unit": "word",
+    "time": 3.3,
+    "stagger": 0.03,
+    "duration": 0.4,
+    "distance": 70
+  },
+  "wave": {
+    "enabled": true,
+    "amplitude": 24,
+    "wavelength": 340,
+    "speed": 0.7,
+    "secondary": 0.35,
+    "squash": 0.12,
+    "shading": 0.28,
+    "pole": "left",
+    "poleCurve": 1,
+    "direction": "ltr"
+  },
+  "pop": {
+    "enabled": false,
+    "bpm": 120,
+    "everyNBeats": 1,
+    "offset": 0,
+    "unit": "none",
+    "stagger": 0,
+    "amount": 0.18,
+    "damping": 8,
+    "bounce": 3,
+    "tilt": 0,
+    "lift": 0
+  }
+}

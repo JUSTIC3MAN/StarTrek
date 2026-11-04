@@ -1,0 +1,29 @@
+# ComfyUI and every custom node pack in ClaudeComfy, pinned to the exact commits that run on Justice's PC (2026-11-03).
+# setup_startrek.ps1 clones each one into ClaudeComfy\ComfyUI\custom_nodes\<folder> and checks out the commit.
+# format: folder | git url | commit
+ComfyUI | https://github.com/comfyanonymous/ComfyUI.git | 3c1b7a17fdf239d35ce98cc777756f572d089795
+CRT-Nodes | https://github.com/PGCRT/CRT-Nodes.git | 04e6b58391fa
+ComfyUI-Custom-Scripts | https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git | 609f3afaa74b
+ComfyUI-DaSiWa-Nodes | https://github.com/darksidewalker/ComfyUI-DaSiWa-Nodes.git | a96f0ddfd519
+ComfyUI-Easy-Use | https://github.com/yolain/ComfyUI-Easy-Use.git | 67afdc820468
+ComfyUI-Fantastic-MiniMaxH3-PromptBuilder | https://github.com/Adudeguyman/ComfyUI-Fantastic-MiniMaxH3-PromptBuilder.git | 1e8df670cc21
+ComfyUI-GGUF | https://github.com/city96/ComfyUI-GGUF.git | 6ea2651e7df6
+ComfyUI-H3-Prompt-IDE | https://github.com/ethanfel/ComfyUI-H3-Prompt-IDE.git | c1667471203b
+ComfyUI-Image-Saver | https://github.com/alexopus/ComfyUI-Image-Saver.git | dbf94571699d
+ComfyUI-Impact-Pack | https://github.com/ltdrdata/ComfyUI-Impact-Pack.git | 429d0159ad42
+ComfyUI-KJNodes | https://github.com/kijai/ComfyUI-KJNodes.git | d3cfe21625e5
+ComfyUI-Krea2T-Enhancer | https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer.git | 958898e947ce
+ComfyUI-MiniMaxH3Mod | https://github.com/Luisacaotica/ComfyUI-MiniMaxH3Mod.git | f9462081e287
+ComfyUI-Pixaroma | https://github.com/pixaroma/ComfyUI-Pixaroma.git | e464839a42e1
+ComfyUI-SeedVR2_VideoUpscaler | https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler.git | 4490bd1f482e
+ComfyUI-VFI | https://github.com/GACLove/ComfyUI-VFI.git | 6176a430f12c
+ComfyUI-VideoHelperSuite | https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git | 4d907bee61e9
+ComfyUI_LayerStyle | https://github.com/chflame163/ComfyUI_LayerStyle.git | 51977b27869a
+Comfyui-Resolution-Master | https://github.com/Azornes/Comfyui-Resolution-Master.git | 95176f3a8635
+Comfyui_Minimax_h3_latent_Upscaler | https://github.com/LBH-123-AI/Comfyui_Minimax_h3_latent_Upscaler.git | 40316cf008b2
+ControlAltAI-Nodes | https://github.com/gseth/ControlAltAI-Nodes.git | 721492b66c9c
+RES4LYF | https://github.com/ClownsharkBatwing/RES4LYF.git | 56e44755d866
+cg-use-everywhere | https://github.com/chrisgoringe/cg-use-everywhere.git | 50ae9f8c5d8b
+rgthree-comfy | https://github.com/rgthree/rgthree-comfy.git | d7297b42f0fa
+was-node-suite-comfyui | https://github.com/ltdrdata/was-node-suite-comfyui.git | 44de705818d4
+# comfyui-krea2edit (v1.2.5, https://github.com/lbouaraba/comfyui-krea2edit) is copied from ClaudeComfy\local_nodes\ - the exact files from Justice's PC.

@@ -1,0 +1,251 @@
+{
+"title": "Ras Manuel - Sentimientos (full song)",
+"out": "projects/sentimientos/sentimientos.mp4",
+"music": "Sentimientos.mp3",
+"videos": "A:\\Ai projects\\Star Trek\\Comfort\\out\\videos",
+"fadein": 24,
+"fadeout": 90,
+"shots": [
+{
+"t": 0.0,
+"e": 108.43,
+"label": "a00_edit150",
+"clip": "sentimientos_v2_edit150.mp4",
+"a": 0.0
+},
+{
+"t": 108.43,
+"e": 113.58,
+"label": "v01_two_kites",
+"tr": "luma_fade 25",
+"run": "sentimientos_end_r06",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 113.58,
+"e": 118.72,
+"label": "v02_kites_below",
+"tr": "cross_zoom 12 strength=30",
+"run": "sentimientos_end_r06",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 118.72,
+"e": 123.46,
+"label": "v03_hands_string",
+"tr": "blur_dissolve 14 blur=30",
+"run": "sentimientos_end_r06",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 123.46,
+"e": 126.88,
+"label": "w01_color_falls",
+"tr": "blur_dissolve 25 blur=40",
+"run": "sentimientos_end_r07",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 126.88,
+"e": 130.3,
+"label": "w02_falls_base",
+"tr": "push 12 direction=from_north",
+"run": "sentimientos_end_r07",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 130.3,
+"e": 133.72,
+"label": "w03_falls_close",
+"tr": "wave 12 direction=from_south amplitude=30",
+"run": "sentimientos_end_r07",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 133.72,
+"e": 137.16,
+"label": "w04_color_river",
+"tr": "cross_zoom 12 strength=30",
+"run": "sentimientos_end_r08",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 137.16,
+"e": 140.58,
+"label": "x01_hill_blooms",
+"tr": "film_dissolve 25",
+"run": "sentimientos_end_r08",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 140.58,
+"e": 144.02,
+"label": "x02_flower_opens",
+"tr": "cross_zoom 12 strength=30",
+"run": "sentimientos_end_r08",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 144.02,
+"e": 147.44,
+"label": "x03_petals_rise",
+"tr": "blur_dissolve 14 blur=30",
+"run": "sentimientos_end_r09",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 147.44,
+"e": 150.0,
+"label": "x04_hill_house",
+"tr": "luma_fade 14",
+"run": "sentimientos_end_r09",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 150.0,
+"e": 154.32,
+"label": "e01_house_birds",
+"tr": "flare 25 color=#ffd27a",
+"run": "sentimientos_end_r01",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 154.32,
+"e": 157.74,
+"label": "e02_flock_overhead",
+"tr": "cross_zoom 12 strength=30",
+"run": "sentimientos_end_r01",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 157.74,
+"e": 161.14,
+"label": "e03_inside_flock",
+"tr": "push 12 direction=from_south",
+"run": "sentimientos_end_r01",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 161.14,
+"e": 164.6,
+"label": "e04_flock_moon",
+"tr": "blur_dissolve 14 blur=30",
+"run": "sentimientos_end_r02",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 164.6,
+"e": 169.74,
+"label": "f01_under_lake",
+"tr": "wave 25 direction=from_north amplitude=40",
+"run": "sentimientos_end_r02",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 169.74,
+"e": 174.86,
+"label": "f02_surface_above",
+"tr": "blur_dissolve 14 blur=30",
+"run": "sentimientos_end_r02",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 174.86,
+"e": 178.32,
+"label": "f03_deep_orbs",
+"tr": "luma_fade 14",
+"run": "sentimientos_end_r03",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 178.32,
+"e": 183.44,
+"label": "g01_village_lanterns",
+"tr": "light_leak 25 color=#ffb070 amount=60",
+"run": "sentimientos_end_r03",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 183.44,
+"e": 188.58,
+"label": "g02_lanterns_up",
+"tr": "film_dissolve 14",
+"run": "sentimientos_end_r03",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 188.58,
+"e": 192.02,
+"label": "g03_lantern_sky",
+"tr": "luma_fade 14",
+"run": "sentimientos_end_r04",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 192.02,
+"e": 197.16,
+"label": "h01_forest_path",
+"tr": "luma_fade 25",
+"run": "sentimientos_end_r04",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 197.16,
+"e": 202.3,
+"label": "h02_walk_behind",
+"tr": "blur_dissolve 14 blur=30",
+"run": "sentimientos_end_r04",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 202.3,
+"e": 208.0,
+"label": "h03_forest_dawn",
+"tr": "light_leak 20 color=#ffd2a0 amount=50",
+"run": "sentimientos_end_r05",
+"slot": 0,
+"off": 0.0
+}
+],
+"copy": [
+"A:\\Ai projects\\Star Trek\\Preview\\Ras Manuel - Sentimientos\\Sentimientos (full song).mp4"
+],
+"pic_dirs": [
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\sentimientos_end_e01",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\sentimientos_end_e02",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\sentimientos_end_p01",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\sentimientos_end_p02"
+],
+"inpoint": 1.2,
+"tail": 4.98,
+"musicfull": true,
+"within": [
+"film_dissolve 14",
+"blur_dissolve 14 blur=30",
+"luma_fade 14"
+],
+"pic_copy": "A:\\Ai projects\\Star Trek\\Preview\\Ras Manuel - Sentimientos\\full pictures"
+}

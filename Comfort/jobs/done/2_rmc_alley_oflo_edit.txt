@@ -1,0 +1,7 @@
+#name rmc_alley_oflo_edit
+#wf edit
+#image out\rmc_intro_v1\02-1_alley_lookout.png
+#boost 4
+#n 2
+#seed random
+[label=oflo_edit] Change only the white spray-painted graffiti word on the brick wall at the right, below the poster: it now reads exactly "O-Flo" (capital O, hyphen, capital F, lowercase l, lowercase o) in the same white dripping spray paint, a little smaller so the whole word fits on the wall between the arched doorway and the right edge of the frame. Keep everything else in the image exactly the same: the masked man crouching with the walkie-talkie, his black cap, mask, puffer jacket and gold RMC chain, the rain, the viaduct arches, the glowing open door, the poster and the bold inked graphic-novel style.

@@ -1,0 +1,6 @@
+#name floral_v6_q03
+#size 1376x768
+#n 1
+#seed random
+#style none
+[label=m01_clouds_race] swirling painted clouds racing over the old stone sea wall and a single purple flower, the sea beyond, mystical ornate fantasy painting, swirling layered forms that flow into curling ornamental waves of violet paint, softly glowing pale gold highlights and rich painterly brush detail, the image filling the frame edge to edge, wide shot from the beach, the wall low across the frame, the sky filling most of the frame, deep violet, magenta, indigo and electric blue-teal, no people, no hands, no text, no watermark, no border, no frame, no blank paper

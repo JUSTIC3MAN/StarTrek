@@ -1,0 +1,7 @@
+#name floral_v6_p05
+#size 1376x768
+#n 1
+#seed random
+#style none
+[label=c13_sun_rays lora=foggy-neon-streak-comfy.safetensors:1.1] the sun rising over the sea, its rays opening like the petals of a giant flower of light, the old stone sea wall in the foreground, a world made of light, translucent glowing forms traced by fine neon filaments and sparks, long light streaks drifting through soft fog against deep darkness, wide shot from the beach, the horizon low, deep violet, indigo, magenta and pale gold light, no people, no hands, no text, no watermark, no border, no frame, no blank paper, foggy neon streak style
+[label=h01_glasshouse lora=pastel-rainbow-watercolor-comfy.safetensors:1.1] a ruined old glasshouse on a cliff above the sea, swallowed by purple flowers, wet-on-wet watercolor painting, deep saturated violet and magenta pigment blooming and bleeding into each other, dark pooled edges, soft teal-blue accents and visible paper grain, the washes filling the whole frame, wide shot from the cliff path, sunlit gold, violet, magenta and teal-blue, no people, no hands, no text, no watermark, no border, no frame, no blank paper, pastel rainbow watercolor style

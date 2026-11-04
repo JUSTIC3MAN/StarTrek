@@ -1,0 +1,4 @@
+#name cosmic_sky_wide_v1
+#size 1536x864
+#n 1
+A cosmic sunset over a sea of clouds, digital painting in a loose anime sky style with bold expressive brushstrokes and thick, textured dabs of color like palette-knife oil paint. Wide panoramic 16:9 composition: low horizon in the lower third, a blazing golden-white sunburst just right of centre, and a towering column of nebula smoke rising diagonally from the sunburst to the upper right in electric cyan, violet, hot magenta and fiery orange, edged with charcoal-black storm clouds. Thin glowing meteors streak down from the upper left trailing pink and white light, and a small dark planet with a cyan rim hangs in the starfield. Below, rolling teal clouds and still pools of water reflect the orange and magenta glow. Deep navy star-speckled sky, warm core against cold blue edges, no text.

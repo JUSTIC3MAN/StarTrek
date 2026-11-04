@@ -1,0 +1,16 @@
+{
+ "workflow": "Krea 2 Identity Edit (ClaudeComfy)",
+ "name": "rezzy_krea_edit",
+ "images": {
+  "72.image": "A:\\Ai projects\\Claude3D\\Rezzy\\rezzy_crop.png"
+ },
+ "set": {
+  "84.prompt": "Show this same small cartoon creature with the round white head standing alone in a full-body front view, head to feet fully in frame with empty space above the thorn halo, facing the camera straight on, standing upright with his feet slightly apart and both arms held down and slightly away from his body, on a plain pure white background. Remove the girl, the black cat, the hallway and the floor. Keep his round white head with the stitched crack, big hollow black eyes, the ring of black thorns floating above his head, the black bat wings spread behind his shoulders, his plain cream white body and the glowing green heart on his chest exactly the same, in a clean flat cartoon illustration style with thick black outlines and even flat lighting.",
+  "83.aspect_ratio": "2:3 (Portrait Photo)",
+  "29.filename_prefix": "Claude3D/krea_edit"
+ },
+ "n": 1,
+ "seed": "random",
+ "copy_to": "A:\\Ai projects\\Claude3D\\Rezzy",
+ "copy_prefix": "rezzy"
+}

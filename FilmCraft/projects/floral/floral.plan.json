@@ -1,0 +1,674 @@
+{
+"title": "Marie Vie - FLORAL",
+"out": "projects/floral/floral.mp4",
+"music": "FLORAL.mp3",
+"videos": "A:\\Ai projects\\Star Trek\\Comfort\\out\\videos",
+"fadein": 24,
+"fadeout": 60,
+"shots": [
+{
+"t": 0.0,
+"e": 10.485,
+"label": "in1",
+"clip": "floral_vid1_stage60.mp4",
+"a": 0.0
+},
+{
+"t": 10.485,
+"e": 17.367,
+"label": "in2",
+"tr": "dissolve 16",
+"clip": "floral_vid2_stage60.mp4",
+"a": 0.0
+},
+{
+"t": 17.367,
+"e": 20.86,
+"label": "f01_wall_glide",
+"tr": "luma_fade 18",
+"clip": "floral_v6_r01_stage60.mp4",
+"a": 6.3
+},
+{
+"t": 20.86,
+"e": 24.4,
+"label": "f02_core_blaze",
+"tr": "additive_dissolve 14",
+"clip": "floral_v6_r01_stage60.mp4",
+"a": 11.0
+},
+{
+"t": 24.4,
+"e": 27.88,
+"label": "s13_neon_ignite",
+"tr": "cross_zoom 26 center=960,540 strength=40",
+"clip": "floral_shots_g5c_stage60.mp4",
+"a": 0.6
+},
+{
+"t": 27.88,
+"e": 31.36,
+"label": "n07_wall_waves",
+"tr": "wave 16 direction=from_east amplitude=40",
+"clip": "floral_ext_r03_stage60.mp4",
+"a": 1.0
+},
+{
+"t": 31.36,
+"e": 33.1,
+"label": "s16_heartbeat",
+"tr": "luma_fade 12",
+"clip": "floral_shots_g5c_stage60.mp4",
+"a": 5.3
+},
+{
+"t": 33.1,
+"e": 36.58,
+"label": "n03_neon_wave",
+"tr": "push 12 direction=from_east",
+"clip": "floral_ext_r01_stage60.mp4",
+"a": 9.3
+},
+{
+"t": 36.58,
+"e": 40.06,
+"label": "n02_wall_lightup",
+"tr": "blur_dissolve 14 blur=30",
+"clip": "floral_ext_r01_stage60.mp4",
+"a": 4.5
+},
+{
+"t": 40.06,
+"e": 41.8,
+"label": "n09_seed_sparks",
+"tr": "flare 10 color=#ff40c0",
+"clip": "floral_ext_r03_stage60.mp4",
+"a": 9.4
+},
+{
+"t": 41.8,
+"e": 45.28,
+"label": "n06_aurora_cliff",
+"tr": "additive_dissolve 14",
+"clip": "floral_ext_r02_stage60.mp4",
+"a": 9.4
+},
+{
+"t": 45.28,
+"e": 48.76,
+"label": "c04_filaments_rise",
+"tr": "luma_fade 53",
+"clip": "floral_ext_r05_stage60.mp4",
+"a": 0.4
+},
+{
+"t": 48.76,
+"e": 52.24,
+"label": "c06_galaxy",
+"tr": "blur_dissolve 16 blur=30",
+"clip": "floral_ext_r05_stage60.mp4",
+"a": 10.4
+},
+{
+"t": 52.24,
+"e": 55.7,
+"label": "c01_star_bursts",
+"tr": "additive_dissolve 16",
+"clip": "floral_ext_r04_stage60.mp4",
+"a": 1.4
+},
+{
+"t": 55.7,
+"e": 59.18,
+"label": "c03_star_beam",
+"tr": "luma_fade 14",
+"clip": "floral_ext_r04_stage60.mp4",
+"a": 9.6
+},
+{
+"t": 59.18,
+"e": 62.66,
+"label": "g01_sunrise_garden",
+"tr": "light_sweep 45",
+"clip": "floral_ext_r06_stage60.mp4",
+"a": 0.8
+},
+{
+"t": 62.66,
+"e": 66.14,
+"label": "g02_turn_to_sun",
+"tr": "luma_fade 14",
+"clip": "floral_ext_r06_stage60.mp4",
+"a": 5.8
+},
+{
+"t": 66.14,
+"e": 68.76,
+"label": "g05_roots_below",
+"tr": "film_dissolve 14",
+"clip": "floral_ext_r07_stage60.mp4",
+"a": 5.5
+},
+{
+"t": 68.76,
+"e": 73.1,
+"label": "g07_petals_to_sun",
+"tr": "blur_dissolve 14 blur=30",
+"clip": "floral_ext_r08_stage60.mp4",
+"a": 0.6
+},
+{
+"t": 73.1,
+"e": 76.58,
+"label": "g04_backlit_petals",
+"tr": "luma_fade 14",
+"clip": "floral_ext_r07_stage60.mp4",
+"a": 0.8
+},
+{
+"t": 76.58,
+"e": 80.04,
+"label": "g08_field_sway",
+"tr": "film_dissolve 14",
+"clip": "floral_ext_r08_stage60.mp4",
+"a": 5.7
+},
+{
+"t": 80.04,
+"e": 82.66,
+"label": "g11_roots_hold",
+"tr": "blur_dissolve 14 blur=30",
+"clip": "floral_ext_r09_stage60.mp4",
+"a": 5.3
+},
+{
+"t": 82.66,
+"e": 87.0,
+"label": "g09_butterfly",
+"tr": "film_dissolve 14",
+"clip": "floral_ext_r08_stage60.mp4",
+"a": 10.4
+},
+{
+"t": 87.0,
+"e": 90.74,
+"label": "p03_ink_seep",
+"tr": "luma_fade 40",
+"run": "floral_v6_r02",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 90.74,
+"e": 94.84,
+"label": "p04_dark_surge",
+"tr": "wave 16 direction=from_west amplitude=40",
+"run": "floral_v6_r02",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 94.84,
+"e": 99.18,
+"label": "p05_bent_stem",
+"tr": "blur_dissolve 16 blur=30",
+"run": "floral_v6_r02",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 99.18,
+"e": 100.92,
+"label": "p06_glow_return",
+"tr": "luma_fade 14",
+"run": "floral_v6_r03",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 100.92,
+"e": 104.4,
+"label": "n15_horizon_bloom",
+"tr": "flare 18 color=#ff40c0",
+"run": "floral_v6_r03",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 104.4,
+"e": 107.88,
+"label": "n14_petal_breeze",
+"tr": "push 12 direction=from_east",
+"run": "floral_v6_r03",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 107.88,
+"e": 109.62,
+"label": "n11_pollen_burst",
+"tr": "cross_zoom 10 strength=35",
+"run": "floral_v6_r04",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 109.62,
+"e": 111.36,
+"label": "n13_petal_wave",
+"tr": "directional_blur_transition 10",
+"run": "floral_v6_r04",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 111.36,
+"e": 114.4,
+"label": "n16_heart_pulse",
+"tr": "luma_fade 12",
+"run": "floral_v6_r04",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 114.4,
+"e": 118.32,
+"label": "c07_heartbeat",
+"tr": "additive_dissolve 20",
+"run": "floral_v6_r05",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 118.32,
+"e": 121.8,
+"label": "c08_rings_water",
+"tr": "luma_fade 12",
+"run": "floral_v6_r05",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 121.8,
+"e": 125.26,
+"label": "c09_constellation",
+"tr": "blur_dissolve 14 blur=30",
+"run": "floral_v6_r06",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 125.26,
+"e": 128.76,
+"label": "c12_sky_burst",
+"tr": "glow 12",
+"run": "floral_v6_r06",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 128.76,
+"e": 132.24,
+"label": "m01_clouds_race",
+"tr": "luma_fade 40",
+"run": "floral_v6_r06",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 132.24,
+"e": 135.7,
+"label": "m02_close_open",
+"tr": "film_dissolve 14",
+"run": "floral_v6_r07",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 135.7,
+"e": 139.18,
+"label": "m05_storm_breaks",
+"tr": "luma_fade 16",
+"run": "floral_v6_r07",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 139.18,
+"e": 142.66,
+"label": "m06_gust_spiral",
+"tr": "blur_dissolve 14 blur=30",
+"run": "floral_v6_r07",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 142.66,
+"e": 146.14,
+"label": "r03_wall_rain",
+"tr": "liquid_distortion 30",
+"run": "floral_v6_r08",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 146.14,
+"e": 149.62,
+"label": "r01_rain_petals",
+"tr": "blur_dissolve 14 blur=30",
+"run": "floral_v6_r08",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 149.62,
+"e": 153.1,
+"label": "r02_flower_closes",
+"tr": "wave 14 direction=from_north amplitude=30",
+"run": "floral_v6_r08",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 153.1,
+"e": 156.58,
+"label": "r04_puddle",
+"tr": "film_dissolve 14",
+"run": "floral_v6_r09",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 156.58,
+"e": 160.06,
+"label": "r05_moon_clouds",
+"tr": "blur_dissolve 14 blur=30",
+"run": "floral_v6_r09",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 160.06,
+"e": 162.66,
+"label": "r07_shut_bud",
+"tr": "luma_fade 14",
+"run": "floral_v6_r09",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 162.66,
+"e": 165.28,
+"label": "gl01_glass_waves",
+"tr": "glass 26",
+"run": "floral_v6_r10",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 165.28,
+"e": 168.76,
+"label": "gl02_liquid_sea",
+"tr": "wave 12 direction=from_west amplitude=30",
+"run": "floral_v6_r10",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 168.76,
+"e": 170.48,
+"label": "gl07_fractal_unfold",
+"tr": "cross_zoom 10 strength=30",
+"run": "floral_v6_r10",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 170.48,
+"e": 173.98,
+"label": "gl08_glass_curl",
+"tr": "blur_dissolve 12 blur=30",
+"run": "floral_v6_r11",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 173.98,
+"e": 175.72,
+"label": "gl06_drop_rings",
+"tr": "luma_fade 10",
+"run": "floral_v6_r11",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 175.72,
+"e": 177.44,
+"label": "gl10_glass_flower",
+"tr": "additive_dissolve 12",
+"run": "floral_v6_r11",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 177.44,
+"e": 180.92,
+"label": "c13_sun_rays",
+"tr": "light_leak 20 color=#ffb070 amount=60",
+"run": "floral_v6_r12",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 180.92,
+"e": 182.66,
+"label": "c16_awaken",
+"tr": "flare 10 color=#ffd0a0",
+"run": "floral_v6_r12",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 182.66,
+"e": 186.14,
+"label": "c15_ring",
+"tr": "luma_fade 12",
+"run": "floral_v6_r12",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 186.14,
+"e": 187.88,
+"label": "c14_star_burst",
+"tr": "additive_dissolve 12",
+"run": "floral_v6_r13",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 187.88,
+"e": 191.36,
+"label": "c18_sun_and_star",
+"tr": "glow 14",
+"run": "floral_v6_r13",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 191.36,
+"e": 194.84,
+"label": "h01_glasshouse",
+"tr": "luma_fade 40",
+"run": "floral_v6_r13",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 194.84,
+"e": 198.32,
+"label": "h02_roof_light",
+"tr": "light_sweep 16",
+"run": "floral_v6_r14",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 198.32,
+"e": 201.8,
+"label": "h03_old_mirror",
+"tr": "film_dissolve 14",
+"run": "floral_v6_r14",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 201.8,
+"e": 205.26,
+"label": "h06_centre_flower",
+"tr": "blur_dissolve 14 blur=30",
+"run": "floral_v6_r14",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 205.26,
+"e": 208.74,
+"label": "n17_glasshouse_night",
+"tr": "flare 20 color=#ff40c0",
+"run": "floral_v6_r15",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 208.74,
+"e": 210.5,
+"label": "n19_neon_vines",
+"tr": "push 10 direction=from_south",
+"run": "floral_v6_r15",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 210.5,
+"e": 213.98,
+"label": "n18_petal_crown",
+"tr": "luma_fade 12",
+"run": "floral_v6_r15",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 213.98,
+"e": 215.72,
+"label": "n20_roof_bursts",
+"tr": "cross_zoom 10 strength=35",
+"run": "floral_v6_r16",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 215.72,
+"e": 219.18,
+"label": "n22_crown_settles",
+"tr": "additive_dissolve 14",
+"run": "floral_v6_r16",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 219.18,
+"e": 222.66,
+"label": "g14_coast_flowers",
+"tr": "light_sweep 40",
+"run": "floral_v6_r16",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 222.66,
+"e": 226.14,
+"label": "g15_color_wave",
+"tr": "film_dissolve 14",
+"run": "floral_v6_r17",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 226.14,
+"e": 229.62,
+"label": "g18_hearts_open",
+"tr": "luma_fade 14",
+"run": "floral_v6_r17",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 229.62,
+"e": 233.1,
+"label": "g19_wall_garden",
+"tr": "blur_dissolve 14 blur=30",
+"run": "floral_v6_r17",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 233.1,
+"e": 236.58,
+"label": "o01_sunset_petals",
+"tr": "luma_fade 53",
+"run": "floral_v6_r18",
+"slot": 0,
+"off": 0.0
+},
+{
+"t": 236.58,
+"e": 238.32,
+"label": "o03_last_light",
+"tr": "blur_dissolve 20 blur=30",
+"run": "floral_v6_r18",
+"slot": 1,
+"off": 0.0
+},
+{
+"t": 238.32,
+"e": 243.54,
+"label": "o04_first_stars",
+"tr": "dip_to_black 40",
+"run": "floral_v6_r18",
+"slot": 2,
+"off": 0.0
+},
+{
+"t": 243.54,
+"e": 248.69,
+"label": "o06_night_pullaway",
+"tr": "luma_fade 30",
+"run": "floral_v6_r19",
+"slot": 0,
+"off": 0.0
+}
+],
+"copy": [
+"A:\\Ai projects\\Star Trek\\Preview\\Marie Vie - FLORAL\\FLORAL full edit.mp4"
+],
+"pic_dirs": [
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\floral_v6_e01",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\floral_v6_e02",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\floral_v6_e03",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\floral_v6_e04",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\floral_v6_e05",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\floral_v6_e06",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\floral_v6_p02",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\floral_v6_p03",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\floral_v6_p04",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\floral_v6_p05",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\floral_v6_p06",
+"A:\\Ai projects\\Star Trek\\Comfort\\out\\floral_v6_q03"
+],
+"inpoint": 0.8,
+"tail": 4.5,
+"musicfull": true,
+"within": [],
+"pic_copy": "A:\\Ai projects\\Star Trek\\Preview\\Marie Vie - FLORAL\\full pictures"
+}

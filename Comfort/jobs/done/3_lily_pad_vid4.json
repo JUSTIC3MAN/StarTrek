@@ -1,0 +1,14 @@
+{
+ "workflow": "H3 Keyframe Chain (Comfort)",
+ "name": "lily_pad_vid4",
+ "set": {
+  "ref.prompt": "subject_definitions:\n<Subject 1> is the rendering style of <Picture 1> and <Picture 2>: a dreamy painterly digital illustration with soft brushstroke textures and rich saturated hues of emerald green, radiant gold and cool blue, peaceful and almost magical.\n<Subject 2> is the pond: round floating lily pads, white water lilies, deep teal water with soft ripples, reeds at the edges.\n<Picture 1> is the first frame of [Shot 1], showing an underwater view looking up toward the surface, round lily pads as dark silhouettes against bright golden sunlight, soft rays of light streaming down through deep teal water, long green stems rising, tiny bubbles drifting up.\n<Picture 2> is the last frame of [Shot 1], showing a split-level view exactly at the waterline, the lower half underwater with lily stems and golden light rays, the upper half above the surface with lily pads and white water lilies glowing in the sunrise, reeds behind.\n\nsummary:\n[keyframe completion + reference generation] A 10.8-second 16:9 single continuous shot in <Subject 1> that begins on <Picture 1> and ends on <Picture 2>: from beneath the pond the camera rises slowly up through the golden light rays to the waterline, ending half under and half above the surface among the lilies.\n\nretention_analysis:\n<Subject 1> (applies to [Shot 1]): fully_preserved - the soft brushstroke texture and saturated painterly color; nothing becomes photographic.\n<Subject 2> (appears in [Shot 1]): fully_preserved - the lily pads, white lilies and teal water.\n<Picture 1> ([Shot 1] first frame): fully_preserved - its composition.\n<Picture 2> ([Shot 1] last frame): fully_preserved - its composition.\n\ndetailed_description:\nThe target video is a living painterly illustration in <Subject 1>: brushstroke texture stays visible as everything moves, motion is slow, gentle and elegant, like a living painting.\n[Shot 1] The shot begins from <Picture 1>. Light rays sway gently through the deep teal water and tiny bubbles drift upward along the lily stems. The camera rises slowly at a steady speed in one continuous move, drifting up between the stems toward the glowing surface until it reaches the waterline, the frame splitting into the calm underwater world below and the lily pads and white flowers glowing in the sunrise above. The camera is still rising as the shot ends on <Picture 2>. No cut or transition occurs.\n\noverall_soundscape:\nMuffled underwater hush and soft bubbles, then the surface breaking into gentle open-air sounds of lapping water and morning birds.\n\nnon_diegetic_music:\nN/A",
+  "ref.length": 260
+ },
+ "images": {
+  "pic1.image": "A:\\Ai projects\\Comfort\\out\\lily_keys\\02-1_k4a.png",
+  "pic2.image": "A:\\Ai projects\\Comfort\\out\\lily_keys\\03-1_k4b.png"
+ },
+ "seed": "random",
+ "fc_in": "leak 30"
+}

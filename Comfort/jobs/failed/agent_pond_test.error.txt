@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "A:\Ai projects\Comfort\comfort.py", line 661, in run_file
+    _, ok = run_job(job, base)
+            ^^^^^^^^^^^^^^^^^^
+  File "A:\Ai projects\Comfort\comfort.py", line 533, in run_job
+    return _run_job(job, default_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\Ai projects\Comfort\comfort.py", line 540, in _run_job
+    raise ValueError("no prompts in job")
+ValueError: no prompts in job

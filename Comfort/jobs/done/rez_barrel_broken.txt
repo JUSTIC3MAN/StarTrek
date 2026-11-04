@@ -1,0 +1,8 @@
+#name rez_barrel_broken
+#preset edit
+#image rez_forest/02-2_squat-old-wooden.png
+#size 1408x1408
+#boost 1.5
+#n 2
+#seed 11
+[label=barrel_broken] The barrel has been smashed to pieces and no longer stands: only a low scattered heap of broken dark wooden planks and splinters, a bent rusted iron hoop and torn black thorny vines lying flat on the ground, shattered green glass shards in a spreading puddle of glowing green potion, same cartoon style and outlines, same plain white background

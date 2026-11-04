@@ -1,0 +1,28 @@
+{
+ "model": "qwen3.6:27b",
+ "time": "2026-10-14 15:08:19",
+ "runs": [
+  {
+   "run": "cold",
+   "load_s": 16.9,
+   "prompt_tokens_per_s": 606.2,
+   "gen_tokens_per_s": 115.1,
+   "total_s": 17.8,
+   "tool_call": {
+    "background": "red",
+    "circle": "green"
+   }
+  },
+  {
+   "run": "warm",
+   "load_s": 0.0,
+   "prompt_tokens_per_s": 4632.0,
+   "gen_tokens_per_s": 126.7,
+   "total_s": 0.4,
+   "tool_call": {
+    "background": "red",
+    "circle": "green"
+   }
+  }
+ ]
+}

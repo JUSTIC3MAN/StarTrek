@@ -1,0 +1,1610 @@
+{
+ "runs": {
+  "floral_v6_r01": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 0.25,
+     "ok": false,
+     "hard": true,
+     "why": "frozen (motion 0.42); off-style, score 4; Style is photographic/3D render, not purple wet-on-wet watercolor. Visible paper grain and bleeding pigment are missing.",
+     "score": 4.0,
+     "note": "Style is photographic/3D render, not purple wet-on-wet watercolor. Visible paper grain and bleeding pigment are missing."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 1.06,
+     "ok": false,
+     "hard": false,
+     "why": "static end cut at 5.0s; off-style, score 4; Style is photographic/3D render, not purple wet-on-wet watercolor. Visible paper grain and bleeding pigment are missing.",
+     "score": 4.0,
+     "note": "Style is photographic/3D render, not purple wet-on-wet watercolor. Visible paper grain and bleeding pigment are missing."
+    },
+    {
+     "in": 1.29,
+     "out": 4.97,
+     "motion": 1.0,
+     "ok": false,
+     "hard": false,
+     "why": "static end cut at 5.0s; off-style, score 4; Style is photographic/3D render, not purple wet-on-wet watercolor. Visible paper grain and bleeding pigment are missing.",
+     "score": 4.0,
+     "note": "Style is photographic/3D render, not purple wet-on-wet watercolor. Visible paper grain and bleeding pigment are missing."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 14:09:58"
+  },
+  "floral_v6_r02": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 1.68,
+     "motion": 0.31,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 1.7s",
+     "score": 8.0,
+     "note": "Strong watercolor aesthetic. The motion of the dark ink seeping is clear and the composition is striking."
+    },
+    {
+     "in": 0.4,
+     "out": 3.78,
+     "motion": 3.86,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 3.8s trimmed",
+     "score": 9.0,
+     "note": "Cinematic and powerful. The wave rolling over the wall is dynamic and fits the stormy mood perfectly."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 1.14,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Beautiful detail on the petals. The rain and bending stem convey the heavy atmosphere well."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 14:10:02"
+  },
+  "floral_v6_r03": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 1.95,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Strong wet-on-wet watercolor aesthetic. The progression of the flower opening and water receding is clear and beautiful."
+    },
+    {
+     "in": 0.42,
+     "out": 4.97,
+     "motion": 0.9,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Stunning neon cyberpunk look. The lighting and composition are cinematic and striking for a big screen."
+    },
+    {
+     "in": 2.18,
+     "out": 4.97,
+     "motion": 11.19,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame at 0.8s skipped; stray frame at 1.2s skipped; stray frame at 2.1s skipped; stray frame/cut at 2.8s; static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Excellent motion flow with the ribbons. The low angle and neon aesthetic are consistent and visually powerful."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 14:17:57"
+  },
+  "floral_v6_r04": {
+   "slots": [
+    {
+     "in": 0.68,
+     "out": 3.28,
+     "motion": 2.96,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 0.6s skipped; stray frame at 3.3s trimmed",
+     "score": 9.0,
+     "note": "Stunning macro shot. The burst of pollen sparks is dynamic and fits the neon anime aesthetic perfectly. High contrast and beautiful lighting."
+    },
+    {
+     "in": 1.33,
+     "out": 3.95,
+     "motion": 11.8,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 4.0s trimmed",
+     "score": 8.0,
+     "note": "Strong composition. The transition from the wave to the vortex is visually interesting and maintains the style. The 'petal' texture is subtle but present."
+    },
+    {
+     "in": 0.4,
+     "out": 4.85,
+     "motion": 8.25,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 4.8s",
+     "score": 9.0,
+     "note": "Excellent execution of the heartbeat pulse. The rings of light rolling out are clear and the neon glow is vibrant. Very cinematic."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 14:18:01"
+  },
+  "floral_v6_r05": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 3.95,
+     "motion": 2.39,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 4.0s trimmed",
+     "score": 8.0,
+     "note": "Cinematic wide shot with clear motion of the light rings and flower pulsing. Fits the neon aesthetic perfectly."
+    },
+    {
+     "in": 1.89,
+     "out": 4.22,
+     "motion": 1.47,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame at 1.8s skipped; stray frame/cut at 4.0s; static end cut at 4.2s",
+     "score": 7.0,
+     "note": "Good perspective of the rings approaching. The water texture is slightly repetitive but the lighting effect is strong."
+    },
+    {
+     "in": 2.1,
+     "out": 4.85,
+     "motion": 6.63,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 2.0s skipped; static end cut at 4.8s",
+     "score": 9.0,
+     "note": "Stunning macro detail. The internal filaments and sparks create a beautiful, high-energy visual suitable for a concert screen."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 14:20:33"
+  },
+  "floral_v6_r06": {
+   "slots": [
+    {
+     "in": 0.79,
+     "out": 4.41,
+     "motion": 0.75,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 4.5s trimmed",
+     "score": 8.0,
+     "note": "Strong neon aesthetic. The formation of the flower is clear and the motion is smooth."
+    },
+    {
+     "in": 0.4,
+     "out": 2.87,
+     "motion": 0.72,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 2.9s trimmed",
+     "score": 9.0,
+     "note": "Stunning burst effect. The transition from the flower shape to the full sky of light is cinematic and visually striking."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 0.86,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Beautiful painterly style. The clouds race effectively across the frame while the foreground remains stable."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 14:20:57"
+  },
+  "floral_v6_r07": {
+   "slots": [
+    {
+     "in": 1.5,
+     "out": 4.97,
+     "motion": 4.84,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Strong painterly style and clear motion of the flower opening/closing. Composition is solid."
+    },
+    {
+     "in": 1.5,
+     "out": 4.77,
+     "motion": 2.66,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 4.8s",
+     "score": 9.0,
+     "note": "Stunning cinematic lighting. The transition from storm to golden light is dramatic and fits the concert screen aesthetic perfectly."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 4.83,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Good low angle and motion of the petals. The spiral effect is clear and the style remains consistent."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 14:28:18"
+  },
+  "floral_v6_r08": {
+   "slots": [
+    {
+     "in": 0.52,
+     "out": 4.97,
+     "motion": 0.75,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame at 0.4s skipped; static end cut at 5.0s; off-style, score 4; Style is too photographic and sharp; lacks the required wet-on-wet watercolor bleed and paper grain. Cinematic composition is good.; still in the finished edit",
+     "score": 4.0,
+     "note": "Style is too photographic and sharp; lacks the required wet-on-wet watercolor bleed and paper grain. Cinematic composition is good."
+    },
+    {
+     "in": 1.27,
+     "out": 4.97,
+     "motion": 6.6,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame at 0.4s skipped; stray frame at 0.6s skipped; stray frame at 1.2s skipped; static end cut at 5.0s; off-style; Water droplets look like 3D renders rather than watercolor. The style is too clean and digital for the requested look.; still in the finished edit",
+     "score": 5.0,
+     "note": "Water droplets look like 3D renders rather than watercolor. The style is too clean and digital for the requested look."
+    },
+    {
+     "in": 0.64,
+     "out": 4.97,
+     "motion": 0.83,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame at 0.5s skipped; static end cut at 5.0s; off-style, score 4; The flower closing is a nice motion, but the texture is too smooth and painterly in a digital sense, missing the specific watercolor aesthetic.; still in the finished edit",
+     "score": 4.0,
+     "note": "The flower closing is a nice motion, but the texture is too smooth and painterly in a digital sense, missing the specific watercolor aesthetic."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 14:28:23"
+  },
+  "floral_v6_r09": {
+   "slots": [
+    {
+     "in": 0.67,
+     "out": 4.97,
+     "motion": 4.77,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Strong top-down composition. The ripples in the puddle provide clear motion, and the watercolor style is consistent."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 4.43,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Stunning cinematic shot. The lightning and cloud movement are dynamic and fit the dark watercolor aesthetic perfectly."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 1.94,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Beautiful extreme close-up. The raindrop and subtle shifts in the bud and background create a moody, high-quality visual."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 14:31:48"
+  },
+  "floral_v6_r03_t1": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.27,
+     "motion": 4.73,
+     "ok": false,
+     "hard": true,
+     "why": "static end cut at 4.3s; glitch, off-style, score 2; Major style failure. Frames 1-2 are watercolor, but frames 3-5 abruptly switch to neon cyberpunk. This is a broken sequence.",
+     "score": 2.0,
+     "note": "Major style failure. Frames 1-2 are watercolor, but frames 3-5 abruptly switch to neon cyberpunk. This is a broken sequence."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 0.45,
+     "ok": false,
+     "hard": false,
+     "why": "static end cut at 5.0s; score 4; Style is correct, but the shot is completely static. No camera or subject motion detected across the 5 frames.",
+     "score": 4.0,
+     "note": "Style is correct, but the shot is completely static. No camera or subject motion detected across the 5 frames."
+    },
+    {
+     "in": 0.4,
+     "out": 2.74,
+     "motion": 12.93,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 2.8s trimmed",
+     "score": 8.0,
+     "note": "Strong cinematic motion and correct neon style. The petals drifting over the waves look great for a concert screen."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 14:42:09"
+  },
+  "floral_v6_r05_t1": {
+   "slots": [
+    {
+     "in": 0.56,
+     "out": 3.93,
+     "motion": 1.81,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame at 0.5s skipped; stray frame/cut at 2.4s; static end cut at 3.9s",
+     "score": 8.0,
+     "note": "Cinematic wide shot. The flower beats and the rings ripple clearly. Beautiful neon aesthetic."
+    },
+    {
+     "in": 1.56,
+     "out": 4.35,
+     "motion": 1.43,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame at 1.5s skipped; stray frame/cut at 3.2s; static end cut at 4.3s",
+     "score": 7.0,
+     "note": "Good camera movement toward the shore. The rings ripple effectively. Slightly dark but fits the mood."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 3.76,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame/cut at 2.4s; static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Stunning macro detail. The internal filaments flicker and pulse with energy. High visual impact."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 14:57:46"
+  },
+  "floral_v6_r05_t2": {
+   "slots": [
+    {
+     "in": 1.23,
+     "out": 4.22,
+     "motion": 3.04,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame at 1.1s skipped; stray frame/cut at 2.5s; static end cut at 4.2s",
+     "score": 8.0,
+     "note": "Cinematic wide shot. The flower beats and the light rings ripple across the water perfectly. Beautiful composition."
+    },
+    {
+     "in": 0.4,
+     "out": 3.58,
+     "motion": 1.08,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 3.6s trimmed",
+     "score": 7.0,
+     "note": "Strong sense of depth and motion. The rings approach the camera smoothly. The flower remains a distant glow as requested."
+    },
+    {
+     "in": 0.93,
+     "out": 4.97,
+     "motion": 7.84,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 0.8s skipped; static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Stunning macro detail. The internal filaments flicker and shift beautifully, capturing the 'lightning' energy."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 15:07:22"
+  },
+  "floral_v6_r08_t1": {
+   "slots": [
+    {
+     "in": 1.27,
+     "out": 4.97,
+     "motion": 1.6,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 0.4s skipped; stray frame at 0.7s skipped; stray frame at 1.0s skipped; stray frame at 1.2s skipped; static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Atmospheric wide shot. The watercolor style is consistent and the rain/lightning effects are visible. The flower is small but present."
+    },
+    {
+     "in": 0.52,
+     "out": 3.03,
+     "motion": 1.32,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 0.4s skipped; stray frame at 3.1s trimmed",
+     "score": 9.0,
+     "note": "Stunning macro detail. The water droplets and rain effects are distinct and beautiful. The indigo/violet palette is perfect."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 6.49,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Excellent composition with the flower in the left third. The motion of the petals closing is clear and the watercolor texture is rich."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 15:23:10"
+  },
+  "floral_v6_r10": {
+   "slots": [
+    {
+     "in": 0.5,
+     "out": 3.56,
+     "motion": 3.94,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 3.6s",
+     "score": 8.0,
+     "note": "Strong cinematic composition. The shattering effect is clear and the glass aesthetic is maintained throughout."
+    },
+    {
+     "in": 1.23,
+     "out": 4.49,
+     "motion": 6.65,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 1.1s skipped; stray frame at 4.5s trimmed",
+     "score": 9.0,
+     "note": "Stunning visuals. The liquid glass texture and violet glow are beautiful and the wave motion is smooth."
+    },
+    {
+     "in": 2.75,
+     "out": 4.97,
+     "motion": 5.33,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Intricate fractal details. The unfolding motion is visible and the glowing center provides a strong focal point."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 15:32:41"
+  },
+  "floral_v6_r11": {
+   "slots": [
+    {
+     "in": 0.42,
+     "out": 3.6,
+     "motion": 3.93,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 3.6s",
+     "score": 9.0,
+     "note": "Stunning volumetric glass wave with beautiful iridescent lighting and smooth camera motion."
+    },
+    {
+     "in": 1.1,
+     "out": 4.49,
+     "motion": 3.99,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 1.0s skipped; stray frame at 4.5s trimmed",
+     "score": 8.0,
+     "note": "Cinematic macro shot of the droplet and ripples; clear motion and strong composition."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 0.86,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Gorgeous glowing glass flower against the dark sea; excellent contrast and lighting."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 15:42:12"
+  },
+  "floral_v6_r12": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.7,
+     "motion": 1.28,
+     "ok": false,
+     "hard": false,
+     "why": "stray frame at 4.8s trimmed; off-style, score 4; Style is photographic/realistic, not the required glowing neon/filament art style. The sun is a literal sun, not a flower of light.",
+     "score": 4.0,
+     "note": "Style is photographic/realistic, not the required glowing neon/filament art style. The sun is a literal sun, not a flower of light."
+    },
+    {
+     "in": 0.4,
+     "out": 3.43,
+     "motion": 0.31,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 3.4s",
+     "score": 8.0,
+     "note": "Strong neon filament style. The flower blooms effectively. Good contrast."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 1.9,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Beautiful neon ring animation. Fits the aesthetic perfectly."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 15:58:48"
+  },
+  "floral_v6_r12_t1": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 0.77,
+     "ok": false,
+     "hard": false,
+     "why": "static end cut at 5.0s; off-style, score 4; Style is photographic/realistic, not the required glowing neon filament art style. Cinematic but fails the strict art style constraint.",
+     "score": 4.0,
+     "note": "Style is photographic/realistic, not the required glowing neon filament art style. Cinematic but fails the strict art style constraint."
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 0.28,
+     "ok": false,
+     "hard": true,
+     "why": "frozen (motion 0.50)",
+     "score": 9.0,
+     "note": "Stunning neon filament aesthetic. The light flower blooms beautifully against the dark background. Perfect concert screen visual."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 1.26,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Strong style adherence. The ring of light forms nicely. Slight visual noise in the water, but the composition is striking."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 16:08:21"
+  },
+  "floral_v6_r12_t2": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 0.91,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Stunning wide shot. The transition from sun to light-flower is seamless and cinematic. Perfect composition."
+    },
+    {
+     "in": 0.4,
+     "out": 2.06,
+     "motion": 0.27,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 2.1s",
+     "score": 8.0,
+     "note": "Strong close-up. The light filaments are distinct and the motion is clear. Fits the neon aesthetic well."
+    },
+    {
+     "in": 1.08,
+     "out": 4.97,
+     "motion": 3.63,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Good low angle. The ring of light adds a nice dynamic element. The stone texture is a bit sharp but acceptable."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 16:16:46"
+  },
+  "floral_v6_r13": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.77,
+     "motion": 0.57,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 4.8s",
+     "score": 8.0,
+     "note": "Beautiful neon light streaks forming a flower shape. The transition from the bloom to the single star is smooth and cinematic."
+    },
+    {
+     "in": 0.4,
+     "out": 3.49,
+     "motion": 0.55,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 3.5s trimmed",
+     "score": 8.0,
+     "note": "Strong composition with the sea wall. The alignment of the star and sun with the light stream is visually striking and fits the neon style perfectly."
+    },
+    {
+     "in": 1.29,
+     "out": 4.97,
+     "motion": 2.24,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Stunning watercolor aesthetic. The purple blooms and teal accents are vibrant and the subtle motion of the flowers and sea makes it feel alive."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 16:26:15"
+  },
+  "floral_v6_r14": {
+   "slots": [
+    {
+     "in": 1.43,
+     "out": 4.97,
+     "motion": 6.09,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 1.3s skipped; static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Strong atmospheric lighting and camera movement. The watercolor texture is visible, though the contrast is slightly high."
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 0.29,
+     "ok": false,
+     "hard": true,
+     "why": "frozen (motion 0.49); score 4; The frames are static; there is no camera or subject motion between frames. A frozen image is a failure.",
+     "score": 4.0,
+     "note": "The frames are static; there is no camera or subject motion between frames. A frozen image is a failure."
+    },
+    {
+     "in": 0.4,
+     "out": 1.43,
+     "motion": 0.33,
+     "ok": false,
+     "hard": true,
+     "why": "static end cut at 1.4s; frozen (motion 2.22)",
+     "score": 9.0,
+     "note": "Stunning composition and lighting. The watercolor style is distinct and the camera movement is smooth and cinematic."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 16:35:43"
+  },
+  "floral_v6_r14_t1": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.93,
+     "motion": 8.44,
+     "ok": false,
+     "hard": false,
+     "why": "static end cut at 4.9s; off-style, score 4; Style is too photographic and sharp; lacks the required wet-on-wet watercolor bleed and paper grain. Cinematic lighting is good, but the texture is wrong.",
+     "score": 4.0,
+     "note": "Style is too photographic and sharp; lacks the required wet-on-wet watercolor bleed and paper grain. Cinematic lighting is good, but the texture is wrong."
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 0.32,
+     "ok": false,
+     "hard": true,
+     "why": "frozen (motion 0.47); off-style, score 2; Frames are static duplicates. Style is too sharp and digital, missing the watercolor aesthetic.",
+     "score": 2.0,
+     "note": "Frames are static duplicates. Style is too sharp and digital, missing the watercolor aesthetic."
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 0.43,
+     "ok": false,
+     "hard": true,
+     "why": "frozen (motion 0.48); off-style, score 2; Frames are static duplicates. Style is too sharp and digital, missing the watercolor aesthetic.",
+     "score": 2.0,
+     "note": "Frames are static duplicates. Style is too sharp and digital, missing the watercolor aesthetic."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 16:45:16"
+  },
+  "floral_v6_r14_t2": {
+   "slots": [
+    {
+     "in": 1.96,
+     "out": 4.97,
+     "motion": 8.5,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Stunning watercolor aesthetic. The camera movement is smooth and the light rays shift beautifully, creating a cinematic feel."
+    },
+    {
+     "in": 1.73,
+     "out": 4.97,
+     "motion": 15.5,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 1.6s skipped; static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Strong composition and style. The camera push-in is subtle but effective. The mirror reflection is clear and artistic."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 0.7,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Perfect symmetrical framing. The light beam intensifies and the flower blooms slightly, providing excellent motion for a concert screen."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 16:55:01"
+  },
+  "floral_v6_r15": {
+   "slots": [
+    {
+     "in": 0.46,
+     "out": 4.97,
+     "motion": 0.47,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Strong atmospheric build-up. The lighting transition is smooth and the neon aesthetic fits the style perfectly."
+    },
+    {
+     "in": 0.4,
+     "out": 4.52,
+     "motion": 0.27,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 4.5s",
+     "score": 7.0,
+     "note": "Good motion of the vines. The transition to the crown in the final frame is a bit abrupt, but visually consistent."
+    },
+    {
+     "in": 1.83,
+     "out": 4.35,
+     "motion": 3.66,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 4.3s",
+     "score": 9.0,
+     "note": "Stunning composition. The camera movement pulling back to reveal the crown is cinematic and striking."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 17:18:55"
+  },
+  "floral_v6_r16": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.93,
+     "motion": 0.44,
+     "ok": false,
+     "hard": true,
+     "why": "static end cut at 4.9s; glitch, score 2; Major prompt failure: shows an exterior view instead of the requested interior low-angle shot. The sequence is also completely static with no motion.",
+     "score": 2.0,
+     "note": "Major prompt failure: shows an exterior view instead of the requested interior low-angle shot. The sequence is also completely static with no motion."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 0.5,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame/cut at 2.5s; static end cut at 5.0s; glitch, score 2; Major prompt failure: shows an exterior view instead of the requested close-up side view. The sequence is completely static.",
+     "score": 2.0,
+     "note": "Major prompt failure: shows an exterior view instead of the requested close-up side view. The sequence is completely static."
+    },
+    {
+     "in": 1.25,
+     "out": 4.97,
+     "motion": 6.93,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Beautiful watercolor style and correct composition. The wave motion is subtle but present."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 17:28:23"
+  },
+  "floral_v6_r16_t1": {
+   "slots": [
+    {
+     "in": 1.17,
+     "out": 4.97,
+     "motion": 3.74,
+     "ok": false,
+     "hard": true,
+     "why": "static end cut at 5.0s; glitch, score 4; Prompt requested a low angle from inside looking up; the image shows an exterior view. The neon lotus elements at the top appear to be a separate overlay rather",
+     "score": 4.0,
+     "note": "Prompt requested a low angle from inside looking up; the image shows an exterior view. The neon lotus elements at the top appear to be a separate overlay rather"
+    },
+    {
+     "in": 0.42,
+     "out": 4.6,
+     "motion": 0.37,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 4.6s",
+     "score": 8.0,
+     "note": "Strong cyberpunk aesthetic with good motion. The glowing neon outlines and electric colors fit the style perfectly. The transition of the petals settling is cle"
+    },
+    {
+     "in": 0.88,
+     "out": 4.97,
+     "motion": 4.99,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Beautiful wet-on-wet watercolor style. The motion of the waves and the soft bleeding of the purple pigments are cinematic and visually striking."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 17:37:58"
+  },
+  "floral_v6_r16_t2": {
+   "slots": [
+    {
+     "in": 0.46,
+     "out": 3.18,
+     "motion": 1.07,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 3.2s",
+     "score": 8.0,
+     "note": "Strong neon cyberpunk aesthetic. The camera movement is smooth and the transition of the roof bursting into petals is visually striking."
+    },
+    {
+     "in": 1.58,
+     "out": 4.97,
+     "motion": 2.39,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame/cut at 3.5s; static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Consistent style with Row 1. The petals settling onto the flower is a beautiful, clear motion. Good lighting contrast."
+    },
+    {
+     "in": 1.79,
+     "out": 4.97,
+     "motion": 14.32,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Stunning watercolor texture. The aerial pan along the coast is cinematic and the color palette is gorgeous."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 17:47:29"
+  },
+  "floral_v6_r17": {
+   "slots": [
+    {
+     "in": 2.17,
+     "out": 4.97,
+     "motion": 6.27,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Beautiful watercolor aesthetic with consistent motion; fits the wide sea cliff description perfectly."
+    },
+    {
+     "in": 0.54,
+     "out": 3.87,
+     "motion": 5.82,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 3.9s trimmed",
+     "score": 7.0,
+     "note": "Strong style adherence and motion, though the perspective is slightly more angled than a strict top-down."
+    },
+    {
+     "in": 1.42,
+     "out": 4.97,
+     "motion": 4.94,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Stunning cinematic quality with excellent lighting and motion; perfectly captures the garden scene."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 17:56:56"
+  },
+  "floral_v6_r18": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 0.7,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Strong watercolor aesthetic with visible paper grain and bleeding pigments. Motion is clear and continuous."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 1.77,
+     "ok": false,
+     "hard": false,
+     "why": "static end cut at 5.0s; off-style, score 3; Style failure: frames are photorealistic photographs, not the requested wet-on-wet watercolor painting.",
+     "score": 3.0,
+     "note": "Style failure: frames are photorealistic photographs, not the requested wet-on-wet watercolor painting."
+    },
+    {
+     "in": 0.68,
+     "out": 4.97,
+     "motion": 0.47,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 0.6s skipped; static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Beautiful night watercolor style with glowing stars and petals. Cinematic and fits the concert screen aesthetic."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 18:06:33"
+  },
+  "floral_v6_r18_t1": {
+   "slots": [
+    {
+     "in": 0.77,
+     "out": 4.97,
+     "motion": 0.82,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 0.7s skipped; static end cut at 5.0s"
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 2.77,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s"
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 1.02,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s"
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-11-03 18:16:19",
+   "vision": "light: motion check only"
+  }
+ },
+ "pics": {
+  "out\\floral_v6_p04\\01-1_r03_wall_rain.png": {
+   "m": 1793735498.6467235,
+   "ok": true,
+   "why": "Stunning wet-on-wet watercolor execution. The violet and magenta blooms are vivid, the composition is cinematic, and the single flower adds the requested focal ",
+   "score": 9.0
+  },
+  "out\\floral_v6_p04\\02-1_gl01_glass_waves.png": {
+   "m": 1793740227.3203106,
+   "ok": true,
+   "why": "Stunning surreal glass render with perfect iridescent lighting and composition. The 'shattering' action is captured beautifully as a frozen moment of impact, fi",
+   "score": 9.0,
+   "fixes": 1
+  },
+  "out\\floral_v6_e04\\01-1_r01_rain_petals.png": {
+   "m": 1793740426.4575262,
+   "ok": false,
+   "why": "off-style, off-brief, score 4, Style is too clean and illustrative (anime-style) rather than the requested dark, bleeding wet-on-wet watercolor. The shot is a wide landscape, not the requeste",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_e04\\02-1_r02_flower_closes.png": {
+   "m": 1793735553.7437348,
+   "ok": true,
+   "why": "Stunning wet-on-wet watercolor execution with perfect color palette and composition. No people or borders. Aesthetic is strong and cinematic.",
+   "score": 9.0
+  },
+  "out\\floral_v6_e04\\03-1_r04_puddle.png": {
+   "m": 1793740504.5586655,
+   "ok": false,
+   "why": "border, off-brief, score 4, The image is a standard landscape view of a flower, not the requested top-down shot of a puddle reflection. It also features a visible white border/margin aroun",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_e04\\04-1_r05_moon_clouds.png": {
+   "m": 1793735594.3634088,
+   "ok": true,
+   "why": "Stunning wet-on-wet watercolor execution with vibrant violet/magenta blooms and teal accents. The composition captures the stormy atmosphere and low angle persp",
+   "score": 9.0
+  },
+  "out\\floral_v6_e04\\05-1_r07_shut_bud.png": {
+   "m": 1793740581.5839055,
+   "ok": false,
+   "why": "off-brief, score 4, Failed to follow the 'extreme close-up' instruction; the shot is a wide landscape showing the ocean and sky rather than filling the frame with the bud.",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_e04\\06-1_gl02_liquid_sea.png": {
+   "m": 1793740277.0544462,
+   "ok": true,
+   "why": "Stunning surreal glass render with perfect lighting and composition; no people or borders.",
+   "score": 9.0,
+   "fixes": 1
+  },
+  "out\\floral_v6_e04\\07-1_gl07_fractal_unfold.png": {
+   "m": 1793735655.3498213,
+   "ok": true,
+   "why": "Stunning execution of the surreal glass render style. The fractal layers and iridescent lighting are visually striking and fit the concert screen aesthetic perf",
+   "score": 9.0
+  },
+  "out\\floral_v6_e04\\08-1_gl08_glass_curl.png": {
+   "m": 1793735674.6888895,
+   "ok": true,
+   "why": "Stunning execution of the surreal glass style. The perspective perfectly captures the 'inside the curl' request with the sun shining through, and the lighting i",
+   "score": 9.0
+  },
+  "out\\floral_v6_e04\\09-1_gl06_drop_rings.png": {
+   "m": 1793740355.6370902,
+   "ok": false,
+   "why": "off-brief, score 4, The art style is correct, but the image fails the prompt's specific request for a 'glass droplet falling into the glass sea and sending out rings of light.' Ins",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_e04\\10-1_gl10_glass_flower.png": {
+   "m": 1793735714.261502,
+   "ok": true,
+   "why": "Stunning execution of the surreal glass render style. The low angle and lighting are perfect, and the image is clean with no people or borders.",
+   "score": 9.0
+  },
+  "out\\floral_v6_p05\\01-1_c13_sun_rays.png": {
+   "m": 1793742311.437838,
+   "ok": true,
+   "why": "Stunning composition. The light trails perfectly mimic the requested 'flower of light' petals while maintaining the neon streak aesthetic. The stone wall and fo",
+   "score": 9.0
+  },
+  "out\\floral_v6_p05\\02-1_h01_glasshouse.png": {
+   "m": 1793742327.9400096,
+   "ok": true,
+   "why": "Stunning wet-on-wet watercolor execution. The violet and magenta pigments bleed beautifully into the teal accents, capturing the requested aesthetic perfectly. ",
+   "score": 9.0
+  },
+  "out\\floral_v6_e05\\01-1_c16_awaken.png": {
+   "m": 1793742380.2118018,
+   "ok": true,
+   "why": "Stunning execution of the neon streak style. The light flower blooms perfectly from the sea wall with the requested color palette and foggy atmosphere. No peopl",
+   "score": 9.0
+  },
+  "out\\floral_v6_e05\\02-1_c15_ring.png": {
+   "m": 1793742401.9050093,
+   "ok": true,
+   "why": "Stunning composition with perfect adherence to the neon streak style and color palette. The low angle emphasizes the scale of the light flower against the sea w",
+   "score": 9.0
+  },
+  "out\\floral_v6_e05\\03-1_c14_star_burst.png": {
+   "m": 1793742558.9589107,
+   "ok": true,
+   "why": "Stunning composition with perfect adherence to the neon streak style and color palette. The light forms create a beautiful, ethereal 'world of light' without an",
+   "score": 9.0,
+   "fixes": 1
+  },
+  "out\\floral_v6_e05\\04-1_c18_sun_and_star.png": {
+   "m": 1793742445.1778247,
+   "ok": true,
+   "why": "Stunning composition with perfect color palette and lighting. The light forms are ethereal and fit the 'neon streak' aesthetic beautifully. No people or artifac",
+   "score": 9.0
+  },
+  "out\\floral_v6_e05\\05-1_h02_roof_light.png": {
+   "m": 1793742635.4533007,
+   "ok": false,
+   "why": "off-brief, score 4, The image is a beautiful watercolor, but it fails the specific prompt requirements. It shows an intact glasshouse from a standard eye-level perspective, whereas",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_e05\\06-1_h03_old_mirror.png": {
+   "m": 1793742494.1074262,
+   "ok": true,
+   "why": "Stunning wet-on-wet watercolor execution. The composition perfectly captures the requested mirror and greenhouse subject with beautiful pigment bleeding and no ",
+   "score": 9.0
+  },
+  "out\\floral_v6_e05\\07-1_h06_centre_flower.png": {
+   "m": 1793742713.7926967,
+   "ok": false,
+   "why": "off-brief, score 4, The prompt explicitly requested a 'wide symmetrical shot down the aisle' inside the glasshouse. The image shows an exterior view of the greenhouse from the side",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_p06\\01-1_n17_glasshouse_night.png": {
+   "m": 1793746694.7940354,
+   "ok": true,
+   "why": "Stunning neon cyberpunk aesthetic with perfect color palette and composition. No people or text detected. High quality illustration.",
+   "score": 9.0
+  },
+  "out\\floral_v6_p06\\02-1_g14_coast_flowers.png": {
+   "m": 1793746766.6857133,
+   "ok": true,
+   "why": "Stunning wet-on-wet watercolor execution. The violet and magenta pigments bleed beautifully into the teal accents, capturing the requested aesthetic perfectly. ",
+   "score": 9.0,
+   "fixes": 1
+  },
+  "out\\floral_v6_p06\\03-1_o01_sunset_petals.png": {
+   "m": 1793746723.6281474,
+   "ok": true,
+   "why": "Stunning wet-on-wet execution with beautiful pigment bleeding and paper grain. The composition is cinematic and the color palette perfectly matches the requeste",
+   "score": 9.0
+  },
+  "out\\floral_v6_e06\\01-1_n19_neon_vines.png": {
+   "m": 1793747242.7402246,
+   "ok": false,
+   "why": "off-brief, Style is perfect, but the camera angle is eye-level rather than the requested low angle looking up.",
+   "score": 6.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_e06\\02-1_n18_petal_crown.png": {
+   "m": 1793747166.591802,
+   "ok": false,
+   "why": "off-brief, score 4, The prompt explicitly requested a 'low angle looking up at the crown'. This image is a standard eye-level wide shot. It fails the specific camera direction requ",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_e06\\03-1_n20_roof_bursts.png": {
+   "m": 1793747318.1620357,
+   "ok": false,
+   "why": "off-brief, score 4, The prompt explicitly requested a 'low angle from inside looking up', but the image shows an exterior view. The shot fails to match the requested camera angle.",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_e06\\04-1_n22_crown_settles.png": {
+   "m": 1793747394.6793919,
+   "ok": false,
+   "why": "off-brief, score 4, The prompt explicitly requested a 'close-up side view' of a specific flower. The image provided is a wide establishing shot of the entire greenhouse. It fails t",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_e06\\05-1_g15_color_wave.png": {
+   "m": 1793746895.4460905,
+   "ok": true,
+   "why": "Stunning wet-on-wet watercolor execution. The violet and magenta pigments bleed beautifully into the teal sea, capturing the 'wave of color' description perfect",
+   "score": 9.0
+  },
+  "out\\floral_v6_e06\\06-1_g18_hearts_open.png": {
+   "m": 1793747091.068463,
+   "ok": false,
+   "why": "off-brief, score 4, The art style is excellent, but the shot is a side-angle perspective, not the requested top-down view. It fails the specific camera instruction.",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_e06\\07-1_g19_wall_garden.png": {
+   "m": 1793746937.0032048,
+   "ok": true,
+   "why": "Stunning wet-on-wet watercolor execution. The violet and magenta pigments bleed beautifully into the teal accents, capturing the requested 'blooming' aesthetic.",
+   "score": 9.0
+  },
+  "out\\floral_v6_e06\\08-1_o03_last_light.png": {
+   "m": 1793747467.1948905,
+   "ok": false,
+   "why": "off-style, off-brief, score 4, Lighting mismatch: image shows a bright sunset rather than the requested 'night' and 'last light'. Colors are too pastel and bright, lacking the requested 'deep",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_e06\\09-1_o04_first_stars.png": {
+   "m": 1793747532.9495196,
+   "ok": false,
+   "why": "off-style, off-brief, score 4, Lighting mismatch: image shows a bright sun/sunset, but prompt requested night with stars. Style is pastel and airy, lacking the requested 'dark pooled edges' a",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\floral_v6_e06\\10-1_o06_night_pullaway.png": {
+   "m": 1793746999.5375648,
+   "ok": true,
+   "why": "Stunning wet-on-wet watercolor execution with perfect color palette and composition. No people or borders detected.",
+   "score": 9.0
+  }
+ },
+ "retakes": {
+  "floral_v6_r03": 1,
+  "floral_v6_r05": 2,
+  "floral_v6_r08": 1,
+  "floral_v6_r12": 2,
+  "floral_v6_r14": 2,
+  "floral_v6_r16": 2,
+  "floral_v6_r18": 1
+ },
+ "use": {
+  "floral_v6_r02:0": {
+   "run": "floral_v6_r02",
+   "slot": 0,
+   "in": 0.4,
+   "out": 1.68
+  },
+  "floral_v6_r02:1": {
+   "run": "floral_v6_r02",
+   "slot": 1,
+   "in": 0.4,
+   "out": 3.78
+  },
+  "floral_v6_r02:2": {
+   "run": "floral_v6_r02",
+   "slot": 2,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "floral_v6_r03:0": {
+   "run": "floral_v6_r03",
+   "slot": 0,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "floral_v6_r03:1": {
+   "run": "floral_v6_r03",
+   "slot": 1,
+   "in": 0.42,
+   "out": 4.97
+  },
+  "floral_v6_r04:0": {
+   "run": "floral_v6_r04",
+   "slot": 0,
+   "in": 0.68,
+   "out": 3.28
+  },
+  "floral_v6_r04:1": {
+   "run": "floral_v6_r04",
+   "slot": 1,
+   "in": 1.33,
+   "out": 3.95
+  },
+  "floral_v6_r04:2": {
+   "run": "floral_v6_r04",
+   "slot": 2,
+   "in": 0.4,
+   "out": 4.85
+  },
+  "floral_v6_r05:0": {
+   "run": "floral_v6_r05",
+   "slot": 0,
+   "in": 0.4,
+   "out": 3.95
+  },
+  "floral_v6_r05:2": {
+   "run": "floral_v6_r05",
+   "slot": 2,
+   "in": 2.1,
+   "out": 4.85
+  },
+  "floral_v6_r03:2": {
+   "run": "floral_v6_r03_t1",
+   "slot": 2,
+   "in": 0.4,
+   "out": 2.74
+  },
+  "floral_v6_r06:0": {
+   "run": "floral_v6_r06",
+   "slot": 0,
+   "in": 0.79,
+   "out": 4.41
+  },
+  "floral_v6_r06:1": {
+   "run": "floral_v6_r06",
+   "slot": 1,
+   "in": 0.4,
+   "out": 2.87
+  },
+  "floral_v6_r06:2": {
+   "run": "floral_v6_r06",
+   "slot": 2,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "floral_v6_r07:0": {
+   "run": "floral_v6_r07",
+   "slot": 0,
+   "in": 1.5,
+   "out": 4.97
+  },
+  "floral_v6_r07:1": {
+   "run": "floral_v6_r07",
+   "slot": 1,
+   "in": 1.5,
+   "out": 4.77
+  },
+  "floral_v6_r07:2": {
+   "run": "floral_v6_r07",
+   "slot": 2,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "floral_v6_r09:0": {
+   "run": "floral_v6_r09",
+   "slot": 0,
+   "in": 0.67,
+   "out": 4.97
+  },
+  "floral_v6_r09:1": {
+   "run": "floral_v6_r09",
+   "slot": 1,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "floral_v6_r09:2": {
+   "run": "floral_v6_r09",
+   "slot": 2,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "floral_v6_r05:1": {
+   "run": "floral_v6_r05_t2",
+   "slot": 1,
+   "in": 0.4,
+   "out": 3.58
+  },
+  "floral_v6_r08:0": {
+   "run": "floral_v6_r08_t1",
+   "slot": 0,
+   "in": 1.27,
+   "out": 4.97
+  },
+  "floral_v6_r08:1": {
+   "run": "floral_v6_r08_t1",
+   "slot": 1,
+   "in": 0.52,
+   "out": 3.03
+  },
+  "floral_v6_r08:2": {
+   "run": "floral_v6_r08_t1",
+   "slot": 2,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "floral_v6_r10:0": {
+   "run": "floral_v6_r10",
+   "slot": 0,
+   "in": 0.5,
+   "out": 3.56
+  },
+  "floral_v6_r10:1": {
+   "run": "floral_v6_r10",
+   "slot": 1,
+   "in": 1.23,
+   "out": 4.49
+  },
+  "floral_v6_r10:2": {
+   "run": "floral_v6_r10",
+   "slot": 2,
+   "in": 2.75,
+   "out": 4.97
+  },
+  "floral_v6_r11:0": {
+   "run": "floral_v6_r11",
+   "slot": 0,
+   "in": 0.42,
+   "out": 3.6
+  },
+  "floral_v6_r11:1": {
+   "run": "floral_v6_r11",
+   "slot": 1,
+   "in": 1.1,
+   "out": 4.49
+  },
+  "floral_v6_r11:2": {
+   "run": "floral_v6_r11",
+   "slot": 2,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "floral_v6_r12:1": {
+   "run": "floral_v6_r12",
+   "slot": 1,
+   "in": 0.4,
+   "out": 3.43
+  },
+  "floral_v6_r12:2": {
+   "run": "floral_v6_r12",
+   "slot": 2,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "floral_v6_r12:0": {
+   "run": "floral_v6_r12_t2",
+   "slot": 0,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "floral_v6_r13:0": {
+   "run": "floral_v6_r13",
+   "slot": 0,
+   "in": 0.4,
+   "out": 4.77
+  },
+  "floral_v6_r13:1": {
+   "run": "floral_v6_r13",
+   "slot": 1,
+   "in": 0.4,
+   "out": 3.49
+  },
+  "floral_v6_r13:2": {
+   "run": "floral_v6_r13",
+   "slot": 2,
+   "in": 1.29,
+   "out": 4.97
+  },
+  "floral_v6_r14:0": {
+   "run": "floral_v6_r14",
+   "slot": 0,
+   "in": 1.43,
+   "out": 4.97
+  },
+  "floral_v6_r14:1": {
+   "run": "floral_v6_r14_t2",
+   "slot": 1,
+   "in": 1.73,
+   "out": 4.97
+  },
+  "floral_v6_r14:2": {
+   "run": "floral_v6_r14_t2",
+   "slot": 2,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "floral_v6_r15:0": {
+   "run": "floral_v6_r15",
+   "slot": 0,
+   "in": 0.46,
+   "out": 4.97
+  },
+  "floral_v6_r15:1": {
+   "run": "floral_v6_r15",
+   "slot": 1,
+   "in": 0.4,
+   "out": 4.52
+  },
+  "floral_v6_r15:2": {
+   "run": "floral_v6_r15",
+   "slot": 2,
+   "in": 1.83,
+   "out": 4.35
+  },
+  "floral_v6_r16:2": {
+   "run": "floral_v6_r16",
+   "slot": 2,
+   "in": 1.25,
+   "out": 4.97
+  },
+  "floral_v6_r16:1": {
+   "run": "floral_v6_r16_t1",
+   "slot": 1,
+   "in": 0.42,
+   "out": 4.6
+  },
+  "floral_v6_r16:0": {
+   "run": "floral_v6_r16_t2",
+   "slot": 0,
+   "in": 0.46,
+   "out": 3.18
+  },
+  "floral_v6_r17:0": {
+   "run": "floral_v6_r17",
+   "slot": 0,
+   "in": 2.17,
+   "out": 4.97
+  },
+  "floral_v6_r17:1": {
+   "run": "floral_v6_r17",
+   "slot": 1,
+   "in": 0.54,
+   "out": 3.87
+  },
+  "floral_v6_r17:2": {
+   "run": "floral_v6_r17",
+   "slot": 2,
+   "in": 1.42,
+   "out": 4.97
+  },
+  "floral_v6_r18:0": {
+   "run": "floral_v6_r18",
+   "slot": 0,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "floral_v6_r18:2": {
+   "run": "floral_v6_r18",
+   "slot": 2,
+   "in": 0.68,
+   "out": 4.97
+  },
+  "floral_v6_r18:1": {
+   "run": "floral_v6_r18_t1",
+   "slot": 1,
+   "in": 0.4,
+   "out": 4.97
+  }
+ },
+ "fixes": {},
+ "final": {
+  "floral_v6_r01": true,
+  "floral_v6_r02": true,
+  "floral_v6_r04": true,
+  "floral_v6_r03": true,
+  "floral_v6_r06": true,
+  "floral_v6_r07": true,
+  "floral_v6_r09": true,
+  "floral_v6_r05": true,
+  "floral_v6_r08": true,
+  "floral_v6_r10": true,
+  "floral_v6_r11": true,
+  "floral_v6_r12": true,
+  "floral_v6_r13": true,
+  "floral_v6_r14": true,
+  "floral_v6_r15": true,
+  "floral_v6_r16": true,
+  "floral_v6_r17": true,
+  "floral_v6_r18": true
+ },
+ "built": 0,
+ "locked": {},
+ "extras": {},
+ "build_sig": "70|{\"floral_v6_r02:0\": {\"in\": 0.4, \"out\": 1.68, \"run\": \"floral_v6_r02\", \"slot\": 0}, \"floral_v6_r02:1\": {\"in\": 0.4, \"out\": 3.78, \"run\": \"floral_v6_r02\", \"slot\": 1}, \"floral_v6_r02:2\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"floral_v6_r02\", \"slot\": 2}, \"floral_v6_r03:0\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"floral_v6_r03\", \"slot\": 0}, \"floral_v6_r03:1\": {\"in\": 0.42, \"out\": 4.97, \"run\": \"floral_v6_r03\", \"slot\": 1}, \"floral_v6_r03:2\": {\"in\": 0.4, \"out\": 2.74, \"run\": \"floral_v6_r03_t1\", \"slot\": 2}, \"floral_v6_r04:0\": {\"in\": 0.68, \"out\": 3.28, \"run\": \"floral_v6_r04\", \"slot\": 0}, \"floral_v6_r04:1\": {\"in\": 1.33, \"out\": 3.95, \"run\": \"floral_v6_r04\", \"slot\": 1}, \"floral_v6_r04:2\": {\"in\": 0.4, \"out\": 4.85, \"run\": \"floral_v6_r04\", \"slot\": 2}, \"floral_v6_r05:0\": {\"in\": 0.4, \"out\": 3.95, \"run\": \"floral_v6_r05\", \"slot\": 0}, \"floral_v6_r05:1\": {\"in\": 0.4, \"out\": 3.58, \"run\": \"floral_v6_r05_t2\", \"slot\": 1}, \"floral_v6_r05:2\": {\"in\": 2.1, \"out\": 4.85, \"run\": \"floral_v6_r05\", \"slot\": 2}, \"floral_v6_r06:0\": {\"in\": 0.79, \"out\": 4.41, \"run\": \"floral_v6_r06\", \"slot\": 0}, \"floral_v6_r06:1\": {\"in\": 0.4, \"out\": 2.87, \"run\": \"floral_v6_r06\", \"slot\": 1}, \"floral_v6_r06:2\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"floral_v6_r06\", \"slot\": 2}, \"floral_v6_r07:0\": {\"in\": 1.5, \"out\": 4.97, \"run\": \"floral_v6_r07\", \"slot\": 0}, \"floral_v6_r07:1\": {\"in\": 1.5, \"out\": 4.77, \"run\": \"floral_v6_r07\", \"slot\": 1}, \"floral_v6_r07:2\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"floral_v6_r07\", \"slot\": 2}, \"floral_v6_r08:0\": {\"in\": 1.27, \"out\": 4.97, \"run\": \"floral_v6_r08_t1\", \"slot\": 0}, \"floral_v6_r08:1\": {\"in\": 0.52, \"out\": 3.03, \"run\": \"floral_v6_r08_t1\", \"slot\": 1}, \"floral_v6_r08:2\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"floral_v6_r08_t1\", \"slot\": 2}, \"floral_v6_r09:0\": {\"in\": 0.67, \"out\": 4.97, \"run\": \"floral_v6_r09\", \"slot\": 0}, \"floral_v6_r09:1\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"floral_v6_r09\", \"slot\": 1}, \"floral_v6_r09:2\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"floral_v6_r09\", \"slot\": 2}, \"floral_v6_r10:0\": {\"in\": 0.5, \"out\": 3.56, \"run\": \"floral_v6_r10\", \"slot\": 0}, \"floral_v6_r10:1\": {\"in\": 1.23, \"out\": 4.49, \"run\": \"floral_v6_r10\", \"slot\": 1}, \"floral_v6_r10:2\": {\"in\": 2.75, \"out\": 4.97, \"run\": \"floral_v6_r10\", \"slot\": 2}, \"floral_v6_r11:0\": {\"in\": 0.42, \"out\": 3.6, \"run\": \"floral_v6_r11\", \"slot\": 0}, \"floral_v6_r11:1\": {\"in\": 1.1, \"out\": 4.49, \"run\": \"floral_v6_r11\", \"slot\": 1}, \"floral_v6_r11:2\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"floral_v6_r11\", \"slot\": 2}, \"floral_v6_r12:0\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"floral_v6_r12_t2\", \"slot\": 0}, \"floral_v6_r12:1\": {\"in\": 0.4, \"out\": 3.43, \"run\": \"floral_v6_r12\", \"slot\": 1}, \"floral_v6_r12:2\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"floral_v6_r12\", \"slot\": 2}, \"floral_v6_r13:0\": {\"in\": 0.4, \"out\": 4.77, \"run\": \"floral_v6_r13\", \"slot\": 0}, \"floral_v6_r13:1\": {\"in\": 0.4, \"out\": 3.49, \"run\": \"floral_v6_r13\", \"slot\": 1}, \"floral_v6_r13:2\": {\"in\": 1.29, \"out\": 4.97, \"run\": \"floral_v6_r13\", \"slot\": 2}, \"floral_v6_r14:0\": {\"in\": 1.43, \"out\": 4.97, \"run\": \"floral_v6_r14\", \"slot\": 0}, \"floral_v6_r14:1\": {\"in\": 1.73, \"out\": 4.97, \"run\": \"floral_v6_r14_t2\", \"slot\": 1}, \"floral_v6_r14:2\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"floral_v6_r14_t2\", \"slot\": 2}, \"floral_v6_r15:0\": {\"in\": 0.46, \"out\": 4.97, \"run\": \"floral_v6_r15\", \"slot\": 0}, \"floral_v6_r15:1\": {\"in\": 0.4, \"out\": 4.52, \"run\": \"floral_v6_r15\", \"slot\": 1}, \"floral_v6_r15:2\": {\"in\": 1.83, \"out\": 4.35, \"run\": \"floral_v6_r15\", \"slot\": 2}, \"floral_v6_r16:0\": {\"in\": 0.46, \"out\": 3.18, \"run\": \"floral_v6_r16_t2\", \"slot\": 0}, \"floral_v6_r16:1\": {\"in\": 0.42, \"out\": 4.6, \"run\": \"floral_v6_r16_t1\", \"slot\": 1}, \"floral_v6_r16:2\": {\"in\": 1.25, \"out\": 4.97, \"run\": \"floral_v6_r16\", \"slot\": 2}, \"floral_v6_r17:0\": {\"in\": 2.17, \"out\": 4.97, \"run\": \"floral_v6_r17\", \"slot\": 0}, \"floral_v6_r17:1\": {\"in\": 0.54, \"out\": 3.87, \"run\": \"floral_v6_r17\", \"slot\": 1}, \"floral_v6_r17:2\": {\"in\": 1.42, \"out\": 4.97, \"run\": \"floral_v6_r17\", \"slot\": 2}, \"floral_v6_r18:0\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"floral_v6_r18\", \"slot\": 0}, \"floral_v6_r18:2\": {\"in\": 0.68, \"out\": 4.97, \"run\": \"floral_v6_r18\", \"slot\": 2}}",
+ "built_shots": 70,
+ "edit_flags_seen": "2026-11-03 18:14:59"
+}

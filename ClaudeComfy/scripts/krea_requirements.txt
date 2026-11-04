@@ -1,0 +1,29 @@
+# Python packages for the Krea 2 workflow's node packs (tested: every node in the workflow loads with these)
+# RES4LYF
+pywavelets
+# Image Saver
+piexif
+# Impact Pack (only "ImpactIfNone" is used; its sam2 git build is skipped)
+segment-anything
+scikit-image
+dill
+# SeedVR2 upscaler
+omegaconf>=2.3.0
+diffusers>=0.33.1
+peft>=0.17.0
+rotary_embedding_torch>=0.5.3
+# LayerStyle
+scikit-learn
+opencv-contrib-python
+pymatting
+timm
+colour-science
+blend_modes
+loguru
+# WAS node suite
+numba>=0.62
+pilgram
+joblib
+gitpython
+# CRT-Nodes
+soundfile

@@ -1,0 +1,122 @@
+STAR TREK CHANGELOG - the history and the reasons behind the rules (the README before 2026-10-27 16:30, kept as is).
+Read README.txt for how to work. This file is only background.
+
+STAR TREK - Justice's music-video production line (A:\Ai projects\Star Trek, rewritten 2026-10-27)
+=====================================================================================================
+THE GOAL
+Make the best possible music videos for Justice's songs and the artists he works with (Marie Vie, Iration Studio):
+beautiful, aesthetic and properly edited like real music videos, in each song's own art style, for the big screen behind
+the musicians at concerts (1080p 60 fps). Almost all the work runs LOCALLY on this PC (RTX 4090), so it costs almost no
+Claude tokens, and it KEEPS RUNNING WHEN CLAUDE IS OUT OF TOKENS: the local AI (the Overseer, rule 7, and Comfort's local
+AI chat, qwen3.6) checks the quality and keeps the GPU busy. Claude's job is the creative plan (the shot list) and fixing
+the tools - never babysitting renders, never re-reading big files, never leaving the GPU idle while waiting.
+
+HOW THE PROGRAMS WORK TOGETHER (one song, start to finish)
+ 1. SongMap\                song MP3 -> timing sheet: BPM, bars, sections, lyrics on timestamps, drops and changes
+                            (SongMap\out\<Song>\<Song>.songmap.txt + .json; also copied into the FilmCraft project).
+ 2. ClaudeSubtitles\        SubtitleStudio: lyrics on timestamps (subtitles, and SongMap's lyric source).
+ 3. THE SHOT LIST           FilmCraft\projects\<song>\<song>.shots.txt - the creative decision, written from the SongMap
+                            sheet and the lyrics by rules 2-4: one scene per section (one place, one light), a master
+                            picture per scene and its other angles made from it with Krea 2 edit (K>label), shot lengths
+                            from the music, a real transition on every scene change. Lyrics as metaphor, never acted out.
+ 4. FilmCraft\song_jobs.py  shot list -> Comfort jobs per batch (pictures, Krea 2 edits, H3 Reference Video runs of 3 shots)
+                            and <song>.plan.json. It only places what the shot list says (format: its docstring).
+ 5. Comfort\                runs the jobs one at a time on the GPU: Krea 2 pictures, MiniMax H3 video, then the automatic
+                            Stage 1080p60 finish (RIFE + RTX VSR). ClaudeComfy = the ComfyUI + models Comfort drives.
+ 6. Overseer\               THE LOCAL AI IN CHARGE (rule 7): checks every picture and shot, re-makes bad ones, picks each
+                            shot's in-point, feeds the queue batch after batch and starts the builds.
+ 7. FilmCraft\              EVERY clip goes into its song's FilmCraft project at its SongMap time as soon as it is made. The edit: song_cut.py turns the plan + the Overseer's verdicts into the cut list; fc.py builds it
+                            with speed ramps and transitions and copies it to Preview\<Artist - Song>\.
+ 8. Preview\<Artist - Song>\ what Justice opens: the latest edit and the pictures (pictures never go into a chat).
+
+RULES EVERY SESSION FOLLOWS FOR SONG VIDEOS (Justice) - read ALL of them (1-7) before touching any song edit
+==================================================================================================
+1. SPEED: EQUAL TEMPO, AUTOMATIC, NEVER SKIPPED
+   AI clips ease into their last frame and out of their first, so joined clips play: slow-down ... lurch.
+   FilmCraft\ramp.py measures how fast every frame moves (ffmpeg at 128x72 on this PC: zero Claude tokens),
+   gives it a speed number and builds a smooth speed curve with gradual slopes, like Premiere's speed-ramp
+   handles: stalls play faster, rushes slower, so every clip plays at the same tempo across the joins.
+   Since 2026-10-27 it runs on EVERY fc.py build by default and keeps each clip exactly its cut length,
+   so cuts placed on SongMap's beats stay on the beat.
+   Check without watching: projects\<song>\<song>.ramps.txt - one line per clip, motion before -> after, "len 100%".
+   Overrides in the cut list: `speed 7.5-9.4 160` under a clip (Justice's own fix wins over the curve),
+   `noramp` at the end of a clip line, `ramp off` / `ramp 0.6` for the whole edit, `ramp free` = old behaviour
+   (clips get shorter).
+   Why this is written here: on 2026-10-26/27 fc.py still had ramps OFF unless a cut list said `ramp on`; the
+   FLORAL edits never said it, and the flower crawled into its last frame and lurched into the next clip.
+2. TRANSITIONS: NEVER DEFAULT TO A DISSOLVE OR A FLASH
+   Choose by what the two shots share - motion (whip, push, cross_zoom through a push-in), shape or light
+   (luma_fade, flare, light_leak in the song's colour), material (water: wave; mist: blur_dissolve; paint/paper:
+   film_dissolve, grunge; print: chroma_leak) and the music's energy. Loud ones (flash, glitch, whip, crash-zoom)
+   only on a hard hit or a drop, at most one per ~30 s. Chained clips: dissolve 12-16. Vary them: one family per
+   song plus one surprise. Full rules: Comfort\CLAUDE.md section 17; all 112: FilmCraft\transitions.txt.
+3. SONGMAP DRIVES THE EDIT
+   Read the song's SongMap sheet first (SongMap\out\<song>\<song>.songmap.txt, also in the FilmCraft project).
+   When the music drops or a section changes, CHANGE THE SCENE (Justice, 2026-10-27): a different image and
+   place, with a real transition - never the same subject from the same angle across a drop. Cut on bar lines.
+
+4. SHOT LENGTH IS AN ARTISTIC DECISION FROM THE SONG - NEVER A FIXED NUMBER (Justice, 2026-10-27)
+   There is NO "2-second" rule and Justice never asked for one. A session took one study's average (Billboard
+   videos ~1.7 s per shot), turned it into a fixed rule, cut to a new unrelated picture on every bar, and FLORAL
+   from 0:17 became a jumbled rapid-fire mess. Then it queued 15 hours of the same thing.
+   - Decide the pace of each section from the SongMap sheet (energy, vocal, cues) and from how real music videos
+     for this kind of song are cut: quiet intro / verse / pre-chorus = long moving shots that let the song
+     breathe; choruses faster; drops and section changes = the scene change with a real transition. Vary it.
+   - A section is ONE scene (one place, one subject, one light). Fast cutting moves between angles of that scene
+     (wide -> closer -> detail -> back) with matching motion - never between unrelated pictures.
+   - Never cut away before a shot's motion has read. A shot has to move the whole time it is on screen.
+
+5. LOOK AT THE FOOTAGE BEFORE IT GOES IN AN EDIT, AND TEST SHORT BEFORE QUEUING LONG
+   - MiniMax H3 shots start almost still: the first 1-2 s of a 5 s shot is often a frozen picture. Use the part
+     that moves. H3 can also slip in a stray frame or another shot (FLORAL v5: a flash frame at ~0:20.5 and a pair
+     of human hands at ~0:24 in a nature-only video).
+   - Before a shot is used, look at ONE contact sheet per section (ffmpeg tile, a frame every ~0.4 s) and reject
+     frozen shots, stray frames and people. That is not "burning tokens checking" - building on footage nobody
+     looked at is what burned them.
+   - Test a new approach short first, but never leave the GPU idle waiting for a reply: the Overseer keeps producing
+     and checking (rule 7), and Justice can pause it.
+
+6. ANSWER STRAIGHT
+   When Justice asks what is finished, list only finished things he can open, and where they are.
+
+7. THE LOCAL AI OVERSEES THE WORK - PRODUCTION NEVER WAITS ON CLAUDE (Justice, 2026-10-27)
+   Overseer\overseer.py runs inside Comfort between jobs (and every 20 s when idle). For each song in Overseer\songs.txt:
+   - feeds the next batch when Comfort's inbox is nearly empty, so the GPU never sits idle;
+   - checks each new picture with the local vision AI (people, border/blank paper, text, style, brief, beauty score)
+     before any video uses it, and re-makes a bad one (2 tries);
+   - measures each H3 shot's motion (in-point, frozen shots, stray frames) and has the vision AI judge one contact sheet
+     per run (people, glitches, style, score); a failed run is re-rendered (2 tries), else the best take or a
+     neighbouring good shot covers it. Verdicts go to FilmCraft\projects\<song>\_review.json, which song_cut.py uses;
+   - puts EVERY generation into the song's FilmCraft project at its SongMap time the moment it exists (rebuilds the
+     project; a re-render swaps in later) and copies the edit to Preview. Nothing waits for a batch to finish.
+   Its standards: Overseer\rules.txt. Its work, readable by Justice, Claude and the local AI: Overseer\report_<song>.txt
+   (one line per shot), Overseer\logs\<song>.log (every decision), Overseer\sheets\<run>.jpg (contact sheets).
+   Control: Overseer\songs.txt (song + mode: auto = keep producing, check = only check, off), Overseer\PAUSE file or
+   "python overseer.py pause|resume|status". Comfort's local AI chat has a star_trek tool for the same (status, pause,
+   resume, modes, read or replace a shot list, read a SongMap sheet), so Justice can keep going when Claude is out of tokens.
+   Claude: write the shot list, queue, and let the Overseer run. No wait loops on renders, no approval stops that idle the GPU.
+   When Justice asks what is finished, read report_<song>.txt (a few lines), not the renders.
+
+STATE ON 2026-10-27 (evening)
+- Conqueress v2 (Marie Vie): the whole song is in production under the Overseer (mode auto), 9 batches, v1 woodcut look,
+  one scene per section. The edit grows in Preview\Marie Vie - Conqueress\Conqueress v2.mp4 as batches are checked.
+  Shot list: FilmCraft\projects\conqueress\conqueress.shots.txt. The old v1 shot list is conqueress.shots.v1-wrong.txt.
+- FLORAL and FAUNA: jobs still held in Comfort\inbox as _hold_*; their shot lists still have the wrong fixed-2-second
+  rule. Rewrite them by rules 3-5 (one scene per section, K>label angles, #build overseer) and add them to songs.txt.
+- Finished earlier: FLORAL 0:00-0:31 edit v5 = Preview\Marie Vie - FLORAL\v5 video 30s.mp4 (bad from 0:17).
+- Two old scheduled check-ins could not be cancelled: if they fire, ignore them.
+
+2026-10-27 16:50  README: top rule made explicit - every finished shot is placed in the FilmCraft project at its SongMap time with a transition on every cut, confirmed by the build line (Justice). Conqueress v3 one-minute cut started (conqueress_v3).
+2026-10-27 17:12  Comfort was closed at 17:03 and nothing generated; Claude claimed it was rendering from a "flow" log line. Fix: comfort_app.py writes heartbeat.txt every 5 s; Comfort Watchdog.vbs (Startup folder) restarts Comfort.exe when the heartbeat is stale unless Overseer\PAUSE exists; README rule 8: "generating" only with a fresh heartbeat.
+2026-10-27 17:18  Claude used computer control to try to open Comfort (wasted tokens) after guessing Comfort was dead from log silence during a running job. Fix: Comfort launches its watchdog itself; README rule 8: heartbeat decides alive/dead, never control the PC, ask Justice to open Comfort.
+2026-10-27 17:19  Correction: Comfort was NOT closed at 17:03 - it finished conq_v3_r02 at 17:10 and started the next job at 17:11; it was down only shortly before Justice reopened it at 17:14.
+2026-10-27 17:50  Overseer stand-ins repeated shots (meteor twice, smoke twice, ridge twice). Fix: neighbour stand-ins removed, song_cut places each source once and holds the previous shot for a gap, song_jobs refuses =label repeats; README rule 3 says never the same shot twice in an edit.
+2026-11-02 song_cut.py: a 'clip' source longer than 30 s (a finished edit, e.g. Sentimientos' approved 2:30) is placed with noramp so its own cuts keep their timing. Backup: FilmCraft\song_cut.py.bak-before-noramp.
+2026-11-02 Sentimientos: the Overseer's 'still in the finished edit' check hard-failed every new shot because the edit at those times was black (the base clip's file was black after 108.9 s), and an unplaced shot can never pass that check, so after 2 re-renders nothing was placed. Claude locked the best-scoring take of each shot in projects\sentimientos\_review.json 'locked' (backup _review.json.bak-before-lock). Open issue: the edit check should not judge a shot that is not placed yet.
+
+2026-11-03 12:30  FLORAL v6 (Justice: fix the short clips around 0:19, then the rest of the song). floral.shots.txt rewritten by THE PROCESS (old: .bak-before-v6): 0-17.37 locked; 17.37-24.40 = two angles of the flower of light from floral_v6_r01 (clip@6.3 and @11.0; that run's picture changes land on 5.0/10.0 s) instead of the four 1.7 s pictures - the v5 roots clip ran past g3c's picture change at 7.0 s and flashed 0.15 s of the wave at 0:20.68; chorus 1, chorus 2, verse 1 re-cut from the rendered v4/ext footage (clip file@sec at measured in-points; ext_r09 slot 2 is black, ext_r10 has black frames - not used); pre-chorus to the end = 55 new pictures, 19 H3 runs, 6 batches, a build after each (queue letter f). Overseer was paused by Justice at 12:11; floral added to songs.txt as auto.
+2026-11-03 13:30  FLORAL v6: Justice first asked to stop at about 2:00 (cut ended at the end of chorus 4, 2:08.76, with a fade; batches 4-6 held), then asked to finish the entire song: #end back to 248.69, all held floral_v6 jobs released. Chorus 4 is c07, c08, c09, c12 (c10 spare).
+2026-11-03 14:08  Overseer resumed (Justice: turn it on if it makes a good difference) - PAUSE moved to Overseer\logs\PAUSE.removed-2026-11-03-1408 (deleting is not allowed from this session). Floral fc build jobs b04-b06 held in the inbox: the Overseer builds floral itself once each run is checked, so two builds never write floral.mp4 at once. talawa and conqueress_v3 stay auto: their next batches feed when the inbox is nearly empty (after floral).
+2026-11-03 14:20  overseer.py: pictures and runs are now judged against their OWN style (look_of: the shot's style key; run_look: read from the run's prompt, one look per row when its shots differ). Before, every check used the first style line, so FLORAL's glass/neon/light/painted sections were rejected as "not purple watercolor". Single-style songs (talawa, conqueress) are judged exactly as before. Backup: overseer.py.bak-before-perstyle.
+2026-11-03 18:20  overseer.py LEAN mode (Justice: no checking/rebuilding every clip): during generation only the free ffmpeg motion trims and the picture check run; no vision review of videos, no rebuild per shot, no edit watch. One build when the whole song is placed and no re-render is waiting. MAX_RETAKES 1, hard failures only, queued as zz* so they run after every first-pass job. Today the old way cost ~2 h 20 min on FLORAL (90 min re-renders, 14 min picture re-makes, 19 min checks, ~20 min build slowdown). Backup: overseer.py.bak-before-lean. Floral fc build jobs b04-b06 stay held.
+2026-11-03 18:25  Overseer levels (Justice): Overseer\level.txt = strict | light | off for every song (third word in songs.txt overrides one song, e.g. "floral auto strict"). strict = the full Overseer as before (vision on pictures and videos, rebuild + edit watch after every shot, 2 re-renders right away). light = motion trims + picture check, one build at the end, 1 re-render for hard failures after the first pass (set now). off = no checks, feed batches + one build at the end. Backup: overseer.py.bak-before-levels.

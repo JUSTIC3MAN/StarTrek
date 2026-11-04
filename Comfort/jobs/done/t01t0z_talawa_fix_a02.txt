@@ -1,0 +1,6 @@
+#size 1376x768
+#n 1
+#seed random
+#style none
+#name talawa_fix_a02
+[label=a02_speaker_cones lora=graphic-novel-earthy-ink-comfy.safetensors:1.1] a stack of hand-painted wooden sound system speaker boxes close up on a green hilltop, the big speaker cones pumping and throwing out glowing pale rings of sound to the right, a Rasta flag with three horizontal stripes, red on top, gold in the middle, green at the bottom, flapping on a pole on top, a rust-red sky behind, no people, graphic novel earthy ink illustration, bold brush-ink contours, cross-hatched shadows and flat earthy color, close side view, the speaker stack filling the left two thirds of the frame, the rings flying out to the right, ochre, rust red, olive and ink black with the red, gold and green flag, no text, no letters, no watermark, no border, no frame, no blank paper, no photoreal, graphic novel earthy ink style

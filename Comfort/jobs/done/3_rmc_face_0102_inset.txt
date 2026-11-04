@@ -1,0 +1,10 @@
+#name rmc_face_0102_inset
+#wf edit
+#image rmc_0102_faceinset.png
+#boost 2
+#size 1376x768
+#n 2
+#seed random
+#style none
+#lora bold-inked-anime-realism-comfy.safetensors:0.7
+[label=selfie_man] Redraw the face of the man in the grey cap so it looks exactly like the real man in the small photo in the top-right corner: his broad face, short light-brown beard trimmed close along the jaw and chin with a light mustache, light hazel eyes, straight nose, short dark-brown hair and small black stud earring, drawn in the same bold inked graphic-novel style with black ink outlines and cel shading, not as a photo. Then remove the small photo completely and fill that corner with the soft out-of-focus city skyline and night sky around it. Keep everything else exactly the same: his pose and steady stare, the grey cap, cream t-shirt, silver chains and cross, the rooftop, the rain and the lighting.

@@ -1,0 +1,6 @@
+#size 1376x768
+#n 1
+#seed random
+#style none
+#name floral_v6_e04_r04_puddle_f1
+[label=r04_puddle wf=edit image=floral_v6_p04/01-1_r03_wall_rain.png lora=pastel-rainbow-watercolor-comfy.safetensors:1.1] the same place, the same light and the same art style as this picture, now top-down shot, the puddle filling the frame: the reflection of the purple flower in a rain puddle on the stones of the wall, wet-on-wet watercolor painting, deep saturated violet and magenta pigment blooming and bleeding into each other, dark pooled edges, soft teal-blue accents and visible paper grain, the washes filling the whole frame, deep indigo, violet, magenta and storm blue-grey, no people, no hands, no text, no watermark, no border, no frame, no blank paper, pastel rainbow watercolor style

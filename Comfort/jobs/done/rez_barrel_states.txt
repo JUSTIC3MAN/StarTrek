@@ -1,0 +1,7 @@
+#name rez_barrel_states
+#preset edit
+#image rez_forest/02-2_squat-old-wooden.png
+#size 1408x1408
+#seed 7
+[label=barrel_damaged] Same barrel, now damaged: two planks cracked and splintered, one iron band snapped and hanging loose, the potion bottle cracked with green liquid dripping down the side, same camera angle, same size and position in the frame, same plain white background
+[label=barrel_broken] Same barrel, now smashed apart: a low heap of broken dark planks, a bent rusted iron band, torn thorny vines and shattered green glass lying on the ground in a puddle of glowing green potion, same camera angle, same position at the bottom of the frame, same plain white background

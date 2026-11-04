@@ -1,0 +1,6 @@
+motion as rendered -> after the speed ramp (. still  - = + * # moving), speeds used, new length
+dem_cyaan_vid1_stage60.mp4: ramp off
+dem_cyaan_vid2_stage60.mp4: ramp off
+dem_cyaan_vid3_stage60.mp4: ramp off
+dem_cyaan_vid4_stage60.mp4: ramp off
+dem_cyaan_vid5_stage60.mp4: ramp off

@@ -1,0 +1,14 @@
+{
+ "workflow": "H3 Keyframe Chain (Comfort)",
+ "name": "lily_pad_vid5",
+ "set": {
+  "ref.prompt": "subject_definitions:\n<Subject 1> is the rendering style of <Picture 1> and <Picture 2>: a dreamy painterly digital illustration with soft brushstroke textures and rich saturated hues of emerald green, radiant gold and cool blue, peaceful and almost magical.\n<Subject 2> is the pond: round floating lily pads, white water lilies, deep teal water with soft ripples, reeds at the edges.\n<Picture 1> is the first frame of [Shot 1], showing a close slightly elevated view of two white water lilies slowly closing their petals on a pond at golden dusk, the first fireflies glowing above the pads, the water reflecting a pink and gold sky, soft mist beginning to rise.\n<Picture 2> is the last frame of [Shot 1], showing a wide slightly elevated view of the whole pond at dusk, floating lily pads and closed white lilies, hundreds of fireflies glowing over the water, soft mist drifting low, the pink and gold sky reflected in the still teal water, reeds at the edges.\n\nsummary:\n[keyframe completion + reference generation] A 9.4-second 16:9 single continuous shot in <Subject 1> that begins on <Picture 1> and ends on <Picture 2>: the camera pulls back slowly from two closing lilies to the whole pond at dusk as more and more fireflies light up over the water and mist drifts in.\n\nretention_analysis:\n<Subject 1> (applies to [Shot 1]): fully_preserved - the soft brushstroke texture and saturated painterly color; nothing becomes photographic.\n<Subject 2> (appears in [Shot 1]): fully_preserved - the lily pads, white lilies and teal water.\n<Picture 1> ([Shot 1] first frame): fully_preserved - its composition.\n<Picture 2> ([Shot 1] last frame): fully_preserved - its composition.\n\ndetailed_description:\nThe target video is a living painterly illustration in <Subject 1>: brushstroke texture stays visible as everything moves, motion is slow, gentle and elegant, like a living painting.\n[Shot 1] The shot begins from <Picture 1>. The two white lilies fold their petals closed slowly as the light turns pink and gold. The camera pulls back gently at a slow, steady speed in one continuous move, more lily pads and closed flowers drifting into view, while fireflies light up one by one over the water and soft mist gathers low across the pond, the sunset sky glowing in the still reflection. The camera is still pulling back as the shot ends on <Picture 2>. No cut or transition occurs.\n\noverall_soundscape:\nCrickets and frogs starting up at dusk, soft water lapping, a quiet breeze through the reeds.\n\nnon_diegetic_music:\nN/A",
+  "ref.length": 226
+ },
+ "images": {
+  "pic1.image": "A:\\Ai projects\\Comfort\\out\\lily_keys\\04-1_k5a.png",
+  "pic2.image": "A:\\Ai projects\\Comfort\\out\\lily_keys\\05-1_k5b.png"
+ },
+ "seed": "random",
+ "fc_in": "film 30"
+}

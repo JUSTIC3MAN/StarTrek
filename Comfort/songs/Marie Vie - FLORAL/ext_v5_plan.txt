@@ -1,0 +1,11 @@
+FLORAL 0:31.44-1:31.44 shot runs (5 s per shot; use 0.4-~2.2 s of each, ramp on by default)
+floral_ext_r01: n01_neon_dew_macro @0:31.44 | n02_aerial_lightup @0:33.20 | n03_neon_wave @0:34.96
+floral_ext_r02: n04_petal_rings @0:36.72 | n05_stem_to_sun @0:38.48 | n06_aurora_cliff @0:40.24
+floral_ext_r03: n07_hero_river @0:42.00-45.28 | n08_neon_roots @spare | n09_seed_sparks @spare
+floral_ext_r04: c01_star_bursts @0:45.28 chorus 2 (luma_fade 53) | c02_reach_stars @0:48.80 | c03_star_beam @0:52.32
+floral_ext_r05: c04_petals_to_stars @0:55.84-59.18 | c05_meteors @spare | c06_galaxy @spare
+floral_ext_r06: g01_sunrise_garden @0:59.18 verse 1 (light_sweep 45) | g02_turn_to_sun @1:02.70 | g03_bee @1:04.46
+floral_ext_r07: g04_backlit_petals @1:06.22 | g05_roots_below @1:07.98 'love your roots' | g06_hummingbird @1:11.50
+floral_ext_r08: g07_petals_to_sun @1:13.26 'petals to the sun' | g08_topdown_sway @1:15.02 | g09_butterfly @1:16.78
+floral_ext_r09: g10_dew_mist @1:18.54 | g11_gust_roots @1:20.30 'hold tight your roots' | g12_seeds_sea @1:22.06 'don't be loose'
+floral_ext_r10: g13_hero_hold @1:23.82-1:27.00 'don't let go' | p01_thorns_dusk @1:27.00 pre-chorus (luma_fade 40) | p02_cracked_puddle @1:29.68-1:31.44

@@ -1,0 +1,23 @@
+# local environment and downloads
+venv/
+models/
+constraints.txt
+__pycache__/
+*.pyc
+
+# your work
+projects/
+output/
+my_presets.json
+studio.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Lyrics inbox: songs and their lyrics
+Lyrics/*
+!Lyrics/lyrics.sh
+!Lyrics/README.txt
+!Lyrics/hints.txt
+lyrics.log*

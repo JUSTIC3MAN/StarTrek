@@ -1,0 +1,77 @@
+{
+ "job": "song_real_herbalist_v5",
+ "rows": [
+  {
+   "id": "01-1",
+   "seed": 1047096047435128,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A perfect smoke ring rises slowly from the rooftop of a small wooden house on a dark hillside and frames the full moon exactly in its center, thin wisps trailing below it, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Wide view from below the house, the roof on the lower left and the moon inside the ring at the upper center, layered hills and a sky full of stars. Cool silver moonlight with a warm amber glow from the house window, colors of indigo, silver, amber and deep green, no people, no text, no watermark, luminous anime film style.",
+   "style": "none",
+   "image": null,
+   "file": "01-1_luna.png",
+   "secs": 13.3
+  },
+  {
+   "id": "02-1",
+   "seed": 292700296746146,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "An empty woven hammock sways gently on a wooden porch at sunset, a slow curl of smoke rising from it as if someone unseen had just exhaled, the green valley glowing below, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Medium-wide view from inside the porch, the hammock on the left, the porch rail and hills on the right. Low golden sunset light with long warm shadows, colors of honey gold, coral, deep green and violet, no people, no text, no watermark, luminous anime film style.",
+   "style": "none",
+   "image": null,
+   "file": "02-1_hamaca.png",
+   "secs": 9.2
+  },
+  {
+   "id": "03-1",
+   "seed": 833868860298800,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "Tall cannabis plants stand in a hillside field at night, hundreds of fireflies glowing among their leaves, a sky full of stars and a faint milky way over the mountains, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Low wide view from inside the plants, the nearest leaves large in the foreground, the field rolling down to the dark valley. Soft green-gold firefly glow and cool starlight, colors of firefly gold, deep teal, indigo and leaf green, no people, no text, no watermark, luminous anime film style.",
+   "style": "none",
+   "image": null,
+   "file": "03-1_luciernagas.png",
+   "secs": 10.2
+  },
+  {
+   "id": "04-1",
+   "seed": 237436712074370,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A carved wooden chalice and a steaming cup of tea rest on a windowsill on a rainy evening, smoke curling up against the rain-streaked glass, the blurred lights of hillside houses beyond, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Close medium view at windowsill height, the chalice and cup on the lower right, the rainy window filling the frame. Warm lamp light inside against cool blue rain outside, colors of amber, teal blue, warm brown and soft white, no people, no text, no watermark, luminous anime film style.",
+   "style": "none",
+   "image": null,
+   "file": "04-1_lluvia.png",
+   "secs": 10.3
+  },
+  {
+   "id": "05-1",
+   "seed": 469479196970861,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "Smoke pours from a glowing chalice set on a cliff edge and flows down into a misty valley at sunrise like a bright river winding between the green hills, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Wide view from behind the chalice on the cliff, the smoke river curving from the lower left into the distance, the sun rising over the far ridges. Golden sunrise backlight through the mist, colors of gold, cream white, sage green and soft blue, no people, no text, no watermark, luminous anime film style.",
+   "style": "none",
+   "image": null,
+   "file": "05-1_rio.png",
+   "secs": 10.3
+  }
+ ],
+ "full_prompts": {
+  "01-1": "A perfect smoke ring rises slowly from the rooftop of a small wooden house on a dark hillside and frames the full moon exactly in its center, thin wisps trailing below it, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Wide view from below the house, the roof on the lower left and the moon inside the ring at the upper center, layered hills and a sky full of stars. Cool silver moonlight with a warm amber glow from the house window, colors of indigo, silver, amber and deep green, no people, no text, no watermark, luminous anime film style",
+  "02-1": "An empty woven hammock sways gently on a wooden porch at sunset, a slow curl of smoke rising from it as if someone unseen had just exhaled, the green valley glowing below, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Medium-wide view from inside the porch, the hammock on the left, the porch rail and hills on the right. Low golden sunset light with long warm shadows, colors of honey gold, coral, deep green and violet, no people, no text, no watermark, luminous anime film style",
+  "03-1": "Tall cannabis plants stand in a hillside field at night, hundreds of fireflies glowing among their leaves, a sky full of stars and a faint milky way over the mountains, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Low wide view from inside the plants, the nearest leaves large in the foreground, the field rolling down to the dark valley. Soft green-gold firefly glow and cool starlight, colors of firefly gold, deep teal, indigo and leaf green, no people, no text, no watermark, luminous anime film style",
+  "04-1": "A carved wooden chalice and a steaming cup of tea rest on a windowsill on a rainy evening, smoke curling up against the rain-streaked glass, the blurred lights of hillside houses beyond, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Close medium view at windowsill height, the chalice and cup on the lower right, the rainy window filling the frame. Warm lamp light inside against cool blue rain outside, colors of amber, teal blue, warm brown and soft white, no people, no text, no watermark, luminous anime film style",
+  "05-1": "Smoke pours from a glowing chalice set on a cliff edge and flows down into a misty valley at sunrise like a bright river winding between the green hills, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Wide view from behind the chalice on the cliff, the smoke river curving from the lower left into the distance, the sun rising over the far ridges. Golden sunrise backlight through the mist, colors of gold, cream white, sage green and soft blue, no people, no text, no watermark, luminous anime film style"
+ }
+}

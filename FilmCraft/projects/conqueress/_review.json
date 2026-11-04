@@ -1,0 +1,571 @@
+{
+ "runs": {
+  "conq_v2_r01": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 0.26,
+     "ok": false,
+     "hard": true,
+     "why": "frozen (motion 0.26); people; The silhouette at the bow is too large and distinct, violating the 'tiny' constraint. The woodcut style is strong.",
+     "score": 7.0,
+     "note": "The silhouette at the bow is too large and distinct, violating the 'tiny' constraint. The woodcut style is strong."
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 4.07,
+     "ok": true,
+     "hard": false,
+     "why": "",
+     "score": 8.0,
+     "note": "Excellent linocut texture and lighting. The camera angle and sail movement are clear."
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 6.41,
+     "ok": true,
+     "hard": false,
+     "why": "",
+     "score": 8.0,
+     "note": "Strong detail shot. The waves and prow movement are distinct and fit the art style perfectly."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-10-27 15:37:31"
+  },
+  "conq_v2_r02": {
+   "slots": [
+    {
+     "in": 0.42,
+     "out": 4.98,
+     "motion": 1.28,
+     "ok": false,
+     "hard": false,
+     "why": "people; The woodcut style is strong and the motion is clear, but the figures on the boat are too large and distinct, violating the strict 'no people' rule.",
+     "score": 6.0,
+     "note": "The woodcut style is strong and the motion is clear, but the figures on the boat are too large and distinct, violating the strict 'no people' rule."
+    },
+    {
+     "in": 0.4,
+     "out": 2.7,
+     "motion": 0.88,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame at 2.8s trimmed; people; The shot is visually striking with good texture, but it fails the content check: the boat with figures is clearly visible in the background, and the prompt expl",
+     "score": 5.0,
+     "note": "The shot is visually striking with good texture, but it fails the content check: the boat with figures is clearly visible in the background, and the prompt expl"
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 0.8,
+     "ok": false,
+     "hard": true,
+     "why": "still in the finished edit",
+     "score": 9.0,
+     "note": "Stunning composition. The linocut style is bold and fills the frame perfectly. The motion of the rising sun and the red planet are clear and cinematic. No peopl"
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-10-27 15:37:53"
+  },
+  "conq_v2_r01_t1": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 0.33,
+     "ok": false,
+     "hard": true,
+     "why": "frozen (motion 0.33); people; Strong woodcut aesthetic and motion. The figure at the bow is too large and distinct to be considered a 'tiny far-off silhouette', violating the strict people r",
+     "score": 8.0,
+     "note": "Strong woodcut aesthetic and motion. The figure at the bow is too large and distinct to be considered a 'tiny far-off silhouette', violating the strict people r"
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 1.76,
+     "ok": true,
+     "hard": false,
+     "why": "",
+     "score": 9.0,
+     "note": "Stunning cinematic composition. The light glowing through the sail is beautiful and the woodcut texture is consistent."
+    },
+    {
+     "in": 1.14,
+     "out": 4.98,
+     "motion": 5.03,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 1.0s skipped",
+     "score": 9.0,
+     "note": "Excellent detail shot. The spray and wave motion are dynamic and the style is perfectly maintained."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-10-27 15:45:00"
+  },
+  "conq_v2_r03": {
+   "slots": [
+    {
+     "in": 1.29,
+     "out": 4.98,
+     "motion": 13.13,
+     "ok": false,
+     "hard": true,
+     "why": "still in the finished edit; still in the finished edit",
+     "score": 8.0,
+     "note": "Strong linocut style with clear camera movement (zoom/tilt) and consistent texture."
+    },
+    {
+     "in": 0.4,
+     "out": 2.7,
+     "motion": 0.9,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame at 2.8s trimmed; still in the finished edit; still in the finished edit; still in the finished edit; still in the finished edit; still in the finished edit; still in the finished edit; still in the finished edit",
+     "score": 7.0,
+     "note": "Good detail on the sun rim, though the motion is subtle; style is consistent."
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 0.8,
+     "ok": false,
+     "hard": false,
+     "why": "people; The silhouette is too large and distinct (looks like a boat mast or figurehead), failing the 'tiny' requirement.",
+     "score": 6.0,
+     "note": "The silhouette is too large and distinct (looks like a boat mast or figurehead), failing the 'tiny' requirement."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-10-27 15:45:04"
+  },
+  "conq_v2_r04": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 12.53,
+     "ok": true,
+     "hard": false,
+     "why": "",
+     "score": 8.0,
+     "note": "Strong linocut aesthetic with clear motion of the falling fire and rising steam. The transition from the sun to the fire is distinct and cinematic."
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 1.0,
+     "ok": false,
+     "hard": true,
+     "why": "people; The style is excellent, but frames 3, 4, and 5 clearly show a silhouette of a figure (taller than a tenth of the frame) rising from the water, violating the 'no",
+     "score": 6.0,
+     "note": "The style is excellent, but frames 3, 4, and 5 clearly show a silhouette of a figure (taller than a tenth of the frame) rising from the water, violating the 'no"
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 0.71,
+     "ok": true,
+     "hard": false,
+     "why": "",
+     "score": 9.0,
+     "note": "Stunning composition. The transition from the sun to the reflection and the subtle ripple motion is beautiful and fits the concert screen aesthetic perfectly."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-10-27 15:45:48"
+  },
+  "conq_v2_r01_t2": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 0.36,
+     "ok": false,
+     "hard": true,
+     "why": "frozen (motion 0.36); people; The figure at the bow is too large and detailed to be considered a 'tiny far-off silhouette'; it is clearly a person.",
+     "score": 6.0,
+     "note": "The figure at the bow is too large and detailed to be considered a 'tiny far-off silhouette'; it is clearly a person."
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 2.47,
+     "ok": true,
+     "hard": false,
+     "why": "",
+     "score": 8.0,
+     "note": "Strong woodcut aesthetic, good motion in the rigging and light, no people."
+    },
+    {
+     "in": 0.4,
+     "out": 4.98,
+     "motion": 4.81,
+     "ok": true,
+     "hard": false,
+     "why": "",
+     "score": 8.0,
+     "note": "Excellent detail shot, dynamic water movement, fits the style perfectly."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-10-27 15:57:46"
+  },
+  "conq_v2_r25": {
+   "slots": [
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 0.86,
+     "ok": false,
+     "hard": false,
+     "why": "static end cut at 5.0s; score 4; Frames are identical; no motion detected in the sequence.",
+     "score": 4.0,
+     "note": "Frames are identical; no motion detected in the sequence."
+    },
+    {
+     "in": 1.08,
+     "out": 4.97,
+     "motion": 3.3,
+     "ok": false,
+     "hard": true,
+     "why": "static end cut at 5.0s; still in the finished edit",
+     "score": 8.0,
+     "note": "Strong impact sequence with clear motion in the water ripples and spray."
+    },
+    {
+     "in": 2.71,
+     "out": 4.68,
+     "motion": 3.05,
+     "ok": false,
+     "hard": true,
+     "why": "stray frame/cut at 4.4s; static end cut at 4.7s",
+     "score": 9.0,
+     "note": "Excellent tracking shot with dynamic flame movement and consistent style."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-10-27 16:31:02"
+  },
+  "conq_v2_r03_t1": {
+   "slots": [
+    {
+     "in": 2.0,
+     "out": 4.97,
+     "motion": 2.88,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 8.0,
+     "note": "Strong woodcut aesthetic with clear camera movement (zoom/dolly in). The transition of the sun's rays at the bottom is slightly abrupt, but the style is consist"
+    },
+    {
+     "in": 0.72,
+     "out": 3.45,
+     "motion": 0.44,
+     "ok": true,
+     "hard": false,
+     "why": "stray frame at 0.6s skipped; stray frame at 3.5s trimmed",
+     "score": 9.0,
+     "note": "Excellent detail and texture. The motion of the sparks and the camera pan across the rim is dynamic and fits the 'gouged' description perfectly."
+    },
+    {
+     "in": 0.4,
+     "out": 4.97,
+     "motion": 0.78,
+     "ok": true,
+     "hard": false,
+     "why": "static end cut at 5.0s",
+     "score": 9.0,
+     "note": "Perfect composition. The silhouette is correctly tiny and far-off. The wave motion and sun rays provide excellent movement for a concert screen."
+    }
+   ],
+   "fps": 24.0,
+   "checked": "2026-10-27 16:40:42"
+  }
+ },
+ "pics": {
+  "out\\conq_v2_e01\\01-1_a02_sail_light.png": {
+   "m": 1793137578.6256783,
+   "ok": false,
+   "why": "people, off-brief, score 3, Contains a prominent figure (person) which violates the 'no people' rule. Additionally, the camera angle is a side profile rather than the requested 'from behin",
+   "score": 3.0,
+   "fixes": 2
+  },
+  "out\\conq_v2_e01\\02-1_a03_prow_waves.png": {
+   "m": 1793130592.7400649,
+   "ok": true,
+   "why": "Stunning woodcut aesthetic with perfect adherence to the color palette and texture requirements. The composition is dynamic and fills the frame edge-to-edge wit",
+   "score": 9.0
+  },
+  "out\\conq_v2_e01\\03-1_a04_harbour_high.png": {
+   "m": 1793137648.3466375,
+   "ok": false,
+   "why": "people, off-brief, score 4, Contains a large figure (person) which violates the strict 'no people' rule. Additionally, the camera angle is eye-level rather than the requested 'high wide sh",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\conq_v2_e01\\04-1_a05_pier_ropes.png": {
+   "m": 1793137719.686975,
+   "ok": false,
+   "why": "people, off-brief, score 3, Contains a large figure of a person (sailor) which violates the 'no people' rule. Additionally, the boat is in the immediate foreground, failing the request for",
+   "score": 3.0,
+   "fixes": 2
+  },
+  "out\\conq_v2_e01\\05-1_b02_mars_close.png": {
+   "m": 1793130651.91341,
+   "ok": true,
+   "why": "Stunning woodcut aesthetic with bold red-orange accents and gouged textures. The composition is striking and fits the concert screen perfectly.",
+   "score": 9.0
+  },
+  "out\\conq_v2_e01\\06-1_b03_sun_rim.png": {
+   "m": 1793137789.9431913,
+   "ok": false,
+   "why": "off-brief, score 4, The image shows a wide landscape with a tunnel and sun, but the prompt specifically requested a close-up detail of the sun's rim filling the frame. The subject ",
+   "score": 4.0,
+   "fixes": 2
+  },
+  "out\\conq_v2_e01\\07-1_b04_far_rock.png": {
+   "m": 1793130691.7524807,
+   "ok": true,
+   "why": "Stunning woodcut aesthetic with perfect adherence to the 'tiny silhouette' rule. The composition is striking and the texture is authentic.",
+   "score": 9.0
+  },
+  "out\\conq_v2_e01\\08-1_b05_fire_falls.png": {
+   "m": 1793130712.0625577,
+   "ok": true,
+   "why": "Strong linocut aesthetic with bold textures and correct color palette. The composition effectively captures the requested 'closer' view of the fire and sea whil",
+   "score": 9.0
+  },
+  "out\\conq_v2_e01\\09-1_b06_waves_glow.png": {
+   "m": 1793130731.3902733,
+   "ok": true,
+   "why": "Stunning woodcut aesthetic with perfect color palette and texture. The composition is striking and fills the frame edge-to-edge without borders.",
+   "score": 9.0
+  },
+  "out\\conq_v2_e01\\10-1_b07_sun_reflection.png": {
+   "m": 1793130750.662279,
+   "ok": true,
+   "why": "Stunning woodcut aesthetic with perfect adherence to the color palette and texture. The composition is striking and fills the frame edge-to-edge.",
+   "score": 9.0
+  },
+  "out\\conq_v2_e10\\01-1_b08_meteor_sky.png": {
+   "m": 1793139730.7731988,
+   "ok": true,
+   "why": "Stunning woodcut aesthetic with strong composition and perfect adherence to the color palette and style constraints.",
+   "score": 9.0
+  },
+  "out\\conq_v2_e10\\02-1_b09_meteor_impact.png": {
+   "m": 1793139755.2461605,
+   "ok": true,
+   "why": "Stunning woodcut aesthetic with strong composition and perfect adherence to the color palette and texture requirements.",
+   "score": 9.0
+  },
+  "out\\conq_v2_e10\\03-1_b10_meteor_head.png": {
+   "m": 1793139780.639654,
+   "ok": true,
+   "why": "Stunning woodcut aesthetic with perfect color palette and composition. The image is a static still, so while the art is beautiful, it lacks the required motion ",
+   "score": 9.0
+  },
+  "out\\conq_v2_e10\\04-1_b07_sun_reflection.png": {
+   "m": 1793139811.154565,
+   "ok": true,
+   "why": "Stunning woodcut aesthetic with perfect adherence to the color palette and texture requirements. The composition is striking and fills the frame edge to edge.",
+   "score": 9.0
+  }
+ },
+ "retakes": {
+  "conq_v2_r01": 2,
+  "conq_v2_r02": 1,
+  "conq_v2_r03": 1,
+  "conq_v2_r04": 1,
+  "conq_v2_r25": 1
+ },
+ "use": {
+  "conq_v2_r01:1": {
+   "run": "conq_v2_r01",
+   "slot": 1,
+   "in": 0.4,
+   "out": 4.98
+  },
+  "conq_v2_r01:2": {
+   "run": "conq_v2_r01",
+   "slot": 2,
+   "in": 0.4,
+   "out": 4.98
+  },
+  "conq_v2_r03:0": {
+   "run": "conq_v2_r03_t1",
+   "slot": 0,
+   "in": 2.0,
+   "out": 4.97
+  },
+  "conq_v2_r04:0": {
+   "run": "conq_v2_r04",
+   "slot": 0,
+   "in": 0.4,
+   "out": 4.98
+  },
+  "conq_v2_r04:2": {
+   "run": "conq_v2_r04",
+   "slot": 2,
+   "in": 0.4,
+   "out": 4.98
+  },
+  "conq_v2_r01:0": {
+   "run": "conq_v2_r01",
+   "slot": 0,
+   "in": 1.2,
+   "out": 4.49,
+   "why": "Justice's pick"
+  },
+  "conq_v2_r02:0": {
+   "run": "conq_v2_r02",
+   "slot": 0,
+   "in": 0.42,
+   "out": 4.98,
+   "why": "holding: best take so far"
+  },
+  "conq_v2_r03:2": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 0.4,
+   "out": 4.97
+  },
+  "conq_v2_r25:0": {
+   "run": "conq_v2_r03",
+   "slot": 0,
+   "in": 2.09,
+   "out": 4.98,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r02:2": {
+   "run": "conq_v2_r03",
+   "slot": 0,
+   "in": 2.09,
+   "out": 4.98,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r03:1": {
+   "run": "conq_v2_r03_t1",
+   "slot": 1,
+   "in": 0.72,
+   "out": 3.45
+  },
+  "conq_v2_r05:0": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r05:1": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r05:2": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r06:0": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r06:1": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r06:2": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r07:0": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r07:1": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r07:2": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r08:0": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r08:1": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r08:2": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  },
+  "conq_v2_r25:1": {
+   "run": "conq_v2_r03_t1",
+   "slot": 2,
+   "in": 1.2,
+   "out": 4.97,
+   "why": "holding until the re-render passes"
+  }
+ },
+ "fixes": {},
+ "final": {
+  "conq_v2_r01": true,
+  "conq_v2_r03": true
+ },
+ "built": 0,
+ "build_sig": "5|{\"conq_v2_r01:0\": {\"in\": 1.2, \"out\": 4.49, \"run\": \"conq_v2_r01\", \"slot\": 0, \"why\": \"Justice's pick\"}, \"conq_v2_r01:1\": {\"in\": 0.4, \"out\": 4.98, \"run\": \"conq_v2_r01\", \"slot\": 1}, \"conq_v2_r01:2\": {\"in\": 0.4, \"out\": 4.98, \"run\": \"conq_v2_r01\", \"slot\": 2}, \"conq_v2_r02:0\": {\"in\": 0.42, \"out\": 4.98, \"run\": \"conq_v2_r02\", \"slot\": 0, \"why\": \"holding: best take so far\"}, \"conq_v2_r02:2\": {\"in\": 2.09, \"out\": 4.98, \"run\": \"conq_v2_r03\", \"slot\": 0, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r03:0\": {\"in\": 2.0, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 0}, \"conq_v2_r03:1\": {\"in\": 0.72, \"out\": 3.45, \"run\": \"conq_v2_r03_t1\", \"slot\": 1}, \"conq_v2_r03:2\": {\"in\": 0.4, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2}, \"conq_v2_r04:0\": {\"in\": 0.4, \"out\": 4.98, \"run\": \"conq_v2_r04\", \"slot\": 0}, \"conq_v2_r04:2\": {\"in\": 0.4, \"out\": 4.98, \"run\": \"conq_v2_r04\", \"slot\": 2}, \"conq_v2_r05:0\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r05:1\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r05:2\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r06:0\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r06:1\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r06:2\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r07:0\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r07:1\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r07:2\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r08:0\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r08:1\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r08:2\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r25:0\": {\"in\": 2.09, \"out\": 4.98, \"run\": \"conq_v2_r03\", \"slot\": 0, \"why\": \"holding until the re-render passes\"}, \"conq_v2_r25:1\": {\"in\": 1.2, \"out\": 4.97, \"run\": \"conq_v2_r03_t1\", \"slot\": 2, \"why\": \"holding until the re-render passes\"}}",
+ "built_shots": 5,
+ "edit_flags_seen": "2026-10-27 16:34:48",
+ "locked": {
+  "conq_v2_r01:0": {
+   "run": "conq_v2_r01",
+   "slot": 0,
+   "in": 1.2,
+   "out": 4.49,
+   "why": "Justice's pick"
+  }
+ },
+ "extras": {}
+}

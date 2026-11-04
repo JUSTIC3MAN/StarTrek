@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Star Trek</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--bg:#121110;--panel:#1b1a18;--line:#2e2b27;--text:#ece6dc;--dim:#9a9187;--accent:#e8743b;--ok:#86b86f;--bad:#e2604f;--warn:#e3aa52;--info:#79aee0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 "Segoe UI",system-ui,sans-serif}
+header{display:flex;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+header h1{font-size:16px;margin:0;letter-spacing:.14em;color:var(--accent)}
+#st{color:var(--dim);font-size:12px;flex:1;min-width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+button,select,textarea{font:inherit;color:var(--text);background:#24221f;border:1px solid var(--line);border-radius:6px;padding:6px 10px}
+button{cursor:pointer}button:hover{border-color:var(--accent)}
+main{display:grid;grid-template-columns:minmax(320px,1fr) minmax(380px,1.25fr);gap:12px;padding:12px;height:calc(100vh - 54px)}
+@media(max-width:900px){main{grid-template-columns:1fr;height:auto}}
+section{background:var(--panel);border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;min-height:0;overflow:hidden}
+h2{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin:0;padding:9px 12px;border-bottom:1px solid var(--line);display:flex;gap:8px;align-items:center}
+h2 .x{text-transform:none;letter-spacing:0;font-size:12px}
+#chat{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px;min-height:300px}
+.m{max-width:90%;padding:8px 11px;border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere;background:#25231f}
+.m.user{align-self:flex-end;background:#3b2a1f}.m.tool,.m.result,.m.tool_result{font-size:12px;color:var(--dim);background:transparent;border:1px dashed var(--line)}
+.m img{max-width:100%;border-radius:6px;margin-top:6px;display:block}
+form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}form textarea{flex:1;resize:none;height:46px}
+.right{display:grid;grid-template-rows:auto minmax(0,1fr);gap:12px;min-height:0}
+video{width:100%;max-height:40vh;background:#000;display:block}
+#feed{flex:1;overflow:auto;padding:6px 12px;font:12px/1.5 Consolas,ui-monospace,monospace;min-height:200px}
+#feed div{padding:3px 0;border-bottom:1px solid #24221f}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}.info{color:var(--info)}
+pre{margin:0;padding:8px 12px;overflow:auto;flex:1;font:12px/1.45 Consolas,ui-monospace,monospace}
+.on{border-color:var(--accent)!important;color:var(--accent)}
+</style></head><body>
+<header><h1>STAR TREK</h1><span id="st">connecting to Comfort…</span>
+<select id="song" title="Song"></select>
+<select id="mode" title="auto = keep producing, check = only check, off"><option>auto</option><option>check</option><option>off</option></select>
+<button id="pause">Pause</button><button id="rebuild" title="Rebuild the FilmCraft project and the preview now">Rebuild edit</button></header>
+<main>
+<section><h2>Local AI <span class="x" id="busy"></span></h2><div id="chat"></div>
+<form id="f"><textarea id="t" placeholder="Talk to the local AI. e.g. what do you think of the edit? / redo the harbour shot / the chorus cuts are too fast"></textarea><button>Send</button></form></section>
+<div class="right">
+<section><h2>Latest edit <span class="x" id="pv"></span></h2><video id="v" controls preload="metadata"></video></section>
+<section><h2><button data-tab="feed" class="on">What the overseer did</button><button data-tab="report">Every shot</button><span class="x" id="q" style="margin-left:auto"></span></h2>
+<div id="feed"></div><pre id="report" hidden></pre></section>
+</div></main>
+<script>
+const $=id=>document.getElementById(id);let S=null,since=0;
+const esc=x=>String(x).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+async function j(u,o){const r=await fetch(u,o);if(!r.ok)throw new Error(await r.text());return r.json()}
+const cls=l=>/REJECT|FAILED|error|stands still|standing still|still weak/i.test(l)?'bad':/re-render|re-make|holding|redo|covered|best of/i.test(l)?'warn':/build|placed|queued batch|watched|rebuild/i.test(l)?'info':/ ok\b/.test(l)?'ok':'';
+async function state(){
+ try{S=await j('/api/startrek')}catch(e){$('st').textContent='Comfort is not running - start it with "Open Star Trek.bat"';return}
+ $('st').textContent=(S.paused?'PAUSED  ·  ':'')+(S.status||'')+'  ·  '+S.queued+' jobs queued';
+ $('pause').textContent=S.paused?'Resume':'Pause';$('pause').classList.toggle('on',S.paused);
+ const sel=$('song');if(!sel.options.length)S.songs.forEach(s=>sel.add(new Option(s.name,s.name)));
+ const s=S.songs.find(x=>x.name===sel.value)||S.songs[0];if(!s)return;
+ if(document.activeElement!==$('mode'))$('mode').value=s.mode;
+ $('feed').innerHTML=s.log.map(l=>`<div class="${cls(l)}">${esc(l)}</div>`).join('');
+ $('report').textContent=s.report||'no report yet';
+ $('pv').textContent=s.preview?s.preview.split('\\').pop()+(s.preview_mtime?'  ·  '+new Date(s.preview_mtime*1000).toLocaleTimeString():''):'';
+ const v=$('v');if(s.preview_mtime&&v.dataset.m!=String(s.preview_mtime)&&v.paused){v.dataset.m=s.preview_mtime;v.src='/api/startrek/video?song='+encodeURIComponent(s.name)+'&m='+s.preview_mtime}
+ $('q').textContent=S.queue.slice(0,2).join('   ');
+}
+function add(it){const d=document.createElement('div');d.className='m '+(it.kind||'');d.textContent=it.text||'';
+ (it.images||[]).forEach(p=>{const im=document.createElement('img');p=String(p).replace(/\\/g,'/');im.src=/^(https?:|\/)/.test(p)?p:'/out/'+p.replace(/^.*\/out\//,'');d.appendChild(im)});
+ $('chat').appendChild(d);$('chat').scrollTop=1e9}
+async function chat(){try{const r=await j('/api/agent/log?since='+since);for(const it of r.items){since=it.i+1;add(it)}$('busy').textContent=r.busy?'thinking…':''}catch(e){}}
+$('f').onsubmit=async e=>{e.preventDefault();const t=$('t').value.trim();if(!t)return;
+ try{await j('/api/agent/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:'[Star Trek, song: '+$('song').value+'] '+t})});$('t').value=''}catch(err){alert('The local AI is still answering - wait a moment.')}};
+$('t').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('f').requestSubmit()}};
+async function cmd(action,arg){const g=['pause','resume'].includes(action)?'':$('song').value;
+ try{const r=await j('/api/startrek/cmd',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action,song:g,arg})});if(r.out)$('st').textContent=r.out.split('\n')[0]}catch(e){alert(e.message)}setTimeout(state,800)}
+$('pause').onclick=()=>cmd(S&&S.paused?'resume':'pause');$('rebuild').onclick=()=>cmd('rebuild');
+$('mode').onchange=()=>cmd('mode',$('mode').value);$('song').onchange=()=>{$('v').dataset.m='';state()};
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('on',x===b));$('feed').hidden=b.dataset.tab!=='feed';$('report').hidden=b.dataset.tab!=='report'});
+state();chat();setInterval(state,5000);setInterval(chat,1500);
+</script></body></html>

@@ -1,0 +1,6 @@
+#name talawa_p01
+#size 1376x768
+#n 1
+#seed random
+#style none
+[label=b01_chopper_field lora=graphic-novel-earthy-ink-comfy.safetensors:1.1] an old rusted army helicopter lying broken on a green hillside field at golden hour, tall herb plants with wide serrated leaves growing up out of its open side door and through its cracked cockpit glass, vines wrapped around its drooping rotor blades, island hills and a low sun behind, no people, graphic novel earthy ink illustration, bold brush-ink contours, cross-hatched shadows and flat earthy color, wide shot from the side, the helicopter across the lower middle, ochre, rust red, olive and ink black, with the red, gold and green of the flag, no text, no letters, no watermark, no border, no frame, no blank paper, no photoreal, graphic novel earthy ink style

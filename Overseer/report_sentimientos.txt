@@ -1,0 +1,28 @@
+Ras Manuel - Sentimientos (full song) - overseer report 2026-11-02 17:50:36 (mode auto)
+batches queued [1, 2] of [1, 2] | in the FilmCraft project: 1 of 25 shots
+preview: A:\Ai projects\Star Trek\Preview\Ras Manuel - Sentimientos\Sentimientos (full song).mp4
+shot                 time   run:slot           verdict
+v01_two_kites         108.4  sentimientos_end_r06:0 weak: static end cut at 5.0s; people; Beautiful gouache style and motion. The figure on the hilltop is visible and distinct, triggering the 'people' flag, though it fits the prompt.; still in the finished edit
+v02_kites_below       113.6  sentimientos_end_r06:1 weak: static end cut at 5.0s; still in the finished edit
+v03_hands_string      118.7  sentimientos_end_r06:2 weak: static end cut at 5.0s; people; Good atmosphere and lighting. The figure is visible from behind, triggering the 'people' flag.; still in the finished edit
+w01_color_falls       123.5  sentimientos_end_r07:0 weak: static end cut at 5.0s; still in the finished edit
+w02_falls_base        126.9  sentimientos_end_r07:1 weak: stray frame at 1.4s skipped; static end cut at 5.0s; still in the finished edit
+w03_falls_close       130.3  sentimientos_end_r07:2 weak: stray frame at 0.9s skipped; static end cut at 5.0s; still in the finished edit
+w04_color_river       133.7  sentimientos_end_r08:0 weak: stray frame at 2.4s skipped; static end cut at 5.0s; still in the finished edit
+x01_hill_blooms       137.2  sentimientos_end_r08:1 weak: static end cut at 5.0s; still in the finished edit
+x02_flower_opens      140.6  sentimientos_end_r08:2 weak: static end cut at 5.0s; still in the finished edit
+x03_petals_rise       144.0  sentimientos_end_r09:0 weak: static end cut at 5.0s; still in the finished edit
+x04_hill_house        147.4  sentimientos_end_r09:1 weak: static end cut at 5.0s; still in the finished edit
+e01_house_birds       150.0  sentimientos_end_r01:0 weak: static end cut at 5.0s; still in the finished edit
+e02_flock_overhead    154.3  sentimientos_end_r01:1 weak: static end cut at 5.0s; still in the finished edit
+e03_inside_flock      157.7  sentimientos_end_r01:2 weak: static end cut at 5.0s; still in the finished edit
+e04_flock_moon        161.1  sentimientos_end_r02:0 weak: static end cut at 5.0s; still in the finished edit
+f01_under_lake        164.6  sentimientos_end_r02:1 weak: static end cut at 5.0s; people; Stunning underwater lighting and color palette. The lilac rings pulse nicely. However, the figure in white is clearly visible and larger than a tiny silhouette,; still in the finished edit
+f02_surface_above     169.7  sentimientos_end_r02:2 weak: static end cut at 5.0s; people; The upward view is striking with the light rays. The figure is visible as a dark shape, which counts as a person. The light ribbons move well.; still in the finished edit
+f03_deep_orbs         174.9  sentimientos_end_r03:0 weak: static end cut at 4.9s; people, score 4; Row 1 fails the 'no people' rule: a white figure appears on the hill in frames 4 and 5. Additionally, the scene transitions from underwater to a hillside, which
+g01_village_lanterns  178.3  sentimientos_end_r03:1 weak: static end cut at 5.0s; still in the finished edit
+g02_lanterns_up       183.4  sentimientos_end_r03:2 weak: static end cut at 5.0s; still in the finished edit
+g03_lantern_sky       188.6  sentimientos_end_r04:0 weak: static end cut at 5.0s; still in the finished edit
+h01_forest_path       192.0  sentimientos_end_r04:1 weak: static end cut at 5.0s; still in the finished edit
+h02_walk_behind       197.2  sentimientos_end_r04:2 weak: static end cut at 5.0s; still in the finished edit
+h03_forest_dawn       202.3  sentimientos_end_r05:0 weak: static end cut at 5.0s; people; Strong gouache style and smooth camera pan. The figure is a tiny silhouette, but appears to be male (white shirt), failing the specific 'silhouette of a woman' ; still in the finished edit

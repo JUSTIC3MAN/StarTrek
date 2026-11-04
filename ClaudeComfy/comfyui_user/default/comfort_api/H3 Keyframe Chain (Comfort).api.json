@@ -1,0 +1,325 @@
+{
+ "unet": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "MiniMaxH3\\DasiwaMinimaxH3_dasiwaHybridV3_int8.safetensors",
+   "weight_dtype": "default"
+  },
+  "_meta": {
+   "title": "Model"
+  }
+ },
+ "clip": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+   "type": "minimax",
+   "device": "default"
+  },
+  "_meta": {
+   "title": "Text Encoder"
+  }
+ },
+ "vae": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "MiniMaxH3\\minimax_h3_video_vae_int8_convrot.safetensors"
+  },
+  "_meta": {
+   "title": "Video VAE"
+  }
+ },
+ "avae": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "MiniMaxH3\\minimax_h3_audio_vae_fp32.safetensors"
+  },
+  "_meta": {
+   "title": "Audio VAE"
+  }
+ },
+ "attn": {
+  "class_type": "ModelAttentionBackend",
+  "inputs": {
+   "attention": "comfy kitchen attention",
+   "model": [
+    "unet",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Attention"
+  }
+ },
+ "lora": {
+  "class_type": "LoraLoaderModelOnly",
+  "inputs": {
+   "lora_name": "MINIMAX\\minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors",
+   "strength_model": 1.0,
+   "model": [
+    "attn",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Turbo LoRA"
+  }
+ },
+ "sparse": {
+  "class_type": "BlockSparseAttention",
+  "inputs": {
+   "selection": "sla",
+   "selection.keep_percent": 10,
+   "start_percent": 0.2,
+   "end_percent": 1,
+   "dense_blocks": "",
+   "min_tokens": 12288,
+   "extra_tokens": 256,
+   "sink_conditioning": "exact_kv_and_rows",
+   "verbose": false,
+   "model": [
+    "lora",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Sparse Attention"
+  }
+ },
+ "pic1": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "example.png"
+  },
+  "_meta": {
+   "title": "First Frame"
+  }
+ },
+ "pic2": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "example.png"
+  },
+  "_meta": {
+   "title": "Last Frame"
+  }
+ },
+ "ref": {
+  "class_type": "MiniMaxH3ReferenceToVideo",
+  "inputs": {
+   "prompt": "",
+   "width": 1376,
+   "height": 768,
+   "length": 192,
+   "ref_image_size": "max",
+   "clip": [
+    "clip",
+    0
+   ],
+   "vae": [
+    "vae",
+    0
+   ],
+   "audio_vae": [
+    "avae",
+    0
+   ],
+   "ref_images.ref_image_0": [
+    "pic1",
+    0
+   ],
+   "ref_images.ref_image_1": [
+    "pic2",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Reference to Video"
+  }
+ },
+ "key1": {
+  "class_type": "MiniMaxH3AddGuide",
+  "inputs": {
+   "positive": [
+    "ref",
+    0
+   ],
+   "vae": [
+    "vae",
+    0
+   ],
+   "latent": [
+    "ref",
+    1
+   ],
+   "image": [
+    "pic1",
+    0
+   ],
+   "frame_idx": 0
+  },
+  "_meta": {
+   "title": "Pin First Frame"
+  }
+ },
+ "key2": {
+  "class_type": "MiniMaxH3AddGuide",
+  "inputs": {
+   "positive": [
+    "key1",
+    0
+   ],
+   "vae": [
+    "vae",
+    0
+   ],
+   "latent": [
+    "ref",
+    1
+   ],
+   "image": [
+    "pic2",
+    0
+   ],
+   "frame_idx": -1
+  },
+  "_meta": {
+   "title": "Pin Last Frame"
+  }
+ },
+ "guider": {
+  "class_type": "BasicGuider",
+  "inputs": {
+   "model": [
+    "sparse",
+    0
+   ],
+   "conditioning": [
+    "key2",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Guider"
+  }
+ },
+ "sampler": {
+  "class_type": "KSamplerSelect",
+  "inputs": {
+   "sampler_name": "er_sde"
+  },
+  "_meta": {
+   "title": "Sampler"
+  }
+ },
+ "sched": {
+  "class_type": "BasicScheduler",
+  "inputs": {
+   "scheduler": "beta",
+   "steps": 8,
+   "denoise": 1.0,
+   "model": [
+    "sparse",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Scheduler"
+  }
+ },
+ "noise": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 1
+  },
+  "_meta": {
+   "title": "Noise"
+  }
+ },
+ "sample": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "noise",
+    0
+   ],
+   "guider": [
+    "guider",
+    0
+   ],
+   "sampler": [
+    "sampler",
+    0
+   ],
+   "sigmas": [
+    "sched",
+    0
+   ],
+   "latent_image": [
+    "ref",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "Sample"
+  }
+ },
+ "dec": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "sample",
+    0
+   ],
+   "vae": [
+    "vae",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Decode Video"
+  }
+ },
+ "adec": {
+  "class_type": "VAEDecodeAudio",
+  "inputs": {
+   "samples": [
+    "sample",
+    0
+   ],
+   "vae": [
+    "avae",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Decode Audio"
+  }
+ },
+ "save": {
+  "class_type": "VHS_VideoCombine",
+  "inputs": {
+   "frame_rate": 24,
+   "loop_count": 0,
+   "filename_prefix": "comfort/h3chain",
+   "format": "video/h264-mp4",
+   "pix_fmt": "yuv420p",
+   "crf": 16,
+   "save_metadata": false,
+   "trim_to_audio": false,
+   "pingpong": false,
+   "save_output": true,
+   "images": [
+    "dec",
+    0
+   ],
+   "audio": [
+    "adec",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Save Video"
+  }
+ }
+}

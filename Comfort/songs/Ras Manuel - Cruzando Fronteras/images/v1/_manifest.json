@@ -1,0 +1,77 @@
+{
+ "job": "song_cruzando_fronteras_v1",
+ "rows": [
+  {
+   "id": "01-1",
+   "seed": 401505458993252,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A lean Rasta man in his thirties with long dark dreadlocks gathered under a red, gold and green knit tam, a faded olive field jacket, black jeans, worn leather boots and a canvas backpack steps out of the doorway of a small turquoise tin-roofed wooden house in a Costa Rican mountain village at dawn and looks back over his shoulder at his grey-haired mother standing in the doorway, shot on 35mm Kodak Portra 400 color negative film, gritty documentary road-movie photography with heavy visible grain, slightly faded warm color and real atmosphere in the air. Wide shot at eye level from the dirt road, the house on the left third and the road leading out of frame on the right, banana plants and a misty green ridge behind. Soft blue dawn light with the first warm sun touching the tin roof, colors of faded turquoise, rust red and wet green, no text, no watermark.",
+   "style": "none",
+   "image": null,
+   "file": "01-1_salida.png",
+   "secs": 14.3
+  },
+  {
+   "id": "02-1",
+   "seed": 277275999727543,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A lean Rasta man in his thirties with long dark dreadlocks gathered under a red, gold and green knit tam, a faded olive field jacket, black jeans, worn leather boots and a canvas backpack walks away from the camera down the middle of an endless cracked two-lane highway through dry golden hills toward a jagged blue mountain range, shot on 35mm Kodak Portra 400 color negative film, gritty documentary road-movie photography with heavy visible grain, slightly faded warm color and real atmosphere in the air. Low wide angle from road level behind him, the faded yellow center line running straight to the vanishing point, his small figure in the lower center, a huge open sky filling the top half. Late-afternoon sun low behind the camera throwing his long shadow ahead of him up the road, heat shimmer on the asphalt, colors of bleached gold, asphalt grey and pale sky blue, no text, no watermark.",
+   "style": "none",
+   "image": null,
+   "file": "02-1_carretera.png",
+   "secs": 10.2
+  },
+  {
+   "id": "03-1",
+   "seed": 481282987757679,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A lean Rasta man in his thirties with long dark dreadlocks gathered under a red, gold and green knit tam, a faded olive field jacket, black jeans, worn leather boots and a canvas backpack stands at a towering rusted chain-link border fence topped with coiled razor wire, one hand gripping the mesh where a long section has been torn open, looking through the gap at the land beyond, shot on 35mm Kodak Portra 400 color negative film, gritty documentary road-movie photography with heavy visible grain, slightly faded warm color and real atmosphere in the air. Medium-wide shot from slightly behind him and to his left, the fence running diagonally across the frame to the horizon, a dusty watchtower small in the far distance. Low sunset sun shining straight through the mesh toward the camera, lens flare and backlit dust, his outline rim-lit in orange, colors of rust orange, burnt gold and deep brown shadow, no text, no watermark.",
+   "style": "none",
+   "image": null,
+   "file": "03-1_frontera.png",
+   "secs": 10.2
+  },
+  {
+   "id": "04-1",
+   "seed": 404200656049380,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A lean Rasta man in his thirties with long dark dreadlocks gathered under a red, gold and green knit tam, a faded olive field jacket, black jeans, worn leather boots and a canvas backpack wades chest-deep across a wide brown river holding his backpack above his head with both arms, jaw set and eyes forward, a few other travellers crossing in a line behind him, shot on 35mm Kodak Portra 400 color negative film, gritty documentary road-movie photography with heavy visible grain, slightly faded warm color and real atmosphere in the air. Eye-level shot from just above the water a few meters in front of him, water splashing against his chest, the far bank of tall green cane and a heavy cloudy sky behind. Overcast diffuse light broken by one shaft of sun falling on him, colors of muddy ochre water, deep jungle green and storm grey, no text, no watermark.",
+   "style": "none",
+   "image": null,
+   "file": "04-1_rio.png",
+   "secs": 10.2
+  },
+  {
+   "id": "05-1",
+   "seed": 516184986648192,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A lean Rasta man in his thirties with long dark dreadlocks gathered under a red, gold and green knit tam, a faded olive field jacket, black jeans, worn leather boots and a canvas backpack stands on top of a towering stack of hand-painted sound-system speaker boxes at a night street dance in a crowded city block, one fist raised high while the crowd below jumps with their hands in the air, shot on 35mm Kodak Portra 400 color negative film, gritty documentary road-movie photography with heavy visible grain, slightly faded warm color and real atmosphere in the air. Low angle from inside the crowd looking up at him, the speaker stack filling the right half of the frame, apartment balconies and tangled power lines behind. Sodium-orange street lights mixed with red and green party bulbs, haze catching the light, colors of sodium orange, deep red, lime green and night black, no text, no watermark.",
+   "style": "none",
+   "image": null,
+   "file": "05-1_faya.png",
+   "secs": 10.2
+  }
+ ],
+ "full_prompts": {
+  "01-1": "A lean Rasta man in his thirties with long dark dreadlocks gathered under a red, gold and green knit tam, a faded olive field jacket, black jeans, worn leather boots and a canvas backpack steps out of the doorway of a small turquoise tin-roofed wooden house in a Costa Rican mountain village at dawn and looks back over his shoulder at his grey-haired mother standing in the doorway, shot on 35mm Kodak Portra 400 color negative film, gritty documentary road-movie photography with heavy visible grain, slightly faded warm color and real atmosphere in the air. Wide shot at eye level from the dirt road, the house on the left third and the road leading out of frame on the right, banana plants and a misty green ridge behind. Soft blue dawn light with the first warm sun touching the tin roof, colors of faded turquoise, rust red and wet green, no text, no watermark",
+  "02-1": "A lean Rasta man in his thirties with long dark dreadlocks gathered under a red, gold and green knit tam, a faded olive field jacket, black jeans, worn leather boots and a canvas backpack walks away from the camera down the middle of an endless cracked two-lane highway through dry golden hills toward a jagged blue mountain range, shot on 35mm Kodak Portra 400 color negative film, gritty documentary road-movie photography with heavy visible grain, slightly faded warm color and real atmosphere in the air. Low wide angle from road level behind him, the faded yellow center line running straight to the vanishing point, his small figure in the lower center, a huge open sky filling the top half. Late-afternoon sun low behind the camera throwing his long shadow ahead of him up the road, heat shimmer on the asphalt, colors of bleached gold, asphalt grey and pale sky blue, no text, no watermark",
+  "03-1": "A lean Rasta man in his thirties with long dark dreadlocks gathered under a red, gold and green knit tam, a faded olive field jacket, black jeans, worn leather boots and a canvas backpack stands at a towering rusted chain-link border fence topped with coiled razor wire, one hand gripping the mesh where a long section has been torn open, looking through the gap at the land beyond, shot on 35mm Kodak Portra 400 color negative film, gritty documentary road-movie photography with heavy visible grain, slightly faded warm color and real atmosphere in the air. Medium-wide shot from slightly behind him and to his left, the fence running diagonally across the frame to the horizon, a dusty watchtower small in the far distance. Low sunset sun shining straight through the mesh toward the camera, lens flare and backlit dust, his outline rim-lit in orange, colors of rust orange, burnt gold and deep brown shadow, no text, no watermark",
+  "04-1": "A lean Rasta man in his thirties with long dark dreadlocks gathered under a red, gold and green knit tam, a faded olive field jacket, black jeans, worn leather boots and a canvas backpack wades chest-deep across a wide brown river holding his backpack above his head with both arms, jaw set and eyes forward, a few other travellers crossing in a line behind him, shot on 35mm Kodak Portra 400 color negative film, gritty documentary road-movie photography with heavy visible grain, slightly faded warm color and real atmosphere in the air. Eye-level shot from just above the water a few meters in front of him, water splashing against his chest, the far bank of tall green cane and a heavy cloudy sky behind. Overcast diffuse light broken by one shaft of sun falling on him, colors of muddy ochre water, deep jungle green and storm grey, no text, no watermark",
+  "05-1": "A lean Rasta man in his thirties with long dark dreadlocks gathered under a red, gold and green knit tam, a faded olive field jacket, black jeans, worn leather boots and a canvas backpack stands on top of a towering stack of hand-painted sound-system speaker boxes at a night street dance in a crowded city block, one fist raised high while the crowd below jumps with their hands in the air, shot on 35mm Kodak Portra 400 color negative film, gritty documentary road-movie photography with heavy visible grain, slightly faded warm color and real atmosphere in the air. Low angle from inside the crowd looking up at him, the speaker stack filling the right half of the frame, apartment balconies and tangled power lines behind. Sodium-orange street lights mixed with red and green party bulbs, haze catching the light, colors of sodium orange, deep red, lime green and night black, no text, no watermark"
+ }
+}

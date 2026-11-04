@@ -1,0 +1,9 @@
+{
+ "workflow": "Stage 1080p60 (Comfort)",
+ "name": "lily_pad_vid11_stage60",
+ "set": {
+  "load.video": "A:\\Ai projects\\Comfort\\out\\videos\\lily_pad_vid11.mp4"
+ },
+ "free_after": true,
+ "fc_in": "cross_zoom 30 center=960,540 strength=35"
+}

@@ -1,0 +1,8 @@
+#name ciudad_chain_keys
+#size 1376x768
+#n 1
+#seed random
+#style none
+#lora aged-tempera-fable-comfy.safetensors:1.1
+[label=k2] At the end of an empty street of old houses at night, a small whitewashed church closes the view in the center, its bell tower rising above with a bronze bell hanging in the open arch, every window on both sides of the street still glowing warm yellow behind thin curtains, fog drifting low over the wet cobblestones, aged tempera fable painting, cracked and faded pigment on an old wood panel, folk storybook composition and soft muted color. Eye-level view down the middle of the street, the church and its tower centered, the lit houses framing both sides. Warm window light against deep blue night, colors of warm yellow, deep blue, whitewash grey and bronze, no people, no text, no watermark, aged tempera fable style.
+[label=k3] High view from just above the clay-tile rooftops of an empty ghost town at the first light of dawn, looking toward a small whitewashed church bell tower in the center, a thin line of golden light opening on the far horizon, a few windows below still glowing faintly, fog lying in the narrow streets, a flock of small birds lifting off the roof tiles, aged tempera fable painting, cracked and faded pigment on an old wood panel, folk storybook composition and soft muted color. The bell tower centered against the pale sky, the rooftops filling the lower half of the frame. Soft golden dawn light on the horizon against fading blue night, colors of pale gold, dusty blue, terracotta and soft grey, no people, no text, no watermark, aged tempera fable style.

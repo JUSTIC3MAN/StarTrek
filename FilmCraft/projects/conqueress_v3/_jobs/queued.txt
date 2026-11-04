@@ -1,0 +1,5 @@
+a01c0p_conq_v3_p01.txt d31ace0c87
+a01c0x_conq_v3_e01.txt df1458b7c2
+a01c1_conq_v3_r01.json f975708af7
+a01c1_conq_v3_r02.json 15a5952282
+a01c1_conq_v3_r03.json da45294f16

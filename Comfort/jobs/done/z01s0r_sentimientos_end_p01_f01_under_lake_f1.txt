@@ -1,0 +1,6 @@
+#size 1376x768
+#n 1
+#seed random
+#style none
+#name sentimientos_end_p01_f01_under_lake_f1
+[label=f01_under_lake lora=airy-gouache-minimalist-comfy.safetensors:1.1] beneath the surface of a calm lake at dusk, the water deep teal, slanting rays of coral and gold light falling through it, a tiny figure in plain white clothes floating far below with arms open and eyes closed, soft rings of lilac light pulsing outward from them, airy minimalist gouache illustration, flat matte color shapes, soft paper grain, lots of open space and a calm limited palette, wide view from just below the surface looking down, coral, teal, lilac, cream, ochre and deep blue, no text, no watermark, no border, no frame, no blank paper, no photoreal, airy gouache minimalist style

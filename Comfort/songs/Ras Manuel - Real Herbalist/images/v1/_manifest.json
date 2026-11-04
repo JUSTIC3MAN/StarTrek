@@ -1,0 +1,77 @@
+{
+ "job": "song_real_herbalist_v1",
+ "rows": [
+  {
+   "id": "01-1",
+   "seed": 100129520211595,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A calm bearded Rasta man with long dreadlocks wrapped in a red, gold and green knitted tam, a loose white cotton tunic and a string of wooden beads pours water from a carved calabash gourd onto the roots of a tall ganja plant in his hillside garden at sunrise, painted like a 1970s roots reggae LP cover, gouache and airbrush on illustration board with soft airbrushed gradients, detailed realistic figure painting and warm saturated color. Wide shot at eye level, the man on the left and the plant on the right third, terraced green hills rolling into misty blue mountains behind, a huge golden sun just rising over the ridge in the center. Soft sunrise backlight with rays through the mist, colors of sunrise gold, leaf green, sky blue and red earth, no text, no watermark.",
+   "style": "none",
+   "image": null,
+   "file": "01-1_amanecer.png",
+   "secs": 10.3
+  },
+  {
+   "id": "02-1",
+   "seed": 672089556242463,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A calm bearded Rasta man with long dreadlocks wrapped in a red, gold and green knitted tam, a loose white cotton tunic and a string of wooden beads sits cross-legged in meditation on a woven mat on a wooden porch with his eyes closed, holding a carved wooden chalice pipe while a long ribbon of white smoke curls upward and drifts into the shape of a white dove, painted like a 1970s roots reggae LP cover, gouache and airbrush on illustration board with soft airbrushed gradients, detailed realistic figure painting and warm saturated color. Medium shot slightly below eye level, the man centered, carved porch posts framing him, green jungle hills behind. Warm mid-morning light from the left with soft blue shade on the right, colors of honey wood, smoke white, deep green and red, gold and green accents, no text, no watermark.",
+   "style": "none",
+   "image": null,
+   "file": "02-1_chalice.png",
+   "secs": 10.4
+  },
+  {
+   "id": "03-1",
+   "seed": 603564061964546,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A calm bearded Rasta man with long dreadlocks wrapped in a red, gold and green knitted tam, a loose white cotton tunic and a string of wooden beads grinds fresh green herbs with a stone mortar and pestle at a rustic wooden table crowded with glass jars of roots and dried leaves, clay bowls and a steaming cup of tea, bundles of drying herbs hanging from the rafters above, painted like a 1970s roots reggae LP cover, gouache and airbrush on illustration board with soft airbrushed gradients, detailed realistic figure painting and warm saturated color. Medium close shot at table height, his hands and the mortar in the lower center. Golden late-afternoon light slanting through a slatted window on the left with dust glowing in the beams, colors of amber, olive green, clay red and warm brown, no text, no watermark.",
+   "style": "none",
+   "image": null,
+   "file": "03-1_remedios.png",
+   "secs": 10.4
+  },
+  {
+   "id": "04-1",
+   "seed": 1044522423224476,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A calm bearded Rasta man with long dreadlocks wrapped in a red, gold and green knitted tam, a loose white cotton tunic and a string of wooden beads stands on a hilltop with both palms open to the sky as a thin thread of incense smoke rises from a clay burner at his feet and spreads into a vast glowing golden spiral of light over the valley, painted like a 1970s roots reggae LP cover, gouache and airbrush on illustration board with soft airbrushed gradients, detailed realistic figure painting and warm saturated color. Wide shot from behind and slightly below him, the man on the lower left third, the spiral filling the sky, layered green hills below. Evening golden-hour glow under a violet sky, colors of molten gold, violet, emerald and red earth, no text, no watermark.",
+   "style": "none",
+   "image": null,
+   "file": "04-1_incienso.png",
+   "secs": 10.3
+  },
+  {
+   "id": "05-1",
+   "seed": 866907939134726,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A calm bearded Rasta man with long dreadlocks wrapped in a red, gold and green knitted tam, a loose white cotton tunic and a string of wooden beads walks a narrow ridge path carrying a woven basket full of fresh herbs on his head, layers of green hills spreading east and west below him, a waterfall in the valley and a small village of colorful houses in the far distance, painted like a 1970s roots reggae LP cover, gouache and airbrush on illustration board with soft airbrushed gradients, detailed realistic figure painting and warm saturated color. Wide panoramic view from a high three-quarter angle, the ridge path curving through the lower half of the frame with the man in the center. Bright clear morning light with white clouds and soft haze between the ridges, colors of emerald, turquoise, gold and red, no text, no watermark.",
+   "style": "none",
+   "image": null,
+   "file": "05-1_colinas.png",
+   "secs": 10.3
+  }
+ ],
+ "full_prompts": {
+  "01-1": "A calm bearded Rasta man with long dreadlocks wrapped in a red, gold and green knitted tam, a loose white cotton tunic and a string of wooden beads pours water from a carved calabash gourd onto the roots of a tall ganja plant in his hillside garden at sunrise, painted like a 1970s roots reggae LP cover, gouache and airbrush on illustration board with soft airbrushed gradients, detailed realistic figure painting and warm saturated color. Wide shot at eye level, the man on the left and the plant on the right third, terraced green hills rolling into misty blue mountains behind, a huge golden sun just rising over the ridge in the center. Soft sunrise backlight with rays through the mist, colors of sunrise gold, leaf green, sky blue and red earth, no text, no watermark",
+  "02-1": "A calm bearded Rasta man with long dreadlocks wrapped in a red, gold and green knitted tam, a loose white cotton tunic and a string of wooden beads sits cross-legged in meditation on a woven mat on a wooden porch with his eyes closed, holding a carved wooden chalice pipe while a long ribbon of white smoke curls upward and drifts into the shape of a white dove, painted like a 1970s roots reggae LP cover, gouache and airbrush on illustration board with soft airbrushed gradients, detailed realistic figure painting and warm saturated color. Medium shot slightly below eye level, the man centered, carved porch posts framing him, green jungle hills behind. Warm mid-morning light from the left with soft blue shade on the right, colors of honey wood, smoke white, deep green and red, gold and green accents, no text, no watermark",
+  "03-1": "A calm bearded Rasta man with long dreadlocks wrapped in a red, gold and green knitted tam, a loose white cotton tunic and a string of wooden beads grinds fresh green herbs with a stone mortar and pestle at a rustic wooden table crowded with glass jars of roots and dried leaves, clay bowls and a steaming cup of tea, bundles of drying herbs hanging from the rafters above, painted like a 1970s roots reggae LP cover, gouache and airbrush on illustration board with soft airbrushed gradients, detailed realistic figure painting and warm saturated color. Medium close shot at table height, his hands and the mortar in the lower center. Golden late-afternoon light slanting through a slatted window on the left with dust glowing in the beams, colors of amber, olive green, clay red and warm brown, no text, no watermark",
+  "04-1": "A calm bearded Rasta man with long dreadlocks wrapped in a red, gold and green knitted tam, a loose white cotton tunic and a string of wooden beads stands on a hilltop with both palms open to the sky as a thin thread of incense smoke rises from a clay burner at his feet and spreads into a vast glowing golden spiral of light over the valley, painted like a 1970s roots reggae LP cover, gouache and airbrush on illustration board with soft airbrushed gradients, detailed realistic figure painting and warm saturated color. Wide shot from behind and slightly below him, the man on the lower left third, the spiral filling the sky, layered green hills below. Evening golden-hour glow under a violet sky, colors of molten gold, violet, emerald and red earth, no text, no watermark",
+  "05-1": "A calm bearded Rasta man with long dreadlocks wrapped in a red, gold and green knitted tam, a loose white cotton tunic and a string of wooden beads walks a narrow ridge path carrying a woven basket full of fresh herbs on his head, layers of green hills spreading east and west below him, a waterfall in the valley and a small village of colorful houses in the far distance, painted like a 1970s roots reggae LP cover, gouache and airbrush on illustration board with soft airbrushed gradients, detailed realistic figure painting and warm saturated color. Wide panoramic view from a high three-quarter angle, the ridge path curving through the lower half of the frame with the man in the center. Bright clear morning light with white clouds and soft haze between the ridges, colors of emerald, turquoise, gold and red, no text, no watermark"
+ }
+}

@@ -1,0 +1,7 @@
+#name rmc_alley_oflo_regen
+#size 1376x768
+#n 1
+#seed 560084205734854
+#style none
+#lora bold-inked-anime-realism-comfy.safetensors:1.0
+[label=oflo_regen] A masked man in a black baseball cap, a black face mask covering his nose and mouth, a black quilted puffer jacket, black cargo pants and a heavy gold Cuban link chain with a chunky gold pendant spelling "RMC" crouches on a stone ledge at the mouth of a rain-soaked brick alley at night, holding a walkie-talkie to his ear while his eyes watch the street. Epic cinematic graphic-novel illustration in full color, bold black ink outlines and confident brush inking, dramatic cel shading with deep shadows, painted film lighting and atmospheric haze, a widescreen movie-still composition. Wide shot, he fills the left third close to the camera while the alley runs deep to a vanishing point on the right under the brick arches of a railway viaduct, an open steel door glowing warm halfway down the alley, a weathered street poster of a white-bearded old man with grey dreadlocks pasted on the wall, the word "O-Flo" spray-painted in big white letters on the bricks, the whole word fully inside the frame. Steady rain, sodium-orange lamps reflected in the puddles, a deep navy sky with lit tower-block windows. Navy blue, sodium orange, gold and wet black. No watermark. bold inked anime realism style

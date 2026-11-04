@@ -1,0 +1,147 @@
+# Marie Vie - FLORAL v6 (2026-11-03): the whole song by THE PROCESS (Star Trek README). Replaces the fixed 1-bar cutting from 0:17 on.
+# Locked: Justice's approved opening 0-17.37 (in1, in2). One scene per section, shots 1.5-2.5 bars (1 bar only on a chorus hit),
+# a transition on every cut, no shot used twice. Rendered v4/ext footage is reused only where it fits its section's scene,
+# from measured in-points (clip file@sec) so no shot runs into the next picture of its run. Old list: floral.shots.txt.bak-before-v6.
+#title Marie Vie - FLORAL
+#songmap FLORAL.songmap.json
+#music FLORAL.mp3
+#copy A:\Ai projects\Star Trek\Preview\Marie Vie - FLORAL\FLORAL full edit.mp4
+#pics floral_v6
+#queue f
+#end 248.69
+#inpoint 0.8
+#tail 4.5
+#people none (nature only)
+#neg no people, no hands, no text, no watermark, no border, no frame, no blank paper
+#subject2 nature only: no people appear anywhere.
+#sound Wind, rain, water and nature sounds that fit each shot.
+style W | lora=pastel-rainbow-watercolor-comfy.safetensors:1.1 | wet-on-wet watercolor painting, deep saturated violet and magenta pigment blooming and bleeding into each other, dark pooled edges, soft teal-blue accents and visible paper grain, the washes filling the whole frame | sunlit gold, violet, magenta and teal-blue | pastel rainbow watercolor style | purple wet-on-wet watercolor painting (violet and magenta pigment blooming and bleeding, dark pooled edges, soft teal accents, visible paper grain)
+style Wd | lora=pastel-rainbow-watercolor-comfy.safetensors:1.1 | wet-on-wet watercolor painting, deep saturated violet and magenta pigment blooming and bleeding into each other, dark pooled edges, soft teal-blue accents and visible paper grain, the washes filling the whole frame | deep indigo, violet, magenta and storm blue-grey | pastel rainbow watercolor style | dark purple wet-on-wet watercolor painting at night (indigo and violet pigment blooming and bleeding, dark pooled edges, visible paper grain)
+style N | lora=neon-cyberpunk-anime-comfy.safetensors:1.1 | neon cyberpunk anime illustration, glowing neon outlines, electric blue and magenta light, a painted illustrated background with no photographic detail | electric violet, magenta, cyan and deep indigo | neon cyberpunk anime style | neon cyberpunk anime illustration (glowing neon outlines, electric blue and magenta light, painted background)
+style L | lora=foggy-neon-streak-comfy.safetensors:1.1 | a world made of light, translucent glowing forms traced by fine neon filaments and sparks, long light streaks drifting through soft fog against deep darkness | deep violet, indigo, magenta and pale gold light | foggy neon streak style | glowing world of light and neon streaks (translucent glowing forms traced by fine neon filaments and sparks, long light streaks drifting through soft fog against deep darkness)
+style G | lora=early-cgi-surreal-render-comfy.safetensors:1.1 | surreal translucent render, forms like glowing glass with iridescent violet and blue light inside, intricate fractal layers and soft volumetric glow, the image filling the frame edge to edge | deep violet, magenta, indigo and electric blue-teal | early cgi surreal render style | surreal translucent glass render (glowing glass with iridescent violet and blue light inside, fractal layers, soft volumetric glow)
+style M | none | mystical ornate fantasy painting, swirling layered forms that flow into curling ornamental waves of violet paint, softly glowing pale gold highlights and rich painterly brush detail, the image filling the frame edge to edge | deep violet, magenta, indigo and electric blue-teal |  | mystical ornate fantasy painting (swirling ornamental waves of violet paint, glowing pale gold highlights, rich painterly brushwork)
+
+batch 1
+@ 0 intro - Justice's approved opening (locked)
+s10.485 | clip floral_vid1_stage60.mp4@0 | | in1
+s6.882 | clip floral_vid2_stage60.mp4@0 | dissolve 16 | in2
+# 0:17.37-0:24.40 FIXED (Justice 2026-11-03): was four unrelated 1.7 s pictures on hard cuts, and the roots clip ran past its run's
+# picture change at g3c 7.0 s, flashing 0.15 s of the wave at 0:20.68. Now two angles of the flower of light from floral_v6_r01
+# (its picture changes land exactly on 5.0 and 10.0 s): the glide along the wall, then the push into the blazing centre on the bar
+# where the low end and highs come in (20.86), into chorus 1 through the cross zoom.
+* | clip floral_v6_r01_stage60.mp4@6.3 | luma_fade 18 | f01_wall_glide
+@ 20.86 intro build - low end and highs in
+* | clip floral_v6_r01_stage60.mp4@11.0 | additive_dissolve 14 | f02_core_blaze
+# spares only (not on the timeline): the flower-of-light angles rendered in floral_v6_r01, kept so the run numbering stays the same
+- | L@floral_styles_v3/02-1_flower_of_light.png | | f00_master | the purple flower of light on the old stone sea wall at dusk, glowing filaments streaming from its petals, the low sun over the sea ; side view at the height of the flower | The filaments stream and flicker in the sea wind while the camera drifts slowly around the flower
+- | L>f00 | luma_fade 18 | f01_wall_rush | the old stone sea wall running along the dusk sea, the small glowing flower of light far down the wall, thin streaks of light drifting in off the water toward it ; wide low shot along the top of the wall, the wall leading into the distance | The camera glides fast and low along the top of the wall toward the flower while streaks of light stream past and gather around the flower
+- | L>f00 | additive_dissolve 14 | f02_core_ignite | the glowing heart of the flower of light, its fine filaments crackling brighter and brighter with sparks of violet and pale gold ; extreme close-up looking straight into the centre of the flower | The filaments spark and the glow swells into a blaze while the camera pushes steadily into the centre
+
+@ 24.40 chorus 1 - the neon sea wall at night (rendered footage re-cut: 2 bars, 1 bar on the heartbeat and the spark burst)
+2 | clip floral_shots_g5c_stage60.mp4@0.6 | cross_zoom 26 center=960,540 strength=40 | s13_neon_ignite
+2 | clip floral_ext_r03_stage60.mp4@1.0 | wave 16 direction=from_east amplitude=40 | n07_wall_waves
+1 | clip floral_shots_g5c_stage60.mp4@5.3 | luma_fade 12 | s16_heartbeat
+2 | clip floral_ext_r01_stage60.mp4@9.3 | push 12 direction=from_east | n03_neon_wave
+2 | clip floral_ext_r01_stage60.mp4@4.5 | blur_dissolve 14 blur=30 | n02_wall_lightup
+1 | clip floral_ext_r03_stage60.mp4@9.4 | flare 10 color=#ff40c0 | n09_seed_sparks
+* | clip floral_ext_r02_stage60.mp4@9.4 | additive_dissolve 14 | n06_aurora_cliff
+
+@ 45.28 chorus 2 - the flower of light under the stars (rendered footage, long shots for the low-energy chorus)
+2 | clip floral_ext_r05_stage60.mp4@0.4 | luma_fade 53 | c04_filaments_rise
+2 | clip floral_ext_r05_stage60.mp4@10.4 | blur_dissolve 16 blur=30 | c06_galaxy
+2 | clip floral_ext_r04_stage60.mp4@1.4 | additive_dissolve 16 | c01_star_bursts
+* | clip floral_ext_r04_stage60.mp4@9.6 | luma_fade 14 | c03_star_beam
+
+@ 59.18 verse 1 - the garden on the sea wall at sunrise, watercolor (rendered footage; half-bar cuts land on the 'roots' and 'petals to the sun' lines)
+2 | clip floral_ext_r06_stage60.mp4@0.8 | light_sweep 45 | g01_sunrise_garden
+2 | clip floral_ext_r06_stage60.mp4@5.8 | luma_fade 14 | g02_turn_to_sun
+1.5 | clip floral_ext_r07_stage60.mp4@5.5 | film_dissolve 14 | g05_roots_below
+2.5 | clip floral_ext_r08_stage60.mp4@0.6 | blur_dissolve 14 blur=30 | g07_petals_to_sun
+2 | clip floral_ext_r07_stage60.mp4@0.8 | luma_fade 14 | g04_backlit_petals
+2 | clip floral_ext_r08_stage60.mp4@5.7 | film_dissolve 14 | g08_field_sway
+1.5 | clip floral_ext_r09_stage60.mp4@5.3 | blur_dissolve 14 blur=30 | g11_roots_hold
+* | clip floral_ext_r08_stage60.mp4@10.4 | film_dissolve 14 | g09_butterfly
+
+batch 2
+@ 87.00 pre-chorus - the sea wall at dusk as a storm comes in, dark watercolor ('not a fairy tale', 'corruption of the system')
+2 | Wd | luma_fade 40 | p03_ink_seep | dark ink-like water seeping out of the cracks of the old stone sea wall and staining the petals of a purple flower growing from the stones, the stormy sea behind ; close side view at the height of the flower, the cracks running across the frame | The dark water creeps across the stones and bleeds into the petals while the camera slides slowly sideways along the wall
+2 | Wd>p03 | wave 16 direction=from_west amplitude=40 | p04_dark_surge | a dark storm wave rolling over the old sea wall and dragging loose purple petals out to sea ; wide low shot from the top of the wall, the wave rising in the background | The wave rolls over the wall and pulls the petals away in a swirl while the camera pulls back
+* | Wd>p03 | blur_dissolve 16 blur=30 | p05_bent_stem | the purple flower's stem bending low under heavy black rain, its petals shut tight ; extreme close-up from below, the bent stem diagonal across the frame | The rain hammers the stem, which bends and shakes but holds, while the camera pushes slowly in
+@ 99.18 pre-chorus - low end in, the lift into chorus 3
+* | Wd>p03 | luma_fade 14 | p06_glow_return | the dark water drawing back from the stone wall and the purple flower glowing brighter, its petals lifting open ; low angle at the flower, the receding water shining in the foreground | The water drains away, the flower's glow swells and its petals lift while the camera rises up past it
+
+@ 100.92 chorus 3 - the night sea with a giant neon flower rising on the horizon ('this is why we came into this life', 'la brisa de este mar')
+2 | N | flare 18 color=#ff40c0 | n15_horizon_bloom | a giant neon flower rising out of the night sea on the horizon like a sunrise, its petals spreading magenta and cyan light across the water toward the old stone sea wall ; wide shot from the top of the sea wall, the horizon low | The flower rises and opens over the horizon and its light races across the waves toward the camera, which pushes forward
+2 | N>n15 | push 12 direction=from_east | n14_petal_breeze | long ribbons of glowing neon petals carried on the sea breeze low over the dark waves, the giant flower glowing on the horizon ; low shot skimming just above the water | The ribbons of petals stream past and twist in the wind while the camera flies fast over the waves with them
+1 | N>n15 | cross_zoom 10 strength=35 | n11_pollen_burst | the centre of the giant neon flower bursting into a cloud of glowing pollen sparks ; macro, the flower centre filling the frame | The pollen bursts outward in slow motion while the camera pushes into the burst
+1 | N>n15 | directional_blur_transition 10 | n13_petal_wave | a curling wave made of glowing neon petals breaking over the old sea wall ; low shot from inside the curl of the wave | The petal wave curls overhead and breaks while the camera rushes forward under it
+* | N>n15 | luma_fade 12 | n16_heart_pulse | a single neon flower on the old sea wall pulsing like a heartbeat, rings of magenta light rolling out from it over the stones ; front close-up, the flower in the centre | The flower pulses on the beat and ring after ring of light rolls outward while the camera orbits slowly around it
+
+batch 3
+@ 114.40 chorus 4 - a flower of light beating like a heart above the dark sea ('un latido')
+2.25 | L | additive_dissolve 20 | c07_heartbeat | a flower made of light floating above the dark sea at night and beating like a heart, each beat sending a ring of violet light across the water ; wide low shot at the waterline, the flower above the horizon | The flower beats and each ring of light races across the water toward the camera, which pushes slowly forward
+2 | L>c07 | luma_fade 12 | c08_rings_water | rings of violet light rippling across black water toward the shore, the flower of light glowing in the distance ; low angle just above the water, the rings coming toward the camera | The rings sweep under the camera one after another while it glides forward over the water
+- | L>c07 | cross_zoom 10 strength=30 | c10_filaments | glowing filaments inside the flower of light flickering like lightning ; extreme macro inside the petals | The filaments flicker and spark while the camera drifts through them
+2 | L>c07 | blur_dissolve 14 blur=30 | c09_constellation | stars above the dark sea joining with lines of light into the shape of a great flower ; looking up at the night sky over the sea | The lines of light draw themselves from star to star while the camera turns slowly beneath them
+* | L>c07 | glow 12 | c12_sky_burst | the flower of light opening wide above the sea and bursting into a sky full of light ; wide shot, the flower centred above the horizon | The flower opens and bursts, its light flooding across the whole sky, while the camera pulls back
+
+@ 128.76 verse 2 - painted clouds racing over the sea wall, the hours passing ('I've waited for hours', 'lift that disaster')
+2 | M | luma_fade 40 | m01_clouds_race | swirling painted clouds racing over the old stone sea wall and a single purple flower, the sea beyond ; wide shot from the beach, the wall low across the frame, the sky filling most of the frame | The clouds race across the sky in fast time-lapse while the light shifts and the camera pushes slowly forward
+2 | M>m01 | film_dissolve 14 | m02_close_open | the purple flower on the sea wall folding shut at dusk and opening again at dawn ; close-up side view, the flower in the right third | The flower folds shut and blooms open again in time-lapse while the camera circles a quarter turn
+2 | M>m01 | luma_fade 16 | m05_storm_breaks | dark swirling storm clouds tearing apart over the sea and golden light breaking through onto the sea wall ; wide shot, the sea below and the sky above | The clouds tear open and beams of golden light sweep across the sea and the wall while the camera rises
+* | M>m01 | blur_dissolve 14 blur=30 | m06_gust_spiral | a gust of wind lifting a spiral of purple petals off the sea wall high into the sky ; low angle from the foot of the wall, the spiral rising | The petals spiral upward faster and faster while the camera tilts up following them
+
+batch 4
+@ 142.66 verse 3 - the empty sea wall at night in the rain ('no vayas a casa', 'when my eyes no longer see')
+2 | Wd | liquid_distortion 30 | r03_wall_rain | the empty old stone sea wall at night in heavy rain, lightning glowing inside the clouds over the dark sea, a single closed purple flower on the wall ; wide shot from the beach, the wall leading to the horizon | Rain sweeps across the wall in sheets and lightning flickers in the clouds while the camera pushes slowly along the wall
+2 | Wd>r03 | blur_dissolve 14 blur=30 | r01_rain_petals | night rain falling on purple petals, the drops bursting off them in sprays ; macro at petal height, the drops in the foreground | Drops hit the petals and burst into spray while the camera pushes in slowly through the rain
+2 | Wd>r03 | wave 14 direction=from_north amplitude=30 | r02_flower_closes | the purple flower on the sea wall folding its petals shut in the rain ; close side view, the flower in the left third | The petals fold shut while the rain streams past and the camera drifts around the flower
+2 | Wd>r03 | film_dissolve 14 | r04_puddle | the reflection of the purple flower in a rain puddle on the stones of the wall ; top-down shot, the puddle filling the frame | Raindrops ripple the puddle and the reflection shivers while the camera turns slowly overhead
+2 | Wd>r03 | blur_dissolve 14 blur=30 | r05_moon_clouds | the moon behind fast rain clouds above the sea wall ; low angle up past the wall to the sky | The clouds race across the moon while the camera tilts slowly up
+* | Wd>r03 | luma_fade 14 | r07_shut_bud | a closed purple bud like a shut eye with a single raindrop on it ; extreme close-up, the bud in the centre | The raindrop slides slowly down the bud while the camera pushes in
+
+@ 162.66 chorus 5 - the sea turned to glass at the sea wall ('donde viven eternos el agua y el mar')
+1.5 | G | glass 26 | gl01_glass_waves | glass waves shattering into thousands of glass petals as they hit the old stone sea wall ; low wide shot from the top of the wall | The wave hits and shatters into glass petals that fly toward the camera, which pushes forward
+2 | G>gl01 | wave 12 direction=from_west amplitude=30 | gl02_liquid_sea | a sea of liquid glass with violet light glowing inside every wave ; at the waterline, the waves rolling toward the camera | The glass waves roll and refract the light while the camera skims forward over them
+1 | G>gl01 | cross_zoom 10 strength=30 | gl07_fractal_unfold | fractal glass petals unfolding endlessly from a glowing centre ; looking straight into a glass flower | The petals unfold layer after layer while the camera pushes into the centre
+2 | G>gl01 | blur_dissolve 12 blur=30 | gl08_glass_curl | a glass wave curling overhead with the low sun shining through it ; from inside the curl of the wave | The wave curls overhead and the sunlight flares through it while the camera rushes forward
+1 | G>gl01 | luma_fade 10 | gl06_drop_rings | a glass droplet falling into the glass sea and sending out rings of light ; low macro at the surface | The droplet falls and the rings spread outward while the camera pulls back
+* | G>gl01 | additive_dissolve 12 | gl10_glass_flower | a glass flower on the old sea wall glowing brightest against the dark glass sea ; front low angle, the flower large in the centre | The glow swells and light pours out of the petals while the camera rises in front of it
+
+batch 5
+@ 177.44 chorus 6 - sunrise over the sea, the force of the sun and a star ('cuando tus ojos se abran', 'the force of the sun and the star')
+2 | L | light_leak 20 color=#ffb070 amount=60 | c13_sun_rays | the sun rising over the sea, its rays opening like the petals of a giant flower of light, the old stone sea wall in the foreground ; wide shot from the beach, the horizon low | The rays spread open like petals while the camera pushes toward the sun
+1 | L>c13 | flare 10 color=#ffd0a0 | c16_awaken | a flower of light on the sea wall springing open, its petals flashing awake in the dawn ; close-up front view | The petals spring open in a flash of light while the camera pulls back
+2 | L>c13 | luma_fade 12 | c15_ring | a ring of light circling the flower of light on the sea wall at dawn ; low angle, the flower in the centre | The ring spins around the flower while the camera orbits the other way
+1 | L>c13 | additive_dissolve 12 | c14_star_burst | a bright star blazing through a cloud of glowing petals in the dawn sky over the sea ; wide shot, the star in the centre | The star bursts and the petals blow outward toward the camera
+* | L>c13 | glow 14 | c18_sun_and_star | the sun and a bright star aligned above the old sea wall, a stream of light pouring between them ; low wide shot from the wall | The light streams between the sun and the star while the camera rises up the wall
+
+@ 191.36 bridge 1 - a ruined glasshouse on the cliff above the sea, swallowed by purple flowers ('in the vanities of this house')
+2 | W | luma_fade 40 | h01_glasshouse | a ruined old glasshouse on a cliff above the sea, swallowed by purple flowers ; wide shot from the cliff path | The camera moves slowly toward the glasshouse while the flowers sway in the sea wind
+2 | W>h01 | light_sweep 16 | h02_roof_light | sunbeams pouring through the broken glass roof onto purple flowers inside the ruined glasshouse ; low angle looking up through the broken roof | The sunbeams sweep across the flowers while the camera tilts up to the roof
+2 | W>h01 | film_dissolve 14 | h03_old_mirror | an old cracked mirror inside the glasshouse overgrown with vines and purple flowers, reflecting the garden ; front view of the mirror | The vines creep across the mirror and the reflection shimmers while the camera slides sideways
+* | W>h01 | blur_dissolve 14 blur=30 | h06_centre_flower | a single tall purple flower in the centre of the glasshouse floor lit by a sunbeam ; wide symmetrical shot down the aisle | The sunbeam brightens on the flower while the camera pushes slowly down the aisle
+
+batch 6
+@ 205.26 bridge 2 - the glasshouse at night, lit up by neon flowers ('the queen of this new house')
+2 | N | flare 20 color=#ff40c0 | n17_glasshouse_night | a ruined glasshouse on a cliff above the sea at night lighting up from inside, neon flowers bursting through every broken pane ; wide shot from the cliff | The flowers burst through the panes one after another as the light grows while the camera pushes in
+1 | N>n17 | push 10 direction=from_south | n19_neon_vines | neon vines racing up the rusted iron frame of the glasshouse ; low angle up the frame | The vines race upward, lighting up as they go, while the camera tilts up fast
+2 | N>n17 | luma_fade 12 | n18_petal_crown | a crown of glowing neon petals forming in the air above the flowers inside the glasshouse ; low angle looking up at the crown | The petals swirl together into a crown while the camera rises toward it
+1 | N>n17 | cross_zoom 10 strength=35 | n20_roof_bursts | the glass roof of the glasshouse bursting upward into neon petals ; low angle from inside looking up | The roof bursts and the petals fly up into the night sky while the camera rises after them
+* | N>n17 | additive_dissolve 14 | n22_crown_settles | the crown of neon petals settling onto the tallest flower in the glasshouse ; close-up side view | The crown drifts down and settles on the flower, which flares brighter, while the camera circles
+
+@ 219.18 chorus 7 - the whole coast covered in purple flowers at sunrise ('the conqueress of this new land')
+2 | W | light_sweep 40 | g14_coast_flowers | the whole coastline and the old sea wall covered in purple flowers at golden sunrise ; high aerial shot along the coast | The camera flies along the coast while the morning light spreads over the flowers
+2 | W>g14 | film_dissolve 14 | g15_color_wave | purple flowers spreading up over the sea cliffs like a wave of color ; wide shot from the sea | The flowers sweep up over the cliffs in time-lapse while the camera pushes in
+2 | W>g14 | luma_fade 14 | g18_hearts_open | thousands of purple flowers opening at once along the coast, their golden hearts shining ; top-down shot over the flowers | The flowers open in a wave across the field while the camera lifts higher
+* | W>g14 | blur_dissolve 14 blur=30 | g19_wall_garden | the purple flower on the old sea wall, now with a whole garden around it, the sun fully up ; wide shot from the beach | The garden sways in the morning wind while the camera pushes toward the wall
+
+@ 233.10 outro - sunset to night on the sea wall; cuts on the drop, the return after the stop, and the last drop
+* | W | luma_fade 53 | o01_sunset_petals | the sun setting over the sea, purple petals drifting down onto the old stone sea wall ; wide shot from the wall | The petals drift down through the golden light while the camera drifts slowly sideways
+@ 236.58 outro - highs out
+* | Wd>o01 | blur_dissolve 20 blur=30 | o03_last_light | the last light of the sunset glittering on the calm sea beside the old wall ; wide low shot at the waterline | The last light glitters and fades on the water while the camera glides forward
+@ 238.32 outro - back in after the stop
+* | Wd>o01 | dip_to_black 40 | o04_first_stars | the first stars appearing above the old sea wall, the purple flower glowing faintly ; low wide shot | The stars appear one by one while the camera rises slowly
+@ 243.54 outro - last drop
+* | Wd>o01 | luma_fade 30 | o06_night_pullaway | the purple flower on the old sea wall under a night sky full of stars ; wide shot from the beach | The camera pulls slowly away from the wall as the stars turn above

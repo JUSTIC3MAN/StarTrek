@@ -1,0 +1,153 @@
+{
+  "_doc": "Styles and positions for fc.py `text` and `subs` lines (FilmCraft CLAUDE.md). Title styles = graphics.set props + size (px at 1080p), pos (default position), fade (frames in/out: 18 or [24,18]), fallback ([family, style] when the font is not installed). Subtitle styles have \"captions\": true and use captions.setStyle keys. Positions are pixels on a 1920x1080 frame (scaled for other sizes): x,y = anchor; h = edge of the text at x (left|center|right); v = baseline|top|middle at y. Safe margins: 144 px at the sides, 120 px at the top, bottom baseline at 948.",
+  "default_style": "clean",
+  "styles": {
+    "boss": {
+      "_look": "RMC intro name card: inked graphic-novel lettering, molten gold on black",
+      "font": "Impact",
+      "font_style": "Regular",
+      "fallback": [
+        "Inter",
+        "Bold"
+      ],
+      "size": 140,
+      "tracking": 200,
+      "fill_kind": "Linear Gradient",
+      "gradient_start": "#ffe9a8",
+      "gradient_end": "#b8650c",
+      "gradient_angle": 90,
+      "stroke": true,
+      "stroke_color": "#0a0604",
+      "stroke_width": 6,
+      "stroke_type": "Outer",
+      "shadow": true,
+      "shadow_color": "#000000",
+      "shadow_opacity": 70,
+      "shadow_angle": 135,
+      "shadow_distance": 8,
+      "shadow_size": 2,
+      "shadow_blur": 22,
+      "pos": "lower-left",
+      "fade": [
+        24,
+        18
+      ],
+      "_font_note": "Impact = the only bold condensed font FilmCraft sees on this PC (2026-10-26 sampler: Bahnschrift exposes Regular only; no Bebas/Oswald/Agency FB/Arial Narrow). Install a condensed display font and change font to upgrade."
+    },
+    "clean": {
+      "font": "Inter",
+      "font_style": "SemiBold",
+      "size": 72,
+      "tracking": 40,
+      "fill_color": "#ffffff",
+      "shadow": true,
+      "shadow_color": "#000000",
+      "shadow_opacity": 60,
+      "shadow_angle": 135,
+      "shadow_distance": 4,
+      "shadow_size": 0,
+      "shadow_blur": 14,
+      "pos": "lower-third",
+      "fade": 15
+    },
+    "lyrics": {
+      "captions": true,
+      "font": "Inter",
+      "size": 64,
+      "color": "#ffffff",
+      "outline": 4,
+      "outlineColor": "#000000",
+      "align": "center",
+      "anchor": "bottom",
+      "margin": 0.07
+    },
+    "conq_title": {
+      "font": "Palatino Linotype",
+      "fill_color": "#f3e4c6",
+      "stroke": true,
+      "stroke_color": "#140a06",
+      "stroke_type": "Outer",
+      "shadow": true,
+      "shadow_color": "#000000",
+      "shadow_opacity": 75,
+      "shadow_angle": 135,
+      "shadow_distance": 5,
+      "shadow_size": 2,
+      "shadow_blur": 16,
+      "pos": "top-left",
+      "fade": [
+        36,
+        24
+      ],
+      "_look": "Conqueress song title: classical inscription serif caps, warm cream like the print's paper, thin carved-black edge",
+      "font_style": "Bold",
+      "fallback": [
+        "Georgia",
+        "Bold"
+      ],
+      "size": 72,
+      "tracking": 110,
+      "stroke_width": 3
+    },
+    "conq_artist": {
+      "font": "Palatino Linotype",
+      "fill_color": "#f3e4c6",
+      "stroke": true,
+      "stroke_color": "#140a06",
+      "stroke_type": "Outer",
+      "shadow": true,
+      "shadow_color": "#000000",
+      "shadow_opacity": 75,
+      "shadow_angle": 135,
+      "shadow_distance": 5,
+      "shadow_size": 2,
+      "shadow_blur": 16,
+      "pos": "top-left",
+      "fade": [
+        36,
+        24
+      ],
+      "_look": "Conqueress artist line: small widely spaced caps above the title",
+      "font_style": "Regular",
+      "fallback": [
+        "Georgia",
+        "Regular"
+      ],
+      "size": 46,
+      "tracking": 600,
+      "stroke_width": 3
+    }
+  },
+  "positions": {
+    "lower-left": {
+      "x": 144,
+      "y": 948,
+      "h": "left",
+      "v": "baseline"
+    },
+    "lower-third": {
+      "x": 144,
+      "y": 860,
+      "h": "left",
+      "v": "baseline"
+    },
+    "center": {
+      "x": 960,
+      "y": 540,
+      "h": "center",
+      "v": "middle"
+    },
+    "top-left": {
+      "x": 144,
+      "y": 120,
+      "h": "left",
+      "v": "top"
+    },
+    "top-right": {
+      "x": 1776,
+      "y": 120,
+      "h": "right",
+      "v": "top"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+a01c0x_conq_v2_e01.txt be7d5e07c0
+a01c1_conq_v2_r01.json 07a0a702c8
+a01c1_conq_v2_r02.json b67004113d
+a01c1_conq_v2_r03.json 4d7739a4ca
+a01c1_conq_v2_r04.json 367baa8ec8
+a01c2_fc_conqueress_b01.json b378da2ab1
+a02c0p_conq_v2_p02.txt ebcaee6904
+a02c0x_conq_v2_e02.txt 4c4f442bb9
+a02c1_conq_v2_r05.json 2ffba7edbe
+a02c1_conq_v2_r06.json ebc280faa5
+a03c0p_conq_v2_p03.txt 923e0d3361
+a03c0x_conq_v2_e03.txt 05ce0b058e
+a03c1_conq_v2_r07.json 8cb6a18d85
+a03c1_conq_v2_r08.json 51d2baece8
+a10c0x_conq_v2_e10.txt a8a22b6340
+a10c1_conq_v2_r25.json 9d02490d1e
+a10c1_conq_v2_r26.json deda52dede

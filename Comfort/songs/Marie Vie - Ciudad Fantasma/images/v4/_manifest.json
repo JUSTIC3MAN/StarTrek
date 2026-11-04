@@ -1,0 +1,77 @@
+{
+ "job": "song_ciudad_fantasma_v4",
+ "rows": [
+  {
+   "id": "01-1",
+   "seed": 178410913536894,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "Clotheslines strung between abandoned adobe houses carry white shirts and long dresses that billow in the wind as if invisible people were still wearing them, sleeves lifting like arms, aged tempera fable painting, cracked and faded pigment on an old wood panel, folk storybook composition and soft muted color. Wide view down a narrow empty street, the clotheslines crossing the frame at different depths, a church bell tower at the far end. Pale morning haze, colors of faded white, dusty terracotta, sage and grey-blue, no people, no text, no watermark, aged tempera fable style.",
+   "style": "none",
+   "image": null,
+   "file": "01-1_ropa.png",
+   "secs": 13.4
+  },
+  {
+   "id": "02-1",
+   "seed": 597174673520697,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "An old wooden marimba stands alone in the middle of an empty town plaza, fallen leaves blowing across its keys as if the wind were playing it, a dry fountain and closed shutters behind, aged tempera fable painting, cracked and faded pigment on an old wood panel, folk storybook composition and soft muted color. Medium-wide view at eye level, the marimba centered. Low golden late-afternoon light, colors of honey wood, faded ochre, dusty rose and grey, no people, no text, no watermark, aged tempera fable style.",
+   "style": "none",
+   "image": null,
+   "file": "02-1_marimba.png",
+   "secs": 10.5
+  },
+  {
+   "id": "03-1",
+   "seed": 271411856968105,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "A bronze bell swings by itself in the open arch of an abandoned church tower above the empty rooftops of a ghost town, its rope blowing loose in the wind, a flock of birds lifting off the roof tiles, aged tempera fable painting, cracked and faded pigment on an old wood panel, folk storybook composition and soft muted color. Low view looking up at the tower, the bell centered against the sky, the rooftops along the bottom. Pale dawn light, colors of bronze, stone grey, faded gold and powder blue, no people, no text, no watermark, aged tempera fable style.",
+   "style": "none",
+   "image": null,
+   "file": "03-1_campana.png",
+   "secs": 10.4
+  },
+  {
+   "id": "04-1",
+   "seed": 1018338920904175,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "Jungle vines and broad leaves grow over a faded painted mural of fully clothed musicians in long skirts and white shirts playing marimba and guitar on the wall of an abandoned building, the painted faces half hidden by green, aged tempera fable painting, cracked and faded pigment on an old wood panel, folk storybook composition and soft muted color. Medium view straight on, the mural filling the frame, leaves spilling in from the top and right. Soft green light, colors of faded mural reds and blues, deep jungle green and weathered white, no text, no watermark, aged tempera fable style.",
+   "style": "none",
+   "image": null,
+   "file": "04-1_mural.png",
+   "secs": 10.3
+  },
+  {
+   "id": "05-1",
+   "seed": 426458587813812,
+   "wf": "krea",
+   "preset": null,
+   "size": "1376x768",
+   "final": null,
+   "prompt": "An empty street of old houses at dusk where every window still glows warm yellow behind thin curtains, the cobblestones wet and silent, mist drifting between the lamp posts, aged tempera fable painting, cracked and faded pigment on an old wood panel, folk storybook composition and soft muted color. Wide view down the middle of the street, the lit windows lining both sides toward a vanishing point. Warm window light against deep blue dusk, colors of warm yellow, deep blue, grey and soft black, no people, no text, no watermark, aged tempera fable style.",
+   "style": "none",
+   "image": null,
+   "file": "05-1_ventanas.png",
+   "secs": 11.2
+  }
+ ],
+ "full_prompts": {
+  "01-1": "Clotheslines strung between abandoned adobe houses carry white shirts and long dresses that billow in the wind as if invisible people were still wearing them, sleeves lifting like arms, aged tempera fable painting, cracked and faded pigment on an old wood panel, folk storybook composition and soft muted color. Wide view down a narrow empty street, the clotheslines crossing the frame at different depths, a church bell tower at the far end. Pale morning haze, colors of faded white, dusty terracotta, sage and grey-blue, no people, no text, no watermark, aged tempera fable style",
+  "02-1": "An old wooden marimba stands alone in the middle of an empty town plaza, fallen leaves blowing across its keys as if the wind were playing it, a dry fountain and closed shutters behind, aged tempera fable painting, cracked and faded pigment on an old wood panel, folk storybook composition and soft muted color. Medium-wide view at eye level, the marimba centered. Low golden late-afternoon light, colors of honey wood, faded ochre, dusty rose and grey, no people, no text, no watermark, aged tempera fable style",
+  "03-1": "A bronze bell swings by itself in the open arch of an abandoned church tower above the empty rooftops of a ghost town, its rope blowing loose in the wind, a flock of birds lifting off the roof tiles, aged tempera fable painting, cracked and faded pigment on an old wood panel, folk storybook composition and soft muted color. Low view looking up at the tower, the bell centered against the sky, the rooftops along the bottom. Pale dawn light, colors of bronze, stone grey, faded gold and powder blue, no people, no text, no watermark, aged tempera fable style",
+  "04-1": "Jungle vines and broad leaves grow over a faded painted mural of fully clothed musicians in long skirts and white shirts playing marimba and guitar on the wall of an abandoned building, the painted faces half hidden by green, aged tempera fable painting, cracked and faded pigment on an old wood panel, folk storybook composition and soft muted color. Medium view straight on, the mural filling the frame, leaves spilling in from the top and right. Soft green light, colors of faded mural reds and blues, deep jungle green and weathered white, no text, no watermark, aged tempera fable style",
+  "05-1": "An empty street of old houses at dusk where every window still glows warm yellow behind thin curtains, the cobblestones wet and silent, mist drifting between the lamp posts, aged tempera fable painting, cracked and faded pigment on an old wood panel, folk storybook composition and soft muted color. Wide view down the middle of the street, the lit windows lining both sides toward a vanishing point. Warm window light against deep blue dusk, colors of warm yellow, deep blue, grey and soft black, no people, no text, no watermark, aged tempera fable style"
+ }
+}

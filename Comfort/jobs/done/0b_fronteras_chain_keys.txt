@@ -1,0 +1,8 @@
+#name fronteras_chain_keys
+#size 1376x768
+#n 1
+#seed random
+#style none
+#lora orange-blue-riso-etching-comfy.safetensors:1.1
+[label=k2] High view over a packed night street dance, a sea of raised hands below, a towering wall of sound-system speakers at the far end of the street, haze and strobe beams cutting through the air, apartment buildings on both sides, orange and blue risograph etching print, two-color ink layers with slight misregistration, fine etched line hatching and grainy paper texture. High wide view from above the crowd looking down the street toward the speaker wall in the center. Hard backlight from the stage, only orange and blue ink, no text, no watermark, orange blue riso etching style.
+[label=k3] Close view of a giant speaker cone in a sound-system wall at night, its rim pumping with bass, dust and grit jumping off the cone, the neighboring speakers stacked around it, orange and blue risograph etching print, two-color ink layers with slight misregistration, fine etched line hatching and grainy paper texture. Frontal close-up, the cone filling the center of the frame. Hard light from the side, only orange and blue ink, no people, no text, no watermark, orange blue riso etching style.

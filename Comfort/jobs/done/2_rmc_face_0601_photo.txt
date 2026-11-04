@@ -1,0 +1,10 @@
+#name rmc_face_0601_photo
+#wf edit
+#image rmc_face_ref.jpg
+#boost 4
+#size 1376x768
+#n 2
+#seed random
+#style none
+#lora bold-inked-anime-realism-comfy.safetensors:0.9
+[label=palm_strike] Show this same man lunging into a deep wide stance down on one knee in a rain-wet empty lot under the arches of an elevated railway viaduct at night, holding a black microphone close to his mouth with one hand while his other arm thrusts an open palm strike toward the right side of the frame, unleashing a swirling vortex of electric blue energy that spirals across the right half of the image. He now wears a black baseball cap, a white ribbed tank top, a long black bead rosary with a gold cross, black bead bracelets, baggy black pants and white low-top sneakers. Wide low-angle shot with him left of center; the blue energy is the key light on his arm and face, warm sodium streetlamps glow behind him, sparks and raindrops hang in the air, parked cars on the wet street at the right. Epic cinematic graphic-novel illustration in full color, bold black ink outlines and confident brush inking, dramatic cel shading with deep shadows, painted film lighting and atmospheric haze, a widescreen movie-still composition. Electric blue, white, black and sodium orange. Keep his face exactly the same: his broad face, short light-brown beard trimmed close along the jaw and chin with a light mustache, light hazel eyes, straight nose, short dark-brown hair and small black stud earring. bold inked anime realism style

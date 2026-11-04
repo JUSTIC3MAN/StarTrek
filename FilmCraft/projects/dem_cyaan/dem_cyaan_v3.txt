@@ -1,0 +1,19 @@
+# dem_cyaan_v3: copy of dem_cyaan_v2 with the clips relinked to Star Trek\Comfort and the whole song on A2 (2026-10-27)
+# Dem Cyaan - Ras Manuel - VERSION 2 (2026-10-25): speed ramps + chosen transitions. Original = dem_cyaan.txt
+# Chained clips join with an invisible 16-frame dissolve; new scenes get a transition chosen from what the two shots share (Comfort CLAUDE.md section 17).
+out projects/dem_cyaan/dem_cyaan_v3.mp4
+size 1920x1080@60
+music Dem Cyaan.mp3          # the song on A2 from 0:00, trimmed to the end of the edit
+musicfull on                          # the whole song on A2 (Star Trek README), not trimmed to the edit
+fadein 24
+clip A:\Ai projects\Star Trek\Comfort\out\videos\dem_cyaan_vid1_stage60.mp4
+> dissolve 16                                                    # chained: the tilt keeps rising into the lanterns
+clip A:\Ai projects\Star Trek\Comfort\out\videos\dem_cyaan_vid2_stage60.mp4
+> glow 24 radius=80 intensity=70                                 # chained accent: the ring of fire flares as the camera turns down
+clip A:\Ai projects\Star Trek\Comfort\out\videos\dem_cyaan_vid3_stage60.mp4
+> luma_fade 40 softness=30                                       # new scene: dawn mist -> rain on embers, darkness soaks in first like ink
+clip A:\Ai projects\Star Trek\Comfort\out\videos\dem_cyaan_vid4_stage60.mp4
+> dissolve 16                                                    # chained: the line of fire, the camera cranes up
+clip A:\Ai projects\Star Trek\Comfort\out\videos\dem_cyaan_vid5_stage60.mp4
+fadeout 48
+ramp on

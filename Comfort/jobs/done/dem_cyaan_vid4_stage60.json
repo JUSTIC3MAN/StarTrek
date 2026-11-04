@@ -1,0 +1,9 @@
+{
+ "workflow": "Stage 1080p60 (Comfort)",
+ "name": "dem_cyaan_vid4_stage60",
+ "set": {
+  "load.video": "A:\\Ai projects\\Comfort\\out\\videos\\dem_cyaan_vid4.mp4"
+ },
+ "free_after": true,
+ "fc_in": "burn 20"
+}

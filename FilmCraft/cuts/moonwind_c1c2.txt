@@ -1,0 +1,6 @@
+out renders/moonwind_c1c2.mp4
+fadein 12
+clip c13
+> leak 18
+clip c12
+fadeout 24

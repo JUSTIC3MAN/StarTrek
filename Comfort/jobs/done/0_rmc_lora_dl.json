@@ -1,0 +1,1 @@
+{"name": "rmc_lora_dl", "download": [{"url": "https://huggingface.co/ilkerzgi/krea-2-bold-inked-anime-realism-lora/resolve/main/bold-inked-anime-realism-comfy.safetensors", "dest": "loras/bold-inked-anime-realism-comfy.safetensors"}]}

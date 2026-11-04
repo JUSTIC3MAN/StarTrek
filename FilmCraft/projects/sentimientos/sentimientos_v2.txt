@@ -1,0 +1,29 @@
+# sentimientos_v2: copy of sentimientos with the clips relinked to Star Trek\Comfort and the whole song on A2 (2026-10-27)
+# Sentimientos - Ras Manuel - concert-screen project (1920x1080 @ 60 fps). Add clips in order, then rebuild:
+#   python3 fc.py build projects/sentimientos/sentimientos.txt
+# Chain: each clip starts on the previous clip's last frame, so a 0.5 s dissolve (30 frames at 60 fps) hides the join.
+out projects/sentimientos/sentimientos_v2.mp4
+size 1920x1080@60
+music Sentimientos.mp3          # the song on A2 from 0:00, trimmed to the end of the edit
+musicfull on                          # the whole song on A2 (Star Trek README), not trimmed to the edit
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_vid1_stage60fast.mp4
+> dissolve 30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_vid2_stage60.mp4
+> dissolve 30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_vid3_stage60.mp4
+> dissolve 30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_vid4_stage60.mp4
+> blur 24
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_vid5_stage60.mp4
+> leak 30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_vid6_stage60.mp4
+> dissolve 16
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_vid7_stage60.mp4
+> dissolve 16
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_vid8_stage60.mp4
+> shape_dissolve 48 shape=circle order=center_out
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_vid9_stage60.mp4
+> dissolve 16
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_vid10_stage60.mp4
+> soft_wipe 45 feather=500
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_vid11_stage60.mp4

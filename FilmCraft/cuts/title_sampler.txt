@@ -1,0 +1,14 @@
+# Title font sampler: one Windows render to see which condensed fonts exist (2026-10-26). Safe to delete.
+out renders/title_sampler.mp4
+size 1920x1080@60
+clip A:\Ai projects\Comfort\out\videos\rmc_intro_vid4_stage60.mp4 3.0-5.1
+text "1 KWOTE" 0- style=boss pos=144,120 size=80 tracking=120 fade=0 font=Bahnschrift font_style="Bold Condensed"
+text "2 KWOTE" 0- style=boss pos=144,220 size=80 tracking=120 fade=0 font="Bahnschrift Condensed" font_style=Bold
+text "3 KWOTE" 0- style=boss pos=144,320 size=80 tracking=120 fade=0 font="Bahnschrift SemiBold Condensed" font_style=Regular
+text "4 KWOTE" 0- style=boss pos=144,420 size=80 tracking=120 fade=0 font=Impact font_style=Regular
+text "5 KWOTE" 0- style=boss pos=144,520 size=80 tracking=120 fade=0 font="Agency FB" font_style=Bold
+text "6 KWOTE" 0- style=boss pos=144,620 size=80 tracking=120 fade=0 font="Franklin Gothic Demi Cond" font_style=Regular
+text "7 KWOTE" 0- style=boss pos=144,720 size=80 tracking=120 fade=0 font="Arial Narrow" font_style=Bold
+text "8 KWOTE" 0- style=boss pos=144,820 size=80 tracking=120 fade=0 font="Segoe UI Black" font_style=Regular
+text "9 KWOTE" 0- style=boss pos=144,920 size=80 tracking=120 fade=0 font="Bebas Neue" font_style=Regular
+text "10 KWOTE" 0- style=boss pos=144,1020 size=80 tracking=120 fade=0 font=Oswald font_style=Bold

@@ -1,0 +1,44 @@
+#title Marie Vie - Conqueress v3 (one minute)
+#songmap Conqueress.songmap.json
+#music Conqueress.mp3
+#queue c
+#kind music-video
+#neg no text, no watermark, no border, no frame, no blank paper
+#subject2 the only person ever shown: one small dark silhouette of a woman in a long dress, always far away and never close; most shots show no people.
+#sound Sea, wind, fire and nature sounds that fit each shot.
+style K | lora=bold-woodcut-linocut-comfy.safetensors:1.1 | bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper | black and warm cream with red-orange accents | bold woodcut linocut style | bold woodcut linocut print (thick carved black lines, gouged textures, black and warm cream with one red-orange ink layer, the carving filling the whole frame)
+# Conqueress v3 (2026-10-27): a NEW one-minute cut, intro to the end of verse 1 (0-57.8 s); the song is trimmed at 57.8 with a fade-out (musicfull off).
+# One scene per section, long moving shots (2-3 bars), 1 bar only on a chorus hit. Reuses the good conq_v2 shots; new meteor, chorus 2 and verse 1.
+# Opening: ONE generation conq_v3_shot_a01_one from 03-1_k3.png; the Overseer locks it over the a01 placeholder (static end cut, rest slowed to fill).
+#pics conq_v3
+#prefix a
+#build overseer
+#end 57.8
+#musicfull off
+#fadeout 90
+#inpoint 1.2
+#within film_dissolve 14 | blur_dissolve 14 blur=30 | luma_fade 14
+#copy A:\Ai projects\Star Trek\Preview\Marie Vie - Conqueress\Conqueress v3 (one minute).mp4
+batch 1
+@ 0 intro - the boat on the sea under the ringed sun (Justice's picture 03-1_k3)
+s5.29 | run conq_v2_r01:0 | | a01_open_sea | the small wooden sailboat with its dark carved sail on the sea, a woman in red at the bow, a huge carved sun of red-orange rings behind ; wide shot | the waves roll and break the whole time, the sun's rings give off a slight radiance, the boat, sail and woman deepen into dark red
+text a01 "MARIE VIE" 0.6-4.9 style=conq_artist pos=144,160
+text a01 "CONQUERESS" 1.0-4.9 style=conq_title pos=144,245
+3 | run conq_v2_r01:1 | wave 18 direction=from_south amplitude=40 | a02_sail_light | the full sail and rigging of the same boat catching the first red-orange light ; closer, from behind the mast | the sail swells and ripples while the camera slides up the mast
+3 | run conq_v2_r01:2 | cross_zoom 14 strength=30 | a03_prow_waves | the prow of the same boat cutting the carved waves ; low at the waterline | the prow slices the waves and the spray arcs
+* | run conq_v2_r02:0 | blur_dissolve 14 blur=30 | a04_boat_into_sun | the boat sailing out past the stone harbour wall into the huge carved sun ; wide | the boat glides away into the sun over rolling waves
+@ 18.4 chorus 1 - sun and fire from Mars over the sea (master 04-1_k4)
+2 | run conq_v2_r02:2 | flare 14 color=#ff7a2a | b01_sun_mars | the huge carved sun over the sea with the small red planet burning in the upper left ; wide | the sun's rings pulse
+1 | run conq_v2_r03:0 | cross_zoom 12 strength=40 | b02_mars_close | the red planet close, burning ; low angle | the flames stream off the planet
+2 | run conq_v2_r04:2 | luma_fade 14 | b07_sun_reflection | the reflection of the carved sun breaking into ripples on the sea ; looking down at the water | the ripples shimmer and break the reflection apart
+- | K@conqueress_keys_v1b/04-1_k4.png | | b00_master | a huge carved sun rising over the sea with a small red planet burning high in the upper left like a spark of fire ; wide shot | The sun's carved rings pulse outward and the waves roll toward the camera while it pushes slowly toward the horizon
+* | K>b00 | push 14 direction=from_north | b08_meteor | a blazing meteor just entering the sky in the far upper left corner above the same sea, its head a white-hot carved ball, a long tail of red-orange fire and gouged sparks trailing behind it, the huge carved sun and the red planet low over the horizon, the rest of the sky open ; wide shot | The meteor streaks diagonally down across the whole sky toward the horizon, its tail stretching and shedding sparks, and plunges into the sea at the horizon in a burst of red-orange light, while the camera tilts slowly down after it
+@ 31.54 chorus 2 - dawn smoke over a still bay (madrugada, humo, brisa, silencio)
+2 | K | light_leak 24 color=#ffb070 amount=60 | c01_dawn_bay | a small village of carved stone houses on a hillside above a still bay at dawn, one thin ribbon of chimney smoke drifting low across the glassy water, a low red-orange sun just above the far hills, no people ; wide shot from across the bay | The smoke ribbon drifts and unrolls slowly across the bay while the camera glides sideways along the far shore
+2 | K>c01 | blur_dissolve 14 blur=30 | c02_reeds | reeds at the edge of the same still bay, their carved blades trembling, the smoke ribbon and the low sun reflected on the water between them, no people ; low at the waterline among the reeds | The reeds sway and slow rings spread across the reflection while the camera pushes forward through the reeds
+2 | K>c01 | film_dissolve 14 | c03_smoke_breeze | the same chimney smoke torn by the dawn breeze into long carved curls over the tiled roofs, the low sun glowing red-orange behind it, no people ; closer, at roof height | The breeze pulls the smoke into long curls that twist and thin out while the camera drifts slowly through them
+* | K>c01 | blur_dissolve 14 blur=30 | c04_bay_sun | the low sun over the same still bay, its reflection a long carved column of red-orange light on the water, a last thread of smoke crossing it, no people ; wide, looking out over the bay | The reflection shimmers and breaks into carved ripples while the camera rises slowly over the water toward the sun
+@ 44.72 verse 1 - the highest mountain (la más alta montaña)
+3 | K | cross_zoom 20 strength=45 | d01_peak | the highest mountain, a towering carved peak rising above a sea of clouds, snow ridges cut in thick black lines, the sun blazing red-orange on its flank, a tiny far-off silhouette of a woman on the ridge far below the summit ; wide shot | The clouds roll past the peak and the light slides across the snow while the camera pushes slowly toward the summit
+3 | K>d01 | push 14 direction=from_east | d02_ridge_wind | the same snow ridge, the wind tearing snow off its edge in long carved plumes against the red-orange sun, no people ; closer, along the ridge | The snow plumes stream off the ridge while the camera tracks steadily along the edge
+* | K>d01 | luma_fade 16 | d03_summit_sun | the summit of the same peak above the sea of clouds, the sun breaking over it in carved red-orange rays, no people ; low angle up at the summit | The rays flare outward over the summit and the clouds churn below while the camera rises slowly toward the top

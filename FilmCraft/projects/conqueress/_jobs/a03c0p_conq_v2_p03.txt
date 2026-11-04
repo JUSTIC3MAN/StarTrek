@@ -1,0 +1,7 @@
+#name conq_v2_p03
+#size 1376x768
+#n 1
+#seed random
+#style none
+[label=e01_pass lora=bold-woodcut-linocut-comfy.safetensors:1.1] a high mountain pass in drifting cloud, a stone cairn beside the path, two eagles circling, the sun a red-orange disc through the mist, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, wide shot, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style
+[label=f01_meadow lora=bold-woodcut-linocut-comfy.safetensors:1.1] a wind-swept meadow of tall grass on a cliff above the sea, a tall sailing ship below raising its sails, a tiny far-off silhouette of a woman walking in the grass, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, wide shot, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style

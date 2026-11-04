@@ -1,0 +1,25 @@
+COMFORT - the app (Comfort.exe)
+===============================
+Double-click Comfort.exe. It starts Comfort in the background (no console) and opens it in its own window.
+Closing the window leaves Comfort running (it keeps serving Claude's inbox jobs); use Settings > Quit to stop it.
+
+ONE-TIME SETUP FOR THE MASTER AI (local, free)
+1. Install Ollama: https://ollama.com (version 0.12.7 or newer).
+2. Open a terminal once and run:   ollama pull qwen3.6:27b
+   (about 18-19 GB; vision + tool calling + thinking. Alternative: qwen3.6:35b - higher agent scores, 23-24 GB.)
+3. In Comfort: Workflows > "Convert / refresh workflows". This converts every workflow saved in ClaudeComfy
+   (using ComfyUI's own converter in a hidden Edge window). Do it again whenever you save a new workflow.
+
+TABS
+- Agent: chat with the master AI. Attach / drop / paste reference images. It can run any converted workflow
+  and change any setting, write prompts, read images into prompts, and look at the results.
+  GPU hand-off: the AI unloads before each ComfyUI job (Krea gets the whole 4090) and reloads after.
+- Workflows: pick any workflow, edit any setting by hand, Run. No AI needed.
+- Gallery: every result. Upscale only the images you like; "Send to Agent" to use one as a reference.
+- Settings: model, thinking mode, hand-off, context length, ComfyUI URL, upscale model.
+
+FILES
+comfort_app.py (server + UI), comfort_agent.py (master AI), comfort_flows.py (any-workflow engine),
+comfort.py (Krea jobs + inbox), ui.html, launcher.json (python path / port / window size for Comfort.exe).
+Logs: comfort.log, app.log. Results: out\. Reference images: inputs\.
+Other AI apps (LM Studio, Claude Desktop) can still use comfort_mcp.py + lmstudio_mcp.json.

@@ -1,0 +1,112 @@
+block_motion | Animation | Block Motion | direction=From West [From North/From East/From South/From West]; blocks=6(2-32); motion_blur=50(0-100)
+flip_motion | Animation | Flip Motion | direction=From West [From North/From East/From South/From West]; perspective=50(0-100); motion_blur=50(0-100)
+fold_motion | Animation | Fold Motion | direction=From West [From North/From East/From South/From West]; perspective=50(0-100)
+pop_motion | Animation | Pop Motion | overshoot=20(0-100); motion_blur=50(0-100)
+pull_motion | Animation | Pull Motion | direction=From West [From North/From East/From South/From West]; motion_blur=50(0-100)
+spin_motion | Animation | Spin Motion | rotation=360(0-1440); spin=Clockwise [Clockwise/Counter-clockwise]; motion_blur=50(0-100)
+spring_motion | Animation | Spring Motion | direction=From West [From North/From East/From South/From West]; bounce=40(0-100); motion_blur=50(0-100)
+travel_motion | Animation | Travel Motion | direction=From West [From North/From East/From South/From West]; zoom=40(0-90); motion_blur=50(0-100)
+additive_dissolve | Dissolve | Additive Dissolve | 
+blur_dissolve | Dissolve | Blur Dissolve | blur=40(0-400)
+burn_alpha | Dissolve | Burn Alpha | burn_color=[1.0, 0.44999998807907104, 0.10000000149011612, 1.0]; softness=25(0-100); seed=1(0-9999)
+cross_dissolve | Dissolve | Cross Dissolve | 
+dip_to_black | Dissolve | Dip to Black | 
+dip_to_color | Dissolve | Dip to Color | color=[0.8500000238418579, 0.20000000298023224, 0.20000000298023224, 1.0]; hold=0(0-90)
+dip_to_white | Dissolve | Dip to White | 
+film_dissolve | Dissolve | Film Dissolve | 
+luma_fade | Dissolve | Luma Fade | source=Outgoing [Outgoing/Incoming]; softness=20(0-100); invert=False
+morph_cut | Dissolve | Morph Cut | 
+mosaic_transition | Dissolve | Mosaic | block_size=64(0-400); dissolve=True
+chaos | Grunge & Distort | Chaos | amount=60(0-100); seed=1(0-9999)
+earthquake | Grunge & Distort | Earthquake | shake=40(0-400); seed=1(0-9999); motion_blur=50(0-100)
+flicker | Grunge & Distort | Flicker | flickers=8(1-40); seed=1(0-9999)
+glass | Grunge & Distort | Glass | cell_size=90(0-1000); refraction=40(0-400); seed=1(0-9999)
+glitch | Grunge & Distort | Glitch | amount=60(0-100); seed=1(0-9999)
+grunge | Grunge & Distort | Grunge | scale=120(0-1000); edge_color=[0.2199999988079071, 0.14000000059604645, 0.07999999821186066, 1.0]; edge_width=12(0-200); seed=1(0-9999)
+kaleidoscope | Grunge & Distort | Kaleidoscope | segments=6(2-32); zoom=30(0-100)
+liquid_distortion | Grunge & Distort | Liquid Distortion | amount=60(0-500); scale=200(0-2000); seed=1(0-9999)
+tv_power | Grunge & Distort | TV Power | glow_color=[0.8500000238418579, 0.949999988079071, 1.0, 1.0]; line=4(0-50)
+vhs_damage | Grunge & Distort | VHS Damage | amount=60(0-100); seed=1(0-9999)
+vr_chroma_leaks | Immersive Video | VR Chroma Leaks | amount=70(0-100); seed=1(0-9999)
+vr_gradient_wipe | Immersive Video | VR Gradient Wipe | softness=20(0-100); invert=False
+vr_iris_wipe | Immersive Video | VR Iris Wipe | center={'x': None, 'y': None}; feather=8(0-2000); border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+vr_light_leaks | Immersive Video | VR Light Leaks | amount=70(0-100); seed=1(0-9999)
+vr_light_rays | Immersive Video | VR Light Rays | center={'x': None, 'y': None}; amount=70(0-100)
+vr_mobius_zoom | Immersive Video | VR Mobius Zoom | zoom=60(0-100); twist=180.0
+vr_random_blocks | Immersive Video | VR Random Blocks | block_size=80(0-1000); softness=10(0-100); seed=1(0-9999)
+vr_spherical_blur | Immersive Video | VR Spherical Blur | blur=60(0-400)
+burn_chroma | Lights & Blurs | Burn Chroma | amount=80(0-100)
+chroma_leak | Lights & Blurs | Chroma Leak | amount=70(0-100); seed=1(0-9999)
+cross_zoom | Lights & Blurs | Cross Zoom | center={'x': None, 'y': None}; strength=60(0-100)
+directional_blur_transition | Lights & Blurs | Directional Blur | angle=90.0; blur=160(0-1000)
+flare | Lights & Blurs | Flare | color=[1.0, 0.800000011920929, 0.550000011920929, 1.0]; amount=80(0-100); angle=20.0
+flash | Lights & Blurs | Flash | color=[1.0, 1.0, 1.0, 1.0]; intensity=100(0-100)
+glow | Lights & Blurs | Glow | radius=40(0-400); intensity=80(0-100)
+lens_blur | Lights & Blurs | Lens Blur | radius=30(0-200)
+light_leak | Lights & Blurs | Light Leak | color=[1.0, 0.550000011920929, 0.20000000298023224, 1.0]; amount=80(0-100); seed=1(0-9999)
+light_sweep | Lights & Blurs | Light Sweep | angle=70.0; width=160(0-1000); color=[1.0, 0.9700000286102295, 0.8999999761581421, 1.0]; amount=80(0-100)
+phosphor | Lights & Blurs | Phosphor | color=[0.550000011920929, 1.0, 0.6000000238418579, 1.0]; decay=50(0-100)
+radial_blur | Lights & Blurs | Radial Blur | center={'x': None, 'y': None}; angle=40(0-180)
+ray | Lights & Blurs | Ray | center={'x': None, 'y': None}; amount=80(0-100); length=50(0-100)
+solarize | Lights & Blurs | Solarize | amount=100(0-100)
+stripe | Lights & Blurs | Stripe | stripes=8(1-64); angle=30.0; color=[1.0, 1.0, 1.0, 1.0]
+zoom_blur | Lights & Blurs | Zoom Blur | center={'x': None, 'y': None}; strength=50(0-100)
+film_roll | Slide | Film Roll | direction=From West [From North/From East/From South/From West]; gap=40(0-400); gap_color=[0.029999999329447746, 0.029999999329447746, 0.029999999329447746, 1.0]; motion_blur=50(0-100)
+push | Slide | Push | direction=From West [From North/From East/From South/From West]; motion_blur=50(0-100)
+roll | Slide | Roll | direction=From West [From North/From East/From South/From West]; motion_blur=50(0-100)
+roll_3d | Slide | 3D Roll | direction=From West [From North/From East/From South/From West]; perspective=50(0-100)
+slide | Slide | Slide | direction=From West [From North/From East/From South/From West]; motion_blur=50(0-100)
+split | Slide | Split | orientation=Horizontal [Horizontal/Vertical]; motion_blur=50(0-100)
+stretch | Slide | Stretch | direction=From West [From North/From East/From South/From West]
+whip | Slide | Whip | direction=From West [From North/From East/From South/From West]; blur=80(0-100)
+motion_camera | Smart Tools | Motion Camera | zoom=40(0-200); rotation=8.0; motion_blur=50(0-100)
+motion_tween | Smart Tools | Motion Tween | scale=15(0-100)
+shape_dissolve | Smart Tools | Shape Dissolve | shape=Circle [Circle/Square/Diamond/Star/Heart/Triangle/Hexagon]; size=120(0-1000); softness=2(0-100); rotation=0.0; order=Random [Random/Left to Right/Center Out]; seed=1(0-9999)
+shape_flow | Smart Tools | Shape Flow | shape=Circle [Circle/Square/Diamond/Star/Heart/Triangle/Hexagon]; direction=From West [From North/From East/From South/From West]; softness=4(0-200)
+text_animator | Text | Text Animator | columns=24(2-128); rows=10(1-64)
+typewriter | Text | Typewriter | columns=32(2-128); rows=12(1-64); cursor=True
+frame | Transformers | Frame | frame_width=24(0-200); frame_color=[1.0, 1.0, 1.0, 1.0]; scale=60(10-95)
+louver | Transformers | Louver | slats=8(1-64); orientation=Horizontal [Horizontal/Vertical]
+mirror_transition | Transformers | Mirror | direction=From West [From North/From East/From South/From West]
+page_peel | Transformers | Page Peel | corner=Bottom Right [Top Left/Top Right/Bottom Right/Bottom Left]; radius=60(0-500); shadow=True
+slice | Transformers | Slice | slices=8(1-64); angle=20.0; motion_blur=50(0-100)
+spin_3d | Transformers | 3D Spin | direction=From West [From North/From East/From South/From West]; perspective=50(0-100)
+spinback_3d | Transformers | 3D Spinback | direction=From West [From North/From East/From South/From West]; depth=60(0-100)
+wave | Transformers | Wave | direction=From West [From North/From East/From South/From West]; amplitude=60(0-500); wavelength=300(0-3000)
+additive_dissolve_legacy | Video Transitions | Additive Dissolve (Legacy) | 
+band_slide | Video Transitions | Band Slide | 
+barn_doors | Video Transitions | Barn Doors | orientation=Vertical [Horizontal/Vertical]; border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+center_split | Video Transitions | Center Split | 
+checker_wipe | Video Transitions | Checker Wipe | 
+clock_wipe_legacy | Video Transitions | Clock Wipe (Legacy) | 
+cross_dissolve_legacy | Video Transitions | Cross Dissolve (Legacy) | 
+cross_zoom_legacy | Video Transitions | Cross Zoom (Legacy) | 
+cube_spin | Video Transitions | Cube Spin | 
+dip_to_black_legacy | Video Transitions | Dip to Black (Legacy) | 
+dip_to_white_legacy | Video Transitions | Dip to White (Legacy) | 
+film_dissolve_legacy | Video Transitions | Film Dissolve (Legacy) | 
+flip_over | Video Transitions | Flip Over | 
+gradient_wipe | Video Transitions | Gradient Wipe | softness=10(0-100)
+inset | Video Transitions | Inset | corner=Top Left [Top Left/Top Right/Bottom Right/Bottom Left]; border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+iris_box | Video Transitions | Iris Box | center={'x': None, 'y': None}; border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+iris_cross | Video Transitions | Iris Cross | center={'x': None, 'y': None}; border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+iris_diamond | Video Transitions | Iris Diamond | center={'x': None, 'y': None}; border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+iris_round | Video Transitions | Iris Round | center={'x': None, 'y': None}; border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+non_additive_dissolve | Video Transitions | Non-Additive Dissolve | 
+page_turn | Video Transitions | Page Turn | 
+push_legacy | Video Transitions | Push (Legacy) | direction=From West [From North/From East/From South/From West]
+radial_wipe_legacy | Video Transitions | Radial Wipe (Legacy) | 
+slide_legacy | Video Transitions | Slide (Legacy) | direction=From West [From North/From East/From South/From West]
+split_legacy | Video Transitions | Split (Legacy) | 
+venetian_blinds | Video Transitions | Venetian Blinds | 
+whip_legacy | Video Transitions | Whip (Legacy) | direction=From West [From North/From East/From South/From West]
+wipe | Video Transitions | Wipe | direction=From West [From North/From East/From South/From West]
+clock_wipe | Wipe | Clock Wipe | center={'x': None, 'y': None}; start=0.0; feather=0(0-2000); border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+linear_wipe | Wipe | Linear Wipe | angle=90.0; feather=0(0-2000); border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+neon_wipe | Wipe | Neon Wipe | angle=90.0; color=[0.20000000298023224, 0.8999999761581421, 1.0, 1.0]; glow=40(0-400); amount=100(0-100)
+panel_wipe | Wipe | Panel Wipe | direction=From West [From North/From East/From South/From West]; panels=6(1-64); feather=0(0-2000); border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+plateau_wipe | Wipe | Plateau Wipe | angle=90.0; plateaus=5(1-64); feather=4(0-2000); border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+radial_wipe | Wipe | Radial Wipe | corner=Top Left [Top Left/Top Right/Bottom Right/Bottom Left]; feather=0(0-2000); border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+soft_wipe | Wipe | Soft Wipe | angle=90.0; feather=300(0-2000)
+star_wipe | Wipe | Star Wipe | center={'x': None, 'y': None}; points=5(3-24); inner=45(5-100); rotation=0.0; feather=0(0-2000); border_width=0(0-200); border_color=[0.0, 0.0, 0.0, 1.0]; antialias=Low [Off/Low/Medium/High]
+stretch_wipe | Wipe | Stretch Wipe | direction=From West [From North/From East/From South/From West]; stretch=200(0-2000)

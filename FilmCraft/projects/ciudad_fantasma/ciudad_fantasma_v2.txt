@@ -1,0 +1,26 @@
+# Ciudad Fantasma - Marie Vie - VERSION 2 (2026-10-25): speed ramps + chosen transitions. Original = ciudad_fantasma.txt - (1920x1080 @ 60 fps). Rebuild: python3 fc.py build projects/ciudad_fantasma/ciudad_fantasma_v2.txt.
+# Chained clips (each starts on the previous clip's last frame) join with an invisible 14-16 frame dissolve;
+# new scenes get a transition chosen from what the two shots share (Comfort CLAUDE.md section 17).
+# Speed ramps are automatic: see ciudad_fantasma.ramps.txt. Fix a spot by hand with  speed <a-b seconds> <percent>  under a clip.
+out projects/ciudad_fantasma/ciudad_fantasma_v2.mp4
+size 1920x1080@60
+music Ciudad Fantasma.mp3          # the song on A2 from 0:00, trimmed to the end of the edit
+musicfull on                          # the whole song on A2 (Star Trek README), not trimmed to the edit
+fadein 24
+clip A:\Ai projects\Star Trek\Comfort\out\videos\ciudad_fantasma_vid1_stage60.mp4
+> dissolve 16                                                    # chained: the glide continues down the street
+clip A:\Ai projects\Star Trek\Comfort\out\videos\ciudad_fantasma_vid2_stage60.mp4
+> dissolve 16                                                    # chained: the church fills the frame, the camera starts to rise
+clip A:\Ai projects\Star Trek\Comfort\out\videos\ciudad_fantasma_vid3_stage60.mp4
+> light_sweep 30 angle=20 color=#ffd9a0 amount=55                # chained accent: the first golden light reaches the rooftops
+clip A:\Ai projects\Star Trek\Comfort\out\videos\ciudad_fantasma_vid4_stage60.mp4
+> cross_zoom 24 center=960,540 strength=35                       # chained accent: the camera goes through the belfry arch
+clip A:\Ai projects\Star Trek\Comfort\out\videos\ciudad_fantasma_vid5_stage60.mp4
+> dissolve 16                                                    # chained: the mural, then the tilt up into the canopy
+clip A:\Ai projects\Star Trek\Comfort\out\videos\ciudad_fantasma_vid6_stage60.mp4
+> luma_fade 48 invert softness=35                                # new scene: the bright morning sky washes into the signing room
+clip A:\Ai projects\Star Trek\Comfort\out\videos\ciudad_fantasma_vid7_stage60.mp4
+> dissolve 16                                                    # chained: the spilled ink becomes a town
+clip A:\Ai projects\Star Trek\Comfort\out\videos\ciudad_fantasma_vid8_stage60.mp4
+fadeout 48
+ramp on

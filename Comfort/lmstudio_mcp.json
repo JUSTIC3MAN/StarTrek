@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "comfort": {
+      "command": "A:\\ClaudeComfy\\venv\\Scripts\\python.exe",
+      "args": ["-s", "A:\\Ai projects\\Comfort\\comfort_mcp.py"]
+    }
+  }
+}

@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comfort</title>
+<style>
+:root{--bg:#0f1113;--panel:#16191c;--panel2:#1d2125;--line:#2a2f35;--text:#e6e8ea;--dim:#8b939b;--accent:#b8f04a;--accent2:#7fc81e;--bad:#ff6b6b;--warn:#ffc04d;--radius:10px}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--text);font:14px/1.45 "Segoe UI Variable","Segoe UI",system-ui,sans-serif;display:grid;grid-template-rows:auto 1fr;overflow:hidden}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer}
+button:hover{border-color:#3a4148}button.primary{background:var(--accent);color:#111;border-color:var(--accent);font-weight:600}
+button.primary:hover{background:#c9ff5f}button:disabled{opacity:.45;cursor:default}
+input,select,textarea{background:#0c0e10;border:1px solid var(--line);border-radius:8px;padding:7px 9px;width:100%}
+textarea{resize:vertical}input:focus,select:focus,textarea:focus{outline:1px solid var(--accent2);border-color:var(--accent2)}
+header{display:flex;align-items:center;gap:16px;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+.brand{font-weight:700;letter-spacing:.5px;font-size:16px}.brand b{color:var(--accent)}
+nav{display:flex;gap:4px}nav button{background:none;border:none;color:var(--dim);padding:6px 12px}
+nav button.on{color:var(--text);background:var(--panel2);border-radius:8px}
+.pills{margin-left:auto;display:flex;gap:8px;align-items:center;font-size:12px}
+.pill{display:flex;align-items:center;gap:6px;padding:4px 10px;border:1px solid var(--line);border-radius:99px;color:var(--dim);cursor:default}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--bad)}.dot.ok{background:var(--accent)}.dot.warn{background:var(--warn)}
+#statusline{max-width:340px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--dim);font-size:12px}
+main{overflow:hidden;min-height:0}.view{display:none;height:100%;min-height:0}.view.on{display:flex}
+/* agent */
+#agent{flex-direction:column}
+#log{flex:1;overflow-y:auto;padding:18px 0}
+.msg{max-width:880px;margin:0 auto 12px;padding:0 20px}
+.bubble{padding:10px 14px;border-radius:var(--radius);white-space:pre-wrap;word-wrap:break-word}
+.m-user .bubble{background:#23301a;border:1px solid #34481f;margin-left:80px}
+.m-assistant .bubble{background:var(--panel);border:1px solid var(--line)}
+.tline{font:12px/1.4 Consolas,monospace;color:var(--dim)}.tline:before{content:"\25B8  "}
+.m-result .bubble{background:transparent;border:1px dashed var(--line);font:12px/1.45 Consolas,monospace;color:#b9c0c6;max-height:180px;overflow:auto}
+.m-error .bubble{border:1px solid var(--bad);color:var(--bad)}.sline{color:var(--dim);font-size:12px;text-align:center}
+.imgs{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.imgs img{max-height:260px;max-width:100%;border-radius:8px;border:1px solid var(--line);cursor:zoom-in}
+#composer{border-top:1px solid var(--line);background:var(--panel);padding:12px 20px}
+#composer .inner{max-width:880px;margin:0 auto}
+#chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.chip{display:flex;align-items:center;gap:6px;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:3px 6px;font-size:12px}
+.chip img{height:34px;border-radius:4px}.chip button{padding:0 6px;border:none;background:none;color:var(--dim)}
+.row{display:flex;gap:8px;align-items:flex-end}.row textarea{min-height:46px;max-height:200px}
+#busybar{font-size:12px;color:var(--accent);height:16px;margin-bottom:4px}
+.banner{max-width:880px;margin:0 auto 12px;padding:10px 14px;border:1px solid var(--warn);border-radius:var(--radius);color:var(--warn);font-size:13px;display:none}
+.drop{outline:2px dashed var(--accent);outline-offset:-6px}
+/* workflows */
+#workflows{gap:0}.side{width:290px;border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0;background:var(--panel)}
+.side .top{padding:12px;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line)}
+#wflist{overflow-y:auto;flex:1;padding:6px}#wflist div{padding:7px 10px;border-radius:8px;cursor:pointer;word-break:break-word}
+#wflist div:hover{background:var(--panel2)}#wflist div.on{background:#23301a;color:var(--accent)}
+.note{color:var(--dim);font-size:12px;padding:8px 12px}
+.editor{flex:1;display:flex;flex-direction:column;min-width:0;min-height:0}
+.edhead{padding:12px 18px;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:center}
+.edhead h2{margin:0;font-size:15px;flex:1;word-break:break-word}.edhead input{max-width:260px}
+#nodes{flex:1;overflow-y:auto;padding:14px 18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px;align-content:start}
+.node{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px}
+.node h3{margin:0 0 8px;font-size:13px}.node h3 small{color:var(--dim);font-weight:400}
+.field{margin-bottom:8px}.field label{display:block;font-size:12px;color:var(--dim);margin-bottom:3px}
+.field.changed label{color:var(--accent)}.field .pair{display:flex;gap:6px}
+.runbar{display:flex;gap:10px;align-items:center;padding:12px 18px;border-top:1px solid var(--line);background:var(--panel)}
+.runbar label{font-size:12px;color:var(--dim)}.runbar input,.runbar select{width:auto}
+#runresult{flex:1;font-size:12px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* gallery */
+#gallery{flex-direction:column}#gtop{padding:12px 18px;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:center}
+#grid{flex:1;overflow-y:auto;padding:16px 18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;align-content:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;cursor:pointer}
+.card:hover{border-color:#3a4148}.card video{width:100%;height:160px;object-fit:cover;display:block;background:#000}
+.seg{display:inline-flex}.seg button{border-radius:0;margin-left:-1px}.seg button:first-child{border-radius:8px 0 0 8px;margin-left:0}.seg button:last-child{border-radius:0 8px 8px 0}.seg button.on{background:var(--accent);color:#111;border-color:var(--accent);font-weight:600}
+.card img{width:100%;height:160px;object-fit:cover;display:block;background:#000}
+.card .meta{padding:8px 10px;font-size:12px}.card .meta b{display:block;font-size:13px;word-break:break-word}.card .meta span{color:var(--dim)}
+/* overlay */
+#overlay{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;z-index:10;overflow:auto}
+#overlay.on{display:block}#ovbody{max-width:1200px;margin:30px auto;padding:0 20px}
+#ovbody h2{display:flex;justify-content:space-between;align-items:center}
+.files{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.file{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.file img,.file video{width:100%;display:block;background:#000;cursor:zoom-in}.file .acts{display:flex;gap:6px;padding:8px;flex-wrap:wrap;align-items:center}
+.file .acts span{font-size:11px;color:var(--dim);flex-basis:100%;word-break:break-all}
+pre.info{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:10px;white-space:pre-wrap;font-size:12px;color:#b9c0c6;max-height:240px;overflow:auto}
+#lightbox{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;z-index:20;align-items:center;justify-content:center;cursor:zoom-out}
+#lightbox.on{display:flex}#lightbox img{max-width:96vw;max-height:94vh}
+/* settings */
+#settings{overflow-y:auto}.form{max-width:720px;margin:20px auto;padding:0 20px;display:grid;gap:14px}
+.form h2{margin:10px 0 0;font-size:15px}.form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form label{font-size:12px;color:var(--dim)}.check{display:flex;gap:8px;align-items:center}.check input{width:auto}
+.help{font-size:12px;color:var(--dim);background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px}
+.help code{color:var(--accent)}
+a{color:inherit;text-decoration:none}#ovbody h2 button{font-size:14px;font-weight:400}
+#toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--panel2);border:1px solid var(--line);padding:8px 14px;border-radius:8px;display:none;z-index:30}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">COMF<b>O</b>RT</div>
+  <nav>
+    <button data-v="agent" class="on">Agent</button><button data-v="workflows">Workflows</button>
+    <button data-v="gallery">Gallery</button><button data-v="settings">Settings</button>
+  </nav>
+  <div class="pills">
+    <div id="statusline"></div><button id="cancelbtn" style="display:none;border-color:var(--bad);color:var(--bad)" title="Stop the job ComfyUI is running now">Cancel job</button>
+    <div class="pill" id="pcomfy" title="Click to start ComfyUI"><span class="dot"></span>ComfyUI</div>
+    <div class="pill" id="pllm"><span class="dot"></span><span id="llmname">AI</span></div>
+    <div class="pill" id="phand"><span class="dot"></span>GPU hand-off</div>
+  </div>
+</header>
+<main>
+  <section class="view on" id="agent">
+    <div id="log"><div class="banner" id="llmbanner"></div></div>
+    <div id="composer"><div class="inner">
+      <div id="busybar"></div>
+      <div id="chips"></div>
+      <div class="row">
+        <button id="attach" title="Attach reference images">Attach</button>
+        <textarea id="input" rows="2" placeholder="Tell Comfort what to make. Drop reference images here. Ctrl+Enter sends."></textarea>
+        <button class="primary" id="send">Send</button>
+        <button id="stop" disabled>Stop</button>
+        <button id="newchat" title="Start a new conversation">New</button>
+      </div>
+      <input type="file" id="filepick" accept="image/*" multiple hidden>
+    </div></div>
+  </section>
+
+  <section class="view" id="workflows">
+    <div class="side">
+      <div class="top">
+        <input id="wffilter" placeholder="Filter workflows">
+        <button id="convert" title="Convert ComfyUI's saved workflows so Comfort can run them">Convert / refresh workflows</button>
+      </div>
+      <div id="wflist"></div>
+      <div class="note" id="notconv"></div>
+    </div>
+    <div class="editor">
+      <div class="edhead"><h2 id="wfname">Pick a workflow</h2><input id="pfilter" placeholder="Find a setting"></div>
+      <details id="wfguide" style="display:none;margin:12px 18px 0"><summary style="cursor:pointer;color:var(--accent)">How to prompt / use this workflow</summary><pre class="info" style="max-height:340px"></pre></details>
+      <div id="nodes"></div>
+      <div class="runbar">
+        <label>Runs</label><input id="wfn" type="number" min="1" value="1" style="width:64px">
+        <label>Seed</label><select id="wfseed"><option value="random">random</option><option value="keep">as saved</option><option value="fixed">fixed…</option></select>
+        <input id="wfseedval" type="number" placeholder="seed" style="width:150px;display:none">
+        <label>Job</label><input id="wfjob" placeholder="name (optional)" style="width:170px">
+        <div id="runresult"></div>
+        <button class="primary" id="wfrun" disabled>Run</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="gallery">
+    <div id="gtop"><span class="seg" id="gmode"><button data-m="all">All</button><button data-m="photos">Photos</button><button data-m="videos">Videos</button></span><button id="grefresh">Refresh</button><input id="gfilter" placeholder="Filter jobs" style="max-width:300px"><span class="note" id="gcount"></span></div>
+    <div id="grid"></div>
+  </section>
+
+  <section class="view" id="settings">
+    <div class="form">
+      <h2>Master AI (local, via Ollama)</h2>
+      <div class="help" id="ollamahelp"></div>
+      <div class="two">
+        <div><label>Model</label><input id="s_model" list="models"><datalist id="models"></datalist></div>
+        <div><label>Ollama URL</label><input id="s_url"></div>
+      </div>
+      <div class="two">
+        <div><label>Context length (tokens)</label><input id="s_ctx" type="number"></div>
+        <div><label>Max tool steps per message</label><input id="s_steps" type="number"></div>
+      </div>
+      <div class="check"><input type="checkbox" id="s_hand"><label for="s_hand">GPU hand-off: unload the AI while ComfyUI renders, free ComfyUI when done</label></div>
+      <div class="check"><input type="checkbox" id="s_think"><label for="s_think">Thinking mode (plans before acting; slower, better)</label></div>
+      <div class="check"><input type="checkbox" id="s_see"><label for="s_see">Let the AI look at each result's contact sheet</label></div>
+      <h2>ComfyUI</h2>
+      <div class="two">
+        <div><label>ComfyUI URL</label><input id="s_comfy"></div>
+        <div><label>Upscale model (only used when you ask)</label><input id="s_upm"></div>
+      </div>
+      <div><button class="primary" id="ssave">Save settings</button> <button id="bench">Test AI speed</button> <button id="quit">Quit Comfort</button></div>
+      <pre class="info" id="benchout" style="display:none"></pre>
+    </div>
+  </section>
+</main>
+
+<div id="overlay"><div id="ovbody"></div></div>
+<div id="lightbox"><img alt=""></div>
+<div id="toast"></div>
+
+<script>
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const api = async (path, body) => {
+  const r = await fetch(path, body === undefined ? {} : {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body)});
+  if (!r.ok) throw new Error(await r.text());
+  return r.json();
+};
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const toast = (t, ms = 2600) => { const el = $('#toast'); el.textContent = t; el.style.display = 'block'; clearTimeout(el._t); el._t = setTimeout(() => el.style.display = 'none', ms); };
+const lightbox = src => { $('#lightbox img').src = src; $('#lightbox').classList.add('on'); };
+$('#lightbox').onclick = () => $('#lightbox').classList.remove('on');
+document.addEventListener('click', e => { if (e.target.matches('.imgs img, .file img')) lightbox(e.target.dataset.full || e.target.src); });
+
+/* nav */
+$$('nav button').forEach(b => b.onclick = () => {
+  $$('nav button').forEach(x => x.classList.toggle('on', x === b));
+  $$('.view').forEach(v => v.classList.toggle('on', v.id === b.dataset.v));
+  if (b.dataset.v === 'gallery') loadJobs();
+  if (b.dataset.v === 'workflows') loadWorkflows();
+  if (b.dataset.v === 'settings') loadSettings();
+});
+
+/* state */
+let ST = {};
+async function poll() {
+  try {
+    ST = await api('/api/state');
+    const dot = (id, cls) => $(id + ' .dot').className = 'dot ' + cls;
+    dot('#pcomfy', ST.comfy ? 'ok' : '');
+    const l = ST.llm;
+    dot('#pllm', l.up && l.installed ? 'ok' : (l.up ? 'warn' : ''));
+    $('#llmname').textContent = l.model;
+    dot('#phand', ST.llm_cfg.vram_handoff ? 'ok' : 'warn');
+    $('#statusline').textContent = ST.task.busy ? ST.task.busy + '…' : ST.status;
+    $('#cancelbtn').style.display = /\brunning\b/.test(ST.status || '') ? '' : 'none';
+    const ban = $('#llmbanner');
+    if (!l.up) { ban.style.display = 'block'; ban.innerHTML = ST.ollama_installed ? 'Starting the local AI (Ollama)… this takes a few seconds after Comfort opens.' : 'Ollama is not installed. Double-click <b>Install Ollama.bat</b> in the Comfort folder. Workflows and Gallery work without it.'; }
+    else if (!l.installed) { ban.style.display = 'block'; ban.innerHTML = 'Model <b>' + esc(l.model) + '</b> is not downloaded yet. Run <b>ollama pull ' + esc(l.model) + '</b> (or pick an installed model in Settings).'; }
+    else ban.style.display = 'none';
+    if (ST.agent.busy || ST.agent.count > shown) pollLog();
+    if (ST.agent.busy) $('#busybar').textContent = ST.agent.status + '…'; else $('#busybar').textContent = '';
+    $('#stop').disabled = !ST.agent.busy; $('#send').disabled = ST.agent.busy;
+    taskWatch();
+  } catch (e) { $('#statusline').textContent = 'Comfort server not reachable'; }
+}
+setInterval(poll, 1500); poll();
+$('#pcomfy').onclick = async () => { if (!ST.comfy) { await api('/api/comfy/start', {}); toast('Starting ComfyUI…'); } };
+
+/* agent */
+let shown = 0, attachments = [];
+function renderItem(it) {
+  const d = document.createElement('div');
+  d.className = 'msg m-' + it.kind;
+  const imgs = (it.images || []).map(u => '<img src="' + esc(u) + '" alt="">').join('');
+  if (it.kind === 'tool') d.innerHTML = '<div class="tline">' + esc(it.text) + '</div>';
+  else if (it.kind === 'status') d.innerHTML = '<div class="sline">' + esc(it.text) + '</div>';
+  else d.innerHTML = '<div class="bubble">' + esc(it.text) + (imgs ? '<div class="imgs">' + imgs + '</div>' : '') + '</div>';
+  $('#log').appendChild(d);
+}
+async function pollLog() {
+  const r = await api('/api/agent/log?since=' + shown);
+  const atBottom = $('#log').scrollHeight - $('#log').scrollTop - $('#log').clientHeight < 80;
+  r.items.forEach(renderItem); shown += r.items.length;
+  if (r.items.length && atBottom) $('#log').scrollTop = $('#log').scrollHeight;
+}
+pollLog();
+function renderChips() {
+  $('#chips').innerHTML = attachments.map((a, i) => '<div class="chip"><img src="' + esc(a.url) + '" alt="">' + esc(a.name) + '<button data-i="' + i + '">×</button></div>').join('');
+  $$('#chips button').forEach(b => b.onclick = () => { attachments.splice(+b.dataset.i, 1); renderChips(); });
+}
+async function uploadFiles(files) {
+  const fd = new FormData(); [...files].forEach(f => fd.append('file', f, f.name));
+  const r = await (await fetch('/api/upload', {method: 'POST', body: fd})).json();
+  r.names.forEach(n => attachments.push({name: n, url: '/inputs/' + encodeURIComponent(n)}));
+  renderChips();
+}
+function attachPath(path) {   // job/file from the gallery
+  attachments.push({name: path, url: '/out/' + path.split('/').map(encodeURIComponent).join('/')});
+  renderChips(); $('nav button[data-v=agent]').click(); toast('Attached to the Agent');
+}
+$('#attach').onclick = () => $('#filepick').click();
+$('#filepick').onchange = e => { uploadFiles(e.target.files); e.target.value = ''; };
+const comp = $('#composer');
+comp.ondragover = e => { e.preventDefault(); comp.classList.add('drop'); };
+comp.ondragleave = () => comp.classList.remove('drop');
+comp.ondrop = e => { e.preventDefault(); comp.classList.remove('drop'); if (e.dataTransfer.files.length) uploadFiles(e.dataTransfer.files); };
+$('#input').addEventListener('paste', e => { const f = [...e.clipboardData.files]; if (f.length) uploadFiles(f); });
+async function send() {
+  const text = $('#input').value.trim(); if (!text) return;
+  try {
+    await api('/api/agent/send', {text, attachments: attachments.map(a => a.name)});
+    $('#input').value = ''; attachments = []; renderChips(); setTimeout(poll, 300);
+  } catch (e) { toast(e.message); }
+}
+$('#send').onclick = send;
+$('#input').onkeydown = e => { if (e.key === 'Enter' && e.ctrlKey) { e.preventDefault(); send(); } };
+$('#stop').onclick = () => api('/api/agent/stop', {});
+$('#newchat').onclick = async () => { try { await api('/api/agent/reset', {}); $('#log').querySelectorAll('.msg').forEach(m => m.remove()); shown = 0; } catch (e) { toast('Wait until the agent finishes'); } };
+
+/* background tasks (workflow runs, convert, upscale) */
+let watching = null;
+function taskWatch() {
+  if (!watching) return;
+  if (ST.task.busy) { $('#runresult').textContent = ST.task.busy + '…'; return; }
+  const last = ST.task.last; const w = watching; watching = null;
+  if (!last) return;
+  if (!last.ok) { toast('Failed: ' + last.error, 6000); $('#runresult').textContent = 'Failed: ' + last.error; return; }
+  if (w === 'convert') { toast('Workflows converted'); loadWorkflows(); return; }
+  if (w === 'bench') { const r = last.result.runs.map(x => x.run + ': ' + x.gen_tokens_per_s + ' tok/s writing, ' + x.prompt_tokens_per_s + ' tok/s reading, load ' + x.load_s + ' s, tool call ' + JSON.stringify(x.tool_call)).join('\n'); $('#benchout').style.display = 'block'; $('#benchout').textContent = last.result.model + '\n' + r; return; }
+  $('#runresult').textContent = 'Done: ' + last.result;
+  openJob(last.result);
+}
+
+/* workflows */
+let WF = null, changes = {}, imageSets = {};
+async function loadWorkflows() {
+  const r = await api('/api/workflows');
+  const f = $('#wffilter').value.toLowerCase();
+  $('#wflist').innerHTML = r.workflows.filter(w => w.toLowerCase().includes(f)).map(w => '<div data-w="' + esc(w) + '"' + (WF && WF.name === w ? ' class="on"' : '') + '>' + esc(w) + '</div>').join('')
+    || '<div class="note">No converted workflows yet. Press Convert.</div>';
+  $('#notconv').textContent = r.not_converted.length ? 'Not converted yet: ' + r.not_converted.length + ' (press Convert)' : '';
+  $$('#wflist div[data-w]').forEach(d => d.onclick = () => openWorkflow(d.dataset.w));
+}
+$('#wffilter').oninput = loadWorkflows;
+$('#convert').onclick = async () => { try { await api('/api/convert', {}); watching = 'convert'; toast('Converting workflows in a hidden browser…', 4000); } catch (e) { toast(e.message); } };
+async function openWorkflow(name) {
+  WF = await api('/api/workflow?name=' + encodeURIComponent(name)); changes = {}; imageSets = {};
+  $('#wfname').textContent = WF.name; $('#wfrun').disabled = false; renderNodes(); loadWorkflows();
+  $('#wfguide').style.display = WF.guide ? 'block' : 'none'; $('#wfguide pre').textContent = WF.guide || '';
+}
+function fieldHtml(nid, k, v, cls) {
+  const key = nid + '.' + k, id = 'f_' + btoa(unescape(encodeURIComponent(key))).replace(/=/g, '');
+  let input;
+  if (typeof v === 'boolean') input = '<input type="checkbox" data-k="' + esc(key) + '"' + (v ? ' checked' : '') + ' style="width:auto">';
+  else if (typeof v === 'number') input = '<input type="number" step="any" data-k="' + esc(key) + '" value="' + esc(v) + '">';
+  else if (cls === 'LoadImage' && k === 'image') input = '<div class="pair"><input data-k="' + esc(key) + '" data-img="1" value="' + esc(v) + '"><button data-pick="' + esc(key) + '">Choose</button></div>';
+  else if (String(v).length > 60 || /\n/.test(v) || /prompt|text|value|string/i.test(k)) input = '<textarea rows="' + Math.min(8, Math.max(2, Math.ceil(String(v).length / 60))) + '" data-k="' + esc(key) + '">' + esc(v) + '</textarea>';
+  else input = '<input data-k="' + esc(key) + '" value="' + esc(v) + '">';
+  return '<div class="field" id="' + id + '"><label>' + esc(k) + '</label>' + input + '</div>';
+}
+function renderNodes() {
+  const f = $('#pfilter').value.toLowerCase();
+  $('#nodes').innerHTML = WF.nodes.filter(n => !f || (n.title + ' ' + n.class + ' ' + Object.keys(n.params).join(' ') + ' ' + JSON.stringify(n.params)).toLowerCase().includes(f))
+    .map(n => '<div class="node"><h3>' + esc(n.title) + ' <small>#' + esc(n.id) + (n.title !== n.class ? ' · ' + esc(n.class) : '') + '</small></h3>'
+      + Object.entries(n.params).map(([k, v]) => fieldHtml(n.id, k, changes[n.id + '.' + k] ?? v, n.class)).join('') + '</div>').join('');
+  $$('#nodes [data-k]').forEach(el => {
+    const onchange = () => {
+      const k = el.dataset.k, v = el.type === 'checkbox' ? el.checked : (el.type === 'number' ? Number(el.value) : el.value);
+      if (el.dataset.img) { imageSets[k] = v; } else changes[k] = v;
+      el.closest('.field').classList.add('changed');
+    };
+    el.oninput = onchange; el.onchange = onchange;
+    if (changes[el.dataset.k] !== undefined || imageSets[el.dataset.k] !== undefined) el.closest('.field').classList.add('changed');
+  });
+  $$('#nodes [data-pick]').forEach(b => b.onclick = () => {
+    const p = document.createElement('input'); p.type = 'file'; p.accept = 'image/*';
+    p.onchange = async () => { const fd = new FormData(); fd.append('file', p.files[0], p.files[0].name);
+      const r = await (await fetch('/api/upload', {method: 'POST', body: fd})).json();
+      const inp = b.previousElementSibling; inp.value = r.names[0]; imageSets[b.dataset.pick] = r.names[0]; inp.closest('.field').classList.add('changed'); };
+    p.click();
+  });
+}
+$('#pfilter').oninput = () => WF && renderNodes();
+$('#wfseed').onchange = () => $('#wfseedval').style.display = $('#wfseed').value === 'fixed' ? 'block' : 'none';
+$('#wfrun').onclick = async () => {
+  const seed = $('#wfseed').value === 'fixed' ? Number($('#wfseedval').value || 0) : $('#wfseed').value;
+  try {
+    await api('/api/workflow/run', {workflow: WF.name, set: changes, images: imageSets, n: Number($('#wfn').value || 1), seed, name: $('#wfjob').value || null});
+    watching = 'run'; $('#runresult').textContent = 'Queued…';
+  } catch (e) { toast(e.message); }
+};
+
+/* gallery */
+let JOBS = [], VIDS = [], GMODE = 'all';
+try { GMODE = localStorage.getItem('gmode') || 'all'; } catch (e) {}
+const IMG_RE = /\.(png|jpe?g|webp|gif)$/i;
+const outUrl = p => '/out/' + p.split('/').map(encodeURIComponent).join('/');
+function closeOv() { $('#overlay').classList.remove('on'); $$('#ovbody video').forEach(v => v.pause()); }
+$$('#gmode button').forEach(b => b.onclick = () => { GMODE = b.dataset.m; try { localStorage.setItem('gmode', GMODE); } catch (e) {} loadJobs(); });
+async function loadJobs() {
+  $$('#gmode button').forEach(b => b.classList.toggle('on', b.dataset.m === GMODE));
+  $('#gfilter').placeholder = GMODE === 'videos' ? 'Filter videos' : 'Filter jobs';
+  const lim = $('#gfilter').value.trim() ? 1000 : 20;   // newest 20 for speed; typing a filter searches everything
+  if (GMODE === 'videos') VIDS = (await api('/api/videos?limit=' + lim)).videos; else JOBS = (await api('/api/jobs?limit=' + lim)).jobs;
+  renderJobs();
+}
+function renderVideos(f) {
+  const list = VIDS.filter(v => v.name.toLowerCase().includes(f));
+  $('#gcount').textContent = list.length + (f ? ' videos' : ' newest videos - type to search all');
+  $('#grid').innerHTML = list.map((v, i) => '<div class="card" data-v="' + i + '"><video muted loop playsinline preload="metadata" src="' + outUrl(v.path) + '#t=0.5"></video>'
+    + '<div class="meta"><b>' + esc(v.name) + '</b><span>' + new Date(v.t * 1000).toLocaleString() + (v.head ? ' · ' + esc(v.head.split(' ')[0]) : '') + '</span></div></div>').join('');
+  $$('#grid .card').forEach(c => {
+    const v = list[+c.dataset.v], vid = c.querySelector('video');
+    c.onmouseenter = () => vid.play().catch(() => {}); c.onmouseleave = () => vid.pause();
+    c.onclick = () => openVideo(v);
+  });
+}
+async function openVideo(v) {
+  const u = outUrl(v.path);
+  let info = {}; try { info = await api('/api/videoinfo?name=' + encodeURIComponent(v.name)); } catch (e) {}
+  $('#ovbody').innerHTML = '<h2><span>' + esc(v.name) + '</span><button id="ovclose">Close</button></h2>'
+    + '<div class="files"><div class="file"><video src="' + u + '" controls autoplay loop></video><div class="acts"><span>' + esc(v.path) + '</span><a href="' + u + '" download><button>Save</button></a></div></div></div>'
+    + Object.entries(info).map(([k, val]) => '<h3 class="note">' + esc(k) + '</h3><pre class="info">' + esc(val) + '</pre>').join('');
+  $('#overlay').classList.add('on');
+  $('#ovclose').onclick = closeOv;
+}
+function renderJobs() {
+  const f = $('#gfilter').value.toLowerCase();
+  if (GMODE === 'videos') return renderVideos(f);
+  let list = JOBS.filter(j => j.name.toLowerCase().includes(f));
+  if (GMODE === 'photos') list = list.filter(j => j.name !== 'videos' && j.name !== 'video_info' && j.files.some(x => IMG_RE.test(x)));
+  $('#gcount').textContent = list.length + (f ? ' jobs' : ' newest jobs - type to search all');
+  $('#grid').innerHTML = list.map(j => {
+    const thumb = j.sheet ? '/out/' + encodeURIComponent(j.name) + '/_sheet.jpg' : (j.files[0] ? '/out/' + encodeURIComponent(j.name) + '/' + encodeURIComponent(j.files[0]) : '');
+    return '<div class="card" data-j="' + esc(j.name) + '">' + (thumb ? '<img loading="lazy" src="' + thumb + '" alt="">' : '<img alt="">')
+      + '<div class="meta"><b>' + esc(j.name) + '</b><span>' + new Date(j.t * 1000).toLocaleString() + ' · ' + j.files.length + ' files · ' + esc((j.head || '').split(' ')[0]) + '</span></div></div>';
+  }).join('');
+  $$('.card').forEach(c => c.onclick = () => openJob(c.dataset.j));
+}
+$('#cancelbtn').onclick = async () => { if (!confirm('Cancel the job that is running now?')) return; try { await api('/api/cancel', {}); toast('Cancelling… ComfyUI stops at its next step'); } catch (e) { toast(e.message); } };
+let GT = 0;
+$('#grefresh').onclick = loadJobs; $('#gfilter').oninput = () => { clearTimeout(GT); GT = setTimeout(loadJobs, 300); };
+async function openJob(name) {
+  if (!JOBS.find(j => j.name === name)) JOBS = (await api('/api/jobs')).jobs;
+  const j = JOBS.find(x => x.name === name); if (!j) { toast('Job not found: ' + name); return; }
+  const info = await api('/api/job?name=' + encodeURIComponent(name));
+  const base = '/out/' + encodeURIComponent(name) + '/';
+  $('#ovbody').innerHTML = '<h2><span>' + esc(name) + '</span><button id="ovclose">Close</button></h2>'
+    + '<div class="files">' + j.files.map(f => {
+      const u = base + encodeURIComponent(f), vid = /\.(mp4|webm)$/i.test(f);
+      return '<div class="file">' + (vid ? '<video src="' + u + '" controls loop></video>' : '<img loading="lazy" src="' + u + '" alt="">')
+        + '<div class="acts"><span>' + esc(f) + '</span>' + (vid ? '' : '<input placeholder="3840x2160" style="width:120px" data-sz="' + esc(f) + '"><button data-up="' + esc(f) + '">Upscale</button><button data-ag="' + esc(f) + '">Send to Agent</button>')
+        + '<a href="' + u + '" download><button>Save</button></a></div></div>';
+    }).join('') + '</div>'
+    + Object.entries(info).map(([k, v]) => '<h3 class="note">' + esc(k) + '</h3><pre class="info">' + esc(v) + '</pre>').join('');
+  $('#overlay').classList.add('on');
+  $('#ovclose').onclick = closeOv;
+  $$('#ovbody [data-up]').forEach(b => b.onclick = async () => {
+    const size = ($$('#ovbody [data-sz]').find(i => i.dataset.sz === b.dataset.up).value || '3840x2160').trim();
+    try { await api('/api/upscale', {image: name + '/' + b.dataset.up, size}); watching = 'upscale'; toast('Upscaling to ' + size + '…'); $('#overlay').classList.remove('on'); } catch (e) { toast(e.message); }
+  });
+  $$('#ovbody [data-ag]').forEach(b => b.onclick = () => { $('#overlay').classList.remove('on'); attachPath(name + '/' + b.dataset.ag); });
+}
+$('#overlay').onclick = e => { if (e.target.id === 'overlay') closeOv(); };
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { $('#lightbox').classList.remove('on'); closeOv(); } });
+
+/* settings */
+async function loadSettings() {
+  const s = await api('/api/settings');
+  $('#s_model').value = s.llm.model; $('#s_url').value = s.llm.url; $('#s_ctx').value = s.llm.num_ctx; $('#s_steps').value = s.llm.max_steps;
+  $('#s_hand').checked = !!s.llm.vram_handoff; $('#s_think').checked = !!s.llm.think; $('#s_see').checked = !!s.llm.show_results;
+  $('#s_comfy').value = s.comfy_url || ''; $('#s_upm').value = s.default_upscale_model || '';
+  const l = ST.llm || {models: []};
+  $('#models').innerHTML = (l.models || []).map(m => '<option value="' + esc(m) + '">').join('');
+  $('#ollamahelp').innerHTML = l.up
+    ? 'Ollama is running. Installed models: <code>' + esc((l.models || []).join(', ') || 'none') + '</code>. Recommended: <code>qwen3.6:27b</code> (vision + tools, fits the 4090 during hand-off) or <code>qwen3.6:35b</code> (higher agent scores, slightly larger than VRAM). Download with <code>ollama pull qwen3.6:27b</code>.'
+    : 'Ollama is not running. Install it from ollama.com, then run <code>ollama pull qwen3.6:27b</code> in a terminal.';
+}
+$('#ssave').onclick = async () => {
+  await api('/api/settings', {llm: {model: $('#s_model').value.trim(), url: $('#s_url').value.trim(), num_ctx: Number($('#s_ctx').value), max_steps: Number($('#s_steps').value),
+    vram_handoff: $('#s_hand').checked, think: $('#s_think').checked, show_results: $('#s_see').checked},
+    comfy_url: $('#s_comfy').value.trim(), default_upscale_model: $('#s_upm').value.trim()});
+  toast('Saved'); poll();
+};
+$('#bench').onclick = async () => { try { await api('/api/llm/benchmark', {}); watching = 'bench'; toast('Testing the AI (about a minute)…', 5000); } catch (e) { toast(e.message); } };
+$('#quit').onclick = async () => { if (confirm('Quit Comfort? (stops the agent and the inbox watcher)')) { await api('/api/quit', {}); document.body.innerHTML = '<p style="padding:40px">Comfort stopped. You can close this window.</p>'; } };
+</script>
+</body>
+</html>

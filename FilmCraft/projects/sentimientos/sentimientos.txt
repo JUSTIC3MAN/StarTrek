@@ -1,0 +1,69 @@
+# built by song_cut.py from sentimientos.plan.json - edit sentimientos.shots.txt and rerun song_jobs.py, not this file
+out projects/sentimientos/sentimientos.mp4
+size 1920x1080@60
+fadein 24
+clipaudio off
+musicfull on
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_v2_edit150.mp4 0.000-108.430 noramp   # a00_edit150 @0.00
+> luma_fade 25
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r06_t2_stage60.mp4 0.400-4.970   # v01_two_kites @108.43
+speed 0.400-4.970 88.7
+> cross_zoom 12 strength=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r06_stage60.mp4 5.400-9.970   # v02_kites_below @113.58
+speed 5.400-9.970 88.9
+> blur_dissolve 14 blur=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r06_t1_stage60.mp4 10.400-14.970   # v03_hands_string @118.72
+speed 10.400-14.970 96.4
+> blur_dissolve 25 blur=40
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r07_t2_stage60.mp4 0.400-3.820   # w01_color_falls @123.46
+> push 12 direction=from_north
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r07_t2_stage60.mp4 5.400-8.820   # w02_falls_base @126.88
+> wave 12 direction=from_south amplitude=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r07_stage60.mp4 10.970-14.390   # w03_falls_close @130.30
+> cross_zoom 12 strength=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r08_t1_stage60.mp4 0.400-3.840   # w04_color_river @133.72
+> film_dissolve 25
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r08_t2_stage60.mp4 5.710-9.130   # x01_hill_blooms @137.16
+> cross_zoom 12 strength=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r08_t2_stage60.mp4 11.290-14.730   # x02_flower_opens @140.58
+> blur_dissolve 14 blur=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r09_t2_stage60.mp4 1.170-4.590   # x03_petals_rise @144.02
+> luma_fade 14
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r09_stage60.mp4 5.400-7.960   # x04_hill_house @147.44
+> flare 25 color=#ffd27a
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r01_t1_stage60.mp4 0.400-4.470   # e01_house_birds @150.00
+speed 0.400-4.470 94.2
+> cross_zoom 12 strength=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r01_t1_stage60.mp4 5.850-9.270   # e02_flock_overhead @154.32
+> push 12 direction=from_south
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r01_t1_stage60.mp4 10.850-14.250   # e03_inside_flock @157.74
+> blur_dissolve 14 blur=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r02_t1_stage60.mp4 0.400-3.860   # e04_flock_moon @161.14
+> wave 25 direction=from_north amplitude=40
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r02_stage60.mp4 5.400-9.970   # f01_under_lake @164.60
+speed 5.400-9.970 88.9
+> blur_dissolve 14 blur=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r02_t2_stage60.mp4 10.400-14.970   # f02_surface_above @169.74
+speed 10.400-14.970 89.3
+> luma_fade 14
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r03_t1_stage60.mp4 0.400-3.860   # f03_deep_orbs @174.86
+> light_leak 25 color=#ffb070 amount=60
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r03_t1_stage60.mp4 5.400-9.970   # g01_village_lanterns @178.32
+speed 5.400-9.970 89.3
+> film_dissolve 14
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r03_stage60.mp4 10.400-14.970   # g02_lanterns_up @183.44
+speed 10.400-14.970 88.9
+> luma_fade 14
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r04_stage60.mp4 0.400-3.840   # g03_lantern_sky @188.58
+> luma_fade 25
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r04_t2_stage60.mp4 5.400-9.970   # h01_forest_path @192.02
+speed 5.400-9.970 88.9
+> blur_dissolve 14 blur=30
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r04_t2_stage60.mp4 10.400-14.970   # h02_walk_behind @197.16
+speed 10.400-14.970 88.9
+> light_leak 20 color=#ffd2a0 amount=50
+clip A:\Ai projects\Star Trek\Comfort\out\videos\sentimientos_end_r05_t2_stage60.mp4 0.400-4.970   # h03_forest_dawn @202.30
+speed 0.400-4.970 80.2
+fadeout 90
+music Sentimientos.mp3
+copy A:\Ai projects\Star Trek\Preview\Ras Manuel - Sentimientos\Sentimientos (full song).mp4

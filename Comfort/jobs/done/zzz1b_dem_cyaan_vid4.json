@@ -1,0 +1,14 @@
+{
+ "workflow": "H3 Keyframe Chain (Comfort)",
+ "name": "dem_cyaan_vid4",
+ "set": {
+  "ref.prompt": "subject_definitions:\n<Subject 1> is the rendering style of <Picture 1> and <Picture 2>: an amber ink mist painting: loose ink wash and soft drifting mist, glowing amber light against deep shadow, delicate brush texture.\n<Subject 2> is the fire that cannot be put out: embers and flames that grow stronger against the rain.\n<Picture 1> is the first frame of [Shot 1], showing a low wide view across a dark field under heavy rain at night, scattered embers glowing in the wet grass, rain streaks slashing across in grey ink, mist rising.\n<Picture 2> is the last frame of [Shot 1], showing a low wide view across the field where the embers have flared into a bright line of fire running across it, steam boiling off where the rain hits, the flames burning stronger against the downpour.\n\nsummary:\n[keyframe completion + reference generation] A 9.4-second 16:9 single continuous shot in <Subject 1> that begins on <Picture 1> and ends on <Picture 2>: heavy rain pours onto a field of glowing embers, and instead of going out they flare up and join into a bright line of fire across the field.\n\nretention_analysis:\n<Subject 1> (applies to [Shot 1]): fully_preserved - the hand-made style, palette and texture; nothing becomes smooth or photographic.\n<Subject 2> (appears in [Shot 1]): fully_preserved - its look and shapes.\n<Picture 1> ([Shot 1] first frame): fully_preserved - its composition.\n<Picture 2> ([Shot 1] last frame): fully_preserved - its composition.\n\ndetailed_description:\nThe target video is a living amber ink mist painting in <Subject 1>: the ink wash and mist keep their brushed texture as they move, and every light glows like warm ink bleeding into dark paper.\n[Shot 1] The shot begins from <Picture 1>. The rain slashes down in grey ink streaks and hisses on the embers, but each ember glows brighter instead of dying. The camera pushes forward low over the wet grass at a slow, steady speed in one continuous move, while the embers flare into small flames, reach toward each other and join into one bright line of fire running across the field, steam boiling up where the raindrops hit it. The camera is still pushing in as the shot ends on <Picture 2>. No cut or transition occurs.\n\noverall_soundscape:\nHeavy rain drumming on wet ground, a loud hiss of water hitting embers, then the rising roar of flames growing against the downpour.\n\nnon_diegetic_music:\nN/A",
+  "ref.length": 226
+ },
+ "images": {
+  "pic1.image": "A:\\Ai projects\\Comfort\\out\\demcyaan_keys3\\01-1_de1.png",
+  "pic2.image": "A:\\Ai projects\\Comfort\\out\\demcyaan_keys3\\02-1_de2.png"
+ },
+ "seed": "random",
+ "fc_in": "burn 20"
+}

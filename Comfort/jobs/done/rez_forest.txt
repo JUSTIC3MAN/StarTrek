@@ -1,0 +1,10 @@
+#name rez_forest
+#style none
+#aspect 2.4:1
+#mp 2
+#final 3840x1600
+#n 3
+A scary cartoon forest at night, gnarled black twisted trees with spiral curling branches and hollow knotholes shaped like moaning faces, thorny bramble vines with long curved thorns, toxic neon green fog drifting between the trunks, glowing lime-green mushrooms and floating green wisps, a pale crooked moon behind bare branches, dirt path with twisted roots, side-scrolling beat 'em up stage background seen straight-on from the side at eye level, a flat open ground path across the bottom third left clear for fighting, layered depth with darker silhouettes in front of misty green-lit layers further back, creepy-cute gothic cartoon style, thick black ink outlines, flat cel shading with soft neon glow, palette of inky black, deep forest green, toxic lime green and bone white, playful spooky not gory, original design, no text, no characters
+#aspect 1:1
+#final none
+A squat old wooden potion barrel with warped dark planks and rusted iron bands, wrapped in black thorny vines with spiral curls, a cork-stoppered glowing toxic green potion bottle wedged in the top, a stitched green heart symbol painted on the front, green light leaking through the gaps between the planks, breakable object for a 2D brawler game, seen from the side at a slight three-quarter angle from slightly above, small soft contact shadow, creepy-cute gothic cartoon style, thick black ink outlines, flat cel shading with soft neon glow, palette of inky black, deep forest green, toxic lime green and bone white, playful spooky not gory, original design, no text, isolated single object centred on a plain flat solid pure white background with no texture, whole object in frame with margin, no characters

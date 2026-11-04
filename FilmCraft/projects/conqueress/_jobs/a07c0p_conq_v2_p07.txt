@@ -1,0 +1,7 @@
+#name conq_v2_p07
+#size 1376x768
+#n 1
+#seed random
+#style none
+[label=m01_agave lora=bold-woodcut-linocut-comfy.safetensors:1.1] a field of tall agave under the moon before dawn, their leaves like carved daggers pointing at the sky, dust drifting between the rows, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, wide shot, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style
+[label=n01_herons lora=bold-woodcut-linocut-comfy.safetensors:1.1] two herons flying side by side low over a misty river at first light, their wings in thick carved strokes, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, wide shot, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style

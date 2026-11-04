@@ -1,0 +1,6 @@
+out renders/pc-test.mp4
+fadein 12
+clip A:\artcraft\FilmCraft\work\X.mp4
+> leak 18
+clip A:\artcraft\FilmCraft\work\Y.mp4
+fadeout 12
