@@ -7,8 +7,8 @@ Option Explicit
 Dim sh, fs, base, pauseF, hb, logF, exe, lastStart, lnk, sc
 Set sh = CreateObject("WScript.Shell")
 Set fs = CreateObject("Scripting.FileSystemObject")
-base = "A:\Ai projects\Star Trek\Comfort"
-pauseF = "A:\Ai projects\Star Trek\Overseer\PAUSE"
+base = fs.GetParentFolderName(WScript.ScriptFullName)                 ' the Comfort folder, wherever Star Trek is
+pauseF = fs.GetParentFolderName(base) & "\Overseer\PAUSE"
 hb = base & "\heartbeat.txt"
 logF = base & "\comfort.log"
 exe = base & "\Comfort.exe"

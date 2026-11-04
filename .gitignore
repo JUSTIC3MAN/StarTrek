@@ -91,3 +91,9 @@ Overseer/report_*.txt
 *.jpg
 *.jpeg
 *.webp
+
+# --- the planner's per-PC state ---
+Overseer/plans/
+Overseer/new_songs/*
+!Overseer/new_songs/README.txt
+Overseer/tick.lock

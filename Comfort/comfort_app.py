@@ -1,6 +1,6 @@
 """Comfort app server: UI + local master AI + any-workflow runner + inbox watcher, on http://127.0.0.1:8790.
 Started by Comfort.exe (pythonw, no console). Uses only packages already in the ClaudeComfy venv (aiohttp, Pillow)."""
-import json, os, re, socket, subprocess, sys, threading, time, traceback, uuid
+import glob, json, os, re, socket, subprocess, sys, threading, time, traceback, uuid
 
 from aiohttp import web
 
@@ -100,6 +100,14 @@ def _st_songs():
                 out.append((p[0], p[1] if len(p) > 1 else "auto"))
     except OSError:
         pass
+    known = {n for n, _ in out}
+    for f in sorted(glob.glob(os.path.join(ST_OV, "plans", "*.json"))):      # new songs the planner is still preparing
+        try:
+            st = json.load(open(f, encoding="utf-8"))
+            if st.get("song") and st["song"] not in known:
+                out.append((st["song"], "new: " + st.get("stage", "")))
+        except Exception:
+            pass
     return out
 
 def _st_preview(song):
@@ -133,7 +141,7 @@ async def startrek_state(_):
 async def startrek_cmd(req):
     d = await req.json()
     act = str(d.get("action", ""))
-    if act not in ("pause", "resume", "mode", "redo", "rebuild", "review", "status"):
+    if act not in ("pause", "resume", "mode", "redo", "rebuild", "review", "status", "planstatus", "pick", "restyle", "replan"):
         raise web.HTTPBadRequest(text="unknown action")
     args = [act] + [str(x) for x in (d.get("song"), d.get("arg")) if x]
     exe = sys.executable[:-5] + ".exe" if sys.executable.lower().endswith("pythonw.exe") else sys.executable

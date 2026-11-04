@@ -704,7 +704,7 @@ def reload_data():
 def filmcraft_build(cut, name):
     """Run FilmCraft's fc.py build <cut list> on Windows (Justice 2026-10-25: the Linux device shell kills builds over 3 min).
     cut = cut list path relative to the FilmCraft folder, e.g. projects/ciudad_fantasma/ciudad_fantasma.txt. Result -> out\<name>\_done.txt."""
-    fdir = CFG.get("filmcraft_dir", r"A:\artcraft\FilmCraft")
+    fdir = CFG.get("filmcraft_dir") or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "FilmCraft")
     cut = cut.replace("/", os.sep)
     if not cut.lower().endswith(".txt") or ".." in cut or os.path.isabs(cut):
         raise ValueError("filmcraft_build needs a .txt cut list inside the FilmCraft folder")

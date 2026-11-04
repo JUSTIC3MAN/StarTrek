@@ -1,8 +1,7 @@
 # Star Trek - one-time setup on a new Windows PC (NVIDIA RTX GPU). Safe to run again: finished steps are skipped,
 # downloads resume. Started by "SETUP NEW PC.bat" in the Star Trek folder. Log: setup\setup_log.txt
 #
-#   -AnyLocation   allow a Star Trek folder somewhere other than A:\Ai projects\Star Trek (not recommended: the
-#                  docs, Comfort's config and the song projects all use the A: paths)
+#   -AnyLocation   set it up right where it is, even when the PC has an A: drive
 #   -SkipModels    everything except the ~150 GB of model downloads (run again later without it)
 param([switch]$AnyLocation, [switch]$SkipModels)
 
@@ -88,15 +87,27 @@ Say '   STAR TREK - new PC setup' 'Green'
 Say ('   folder: ' + $ST)
 
 # ---------------------------------------------------------------- 0. location
+# Unzipped anywhere: with an A: drive, Star Trek is copied to A:\Ai projects\Star Trek (where every config, doc and song
+# project expects it) and the setup carries on from there. Without an A: drive it runs right where it is.
 Step 'Location'
-if ($ST -ne $Want) {
-    if (-not $AnyLocation) {
-        Stop-Setup ("The Star Trek folder must be " + $Want + " (it is " + $ST + "). Every config, doc and song project uses the A: paths. " +
-                    "Clone it there (see README.md step 1), or run with -AnyLocation if you accept fixing paths by hand.")
+if ($ST -ne $Want -and (Test-Path 'A:\') -and -not $AnyLocation) {
+    $fresh = -not (Test-Path (Join-Path $Want 'SETUP NEW PC.bat'))
+    Say ('   ' + ($(if ($fresh) { 'copying' } else { 'updating' })) + ' Star Trek in ' + $Want + ' ...')
+    New-Item -ItemType Directory -Path $Want -Force | Out-Null
+    # an update never overwrites this PC's own state (which songs run, the check level, Comfort's settings)
+    & robocopy $ST $Want /E /R:1 /W:1 /NFL /NDL /NJH /NJS /NP /XF songs.txt level.txt config.json launcher.json planner.json /XD .git | Out-Null
+    if ($LASTEXITCODE -ge 8) { Stop-Setup ('could not copy to ' + $Want) }
+    foreach ($f in 'Overseer\songs.txt', 'Overseer\level.txt', 'Comfort\config.json', 'Comfort\launcher.json', 'Overseer\planner.json') {
+        if (-not (Test-Path (Join-Path $Want $f)) -and (Test-Path (Join-Path $ST $f))) { Copy-Item (Join-Path $ST $f) (Join-Path $Want $f) }
     }
-    Say ('   running at ' + $ST + ' (-AnyLocation): A: links are skipped and Comfort\config.json gets this location') 'Yellow'
+    Say ('   done - continuing the setup in ' + $Want + ' (the unzipped folder ' + $ST + ' can be deleted afterwards)')
+    Stop-Transcript | Out-Null
+    $more = @(); if ($SkipModels) { $more += '-SkipModels' }
+    & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $Want 'setup\setup_startrek.ps1') @more
+    exit $LASTEXITCODE
 }
 $onA = ($ST -eq $Want)
+if (-not $onA) { Say ('   no A: drive - Star Trek runs right here: ' + $ST + ' (the A: links are skipped)') 'Yellow' }
 $CC  = if ($onA) { 'A:\ClaudeComfy' } else { $CCdir }
 
 # Files from a GitHub "Download ZIP" carry Windows' downloaded-from-the-internet mark, which makes SmartScreen block

@@ -7,8 +7,8 @@
    you are about to use: `Comfort\CLAUDE.md`, `FilmCraft\CLAUDE.md`, `SongMap\CLAUDE.md`,
    `ClaudeSubtitles\SubtitleStudio\CLAUDE.md`.
 
-The design in one line: the local AI (Overseer + Comfort agent, Ollama qwen3.6:27b) runs and checks production on this
-PC; Claude plans and fixes with as few tokens as possible, talks to every program through files, and never takes control
+The design in one line: the local AI (Overseer + its planner + Comfort agent, Ollama qwen3.6:27b) runs everything on this
+PC, new songs included (MP3 into Overseer\new_songs\ -> finished edit, Overseer\planner.py); Claude is optional and plans or fixes with as few tokens as possible, talks to every program through files, and never takes control
 of Justice's screen.
 
 Don't change README.txt unless Justice asks. Keep both PCs in step with git (`git pull` before, commit + push after);

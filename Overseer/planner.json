@@ -1,0 +1,10 @@
+{
+ "styles_count": 6,
+ "pick_wait_minutes": 30,
+ "max_tries": 4,
+ "model": "",
+ "num_ctx": 32768,
+ "think": true,
+ "size": "1376x768",
+ "people": ""
+}

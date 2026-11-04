@@ -188,6 +188,61 @@ def fetch_rife_pkl():
         return False
 
 
+FALLBACK_H3 = ("diffusion_models/MiniMaxH3/minimax_h3_ref2va_pruned_int8_convrot.safetensors", "hf:Comfy-Org/MiniMax-H3",
+               "diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors", 20970379616)
+DASIWA = "DasiwaMinimaxH3_dasiwaHybridV3_int8.safetensors"
+REDCRAFT = "redcraftHybridH3Krea2t_30Krea2_fp8.safetensors"
+API = MODELS.parent / "user" / "default" / "comfort_api"
+API_ORIG = ROOT / "ClaudeComfy" / "comfyui_user" / "default" / "comfort_api"
+CONFIG = ROOT / "Comfort" / "config.json"
+
+
+def swap_in_workflows(old, new):
+    """Point Comfort's workflows from one model file to another (only the copies in ComfyUI, never the originals)."""
+    n = 0
+    for f in API.glob("*.api.json"):
+        t = f.read_text("utf-8")
+        if old in t:
+            f.write_text(t.replace(old, new), "utf-8")
+            n += 1
+    return n
+
+
+def fallbacks():
+    """Without the two Civitai files (no API key yet) Star Trek still runs: MiniMax H3 on Comfy-Org's official REF2VA int8
+    (same type as DaSiWa Hybrid v3) and Krea pictures on stock Krea 2 Turbo. With the Civitai files in place it switches back."""
+    import json
+    have_dasiwa = (MODELS / "diffusion_models" / "MiniMaxH3" / DASIWA).exists()
+    have_red = (MODELS / "diffusion_models" / "Krea2" / REDCRAFT).exists()
+    fb_name = Path(FALLBACK_H3[0]).name
+    if not have_dasiwa:
+        dest, repo, path, size = FALLBACK_H3
+        target = MODELS / dest
+        if not (target.exists() and target.stat().st_size == size):
+            log(f"[fallback] no DaSiWa H3 (Civitai): downloading Comfy-Org MiniMax H3 REF2VA int8 ({human(size)})")
+            got = get_hf(repo.split(":", 1)[1], path)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            os.replace(got, target)
+        n = swap_in_workflows(DASIWA, fb_name)
+        log(f"[fallback] H3 workflows use {fb_name} ({n} changed). Add the Civitai key and run setup again for DaSiWa.")
+    elif swap_in_workflows(fb_name, DASIWA):
+        log("[fallback] DaSiWa H3 is in place - workflows switched back to it")
+    cfg = json.loads(CONFIG.read_text("utf-8"))
+    unet = cfg.get("krea", {}).get("unet", "")
+    stock = "Krea2\\krea2_turbo_fp8_scaled.safetensors"
+    if not have_red and REDCRAFT in unet:
+        cfg["krea"]["unet"] = stock
+        cfg["krea"]["_fallback_from"] = unet
+        CONFIG.write_text(json.dumps(cfg, indent=1, ensure_ascii=False), "utf-8")
+        n = swap_in_workflows(REDCRAFT, "krea2_turbo_fp8_scaled.safetensors")
+        log(f"[fallback] no RedCraft (Civitai): Krea pictures use stock Krea 2 Turbo ({n} workflows). Add the key and run setup again.")
+    elif have_red and cfg.get("krea", {}).get("_fallback_from"):
+        cfg["krea"]["unet"] = cfg["krea"].pop("_fallback_from")
+        CONFIG.write_text(json.dumps(cfg, indent=1, ensure_ascii=False), "utf-8")
+        swap_in_workflows("krea2_turbo_fp8_scaled.safetensors", REDCRAFT)
+        log("[fallback] RedCraft is in place - Krea pictures switched back to it")
+
+
 def main():
     only = sys.argv[sys.argv.index("--only") + 1].split(",") if "--only" in sys.argv else None
     list_only = "--list" in sys.argv
@@ -232,6 +287,16 @@ def main():
     if list_only:
         log(f"{len(missing)} missing" + ("" if missing else " - all model files are in place"))
         return
+    if not list_only and not only and API.is_dir():
+        try:
+            fallbacks()
+        except Exception as e:  # noqa: BLE001
+            log(f"[fallback] FAILED: {e}")
+    civ = [f for f in failed if "civitai" in dict((d, s) for _, d, s, *_ in FILES).get(f, "")]
+    failed = [f for f in failed if f not in civ]
+    if civ:
+        log("\nCivitai files not downloaded (no or wrong API key): " + ", ".join(Path(c).name for c in civ)
+            + " - Star Trek runs on the fallback models until then.")
     if failed:
         log("\nNot finished (run this again to resume):")
         for f in failed:
