@@ -17,7 +17,7 @@ The production rules (what a finished video must be) are in [README.txt](README.
 
 | | |
 |---|---|
-| Windows 10/11, 64-bit | `winget` available (it is on every current Windows) |
+| Windows 10 (1809 or newer, LTSC 2019/2021 included) or 11, 64-bit | winget is used when present; without it (LTSC) the setup downloads the official installers |
 | NVIDIA RTX GPU, **24 GB VRAM** (built on an RTX 4090) | NVIDIA driver **580 or newer** (CUDA 13) |
 | **64 GB RAM** recommended | **~250 GB free** on the drive that becomes `A:` |
 | Internet | a GitHub login (this repo is private) and a free Civitai account (for 2 models) |
@@ -41,7 +41,15 @@ A:\Ai projects\Star Trek     <- this repository
 winget install -e --id Git.Git
 git clone https://github.com/JUSTIC3MAN/StarTrek.git "A:\Ai projects\Star Trek"
 ```
-The repo is private: Git opens a GitHub sign-in window the first time — Justice signs in once.
+**No winget** (Windows 10 LTSC): install Git from its official release instead, in PowerShell, then open a new window and clone:
+```
+$r = Invoke-RestMethod https://api.github.com/repos/git-for-windows/git/releases/latest
+$u = ($r.assets | Where-Object { $_.name -match '^Git-[0-9.]+-64-bit\.exe$' } | Select-Object -First 1).browser_download_url
+Invoke-WebRequest $u -OutFile "$env:TEMP\git-setup.exe"; Start-Process -Wait "$env:TEMP\git-setup.exe" '/VERYSILENT /NORESTART /SP-'
+```
+
+**Claude on this PC:** if the Claude desktop app can't be installed (Windows 10 LTSC), use **Claude Code** in PowerShell:
+`irm https://claude.ai/install.ps1 | iex`, open a new window, run `claude`, sign in. It supports Windows 10 1809+.
 
 ## Step 3 — run the setup
 
@@ -51,7 +59,8 @@ Pressing Enter skips it; run the setup again later with the key to fetch those t
 
 It takes several hours the first time, almost all of it downloads. It does, in order:
 
-1. Installs Git, Python 3.12, ffmpeg, Ollama and the VC++ runtime with winget (skips what is installed).
+1. Installs Git, Python 3.12, ffmpeg, Ollama, the VC++ runtime and (if there is no Edge or Chrome) Chrome: with winget when
+   Windows has it, otherwise from the official installers. Skips what is installed.
 2. Makes the folders, and the old-path links Justice's tools still use (folder junctions, nothing copied):
    `A:\ClaudeComfy` → `Star Trek\ClaudeComfy`, `A:\artcraft\FilmCraft` → `Star Trek\FilmCraft`,
    `A:\Ai projects\Comfort` → `Star Trek\Comfort`, `A:\Ai projects\ClaudeSubtitles` → `Star Trek\ClaudeSubtitles`.

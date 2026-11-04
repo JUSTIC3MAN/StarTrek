@@ -25,9 +25,46 @@ function Refresh-Path {
     $env:Path = ($m + ';' + $u + ';' + (Join-Path $env:LOCALAPPDATA 'Microsoft\WinGet\Links'))
 }
 function Winget([string]$id, [string]$what) {
-    if (-not (Have 'winget')) { Stop-Setup ("winget is missing - install '" + $what + "' by hand, then run setup again") }
-    Say ("installing " + $what + " (winget " + $id + ") ...")
-    & winget install -e --id $id --accept-package-agreements --accept-source-agreements --silent
+    # winget when Windows has it; otherwise (Windows 10 LTSC has no winget) the official installer, downloaded directly
+    Refresh-Path
+    if (Have 'winget') {
+        Say ("installing " + $what + " (winget " + $id + ") ...")
+        & winget install -e --id $id --accept-package-agreements --accept-source-agreements --silent
+        Refresh-Path; return
+    }
+    Say ("installing " + $what + " (no winget on this Windows - official installer) ...")
+    $t = Join-Path $env:TEMP ('st_' + ($id -replace '[^A-Za-z0-9]', '_'))
+    switch ($id) {
+        'Git.Git' {
+            $r = Invoke-RestMethod 'https://api.github.com/repos/git-for-windows/git/releases/latest'
+            $u = ($r.assets | Where-Object { $_.name -match '^Git-[0-9.]+-64-bit\.exe$' } | Select-Object -First 1).browser_download_url
+            Download $u "$t.exe"; Start-Process -Wait "$t.exe" '/VERYSILENT /NORESTART /NOCANCEL /SP- /SUPPRESSMSGBOXES'
+        }
+        'Python.Python.3.12' {
+            Download 'https://www.python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe' "$t.exe"
+            Start-Process -Wait "$t.exe" '/quiet InstallAllUsers=0 InstallLauncherAllUsers=0 Include_launcher=1 PrependPath=1 Include_test=0'
+            $env:Path = (Join-Path $env:LOCALAPPDATA 'Programs\Python\Launcher') + ';' + $env:Path
+        }
+        'Gyan.FFmpeg' {
+            Download 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip' "$t.zip"
+            Expand-Archive -Force "$t.zip" "$t"
+            $bin = (Get-ChildItem -Directory $t | Select-Object -First 1).FullName + '\bin'
+            New-Item -ItemType Directory -Path 'C:\ffmpeg' -Force | Out-Null
+            Copy-Item -Recurse -Force $bin 'C:\ffmpeg\'
+            $up = [Environment]::GetEnvironmentVariable('Path', 'User')
+            if ($up -notlike '*C:\ffmpeg\bin*') { [Environment]::SetEnvironmentVariable('Path', ($up.TrimEnd(';') + ';C:\ffmpeg\bin'), 'User') }
+        }
+        'Ollama.Ollama' {
+            Download 'https://ollama.com/download/OllamaSetup.exe' "$t.exe"; Start-Process -Wait "$t.exe" '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES'
+        }
+        'Microsoft.VCRedist.2015+.x64' {
+            Download 'https://aka.ms/vs/17/release/vc_redist.x64.exe' "$t.exe"; Start-Process -Wait "$t.exe" '/install /quiet /norestart'
+        }
+        'Google.Chrome' {
+            Download 'https://dl.google.com/chrome/install/googlechromestandaloneenterprise64.msi' "$t.msi"
+            Start-Process -Wait msiexec.exe ('/i "' + $t + '.msi" /qn /norestart')
+        }
+    }
     Refresh-Path
 }
 function Download([string]$url, [string]$out) {
@@ -63,7 +100,7 @@ $onA = ($ST -eq $Want)
 $CC  = if ($onA) { 'A:\ClaudeComfy' } else { $CCdir }
 
 # ---------------------------------------------------------------- 1. programs
-Step 'Programs (git, Python 3.12, ffmpeg, Ollama, VC++ runtime)'
+Step 'Programs (git, Python 3.12, ffmpeg, Ollama, VC++ runtime, a browser for Comfort)'
 Refresh-Path
 if (-not (Have 'git'))    { Winget 'Git.Git' 'Git' }
 & git config --global core.longpaths true
@@ -72,7 +109,10 @@ if (-not $py312)          { Winget 'Python.Python.3.12' 'Python 3.12' }
 if (-not (Have 'ffmpeg')) { Winget 'Gyan.FFmpeg' 'ffmpeg' }
 $ollama = Join-Path $env:LOCALAPPDATA 'Programs\Ollama\ollama.exe'
 if (-not (Have 'ollama') -and -not (Test-Path $ollama)) { Winget 'Ollama.Ollama' 'Ollama' }
-Winget 'Microsoft.VCRedist.2015+.x64' 'Visual C++ runtime'
+if (-not (Test-Path (Join-Path $env:WINDIR 'System32\vcruntime140_1.dll'))) { Winget 'Microsoft.VCRedist.2015+.x64' 'Visual C++ runtime' }
+# Comfort opens its window in Edge or Chrome (Windows 10 LTSC 2019 has neither)
+$browsers = @('C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe', 'C:\Program Files\Microsoft\Edge\Application\msedge.exe', 'C:\Program Files\Google\Chrome\Application\chrome.exe')
+if (-not ($browsers | Where-Object { Test-Path $_ })) { Winget 'Google.Chrome' 'Google Chrome (for Comfort''s window)'; if (-not ($browsers | Where-Object { Test-Path $_ })) { Say '   Chrome did not install (it needs admin rights) - install Chrome or Edge by hand' 'Yellow' } }
 foreach ($c in 'git', 'py', 'ffmpeg') { if (-not (Have $c)) { Stop-Setup ($c + " is still not on PATH - close this window, open a new one and run setup again") } }
 try { & nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader } catch { Say 'nvidia-smi not found - an NVIDIA driver 580+ is needed (CUDA 13)' 'Yellow' }
 
