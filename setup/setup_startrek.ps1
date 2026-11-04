@@ -24,13 +24,19 @@ function Refresh-Path {
     $m = [Environment]::GetEnvironmentVariable('Path', 'Machine'); $u = [Environment]::GetEnvironmentVariable('Path', 'User')
     $env:Path = ($m + ';' + $u + ';' + (Join-Path $env:LOCALAPPDATA 'Microsoft\WinGet\Links'))
 }
+function Run-Installer([string]$exe, [string]$argline) {
+    # waits for the installer itself only: Start-Process -Wait would also wait for what it launches (Ollama's tray app)
+    $p = Start-Process -FilePath $exe -ArgumentList $argline -PassThru; $p.WaitForExit()
+}
 function Winget([string]$id, [string]$what) {
     # winget when Windows has it; otherwise (Windows 10 LTSC has no winget) the official installer, downloaded directly
     Refresh-Path
     if (Have 'winget') {
         Say ("installing " + $what + " (winget " + $id + ") ...")
-        & winget install -e --id $id --accept-package-agreements --accept-source-agreements --silent
-        Refresh-Path; return
+        & winget install -e --id $id --accept-package-agreements --accept-source-agreements --silent --disable-interactivity
+        $wc = $LASTEXITCODE; Refresh-Path
+        if ($wc -eq 0 -or $wc -eq -1978335189 -or $wc -eq -1978335135) { return }   # installed / already installed
+        Say ("   winget could not install " + $what + " (exit " + $wc + ") - using the official installer instead") 'Yellow'
     }
     Say ("installing " + $what + " (no winget on this Windows - official installer) ...")
     $t = Join-Path $env:TEMP ('st_' + ($id -replace '[^A-Za-z0-9]', '_'))
@@ -38,23 +44,23 @@ function Winget([string]$id, [string]$what) {
         'Git.Git' {
             $r = Invoke-RestMethod 'https://api.github.com/repos/git-for-windows/git/releases/latest'
             $u = ($r.assets | Where-Object { $_.name -match '^Git-[0-9.]+-64-bit\.exe$' } | Select-Object -First 1).browser_download_url
-            Download $u "$t.exe"; Start-Process -Wait "$t.exe" '/VERYSILENT /NORESTART /NOCANCEL /SP- /SUPPRESSMSGBOXES'
+            Download $u "$t.exe"; Run-Installer "$t.exe" '/VERYSILENT /NORESTART /NOCANCEL /SP- /SUPPRESSMSGBOXES'
         }
         'Python.Python.3.12' {
             Download 'https://www.python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe' "$t.exe"
-            Start-Process -Wait "$t.exe" '/quiet InstallAllUsers=0 InstallLauncherAllUsers=0 Include_launcher=1 PrependPath=1 Include_test=0'
+            Run-Installer "$t.exe" '/quiet InstallAllUsers=0 InstallLauncherAllUsers=0 Include_launcher=1 PrependPath=1 Include_test=0'
             $env:Path = (Join-Path $env:LOCALAPPDATA 'Programs\Python\Launcher') + ';' + $env:Path
         }
         'Gyan.FFmpeg' { Install-FFmpegZip }
         'Ollama.Ollama' {
-            Download 'https://ollama.com/download/OllamaSetup.exe' "$t.exe"; Start-Process -Wait "$t.exe" '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES'
+            Download 'https://ollama.com/download/OllamaSetup.exe' "$t.exe"; Run-Installer "$t.exe" '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES'
         }
         'Microsoft.VCRedist.2015+.x64' {
-            Download 'https://aka.ms/vs/17/release/vc_redist.x64.exe' "$t.exe"; Start-Process -Wait "$t.exe" '/install /quiet /norestart'
+            Download 'https://aka.ms/vs/17/release/vc_redist.x64.exe' "$t.exe"; Run-Installer "$t.exe" '/install /quiet /norestart'
         }
         'Google.Chrome' {
             Download 'https://dl.google.com/chrome/install/googlechromestandaloneenterprise64.msi' "$t.msi"
-            Start-Process -Wait msiexec.exe ('/i "' + $t + '.msi" /qn /norestart')
+            Run-Installer msiexec.exe ('/i "' + $t + '.msi" /qn /norestart')
         }
     }
     Refresh-Path
@@ -145,11 +151,24 @@ if (-not (Test-Path 'A:\') -and -not $AnyLocation) {
 if ($ST -ne $Want -and (Test-Path 'A:\') -and -not $AnyLocation) {
     $it = Get-Item -LiteralPath $Want -Force -ErrorAction SilentlyContinue
     if ($it -and $it.LinkType -ne 'Junction') {
-        # an older Star Trek already lives in A:\Ai projects\Star Trek: update it (this PC's own settings are kept)
-        Say ('   updating the Star Trek in ' + $Want + ' ...')
-        & robocopy $ST $Want /E /R:1 /W:1 /NFL /NDL /NJH /NJS /NP /XF songs.txt level.txt config.json launcher.json /XD .git | Out-Null
-        if ($LASTEXITCODE -ge 8) { Stop-Setup ('could not copy to ' + $Want) }
-    } else {
+        $doneHere  = Test-Path (Join-Path $CCdir 'ComfyUI\main.py')
+        $doneThere = Test-Path (Join-Path $Want 'ClaudeComfy\ComfyUI\main.py')
+        if ($doneThere -and -not $doneHere) {
+            # an installed Star Trek lives in A:\Ai projects\Star Trek: give it this download's program files (never its
+            # ComfyUI, environments or models; this PC's own settings are kept) and carry on there
+            Say ('   updating the Star Trek in ' + $Want + ' ...')
+            & robocopy $ST $Want /E /R:1 /W:1 /NFL /NDL /NJH /NJS /NP /XF songs.txt level.txt config.json launcher.json civitai_token.txt /XD .git ComfyUI venv models | Out-Null
+            if ($LASTEXITCODE -ge 8) { Stop-Setup ('could not copy to ' + $Want) }
+        } else {
+            # an older copy sits there: move it aside (nothing is deleted, and nothing big is copied) and use THIS folder
+            $old = $Want + ' (old ' + (Get-Date -Format 'yyyy-MM-dd HHmm') + ')'
+            Rename-Item -LiteralPath $Want -NewName (Split-Path -Leaf $old) -ErrorAction SilentlyContinue
+            if (Test-Path -LiteralPath $Want) { Stop-Setup ('could not move the older ' + $Want + ' aside: close every program and window using it (SongMap, Comfort, ComfyUI, Explorer, a terminal), then run this again') }
+            Say ('   moved the older copy aside: ' + $old + '  (delete it once everything works)') 'Yellow'
+            $it = $null
+        }
+    }
+    if (-not $it -or $it.LinkType -eq 'Junction') {
         # the files stay where they are: A:\Ai projects\Star Trek becomes a link to this folder, so every tool and manual
         # finds them at the A: path
         if ($it) { cmd /c rmdir "$Want" | Out-Null }
