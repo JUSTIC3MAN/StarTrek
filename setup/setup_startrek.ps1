@@ -99,6 +99,10 @@ if ($ST -ne $Want) {
 $onA = ($ST -eq $Want)
 $CC  = if ($onA) { 'A:\ClaudeComfy' } else { $CCdir }
 
+# Files from a GitHub "Download ZIP" carry Windows' downloaded-from-the-internet mark, which makes SmartScreen block
+# Comfort.exe and the hidden watchdog. Clear it on everything in the Star Trek folder (a git clone has no mark).
+Get-ChildItem -LiteralPath $ST -Recurse -File -ErrorAction SilentlyContinue | Unblock-File -ErrorAction SilentlyContinue
+
 # ---------------------------------------------------------------- 1. programs
 Step 'Programs (git, Python 3.12, ffmpeg, Ollama, VC++ runtime, a browser for Comfort)'
 Refresh-Path

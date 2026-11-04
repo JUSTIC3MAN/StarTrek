@@ -51,6 +51,11 @@ Invoke-WebRequest $u -OutFile "$env:TEMP\git-setup.exe"; Start-Process -Wait "$e
 **Claude on this PC:** if the Claude desktop app can't be installed (Windows 10 LTSC), use **Claude Code** in PowerShell:
 `irm https://claude.ai/install.ps1 | iex`, open a new window, run `claude`, sign in. It supports Windows 10 1809+.
 
+**No Git and no Claude on this PC?** That works too: on https://github.com/JUSTIC3MAN/StarTrek press **Code → Download ZIP**,
+extract it into `A:\Ai projects\` and rename the folder `StarTrek-main` to `Star Trek`. The setup installs Git itself
+(ComfyUI needs it) and clears Windows' "downloaded file" block on everything. The PC can't `git pull` updates that way;
+download the ZIP again (or clone later) to update.
+
 ## Step 3 — run the setup
 
 Double-click **`SETUP NEW PC.bat`** in `A:\Ai projects\Star Trek` (or run it from a terminal; it is the same thing).
