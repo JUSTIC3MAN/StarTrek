@@ -1,7 +1,0 @@
-#name floral_v6_p02
-#size 1376x768
-#n 1
-#seed random
-#style none
-[label=p03_ink_seep lora=pastel-rainbow-watercolor-comfy.safetensors:1.1] dark ink-like water seeping out of the cracks of the old stone sea wall and staining the petals of a purple flower growing from the stones, the stormy sea behind, wet-on-wet watercolor painting, deep saturated violet and magenta pigment blooming and bleeding into each other, dark pooled edges, soft teal-blue accents and visible paper grain, the washes filling the whole frame, close side view at the height of the flower, the cracks running across the frame, deep indigo, violet, magenta and storm blue-grey, no people, no hands, no text, no watermark, no border, no frame, no blank paper, pastel rainbow watercolor style
-[label=n15_horizon_bloom lora=neon-cyberpunk-anime-comfy.safetensors:1.1] a giant neon flower rising out of the night sea on the horizon like a sunrise, its petals spreading magenta and cyan light across the water toward the old stone sea wall, neon cyberpunk anime illustration, glowing neon outlines, electric blue and magenta light, a painted illustrated background with no photographic detail, wide shot from the top of the sea wall, the horizon low, electric violet, magenta, cyan and deep indigo, no people, no hands, no text, no watermark, no border, no frame, no blank paper, neon cyberpunk anime style

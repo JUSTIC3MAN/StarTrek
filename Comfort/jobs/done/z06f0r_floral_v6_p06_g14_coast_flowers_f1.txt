@@ -1,6 +1,0 @@
-#size 1376x768
-#n 1
-#seed random
-#style none
-#name floral_v6_p06_g14_coast_flowers_f1
-[label=g14_coast_flowers lora=pastel-rainbow-watercolor-comfy.safetensors:1.1] the whole coastline and the old sea wall covered in purple flowers at golden sunrise, wet-on-wet watercolor painting, deep saturated violet and magenta pigment blooming and bleeding into each other, dark pooled edges, soft teal-blue accents and visible paper grain, the washes filling the whole frame, high aerial shot along the coast, sunlit gold, violet, magenta and teal-blue, no people, no hands, no text, no watermark, no border, no frame, no blank paper, pastel rainbow watercolor style

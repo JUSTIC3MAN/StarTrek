@@ -1,8 +1,0 @@
-{
- "workflow": "Stage 1080p60 (Comfort)",
- "name": "floral_ext_r01_stage60",
- "set": {
-  "load.video": "A:\\Ai projects\\Star Trek\\Comfort\\out\\videos\\floral_ext_r01.mp4"
- },
- "free_after": true
-}

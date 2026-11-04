@@ -1,9 +1,0 @@
-{
- "workflow": "Stage 1080p60 (Comfort)",
- "name": "sentimientos_vid11_stage60",
- "set": {
-  "load.video": "A:\\Ai projects\\Comfort\\out\\videos\\sentimientos_vid11.mp4"
- },
- "free_after": true,
- "fc_in": "soft_wipe 45 feather=500"
-}

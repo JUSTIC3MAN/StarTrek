@@ -1,7 +1,0 @@
-motion as rendered -> after the speed ramp (. still  - = + * # moving), speeds used, new length
-cruzando_fronteras_vid1_stage60.mp4: ramp off
-cruzando_fronteras_vid2_stage60.mp4: ramp off
-cruzando_fronteras_vid3_stage60.mp4: ramp off
-cruzando_fronteras_vid4_stage60.mp4: ramp off
-cruzando_fronteras_vid5_stage60.mp4: ramp off
-cruzando_fronteras_vid6_stage60.mp4: ramp off

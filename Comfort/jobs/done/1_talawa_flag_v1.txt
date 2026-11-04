@@ -1,6 +1,0 @@
-#name talawa_flag_v1
-#size 1376x768
-#n 2
-#seed random
-#style none
-[label=flag wf=edit image=talawa_styles_v1/13-1_graphic-novel-earthy-ink.png lora=graphic-novel-earthy-ink-comfy.safetensors:1.1] the same picture exactly, the same hilltop, the same light, the same speaker stack, the same man in khaki, the same rings of sound and the same cracking grey tower, only the flag on the pole on top of the speaker stack changed into a Rasta flag with three horizontal stripes, red on top, gold in the middle, green at the bottom, flapping in the wind, graphic novel earthy ink illustration, bold brush-ink contours, cross-hatched shadows and flat earthy color, no text, no watermark, graphic novel earthy ink style

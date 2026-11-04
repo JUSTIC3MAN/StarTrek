@@ -1,6 +1,0 @@
-#size 1376x768
-#n 1
-#seed random
-#style none
-#name floral_v6_p04_gl01_glass_waves_f1
-[label=gl01_glass_waves lora=early-cgi-surreal-render-comfy.safetensors:1.1] glass waves shattering into thousands of glass petals as they hit the old stone sea wall, surreal translucent render, forms like glowing glass with iridescent violet and blue light inside, intricate fractal layers and soft volumetric glow, the image filling the frame edge to edge, low wide shot from the top of the wall, deep violet, magenta, indigo and electric blue-teal, no people, no hands, no text, no watermark, no border, no frame, no blank paper, early cgi surreal render style

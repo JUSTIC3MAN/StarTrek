@@ -1,4 +1,0 @@
-{"name": "dl_marievie_loras", "download": [
- {"url": "https://huggingface.co/ilkerzgi/krea-2-bold-impasto-sunlit-lora/resolve/main/bold-impasto-sunlit-comfy.safetensors", "dest": "loras/bold-impasto-sunlit-comfy.safetensors"},
- {"url": "https://huggingface.co/ilkerzgi/krea-2-misty-anime-cinematic-lora/resolve/main/misty-anime-cinematic-comfy.safetensors", "dest": "loras/misty-anime-cinematic-comfy.safetensors"},
- {"url": "https://huggingface.co/ilkerzgi/krea-2-bold-woodcut-linocut-lora/resolve/main/bold-woodcut-linocut-comfy.safetensors", "dest": "loras/bold-woodcut-linocut-comfy.safetensors"}]}

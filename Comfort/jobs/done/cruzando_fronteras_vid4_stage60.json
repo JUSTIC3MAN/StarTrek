@@ -1,9 +1,0 @@
-{
- "workflow": "Stage 1080p60 (Comfort)",
- "name": "cruzando_fronteras_vid4_stage60",
- "set": {
-  "load.video": "A:\\Ai projects\\Comfort\\out\\videos\\cruzando_fronteras_vid4.mp4"
- },
- "free_after": true,
- "fc_in": "glitch 18"
-}

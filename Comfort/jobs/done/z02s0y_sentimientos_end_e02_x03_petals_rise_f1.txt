@@ -1,6 +1,0 @@
-#size 1376x768
-#n 1
-#seed random
-#style none
-#name sentimientos_end_e02_x03_petals_rise_f1
-[label=x03_petals_rise wf=edit image=sentimientos_end_p02/03-1_x01_hill_blooms.png lora=airy-gouache-minimalist-comfy.safetensors:1.1] the same place, the same light and the same carved print as this picture, now low view among the flowers looking up: petals of coral, lilac and gold lifting off the same flowering hillside into the wind and swirling up into the peach sky, no people, airy minimalist gouache illustration, flat matte color shapes, soft paper grain, lots of open space and a calm limited palette, coral, teal, lilac, cream, ochre and deep blue, no text, no watermark, no border, no frame, no blank paper, no photoreal, airy gouache minimalist style

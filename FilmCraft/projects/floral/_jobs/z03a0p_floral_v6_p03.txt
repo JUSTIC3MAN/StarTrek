@@ -1,6 +1,0 @@
-#name floral_v6_p03
-#size 1376x768
-#n 1
-#seed random
-#style none
-[label=c07_heartbeat lora=foggy-neon-streak-comfy.safetensors:1.1] a flower made of light floating above the dark sea at night and beating like a heart, each beat sending a ring of violet light across the water, a world made of light, translucent glowing forms traced by fine neon filaments and sparks, long light streaks drifting through soft fog against deep darkness, wide low shot at the waterline, the flower above the horizon, deep violet, indigo, magenta and pale gold light, no people, no hands, no text, no watermark, no border, no frame, no blank paper, foggy neon streak style

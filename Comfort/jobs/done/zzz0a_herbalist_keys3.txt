@@ -1,9 +1,0 @@
-#name herbalist_keys3
-#size 1376x768
-#n 1
-#seed random
-#style none
-#lora luminous-anime-film-comfy.safetensors:1.1
-[label=h4] Night sky above a hillside field of tall cannabis plants, thousands of fireflies rising slowly from the leaves and drifting up to blend into a sky full of stars and the milky way, the dark ridge of hills along the bottom, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Low view looking up from among the plants, leaf tips silhouetted along the bottom edge, the rising lights filling the sky. Soft firefly glow and starlight, colors of firefly gold, deep indigo, teal and violet, no people, no text, no watermark, luminous anime film style.
-[label=he1] Extreme close-up of a single drop of morning dew hanging from the tip of a serrated cannabis leaf, the rising sun glowing inside the drop, soft green hills blurred behind, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Macro view, the leaf tip and the drop in the upper center. Warm golden sunrise backlight, colors of gold, leaf green, peach and soft blue, no people, no text, no watermark, luminous anime film style.
-[label=he2] A ring of small fresh green sprouts rises from dry cracked earth around the spot where a single drop of dew has just landed, the wet dark spot glowing in the sunrise, a cannabis leaf tip hanging at the top edge, luminous anime film illustration with hand-painted backgrounds, soft glowing light and rich atmosphere. Close low view at ground level, the ring of sprouts centered. Warm golden sunrise light, colors of gold, fresh green, earth brown and peach, no people, no text, no watermark, luminous anime film style.

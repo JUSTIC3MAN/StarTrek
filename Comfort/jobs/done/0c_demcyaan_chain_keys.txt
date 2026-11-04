@@ -1,8 +1,0 @@
-#name demcyaan_chain_keys
-#size 1376x768
-#n 1
-#seed random
-#style none
-#lora amber-ink-mist-comfy.safetensors:1.1
-[label=k2] Thousands of glowing paper lanterns and embers swirl together in the night sky into a great slow ring of amber light around a blazing core, ink-black mist drifting through it, amber ink mist painting, loose ink wash and soft drifting mist with glowing amber light against deep shadow and delicate brush texture. View looking straight up into the sky, the ring of lights centered and filling most of the frame. Glowing amber light against deep shadow, colors of amber, gold, ink black and smoky grey, no people, no text, no watermark, amber ink mist style.
-[label=k3] Dawn over a valley of misty hills drawn in ink wash, a great amber sun rising on the horizon, golden mist glowing in the valleys, a small figure in plain clothes standing on a dark hilltop in the foreground holding up a torch whose small flame matches the rising sun, amber ink mist painting, loose ink wash and soft drifting mist with glowing amber light against deep shadow and delicate brush texture. Wide view, the sun in the center on the horizon, the figure small in silhouette on the lower left. Warm amber dawn light against deep shadow, colors of amber, gold, ink black and smoky grey, no text, no watermark, amber ink mist style.

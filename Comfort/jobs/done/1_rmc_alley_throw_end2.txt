@@ -1,8 +1,0 @@
-#name rmc_alley_throw_end2
-#wf edit
-#image out\rmc_alley_oflo_final\02-1_alley_lookout_oflo_v4.png
-#boost 1
-#steps 8
-#n 4
-#seed random
-[label=throw_a] Change only the masked man's pose: he has risen halfway out of his crouch and has just thrown the walkie-talkie down at the ground in anger. His left hand is no longer at his ear and holds nothing: it is clenched into a fist at his side. His right arm is swung down and forward, the hand open and empty with fingers spread. The walkie-talkie lies broken on the wet cobblestones in front of his feet, its antenna snapped off, small black plastic pieces scattered, a splash of puddle water bursting up around it. His eyes glare down at it in fury above the black mask. Keep his black cap, black face mask, black quilted puffer jacket, black pants and the gold Cuban chain with the gold RMC pendant exactly the same, and keep the whole rainy alley, the glowing door, the poster and the white O-Flo graffiti exactly the same, in the same style and the same framing.

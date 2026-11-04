@@ -1,8 +1,0 @@
-#name sentimientos_chain_keys
-#size 1376x768
-#n 1
-#seed random
-#style none
-#lora airy-gouache-minimalist-comfy.safetensors:1.1
-[label=k2] Looking up into a vast dusk sky above a calm lake, soft ribbons of coral, teal, lilac and gold light rise from the water and curl slowly across the sky like voices, a tiny figure in a white top and soft pink skirt dancing on the water at the very bottom of the frame, soft hills along the bottom edge, airy minimalist gouache illustration, flat matte color shapes, soft paper grain, lots of open space and a calm limited palette. Low view tilted up, the ribbons filling most of the frame, the dancer and the hills small along the bottom. Soft dusk light turning toward evening, colors of coral, teal, lilac, gold and deep blue, no text, no watermark, airy gouache minimalist style.
-[label=k3] A deep blue night sky where soft ribbons of coral, teal, lilac and gold light curl into a slow wide spiral around a pale full moon, small stars appearing between the ribbons, the dark tops of soft hills along the bottom edge, airy minimalist gouache illustration, flat matte color shapes, soft paper grain, lots of open space and a calm limited palette. The moon and the spiral centered, open night sky all around. Calm moonlight, colors of deep blue, pale cream, coral, teal and lilac, no people, no text, no watermark, airy gouache minimalist style.

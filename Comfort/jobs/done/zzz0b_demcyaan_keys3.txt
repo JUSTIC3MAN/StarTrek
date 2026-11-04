@@ -1,9 +1,0 @@
-#name demcyaan_keys3
-#size 1376x768
-#n 1
-#seed random
-#style none
-#lora amber-ink-mist-comfy.safetensors:1.1
-[label=de1] A dark field under heavy rain at night, scattered embers glowing in the wet grass, rain streaks slashing across in grey ink, mist rising, amber ink mist painting, loose ink wash and soft drifting mist with glowing amber light against deep shadow and delicate brush texture. Low wide view across the field, the embers spread through the lower half. Faint ember glow against cold rain, colors of amber, ink black, cold grey and faint blue, no people, no text, no watermark, amber ink mist style.
-[label=de2] In the heavy rain the embers flare up into a bright line of fire running across the dark field, steam boiling off where the raindrops hit, the flames burning stronger against the downpour, amber ink mist painting, loose ink wash and soft drifting mist with glowing amber light against deep shadow and delicate brush texture. Low wide view across the field, the line of fire crossing the middle of the frame. Bright amber fire against cold dark rain, colors of amber, gold, ink black and steam grey, no people, no text, no watermark, amber ink mist style.
-[label=de3] High view looking down at a dark hill encircled by a great glowing ring of fire in the rain, inside the ring the rain has stopped and the grass is green and calm under clear starlight, mist drifting outside the ring, amber ink mist painting, loose ink wash and soft drifting mist with glowing amber light against deep shadow and delicate brush texture. High view from above, the ring of fire centered and filling most of the frame. Amber firelight against deep shadow and starlight, colors of amber, gold, ink black, deep green and smoky grey, no people, no text, no watermark, amber ink mist style.

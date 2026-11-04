@@ -1,7 +1,0 @@
-#name conq_v3_p01
-#size 1376x768
-#n 1
-#seed random
-#style none
-[label=c01_dawn_bay lora=bold-woodcut-linocut-comfy.safetensors:1.1] a small village of carved stone houses on a hillside above a still bay at dawn, one thin ribbon of chimney smoke drifting low across the glassy water, a low red-orange sun just above the far hills, no people, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, wide shot from across the bay, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style
-[label=d01_peak lora=bold-woodcut-linocut-comfy.safetensors:1.1] the highest mountain, a towering carved peak rising above a sea of clouds, snow ridges cut in thick black lines, the sun blazing red-orange on its flank, a tiny far-off silhouette of a woman on the ridge far below the summit, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, wide shot, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style

@@ -1,6 +1,0 @@
-#size 1376x768
-#n 1
-#seed random
-#style none
-#name sentimientos_end_e01_f02_surface_above_f1
-[label=f02_surface_above wf=edit image=sentimientos_end_p01/02-1_f01_under_lake.png lora=airy-gouache-minimalist-comfy.safetensors:1.1] the same place, the same light and the same carved print as this picture, now low view looking straight up toward the surface: the bright rippling surface of the same lake seen from deep below, glowing coral and gold, the tiny floating figure a small dark shape against it, ribbons of teal and lilac light curling upward around them, airy minimalist gouache illustration, flat matte color shapes, soft paper grain, lots of open space and a calm limited palette, coral, teal, lilac, cream, ochre and deep blue, no text, no watermark, no border, no frame, no blank paper, no photoreal, airy gouache minimalist style

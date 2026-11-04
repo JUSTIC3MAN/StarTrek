@@ -1,6 +1,0 @@
-#size 1376x768
-#n 1
-#seed random
-#style none
-#name sentimientos_end_p01_h01_forest_path_f2
-[label=h01_forest_path lora=airy-gouache-minimalist-comfy.safetensors:1.1] a narrow winding path through a dark blue forest of tall slender trees at night, small fireflies of gold and coral gathering above the path into a soft glowing trail, a tiny figure in plain white clothes far down the path, airy minimalist gouache illustration, flat matte color shapes, soft paper grain, lots of open space and a calm limited palette, wide view down the path, coral, teal, lilac, cream, ochre and deep blue, no text, no watermark, no border, no frame, no blank paper, no photoreal, airy gouache minimalist style

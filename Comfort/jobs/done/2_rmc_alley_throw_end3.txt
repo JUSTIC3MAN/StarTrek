@@ -1,8 +1,0 @@
-#name rmc_alley_throw_end3
-#wf edit
-#image out\rmc_alley_throw_end\01-4_throw_end.png
-#boost 2
-#steps 8
-#n 4
-#seed random
-[label=throw_b] Change only these things: lower his left hand away from his ear, empty, clenched into a fist at his side with nothing in it. Make the walkie-talkie lying on the ground at the right broken, its antenna snapped off and small black plastic pieces scattered around it, with a splash of puddle water bursting up around it. Make his eyes glare down at it in fury above the black mask. Keep everything else exactly the same.

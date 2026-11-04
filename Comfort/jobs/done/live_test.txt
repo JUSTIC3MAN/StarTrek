@@ -1,7 +1,0 @@
-#name live_test
-#preset prop_tall
-A single cracked ancient stone pillar standing on a square plinth, weathered grey stone with chipped fluting, a moss cap on the broken top, creeping vines and grass tufts wrapped around the overgrown base
-#preset floor_slab
-A single square weathered flagstone floor slab, flat grey-green stone with faint chips, a few hairline cracks and tiny moss in the pits, edges slightly darker and worn
-#preset bg_sky
-warm late-afternoon sky fading from pale gold near the horizon to dusty blue above, thin layered clouds, faint silhouettes of two enormous collapsed robots and broken towers dissolving into atmospheric haze along the lower third

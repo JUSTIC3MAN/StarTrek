@@ -1,6 +1,0 @@
-#size 1376x768
-#n 1
-#seed random
-#style none
-#name talawa_e01_a03_tower_falls_f1
-[label=a03_tower_falls lora=graphic-novel-earthy-ink-comfy.safetensors:1.1] an enormous grey stone tower seen close from its foot on a green hillside, its wall splitting open under huge glowing rings of sound coming from the left, chunks of stone and dust breaking away and falling, light bursting through the cracks, a rust-red sky behind, no people, graphic novel earthy ink illustration, bold brush-ink contours, cross-hatched shadows and flat earthy color, low angle looking up at the tower, the tower filling the frame from the bottom edge to the top edge, ochre, rust red, olive and ink black, no text, no letters, no watermark, no border, no frame, no blank paper, no photoreal, graphic novel earthy ink style

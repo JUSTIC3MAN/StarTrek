@@ -1,8 +1,0 @@
-motion as rendered -> after the speed ramp (. still  - = + * # moving), speeds used, new length
-rmc_intro_vid1_stage60.mp4: ramp off
-rmc_intro_vid2c_stage60.mp4: ramp off
-rmc_intro_vid3b_stage60.mp4: ramp off
-rmc_intro_vid4_stage60.mp4: ramp off
-rmc_intro_vid5_stage60.mp4: ramp off
-rmc_intro_vid6_stage60.mp4: ramp off
-rmc_intro_vid1_stage60.mp4: ramp off

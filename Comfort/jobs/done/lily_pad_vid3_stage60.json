@@ -1,8 +1,0 @@
-{
- "workflow": "Stage 1080p60 (Comfort)",
- "name": "lily_pad_vid3_stage60",
- "set": {
-  "load.video": "A:\\Ai projects\\Comfort\\out\\videos\\lily_pad_vid3.mp4"
- },
- "free_after": true
-}

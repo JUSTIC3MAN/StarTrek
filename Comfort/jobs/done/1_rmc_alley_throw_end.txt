@@ -1,8 +1,0 @@
-#name rmc_alley_throw_end
-#wf edit
-#image out\rmc_alley_oflo_final\02-1_alley_lookout_oflo_v4.png
-#boost 2
-#steps 8
-#n 4
-#seed random
-[label=throw_end] Show the same scene one second later: the same masked man has sprung up out of his crouch into a low forward lunge, his right arm swung down hard and open after hurling the walkie-talkie at the ground, and the walkie-talkie lies smashed on the wet cobblestones in the lower middle of the frame in front of him, its antenna snapped off and black plastic pieces and the battery bouncing away, a burst of puddle water splashing up around it. His brown eyes glare down at it with fury above the black mask. Keep his black baseball cap, black face mask, black quilted puffer jacket, black pants and the heavy gold Cuban link chain with the gold RMC pendant exactly the same, and keep the rainy alley, the brick viaduct arches, the tower in the sky, the glowing open door, the poster of the white-bearded old man and the white O-Flo graffiti exactly the same, in the same bold inked graphic-novel style and the same camera framing.

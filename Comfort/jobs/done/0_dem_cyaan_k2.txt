@@ -1,7 +1,0 @@
-#name dem_cyaan_k2
-#size 1376x768
-#n 1
-#seed random
-#style none
-#lora amber-ink-mist-comfy.safetensors:1.1
-[label=cielo] Thousands of glowing paper lanterns and embers rise into the night sky above a dark hilltop, filling the whole frame with warm amber points of light drifting upward through soft swirling mist, the flaming tip of a burning torch held up from below just visible at the bottom center, amber ink mist painting, loose ink wash and soft drifting mist with glowing amber light against deep shadow and delicate brush texture. Low view looking up into the sky, the lanterns at many depths, the dark edge of the hilltop along the bottom. Glowing amber light against deep shadow, colors of amber, gold, ink black and smoky grey, no text, no watermark, amber ink mist style.

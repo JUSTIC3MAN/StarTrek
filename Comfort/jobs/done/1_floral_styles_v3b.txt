@@ -1,6 +1,0 @@
-#name floral_styles_v3b
-#size 1376x768
-#n 1
-#seed random
-#style none
-[label=mystical_swirl_painting] A single purple flower grows from a crack in an old stone sea wall at twilight, its glowing petals lifting off on the sea breeze and streaming up toward a low violet sun on the sea horizon, mystical ornate fantasy painting, swirling layered petals that flow into curling ornamental waves of violet paint, a softly glowing pale gold centre and rich painterly brush detail, wide 16:9 shot from the sea wall, the flower large in the left third in the foreground, the stream of petals curving up toward the sun on the right, the sea low across the frame, deep indigo sky, the image filling the frame edge to edge, deep violet, magenta, indigo and electric blue-teal, no people, no text, no watermark

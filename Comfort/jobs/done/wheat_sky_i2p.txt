@@ -1,4 +1,0 @@
-#name wheat_sky_i2p
-#wf i2p
-#i2p A:\Ai projects\Comfort\inputs\wheat_sky_ref.png
--

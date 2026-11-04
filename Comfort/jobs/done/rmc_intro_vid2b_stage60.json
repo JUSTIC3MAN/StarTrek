@@ -1,8 +1,0 @@
-{
- "workflow": "Stage 1080p60 (Comfort)",
- "name": "rmc_intro_vid2b_stage60",
- "set": {
-  "load.video": "A:\\Ai projects\\Comfort\\out\\videos\\rmc_intro_vid2b.mp4"
- },
- "free_after": true
-}

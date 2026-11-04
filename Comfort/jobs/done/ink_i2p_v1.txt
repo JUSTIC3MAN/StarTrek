@@ -1,6 +1,0 @@
-#name ink_i2p_v1
-#wf i2p
-#i2p A:\Ai projects\Comfort\inputs\ink_ref_bird_1020.png
--
-#i2p A:\Ai projects\Comfort\inputs\ink_ref_cat_1020.png
--

@@ -1,7 +1,0 @@
-#name conq_v2_p05
-#size 1376x768
-#n 1
-#seed random
-#style none
-[label=i01_cane_fire lora=bold-woodcut-linocut-comfy.safetensors:1.1] a field of flowering sugarcane at dawn, its pale feathery plumes catching fire one after another, sparks swirling into the sky, a small house far away on the hill, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, wide shot, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style
-[label=j01_river lora=bold-woodcut-linocut-comfy.safetensors:1.1] a wild river bursting out of a narrow carved canyon into an open plain at sunrise, white water foaming, birds flying low over it, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, wide shot, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style

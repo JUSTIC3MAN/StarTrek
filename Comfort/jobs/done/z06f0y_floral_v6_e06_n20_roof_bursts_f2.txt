@@ -1,6 +1,0 @@
-#size 1376x768
-#n 1
-#seed random
-#style none
-#name floral_v6_e06_n20_roof_bursts_f2
-[label=n20_roof_bursts wf=edit image=floral_v6_p06/01-1_n17_glasshouse_night.png lora=neon-cyberpunk-anime-comfy.safetensors:1.1] the same place, the same light and the same art style as this picture, now low angle from inside looking up: the glass roof of the glasshouse bursting upward into neon petals, neon cyberpunk anime illustration, glowing neon outlines, electric blue and magenta light, a painted illustrated background with no photographic detail, electric violet, magenta, cyan and deep indigo, no people, no hands, no text, no watermark, no border, no frame, no blank paper, neon cyberpunk anime style

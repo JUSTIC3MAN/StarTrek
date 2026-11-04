@@ -1,6 +1,0 @@
-#size 1376x768
-#n 1
-#seed random
-#style none
-#name conq_v3_e01_d02_ridge_wind_f3
-[label=d02_ridge_wind wf=edit image=conq_v3_p01/02-1_d01_peak.png lora=bold-woodcut-linocut-comfy.safetensors:1.1] the same place, the same light and the same carved print as this picture, now closer, along the ridge: the same snow ridge, the wind tearing snow off its edge in long carved plumes against the red-orange sun, the ridge and the slopes completely empty, the small figure removed: no person, no figure, no silhouette anywhere in the picture, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style

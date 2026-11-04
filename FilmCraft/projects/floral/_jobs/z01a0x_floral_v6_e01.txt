@@ -1,7 +1,0 @@
-#name floral_v6_e01
-#size 1376x768
-#n 1
-#seed random
-#style none
-[label=f01_wall_rush wf=edit image=floral_styles_v3/02-1_flower_of_light.png lora=foggy-neon-streak-comfy.safetensors:1.1] the same place, the same light and the same art style as this picture, now wide low shot along the top of the wall, the wall leading into the distance: the old stone sea wall running along the dusk sea, the small glowing flower of light far down the wall, thin streaks of light drifting in off the water toward it, a world made of light, translucent glowing forms traced by fine neon filaments and sparks, long light streaks drifting through soft fog against deep darkness, deep violet, indigo, magenta and pale gold light, no people, no hands, no text, no watermark, no border, no frame, no blank paper, foggy neon streak style
-[label=f02_core_ignite wf=edit image=floral_styles_v3/02-1_flower_of_light.png lora=foggy-neon-streak-comfy.safetensors:1.1] the same place, the same light and the same art style as this picture, now extreme close-up looking straight into the centre of the flower: the glowing heart of the flower of light, its fine filaments crackling brighter and brighter with sparks of violet and pale gold, a world made of light, translucent glowing forms traced by fine neon filaments and sparks, long light streaks drifting through soft fog against deep darkness, deep violet, indigo, magenta and pale gold light, no people, no hands, no text, no watermark, no border, no frame, no blank paper, foggy neon streak style

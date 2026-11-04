@@ -1,8 +1,0 @@
-{
- "workflow": "Stage 1080p60 (Comfort)",
- "name": "conq_v2_r25_stage60",
- "set": {
-  "load.video": "A:\\Ai projects\\Star Trek\\Comfort\\out\\videos\\conq_v2_r25.mp4"
- },
- "free_after": true
-}

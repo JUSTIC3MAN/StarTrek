@@ -71,3 +71,23 @@ SongMap/out/
 *.lyrics.txt
 *.songmap.txt
 *.songmap.json
+
+# --- project work and media stay on Justice's PCs (copy them over yourself) ---
+# kept: the example shot lists and style-round jobs the manuals point to (format examples for Claude)
+Comfort/songs/
+Comfort/jobs/*/*
+!Comfort/jobs/done/
+!Comfort/jobs/done/*_styles_v2.*
+FilmCraft/projects/*/*
+FilmCraft/projects/*/.*
+!FilmCraft/projects/floral/
+!FilmCraft/projects/fauna/
+!FilmCraft/projects/conqueress/
+!FilmCraft/projects/floral/floral.shots.txt
+!FilmCraft/projects/fauna/fauna.shots.txt
+!FilmCraft/projects/conqueress/conqueress.shots.txt
+Overseer/report_*.txt
+*.png
+*.jpg
+*.jpeg
+*.webp

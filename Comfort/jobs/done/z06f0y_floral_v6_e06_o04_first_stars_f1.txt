@@ -1,6 +1,0 @@
-#size 1376x768
-#n 1
-#seed random
-#style none
-#name floral_v6_e06_o04_first_stars_f1
-[label=o04_first_stars wf=edit image=floral_v6_p06/03-1_o01_sunset_petals.png lora=pastel-rainbow-watercolor-comfy.safetensors:1.1] the same place, the same light and the same art style as this picture, now low wide shot: the first stars appearing above the old sea wall, the purple flower glowing faintly, wet-on-wet watercolor painting, deep saturated violet and magenta pigment blooming and bleeding into each other, dark pooled edges, soft teal-blue accents and visible paper grain, the washes filling the whole frame, deep indigo, violet, magenta and storm blue-grey, no people, no hands, no text, no watermark, no border, no frame, no blank paper, pastel rainbow watercolor style

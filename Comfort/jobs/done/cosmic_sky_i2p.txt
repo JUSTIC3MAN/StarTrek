@@ -1,4 +1,0 @@
-#name cosmic_sky_i2p
-#wf i2p
-#i2p A:\Ai projects\Comfort\inputs\cosmic_sky_ref.jpg
--

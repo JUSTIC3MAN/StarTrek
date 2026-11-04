@@ -1,6 +1,0 @@
-#size 1376x768
-#n 1
-#seed random
-#style none
-#name conq_v2_e01_a02_sail_light_f2
-[label=a02_sail_light wf=edit image=conqueress_keys_v1b/03-1_k3.png lora=bold-woodcut-linocut-comfy.safetensors:1.1] the same place, the same light and the same carved print as this picture, now closer, from behind the mast looking up at the sail: the full sail and rigging of the same boat catching the first red-orange light, the sun glowing through the cloth, no people, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style

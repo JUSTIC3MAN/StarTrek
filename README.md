@@ -82,21 +82,19 @@ Models only: `A:\ClaudeComfy\venv\Scripts\python.exe "A:\Ai projects\Star Trek\s
 
 ## What is in git and what is not
 
-This repo is **public**, so Justice's own photos and the artists' songs and lyrics are not in it.
+Git holds only what is needed to install and run Star Trek. Justice's project work and media stay on his PCs.
 
-| In this repo | Not in git — copy from the old PC (same folders) when needed |
+| In this repo | Not in git — Justice copies these from the old PC (same folders) |
 |---|---|
-| All program code, launchers, setups, docs, CLAUDE.md files | `Comfort\inputs\` — reference images (Justice Man selfies etc.) |
-| Every ComfyUI workflow + Comfort's API versions | The songs and full lyrics: `*.mp3`, `*.lrc`, `*.srt`, `*.ass`, `*.lyrics.txt`, `*.songmap.txt/.json` inside `FilmCraft\projects\<song>\`, plus `SongMap\out\`, `Comfort\lyrics\`, `Comfort\songs\*\lyrics.txt` |
-| Song projects: shot lists, plans, cut lists, `.fcproj`, review files, title/subtitle settings | `Comfort\out\` — every generated picture and video (hundreds of GB) |
-| Song briefs and picked pictures (`Comfort\songs\`), job history (`Comfort\jobs\`) | `Preview\` — the finished edits; `FilmCraft\projects\*\*.mp4` renders |
+| All program code, launchers, setups, docs and CLAUDE.md manuals | `FilmCraft\projects\` — the song projects (shot lists, plans, cut lists, .fcproj, MP3s, lyrics, SongMap sheets) |
+| ComfyUI: every workflow (`ClaudeComfy\comfyui_user\`), Comfort's API workflows, the pinned node list, comfyui-krea2edit | `Comfort\songs\` — song briefs and picked pictures; `Comfort\lyrics\` |
+| Comfort's config, presets, styles, guides; Overseer's rules, `songs.txt`, `level.txt` | `Comfort\inputs\` — reference images (Justice Man selfies etc.) |
+| Format examples the manuals point to: `FilmCraft\projects\{floral,fauna,conqueress}\*.shots.txt`, `Comfort\jobs\done\*_styles_v2.*` | `Comfort\jobs\` history, `SongMap\out\`, `Comfort\out\` (every generated picture and video), `Preview\` |
 | | Model files, venvs, FilmCraft exes — the setup downloads these |
 
-**Simplest way (ASK Justice for a USB drive or network share):** from the old PC copy these folders over the new clone,
-merging and overwriting: `Comfort\inputs`, `Comfort\lyrics`, `Comfort\songs`, `FilmCraft\projects`, `SongMap\out`,
-and, to keep old shots, `Comfort\out` and `Preview`. Git ignores all of them, so `git pull` never touches them.
-Without the MP3s a song project can't build; SongMap can remake a sheet from the song's MP3 (`SongMap.bat`).
-Song projects point at clips in `A:\Ai projects\Star Trek\Comfort\out\videos\`; without them the Overseer renders new ones.
+To continue the songs on this PC, copy those folders from the old PC over the clone (merge, overwrite). Git ignores
+them, so `git pull` never touches them. Song projects point at clips in `A:\Ai projects\Star Trek\Comfort\out\videos\`;
+without them the Overseer renders new ones. Without a project's MP3 it can't build; SongMap remakes a sheet from the MP3.
 
 ## Every model file (all downloaded by the setup)
 

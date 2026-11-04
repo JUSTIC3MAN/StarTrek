@@ -1,9 +1,0 @@
-{
- "workflow": "Stage 1080p60 (Comfort)",
- "name": "ciudad_fantasma_vid7_stage60",
- "set": {
-  "load.video": "A:\\Ai projects\\Comfort\\out\\videos\\ciudad_fantasma_vid7.mp4"
- },
- "free_after": true,
- "fc_in": "film 24"
-}

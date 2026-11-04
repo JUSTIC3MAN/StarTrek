@@ -1,6 +1,0 @@
-#size 1376x768
-#n 1
-#seed random
-#style none
-#name talawa_p02
-[label=b05_rotor_hub lora=graphic-novel-earthy-ink-comfy.safetensors:1.1] the rusted rotor hub and drooping rotor blades of an old army helicopter close up against a golden evening sky, flowering vines and herb leaves wrapped around the hub and hanging from the blades, the low sun flaring between two blades, no people, graphic novel earthy ink illustration, bold brush-ink contours, cross-hatched shadows and flat earthy color, close low angle under the rotor hub, the blades crossing the whole frame, the helicopter body out of frame, ochre, rust red, olive and ink black, with the red, gold and green of the flag, no text, no letters, no watermark, no border, no frame, no blank paper, no photoreal, graphic novel earthy ink style

@@ -1,6 +1,0 @@
-#name conq_v2_p08
-#size 1376x768
-#n 1
-#seed random
-#style none
-[label=p01_lion lora=bold-woodcut-linocut-comfy.safetensors:1.1] a lion lying on a high flat rock on the savanna under a huge carved sun, its mane blown by the wind, its chest rising and falling, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, wide shot, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style

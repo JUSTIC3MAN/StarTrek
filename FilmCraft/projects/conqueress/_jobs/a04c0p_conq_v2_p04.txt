@@ -1,7 +1,0 @@
-#name conq_v2_p04
-#size 1376x768
-#n 1
-#seed random
-#style none
-[label=g01_chrysalis lora=bold-woodcut-linocut-comfy.safetensors:1.1] a chrysalis hanging from a thorny branch in a sunlit thicket, its shell splitting and a butterfly's carved wings unfolding out of it, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, closer shot, the chrysalis in the centre, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style
-[label=h01_lake lora=bold-woodcut-linocut-comfy.safetensors:1.1] a still mountain lake at morning ringed with reeds, rings of ripples spreading across it, mist lifting, the sun low and red-orange, bold woodcut linocut print, thick carved black lines and gouged textures with one hand-inked red-orange layer on warm cream, the carving filling the whole frame edge to edge with no border, no margin and no blank paper, wide shot, black and warm cream with red-orange accents, no text, no watermark, no border, no frame, no blank paper, bold woodcut linocut style

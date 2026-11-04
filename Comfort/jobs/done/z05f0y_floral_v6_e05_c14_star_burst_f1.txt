@@ -1,6 +1,0 @@
-#size 1376x768
-#n 1
-#seed random
-#style none
-#name floral_v6_e05_c14_star_burst_f1
-[label=c14_star_burst wf=edit image=floral_v6_p05/01-1_c13_sun_rays.png lora=foggy-neon-streak-comfy.safetensors:1.1] the same place, the same light and the same art style as this picture, now wide shot, the star in the centre: a bright star blazing through a cloud of glowing petals in the dawn sky over the sea, a world made of light, translucent glowing forms traced by fine neon filaments and sparks, long light streaks drifting through soft fog against deep darkness, deep violet, indigo, magenta and pale gold light, no people, no hands, no text, no watermark, no border, no frame, no blank paper, foggy neon streak style

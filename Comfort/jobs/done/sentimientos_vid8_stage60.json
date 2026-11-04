@@ -1,8 +1,0 @@
-{
- "workflow": "Stage 1080p60 (Comfort)",
- "name": "sentimientos_vid8_stage60",
- "set": {
-  "load.video": "A:\\Ai projects\\Comfort\\out\\videos\\sentimientos_vid8.mp4"
- },
- "free_after": true
-}
