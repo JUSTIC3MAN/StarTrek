@@ -308,12 +308,20 @@ Step 'Subtitle Studio (Qwen3-ASR lyrics, about 7 GB of models)'
 $ss = Join-Path $ST 'ClaudeSubtitles\SubtitleStudio'
 if (-not (Test-Path (Join-Path $ss 'venv\Scripts\python.exe')) -or -not (Test-Path (Join-Path $ss 'models'))) {
     Push-Location $ss; cmd /c setup.bat; $c = $LASTEXITCODE; Pop-Location
+    if ($c -ne 0) {   # a locked/unreadable file in pip's cache stops pip with Errno 13: try once more without the cache
+        Say '   retrying without pip''s download cache...' 'Yellow'
+        $env:PIP_NO_CACHE_DIR = '1'; Push-Location $ss; cmd /c setup.bat; $c = $LASTEXITCODE; Pop-Location; Remove-Item Env:PIP_NO_CACHE_DIR
+    }
     if ($c -ne 0) { Stop-Setup 'Subtitle Studio setup failed (see the lines above)' }
 } else { Say '   ok' }
 Step 'SongMap (beats, sections, lyrics on timestamps)'
 $sm = Join-Path $ST 'SongMap'
 if (-not (Test-Path (Join-Path $sm 'venv\Scripts\python.exe')) -or -not (Test-Path (Join-Path $sm 'models\SongFormer'))) {
     Push-Location $sm; cmd /c setup.bat; $c = $LASTEXITCODE; Pop-Location
+    if ($c -ne 0) {   # a locked/unreadable file in pip's cache stops pip with Errno 13: try once more without the cache
+        Say '   retrying without pip''s download cache...' 'Yellow'
+        $env:PIP_NO_CACHE_DIR = '1'; Push-Location $sm; cmd /c setup.bat; $c = $LASTEXITCODE; Pop-Location; Remove-Item Env:PIP_NO_CACHE_DIR
+    }
     if ($c -ne 0) { Stop-Setup 'SongMap setup failed (see the lines above)' }
 } else { Say '   ok' }
 
