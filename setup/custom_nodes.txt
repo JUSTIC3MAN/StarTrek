@@ -13,6 +13,7 @@ ComfyUI-Image-Saver | https://github.com/alexopus/ComfyUI-Image-Saver.git | dbf9
 ComfyUI-Impact-Pack | https://github.com/ltdrdata/ComfyUI-Impact-Pack.git | 429d0159ad42
 ComfyUI-KJNodes | https://github.com/kijai/ComfyUI-KJNodes.git | d3cfe21625e5
 ComfyUI-Krea2T-Enhancer | https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer.git | 958898e947ce
+# ^ that repo was deleted from GitHub (404, 2026-11-03): the setup installs Justice's copy from ClaudeComfy\local_nodes (MIT license)
 ComfyUI-MiniMaxH3Mod | https://github.com/Luisacaotica/ComfyUI-MiniMaxH3Mod.git | f9462081e287
 ComfyUI-Pixaroma | https://github.com/pixaroma/ComfyUI-Pixaroma.git | e464839a42e1
 ComfyUI-SeedVR2_VideoUpscaler | https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler.git | 4490bd1f482e

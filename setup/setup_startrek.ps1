@@ -12,6 +12,7 @@ $ST    = Split-Path -Parent $Setup
 $CCdir = Join-Path $ST 'ClaudeComfy'
 $Want  = 'A:\Ai projects\Star Trek'
 $Log   = Join-Path $Setup 'setup_log.txt'
+$env:GIT_TERMINAL_PROMPT = '0'; $env:GCM_INTERACTIVE = 'Never'   # a missing repo must fail, not pop up a GitHub sign-in
 $env:PYTHONUTF8 = '1'; $env:PYTHONIOENCODING = 'utf-8'; $env:UV_LINK_MODE = 'copy'; $env:UV_HTTP_TIMEOUT = '600'
 Start-Transcript -Path $Log -Append | Out-Null
 
@@ -218,13 +219,23 @@ foreach ($ln in $lines) {
     $p = $ln.Split('|') | ForEach-Object { $_.Trim() }
     $name, $url, $sha = $p[0], $p[1], $p[2]
     $dir = if ($name -eq 'ComfyUI') { $Comfy } else { Join-Path $Comfy ('custom_nodes\' + $name) }
+    $local = Join-Path $CCdir ('local_nodes\' + $name)       # Justice's exact copy, shipped for packs that left GitHub
+    if ((Test-Path $dir) -and -not (Test-Path (Join-Path $dir '.git')) -and (Test-Path $local)) { Say ("   ok   " + $name + " (copy from Justice's PC)"); continue }
     if (Test-Path (Join-Path $dir '.git')) {
         $cur = (& git -C $dir rev-parse HEAD).Trim()
         if ($cur.StartsWith($sha)) { Say ("   ok   " + $name); continue }
     } else {
         Say ("   clone " + $name)
         & git clone --filter=blob:none --quiet $url $dir
-        if ($LASTEXITCODE -ne 0) { Stop-Setup ("git clone failed: " + $url) }
+        if ($LASTEXITCODE -ne 0) {
+            if (Test-Path $local) {
+                if (Test-Path $dir) { Remove-Item -Recurse -Force $dir }
+                Copy-Item -Recurse $local $dir
+                Say ("   " + $name + " is no longer on GitHub - installed the copy from Justice's PC") 'Yellow'
+                continue
+            }
+            Stop-Setup ("git clone failed: " + $url)
+        }
     }
     & git -C $dir -c advice.detachedHead=false checkout --quiet $sha
     if ($LASTEXITCODE -ne 0) { Stop-Setup ("could not check out " + $name + " at " + $sha) }
